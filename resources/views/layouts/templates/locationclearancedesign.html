@@ -1,0 +1,85 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <style type="text/css">
+        @page {margin-top: 15mm; margin-bottom: 15mm; margin-header: 0mm;margin-footer: 0mm;}
+        @import url('https://fonts.googleapis.com/css?family=Fjalla+One|Montserrat:400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap');
+        * { margin: 0; padding: 0; }
+        body { font-family: 'Montserrat', sans-serif;font-size: 12px; }
+        p {margin: 0px}
+        table td, table th { border: 1px solid black; padding: 5px; }
+        .page-wrap { width: 800px; margin: 100px auto;}
+        table { border-collapse: collapse; }
+    </style>
+    <title>City Planning and Development Office</title>
+</head>
+<body>
+    
+    <table width="100%" style="font-size:12px;">
+        <tr>
+            <td style="text-align:left; padding:0px; border:0px solid black;">
+                <img src="{{LOGO}}" style="width:100px; height:100px;">
+            </td>
+            <td style="text-align:center; padding:0px; border:0px solid black; font-size:14px">
+                <p style=""><strong>Republic of the Philippines</strong></p>
+                <p style=""><strong>CITY OF PALAYAN</strong></p>
+                <p style=""><strong>Capital of Nueva Ecija</strong></p>
+            </td>
+            <td style="text-align:right; padding:0px; border:0px solid black; visibility: hidden;">
+                <img src="{{LOGO}}" style="width:100px; height:100px; visibility:hidden;">
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3" width="100%" style="text-align:center; border:0px solid black; border-bottom: solid 4px #005300; padding-bottom:5px; padding-top: 0px;"><p style="font-size: 18px; text-transform: uppercase;"><strong>City Planning And Development Office</strong></p>
+            </td>
+        </tr>
+    </table>
+
+    <div style="clear:both"></div>
+
+    <div style="width: 100%; margin-top:100px; font-size: 15px;">
+        <div style="width:25%; float:right; margin-right:30px">
+            <p style="border-bottom: solid 1px black; text-align: center; padding-left:20px padding-right:20px">{{DATE}}</p>
+            <p style="text-align:center;">Date</p>
+        </div>
+    </div>
+
+    <div style="width: 100%; margin-top:30px;">
+        <h2 style="text-align:center;"><span style="border-bottom: 2px solid black;">E</span> <span style="border-bottom: 2px solid black;">N</span> <span style="border-bottom: 2px solid black;">D</span> <span style="border-bottom: 2px solid black;">O</span> <span style="border-bottom: 2px solid black;">R</span> <span style="border-bottom: 2px solid black;">S</span> <span style="border-bottom: 2px solid black;">E</span> <span style="border-bottom: 2px solid black;">M</span> <span style="border-bottom: 2px solid black;">E</span> <span style="border-bottom: 2px solid black;">N</span> <span style="border-bottom: 2px solid black;">T</span>
+        </h2>
+    </div>
+
+    <div style="margin-top:10px; margin-left:30px; margin-right:30px">
+        <p style="text-align:justify; font-size:15px; text-indent: 80px;">
+            Respectfully endorsed to the Honorable City Mayor, this City, that <span style=""> <u>&nbsp;&nbsp;&nbsp;{{businessname}}&nbsp;&nbsp;&nbsp;</u> </span> of Brgy.<span style=""> <u>&nbsp;&nbsp;&nbsp;{{barangay}}&nbsp;&nbsp;&nbsp;</u> </span>, Palayan City has satisfactorily complied with all the requirements needed in securing permit that this office recommends for the approval of the application to operate low risk business pursuant to the provision of existing laws and city ordinances.
+        </p>
+    </div>
+
+    <div style="width: 100%; margin-top:100px">
+		<div style="width:30%; float:left; margin-right:15px; font-size:15px;">
+			<p style="text-align:center; font-weight: bold;">Inspected by:</p>
+            <p style="border-bottom: solid 0px black;  text-align: center; padding-left:20px padding-right:20px">{{inspectedzoneofficer}}</p>
+            <p style="text-align:center;">{{inspectedposition}}</p>
+        </div>
+        <div style="width:30%; float:right; margin-right:15px; font-size:15px;">
+			<p style="text-align:center;font-weight: bold;">Approved by:</p>
+            <p style="border-bottom: solid 0px black;  text-align: center; padding-left:20px padding-right:20px">{{zoneofficer}}</p>
+            <p style="text-align:center;">{{position}}</p>
+        </div>
+    </div>
+	<br>
+	<br>
+    {{ordynamicdata}}
+</body>
+</html>
+
+
+
+
+
+
+

@@ -1,0 +1,1 @@
+ALTER TABLE `hr_gsis_table` CHANGE `hrgt_percentage` `hrgt_percentage` DOUBLE NOT NULL;

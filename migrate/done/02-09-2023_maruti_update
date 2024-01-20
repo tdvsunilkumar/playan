@@ -1,0 +1,1 @@
+ALTER TABLE `eng_fixture_types` CHANGE `eft_fees` `eft_fees` DOUBLE(10,2) NULL DEFAULT '0';

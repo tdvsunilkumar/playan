@@ -1,0 +1,3 @@
+ALTER TABLE `rpt_cto_tax_revenues` ADD `basic_discount_tfoc_id` INT(11) NULL DEFAULT NULL COMMENT 'Ref-Table: cto_tfocs.id' AFTER `basic_tfoc_id`, ADD `basic_penalty_tfoc_id` INT(11) NULL DEFAULT NULL COMMENT 'Ref-Table: cto_tfocs.id' AFTER `basic_discount_tfoc_id`;
+ALTER TABLE `rpt_cto_tax_revenues` ADD `sef_discount_tfoc_id` INT(11) NULL DEFAULT NULL COMMENT 'Ref-Table: cto_tfocs.id' AFTER `sef_tfoc_id`, ADD `sef_penalty_tfoc_id` INT(11) NULL DEFAULT NULL COMMENT 'Ref-Table: cto_tfocs.id' AFTER `sef_discount_tfoc_id`;
+ALTER TABLE `rpt_cto_tax_revenues` ADD `sh_discount_tfoc_id` INT(11) NULL DEFAULT NULL COMMENT 'Ref-Table: cto_tfocs.id' AFTER `sh_tfoc_id`, ADD `sh_penalty_tfoc_id` INT(11) NULL DEFAULT NULL COMMENT 'Ref-Table: cto_tfocs.id' AFTER `sh_discount_tfoc_id`;

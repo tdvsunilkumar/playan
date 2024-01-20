@@ -1,0 +1,1 @@
+ALTER TABLE `ho_app_health_certs` DROP `is_active`;

@@ -1,0 +1,1 @@
+ALTER TABLE `ho_medical_records` CHANGE `id` `medical_rec_id` INT(11) NOT NULL AUTO_INCREMENT;

@@ -1,0 +1,1 @@
+ALTER TABLE `rpt_appraisers` ADD `is_sgd` TINYINT NOT NULL AFTER `ra_is_active`;

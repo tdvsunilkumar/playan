@@ -1,0 +1,1 @@
+ALTER TABLE `welfare_tcm_destination` CHANGE `wtcmd_companion` `wtcmd_companion` VARCHAR(100) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL, CHANGE `wtcmd_address` `wtcmd_address` VARCHAR(100) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL, CHANGE `wtcmd_contactno` `wtcmd_contactno` VARCHAR(100) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL;

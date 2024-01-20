@@ -1,0 +1,1 @@
+ALTER TABLE `eng_job_requests` ADD `ejr_is_permit_released` INT(11) NOT NULL DEFAULT '0' AFTER `is_online`, ADD `ejr_permit_released_date_time` DATETIME NULL AFTER `ejr_is_permit_released`, ADD `ejr_permit_released_by` INT(11) NOT NULL DEFAULT '0' AFTER `ejr_permit_released_date_time`;

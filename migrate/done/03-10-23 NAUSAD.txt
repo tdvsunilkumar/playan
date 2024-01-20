@@ -1,0 +1,5 @@
+ALTER TABLE ho_inventory_adjustment_details ADD hiad_base_uom integer AFTER hiad_uom;
+ALTER TABLE ho_inventory_adjustment_details ADD hiad_base_qty integer AFTER hiad_base_uom;
+ALTER TABLE ho_inventory_adjustment_details ADD current_uom integer AFTER hiad_base_qty;
+ALTER TABLE ho_inventory_adjustment_details ADD hiad_converted_qty integer AFTER current_uom;
+ALTER TABLE ho_inventory_adjustment_details ADD current_qty integer AFTER current_uom;

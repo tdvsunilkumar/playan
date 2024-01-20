@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <style type="text/css">
+        @page {sheet-size: A4; margin-top: 5mm; margin-bottom: 5mm; margin-left: 5mm; margin-right: 5mm; margin-header: 0mm;margin-footer: 0mm;}
+        @page rotated {
+            size: portrait;
+        }
+        @import url('https://fonts.googleapis.com/css?family=Fjalla+One|Montserrat:400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap');
+        * { margin: 0; padding: 0; }
+        body { font-family: 'Montserrat', sans-serif;font-size: 12px; }
+        p {margin: 0px}
+        table td, table th { border: 1px solid black; padding: 5px; }
+        .page-wrap { width: 800px; margin: 100px auto;}
+        table { border-collapse: collapse; }
+        h2, p, h1{margin: 0px; padding: 0px;}
+    </style>
+    <title>Urinalysis: {{urin_lab_num}}</title>
+</head>
+<body>    
+    <watermarkimage src="{{watermark}}" alpha="0.1" position="55, 40" size="100,100" />
+    <div width="100%" style="text-align:center; border:0px solid black; padding-bottom:10px; padding-top: 0px;">
+        <div style="text-align:right; padding:0px; border:0px solid black; width:80px; float:left; margin-left:150px">
+            <img src="{{logo}}" style="width:80px; height:80px;">
+        </div>
+        <div style="text-align:center; padding:0px; border:0px solid black; margin-left: -230px; width: auto; float: left;">
+            <p style="">REPUBLIC OF THE PHILIPPINES</p>
+            <p style="">PROVINCE OF NUEVA ECIJA</p>
+            <p style="padding-bottom:10px">CITY OF PALAYAN</p>
+            <p><strong>CITY HEALTH OFFICE</strong></p>
+            <p><strong>CLINICAL LABORATORY</strong></p>
+        </div>
+    </div>
+
+    <div style="clear:both"></div>
+
+    <table width="100%">
+        <tr>
+            <td style="padding:0px; width: 8%; border:none;">
+                <strong>Lab. No.</strong>
+            </td>
+            <td style="padding:0px; border:none;">
+                <strong>:</strong>  
+            </td>
+            <td style="padding:0px; width: 41%; text-align: center; border:none; border-bottom:1px solid black;">
+                <strong>{{urin_lab_num}}</strong>
+            </td>
+            <td style="padding:0px; width: 10%; border:none; text-align:right;">
+                <strong>Age / Sex:</strong>
+            </td>
+            <td style="padding:0px; width: 20%; text-align: center; border:none; border-bottom:1px solid black;">
+                <strong>{{age}} / {{gender}}</strong>
+            </td>
+            <td style="padding:0px; width: 6%; border:none; text-align: right;">
+                <strong>Date:</strong>
+            </td>
+            <td style="padding:0px; width: 22%; text-align: center; border:none; border-bottom:1px solid black;">
+                <strong>{{date}}</strong>
+            </td>
+        </tr>
+    </table>
+
+    <table width="100%">
+        <tr>
+            <td style="padding:0px; width: 8%; border:none;">
+                <strong>Name</strong>
+            </td>
+            <td style="padding:0px; border:none;">
+                <strong>:</strong>  
+            </td>
+            <td style="padding:0px; width: 41%; text-align: center; border:none; border-bottom:1px solid black;">
+                <strong>{{name}}</strong>
+            </td>
+            <td style="padding:0px; width: 20.1%; border:none; text-align:right;">
+                <strong>Requesting Physician:</strong>
+            </td>
+            <td style="padding:0px; width: 38.9%; text-align: center; border:none; border-bottom:1px solid black;">
+                <strong>{{physician}}</strong>
+            </td>
+        </tr>
+    </table>
+
+    <div style="margin-top:5px; text-align:center;">
+        <h2>URINALYSIS</h2>
+    </div>
+
+    <div style="clear:both"></div>
+
+    <div style="width:47%; float:left;">
+        <table style="width: 100%; font-size:13px;">
+            <tr>
+                <td colspan="3" style="width: 100%; border:none; padding:0px;">
+                    <strong>MACROSCOPIC</strong>
+                </td>
+            </tr>
+            <tr>
+                <td style="width: 40%; border:none; padding:0px;">Color</td>
+                <td style="border:none; padding:0px;">:</td>
+                <td style="width: 59%; border:none; padding:0px; padding-top:4px; border-bottom: 1px solid black; text-align: center;"><strong>{{urin_color}}</strong></td>
+            </tr>
+            <tr>
+                <td style="width: 40%; border:none; padding:0px;">Appearance</td>
+                <td style="border:none; padding:0px;">:</td>
+                <td style="width: 59%; border:none; padding:0px; padding-top:4px; border-bottom: 1px solid black; text-align: center;"><strong>{{urin_appearance}}</strong></td>
+            </tr>
+            <tr>
+                <td colspan="3" style="width: 100%; border:none; padding:0px;">
+                    <strong>CHEMICAL</strong>
+                </td>
+            </tr>
+            <tr>
+                <td style="width: 40%; border:none; padding:0px;">Leukocytes</td>
+                <td style="border:none; padding:0px;">:</td>
+                <td style="width: 59%; border:none; padding:0px; padding-top:4px; border-bottom: 1px solid black; text-align: center;"><strong>{{urin_leukocytes}}</strong></td>
+            </tr>
+            <tr>
+                <td style="width: 40%; border:none; padding:0px;">Nitrite</td>
+                <td style="border:none; padding:0px;">:</td>
+                <td style="width: 59%; border:none; padding:0px; padding-top:4px; border-bottom: 1px solid black; text-align: center;"><strong>{{urin_nitrite}}</strong></td>
+            </tr>
+            <tr>
+                <td style="width: 40%; border:none; padding:0px;">Urobilinogen</td>
+                <td style="border:none; padding:0px;">:</td>
+                <td style="width: 59%; border:none; padding:0px; padding-top:4px; border-bottom: 1px solid black; text-align: center;"><strong>{{urin_urobilinogen}}</strong></td>
+            </tr>
+            <tr>
+                <td style="width: 40%; border:none; padding:0px;">Protein</td>
+                <td style="border:none; padding:0px;">:</td>
+                <td style="width: 59%; border:none; padding:0px; padding-top:4px; border-bottom: 1px solid black; text-align: center;"><strong>{{urin_protein}}</strong></td>
+            </tr>
+            <tr>
+                <td style="width: 40%; border:none; padding:0px;">Reaction</td>
+                <td style="border:none; padding:0px;">:</td>
+                <td style="width: 59%; border:none; padding:0px; padding-top:4px; border-bottom: 1px solid black; text-align: center;"><strong>{{urin_reaction}}</strong></td>
+            </tr>
+            <tr>
+                <td style="width: 40%; border:none; padding:0px;">Blood</td>
+                <td style="border:none; padding:0px;">:</td>
+                <td style="width: 59%; border:none; padding:0px; padding-top:4px; border-bottom: 1px solid black; text-align: center;"><strong>{{urin_blood}}</strong></td>
+            </tr>
+            <tr>
+                <td style="width: 40%; border:none; padding:0px;">Specific Gravity</td>
+                <td style="border:none; padding:0px;">:</td>
+                <td style="width: 59%; border:none; padding:0px; padding-top:4px; border-bottom: 1px solid black; text-align: center;"><strong>{{urin_sg}}</strong></td>
+            </tr>
+            <tr>
+                <td style="width: 40%; border:none; padding:0px;">Ketones</td>
+                <td style="border:none; padding:0px;">:</td>
+                <td style="width: 59%; border:none; padding:0px; padding-top:4px; border-bottom: 1px solid black; text-align: center;"><strong>{{urin_ketones}}</strong></td>
+            </tr>
+            <tr>
+                <td style="width: 40%; border:none; padding:0px;">Bilirubin</td>
+                <td style="border:none; padding:0px;">:</td>
+                <td style="width: 59%; border:none; padding:0px; padding-top:4px; border-bottom: 1px solid black; text-align: center;"><strong>{{urin_bilirubin}}</strong></td>
+            </tr>
+            <tr>
+                <td style="width: 40%; border:none; padding:0px;">Glucose</td>
+                <td style="border:none; padding:0px;">:</td>
+                <td style="width: 59%; border:none; padding:0px; padding-top:4px; border-bottom: 1px solid black; text-align: center;"><strong>{{urin_glucose}}</strong></td>
+            </tr>
+        </table>
+    </div>
+
+    <div style="width:6%; float:left;">
+        &nbsp;
+    </div>
+
+    <div style="width:47%; float:left;">
+        <table style="width: 100%; font-size:13px;">
+            <tr>
+                <td colspan="3" style="width: 100%; border:none; padding:0px;">
+                    <strong>MICROSCOPIC</strong>
+                </td>
+            </tr>
+            <tr>
+                <td style="width: 40%; border:none; padding:0px;">Red Blood Cells</td>
+                <td style="border:none; padding:0px;">:</td>
+                <td style="width: 59%; border:none; padding:0px; padding-top:4px; border-bottom: 1px solid black; text-align: center;"><strong>{{urin_rbc}}</strong> /HPF</td>
+            </tr>
+            <tr>
+                <td style="width: 40%; border:none; padding:0px;">Pus Cells</td>
+                <td style="border:none; padding:0px;">:</td>
+                <td style="width: 59%; border:none; padding:0px; padding-top:4px; border-bottom: 1px solid black; text-align: center;"><strong>{{urin_pc}}</strong> /HPF</td>
+            </tr>
+            <tr>
+                <td style="width: 40%; border:none; padding:0px;">Bacteria</td>
+                <td style="border:none; padding:0px;">:</td>
+                <td style="width: 59%; border:none; padding:0px; padding-top:4px; border-bottom: 1px solid black; text-align: center;"><strong>{{urin_bac}}</strong> /HPF</td>
+            </tr>
+            <tr>
+                <td style="width: 40%; border:none; padding:0px;">Yeast Cell</td>
+                <td style="border:none; padding:0px;">:</td>
+                <td style="width: 59%; border:none; padding:0px; padding-top:4px; border-bottom: 1px solid black; text-align: center;"><strong>{{urin_yc}}</strong></td>
+            </tr>
+            <tr>
+                <td style="width: 40%; border:none; padding:0px;">Epithelial Cells</td>
+                <td style="border:none; padding:0px;">:</td>
+                <td style="width: 59%; border:none; padding:0px; padding-top:4px; border-bottom: 1px solid black; text-align: center;"><strong>{{urin_ec}}</strong></td>
+            </tr>
+            <tr>
+                <td style="width: 40%; border:none; padding:0px;">Mucus Threads</td>
+                <td style="border:none; padding:0px;">:</td>
+                <td style="width: 59%; border:none; padding:0px; padding-top:4px; border-bottom: 1px solid black; text-align: center;"><strong>{{urin_mt}}</strong></td>
+            </tr>
+            <tr>
+                <td colspan="3" style="width: 100%; border:none; padding:0px;">
+                    <strong>CRYSTAL</strong>
+                </td>
+            </tr>
+        </table>
+        <table style="width: 100%; font-size:13px;">
+            <tr>
+                <td colspan="3" style="width:53%; border:none; padding:0px;">Amorphous Urates/Phosphate:</td>
+                
+                <td style="width: 47%; border:none; padding:0px; padding-top:4px; border-bottom: 1px solid black; text-align: center;"><strong>{{urin_aup}}</strong></td>
+            </tr>
+        </table>
+        <table style="width: 100%; font-size:13px;">
+            <tr>
+                <td style="width: 40%; border:none; padding:0px;">OTHERS</td>
+                <td style="border:none; padding:0px;">:</td>
+                <td style="width: 59%; border:none; padding:0px; padding-top:4px; border-bottom: 1px solid black; text-align: center;"><strong>{{urin_others1}}</strong></td>
+            </tr>
+            <tr>
+                <td style="width: 40%; border:none; padding:0px;">&nbsp;</td>
+                <td style="border:none; padding:0px;">&nbsp;</td>
+                <td style="width: 59%; border:none; padding:0px; padding-top:4px; border-bottom: 1px solid black; text-align: center;"><strong>&nbsp;</strong></td>
+            </tr>
+            <tr>
+                <td style="width: 40%; border:none; padding:0px;"><strong>Cast/s</strong></td>
+                <td style="border:none; padding:0px;">:</td>
+                <td style="width: 59%; border:none; padding:0px; padding-top:4px; border-bottom: 1px solid black; text-align: center;"><strong>{{urin_cast}}</strong></td>
+            </tr>
+            <tr>
+                <td style="width: 40%; border:none; padding:0px;">&nbsp;</td>
+                <td style="border:none; padding:0px;">&nbsp;</td>
+                <td style="width: 59%; border:none; padding:0px; padding-top:4px; border-bottom: 1px solid black; text-align: center;"><strong>&nbsp;</strong></td>
+            </tr>
+            <tr>
+                <td style="width: 40%; border:none; padding:0px;"><strong>Others</strong></td>
+                <td style="border:none; padding:0px;">:</td>
+                <td style="width: 59%; border:none; padding:0px; padding-top:4px; border-bottom: 1px solid black; text-align: center;"><strong>{{urin_others2}}</strong></td>
+            </tr>
+        </table>
+    </div>
+
+    <table style="width:100%">
+        <tr>
+            <td style="width: 20%; padding:0px; border:none; padding-top:5px;">REMARKS: </td>
+            <td style="width:80%; padding:0px; border:none; border-bottom:solid 1px black; padding-top:5px;">{{urin_remarks}}</td>
+        </tr>
+    </table>
+
+    <div style="width: 100%; float:left; margin-top:61px;">
+        <div style="width:50%; float:left;">
+            <div style="width:300px;">
+                <p style="border-bottom: solid 1px black; font-weight: bold; text-align: center; padding-left:20px padding-right:20px;">
+                    <strong>&nbsp;{{medical_tech}}</strong>
+                </p>
+                <p style="text-align:center;">
+                    {{med_tech_position}}
+                </p>
+            </div>
+        </div>
+
+        <div style="width:50%; float:left; text-align:right;">
+            <div style="width:300px; float: right;">
+                <p style="border-bottom: solid 1px black; font-weight: bold; text-align: center; padding-left:20px padding-right:20px;">
+                    <strong>{{officer}}</strong>
+                </p>
+                <p style="text-align:center;">
+                    {{officer_position}}
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+

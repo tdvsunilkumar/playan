@@ -1,0 +1,2 @@
+CREATE TABLE welfare_tcm_service (id int PRIMARY KEY AUTO_INCREMENT, wts_service_name varchar(255) NOT NULL, tfoc_id int, top_transaction_type_id int NOT NULL, wts_service_fee DECIMAL(14,2) NOT NULL, wts_is_active int, created_by int, created_at DATETIME, updated_by int, updated_at DATETIME);
+INSERT INTO welfare_tcm_service (`wts_service_name`,`top_transaction_type_id`,`wts_service_fee`,`wts_is_active`) VALUES ('Travel Clearance to Minor',35,'500.00',1);

@@ -1,0 +1,1 @@
+ALTER TABLE `cpdo_application_forms` CHANGE `caf_excempted` `caf_excempted` INT(11) NULL DEFAULT '0' COMMENT 'Excemption?';

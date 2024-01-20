@@ -1,0 +1,1 @@
+ALTER TABLE `bplo_business_type` ADD `is_individual` INT(11) NOT NULL DEFAULT '0' AFTER `btype_desc`;

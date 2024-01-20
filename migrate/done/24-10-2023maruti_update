@@ -1,0 +1,1 @@
+ALTER TABLE `rpt_property_subclassifications` ADD `is_td_display` INT(1) NOT NULL DEFAULT '0' AFTER `ps_is_active`;

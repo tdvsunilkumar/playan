@@ -1,0 +1,2 @@
+ALTER TABLE `bplo_business_permit_issuance` CHANGE `bpi_no` `bpi_no` VARCHAR(11) NOT NULL DEFAULT '0';
+ALTER TABLE `bplo_business_permit_issuance` CHANGE `bpi_permit_no` `bpi_permit_no` VARCHAR(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL;

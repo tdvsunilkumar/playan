@@ -1,0 +1,3 @@
+ALTER TABLE `cpdo_inspection_reports` CHANGE `cir_long` `cir_long` VARCHAR(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL COMMENT 'Long', CHANGE `cir_lat` `cir_lat` VARCHAR(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL COMMENT 'Lat';
+
+ALTER TABLE `cpdo_development_inspection_reports` CHANGE `cir_long` `cir_long` VARCHAR(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL COMMENT 'Long', CHANGE `cir_lat` `cir_lat` VARCHAR(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL COMMENT 'Lat';

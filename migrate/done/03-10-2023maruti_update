@@ -1,0 +1,1 @@
+ALTER TABLE `cto_receivables` ADD `top_transaction_type_id` INT(11) NULL AFTER `application_id`;

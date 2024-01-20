@@ -1,0 +1,1 @@
+ALTER TABLE `hr_income_and_deduction` CHANGE `hriad_approved_by` `hriad_approved_by` INT(11) NULL COMMENT 'ref-Table: hr_employees.id', CHANGE `hriad_approved_date` `hriad_approved_date` DATE NULL COMMENT 'Approved Date';

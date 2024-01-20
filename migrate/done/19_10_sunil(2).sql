@@ -1,0 +1,1 @@
+ALTER TABLE `cto_receivables` ADD `ars_category` TINYINT(4) NOT NULL COMMENT 'Ref-Table: cto_accounts_receivable_setup.ars_category... 1=basic tax, 2=special education tax, 3=socialize housing tax' AFTER `application_id`;

@@ -1,0 +1,1 @@
+ALTER TABLE `ho_lab_fees` ADD COLUMN IF NOT EXISTS `hlf_is_free` int DEFAULT 0 AFTER `hlf_service_name`;

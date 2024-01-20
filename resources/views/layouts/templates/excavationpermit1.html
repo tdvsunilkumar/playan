@@ -1,0 +1,291 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <style type="text/css">
+      @import url('https://fonts.googleapis.com/css?family=Fjalla+One|Montserrat:400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap');
+* { margin: 0; padding: 0; }
+body { font-family: 'Montserrat', sans-serif;font-size: 14px; }
+table td, table th { border: 1px solid black; padding: 5px; }
+.page-wrap { width: 800px; margin: 100px auto;}
+
+textarea { border: 0; font-size: 14px; font-family: 'Montserrat', sans-serif;overflow: hidden; resize: none; }
+table { border-collapse: collapse; }
+
+
+/*#header { height: 15px; width: 100%; margin: 20px 0; background: #222; text-align: center; color: white; font: bold 15px 'Montserrat', sans-serif text-decoration: uppercase; letter-spacing: 20px; padding: 8px 0px; }*/
+.header{margin: 20px 0;text-align: left;font-size: 45px;font-weight: 700; font-family: 'Fjalla One', sans-serif; text-decoration: uppercase;
+    letter-spacing: 1px;padding: 8px 0px;color:#1f4888;}
+.company-name {font-size: 20px;font-weight: 600;}
+
+#address { width: 250px; height: 150px; float: left;font-weight: 500; }
+/*#customer { overflow: hidden; }*/
+.company-address {font-size: 15px;color: #1f4888 !important;height: 115px !important;}
+.chklabel{margin-bottom: 5px; margin-left:5px !important;}
+#logo { text-align: right; float: right; position:}
+/*#logo:hover, #logo.edit { border: 1px solid #000; margin-top: 0px; max-height: 125px; }*/
+#logoctr { display: none; }
+
+#logohelp { text-align: left; display: none; font-style: italic; padding: 10px 5px;}
+#logohelp input { margin-bottom: 5px; }
+.edit #logohelp { display: block; }
+.edit #save-logo, .edit #cancel-logo { display: inline; }
+.edit #image, #save-logo, #cancel-logo, .edit #change-logo, .edit #delete-logo { display: none; }
+#customer-title { font-size: 20px; font-weight: bold; float: left;color: #1f4888; }
+
+#meta { margin-top: 1px; width: 300px; float: right; }
+#meta td { text-align: right;  }
+td,p{padding:1px;}
+#meta td.meta-head { text-align: left; background: #eee;font-weight: 500; }
+#meta td textarea { width: 100%; height: 20px; text-align: right; }
+textarea:hover, textarea:focus, #items td.total-value textarea:hover, #items td.total-value textarea:focus, .delete:hover { background-color:#EEFF88; }
+.pull-right{text-align: right;}
+.delete-wpr { position: relative; }
+.delete { display: block; color: #000; text-decoration: none; position: absolute; background: #EEEEEE; font-weight: bold; padding: 0px 3px; border: 1px solid; top: -6px; left: -22px; font-family: Verdana; font-size: 12px; }
+.footer-contain {text-align: center;font-size: 35px; font-weight: 700;color: #1f4888;}
+.font_change{white-space: pre !important;font-size: 12px;margin-left: 10px;}
+.textborder{border:1px solid black;}
+    </style>
+
+    <title>BPLO Clearance</title>
+  </head>
+<body>
+<table style='width:1000px;'>
+  <tr>
+    <td style="border: 1px solid black;">
+        <table width="100%" id="summary" class="noborder">
+                <tr>
+                  <td width="80%" style="text-align:center;border:0px solid black;"><p style="font-size: 15px; font-weight: 600; text-transform: uppercase;">CITY OF PALAYAN</p><p style="font-size: 15px; text-transform: uppercase;">OFFICE OF THE BUILDING OFFICIAL</p>
+                    <p style="font-size: 15px; text-transform: uppercase;">CITY / MUNCIPALITY<span class="textborder">{{MUNCIPALITY}}</span></p> </td>
+                </tr>
+        </table>
+         <table width="100%" id="summary" class="noborder">
+                  <tr><td colspan="3" style="text-align:center; border:0px solid black;font-size: 17px;text-transform: uppercase;">Excavation Permit</td></tr>
+                   <tr>
+                    <td  width="33%%" style="text-align:center; border:0px solid black;font-size: 17px;">
+                    <p style="font-weight: 500;">Application  No: {{appno}} </p>
+                    </td>
+                     <td  width="34%%" style="text-align:center; border:0px solid black;font-size: 17px;">
+                      <p style="font-weight: 500;">ELP No: {{permitno}} </p>
+                    </td>
+                    <td  width="33%" style="text-align:center; border:0px solid black;font-size: 17px;">
+                      <p style="font-weight: 500;">Permit No: {{permitno}} </p>
+                    </td>
+                  </tr>
+        </table>
+        <table width="100%" id="summary" style="border:1px solid black;">
+             <tr>
+                  <td colspan="3" style="text-align:left;border:0px solid black; padding-right:30px;">
+                   <p style="font-size: 12px;font-weight: 600;">OWNER</p></td>
+                   
+             </tr>
+            <tr>
+                  <td style="text-align:right;border:0px solid black; padding-right:30px;">
+                   <p style="font-size: 16px;font-weight: 500;">Last Name:&nbsp; {{lastname}} </p></td>
+                   <td style="text-align:right;border:0px solid black; padding-right:30px;">
+                   <p style="font-size: 16px;font-weight: 500;">First Name: &nbsp; {{firstname}} </p></td>
+                   <td style="text-align:right;border:0px solid black; padding-right:30px;">
+                   <p style="font-size: 16px;font-weight: 500;">MI: &nbsp; {{middlename}} </p></td>
+                   <td style="text-align:right;border:0px solid black; padding-right:30px;">
+                   <p style="font-size: 16px;font-weight: 500;">TAX ACCT NO: {{acctno}} </p></td>
+             </tr>
+             <tr>
+                  <td colspan="3" style="text-align:left;border:0px solid black; padding-right:30px;">
+                   <p style="font-size: 12px;font-weight: 600;">FOR CONSTRUCTION OWNED BY AN ENTERPRIZE</p></td>
+                   
+             </tr>
+             <tr>
+                  <td colspan="2" style="text-align:right;border:0px solid black; padding-right:30px;">
+                   <p style="font-size: 16px;font-weight: 500;">FORM OF OWNERSHIP: {{formogowner}} </p></td>
+                   <td colspan="2" style="text-align:right;border:0px solid black; padding-right:30px;">
+                   <p style="font-size: 16px;font-weight: 500;">Use Or Character Occupancy:</p></td>
+             </tr>
+              <tr>
+                  <td colspan="3" style="text-align:left;border:0px solid black; padding-right:30px;">
+                   <p style="font-size: 16px;font-weight: 500;">Address</p></td>
+             </tr>
+             <tr>
+                  <td colspan="3" style="text-align:left;border:0px solid black; padding-right:30px;">
+                   <p style="font-size: 16px;font-weight: 500;">Location Of Construction: {{location}} </p></td>
+             </tr>
+        </table>
+         <table width="100%" id="summary" style="border:1px solid black;">
+            <tr>
+              <td  colspan="2" style="text-align:left;border:0px solid black; padding-right:30px;"><p style="font-size: 16px;font-weight: 500;">SCOPE OF WORK:</p></td>
+            </tr>
+            <tr>
+                  <td width="33%" style="text-align:left;border:0px solid black; padding-right:30px;">
+                   {{scopeofwork}}</td>
+                   <td width="33%" style="text-align:left;border:0px solid black; padding-right:30px;">
+                     <p style="font-size: 16px;font-weight: 500;">RENEVATION <span class="textborder"> {{MUNCIPALITY}} </span></p>
+                     <p style="font-size: 16px;font-weight: 500;">REPAIR<span class="textborder"> {{MUNCIPALITY}} </span></p>
+                    
+                   <p style="font-size: 16px;font-weight: 500;"> </td>
+                    <td width="33%" style="text-align:left;border:0px solid black; padding-right:30px;">
+                   <p style="font-size: 16px;font-weight: 500;"><input type="checkbox">Other Specify</p>
+                   <p style="font-size: 16px;font-weight: 500;"><span class="textborder"> {{textb}} </span></p>
+                    
+                 </td>
+                   
+             </tr>
+         </table>
+         <table width="100%" id="summary" style="border:1px solid black;">
+             <tr>
+              <td  colspan="2" style="text-align:left;border:0px solid black; padding-right:30px;"><p style="font-size: 16px;font-weight: 500;">INSTALLATION AND OPERATION OF</p></td>
+            </tr>
+              <tr>
+                  <td   style="text-align:left;border:0px solid black; padding-right:30px;">
+                    <p><input type="checkbox">Light</p>
+                   </td>
+                   <td  style="text-align:left;border:0px solid black; padding-right:30px;">
+                    <p><input type="checkbox">Switches</p>
+                  </td>
+                   <td  style="text-align:left;border:0px solid black; padding-right:30px;">
+                    <p><input type="checkbox">Conv Outlets</p>
+                  </td>
+             </tr>
+              <tr>
+                  <td   style="text-align:left;border:0px solid black; padding-right:30px;">
+                    <p><input type="checkbox">Bell System</p>
+                   </td>
+                   <td  style="text-align:left;border:0px solid black; padding-right:30px;">
+                    <p><input type="checkbox">Electic Range</p>
+                  </td>
+                   <td  style="text-align:left;border:0px solid black; padding-right:30px;">
+                    <p><input type="checkbox">Water Heater</p>
+                  </td>
+             </tr>
+             <tr>
+                  <td   style="text-align:left;border:0px solid black; padding-right:30px;">
+                    <p><input type="checkbox">Air Conditinal System</p>
+                   </td>
+                   <td  style="text-align:left;border:0px solid black; padding-right:30px;">
+                    <p><input type="checkbox">Telephone</p>
+                  </td>
+                   <td  style="text-align:left;border:0px solid black; padding-right:30px;">
+                    <p><input type="checkbox">Motors</p>
+                  </td>
+             </tr>
+             <tr>
+                  <td   style="text-align:left;border:0px solid black; padding-right:30px;">
+                    <p><input type="checkbox">Others</p>
+                   </td>
+                   <td  style="text-align:left;border:0px solid black; padding-right:30px;">
+                  </td>
+                    <td  style="text-align:left;border:0px solid black; padding-right:30px;">
+                  </td>
+             </tr>
+        </table>
+         <table width="100%" id="summary" style="border:1px solid black;">
+              <tr>
+                  <td width="50%" style="text-align:left;border:0px solid black; padding-right:30px;">
+                   <p style="font-size: 12px;font-weight: 600;">DESIGN PROFESSION /MECHANICAL ENGINEER</p></td>
+                   <td width="50%" style="text-align:left;border:0px solid black; padding-right:30px;">
+                   <p style="font-size: 12px;font-weight: 600;">WITH</p></td>
+             </tr>
+              <tr>
+                  <td  width="50%" style="text-align:left;border:0px solid black; padding-right:0px;">
+                     <table width="100%" id="summary" style="border:1px solid black;">
+                      <tr>
+                        <td colspan="2" style="text-align:center;border:0px solid black; padding-right:30px;"><span class="textborder"> {{signfullname}} </span><br>
+                          <p>Professional Mexhanical Enginner</p></td>
+                      </tr>
+                      <tr>
+                        <td colspan="2" style="text-align:left;border:0px solid black; padding-right:30px;">Address <span class="textborder"> {{signaddress}} </span></td>
+                      </tr>
+                      <tr>
+                        <td  style="text-align:left;border:0px solid black; padding-right:30px;">PRC NO<span class="textborder">{{signprcno}} </span></td>
+                        <td  style="text-align:left;border:0px solid black; padding-right:30px;">Validity<span class="textborder">{{signvalidity}} </span></td>
+                      </tr>
+                      <tr>
+                        <td style="text-align:left;border:0px solid black; padding-right:30px;">PTR NO<span class="textborder">{{signptr}} </span></td>
+                        <td style="text-align:left;border:0px solid black; padding-right:30px;">Date Issued <span class="textborder">{{signdateissued}} </span></td> 
+                      </tr>
+                      <tr> 
+                        <td style="text-align:left;border:0px solid black; padding-right:30px;">Issued At<span class="textborder">{{signplaceissued}} </span></td> 
+                        <td style="text-align:left;border:0px solid black; padding-right:30px;">TIN<span class="textborder">{{signtin}} </span></td>    
+                      </tr>
+                     </table>
+                   </td>
+                   <td width="50%" style="text-align:left;border:0px solid black; padding-right:0px;">
+                     <table width="100%" id="summary" style="border:1px solid black;">
+                      <tr>
+                        <td colspan="2" style="text-align:center;border:0px solid black; padding-right:30px;"><span class="textborder"> {{inchargefullname}} </span><br>
+                          <p>Professional Mexhanical Enginner</p></td>
+                      </tr>
+                      <tr>
+                        <td colspan="2" style="text-align:left;border:0px solid black; padding-right:30px;">Address <span class="textborder"> {{inchargeaddress}} </span></td>
+                      </tr>
+                      <tr>
+                        <td  style="text-align:left;border:0px solid black; padding-right:30px;">PRC NO<span class="textborder">{{inchargeprcno}} </span></td>
+                        <td  style="text-align:left;border:0px solid black; padding-right:30px;">Validity<span class="textborder">{{inchargevalidity}} </span></td>
+                      </tr>
+                      <tr>
+                        <td style="text-align:left;border:0px solid black; padding-right:30px;">PTR NO<span class="textborder">{{inchargeptrno}} </span></td>
+                        <td style="text-align:left;border:0px solid black; padding-right:30px;">Date Issued <span class="textborder">{{inchargedateissued}} </span></td> 
+                      </tr>
+                      <tr> 
+                        <td style="text-align:left;border:0px solid black; padding-right:30px;">Issued At<span class="textborder">{{inchargeplaceissued}} </span></td> 
+                        <td style="text-align:left;border:0px solid black; padding-right:30px;">TIN<span class="textborder">{{inchargetin}} </span></td>    
+                      </tr>
+                     </table>
+                  </td>
+             </tr>
+        </table>
+         <table width="100%" id="summary" style="border:0px solid black;">
+             <tr>
+                  <td width="50%" style="text-align:left;border:0px solid black; padding-right:0px;">
+                   <p style="font-size: 12px;font-weight: 600;">BUILDING OWNER</p></td>
+                   <td width="50%" style="text-align:left;border:0px solid black; padding-right:0px;">
+                   <p style="font-size: 12px;font-weight: 600;">WITH MY CONSENT: LOT OWNER</p></td>
+             </tr>
+              <tr>
+                  <td  width="50%" style="text-align:left;border:0px solid black; padding-right:0px;">
+                     <table width="100%" id="summary" style="border:1px solid black;">
+                      <tr>
+                        <td colspan="3" style="text-align:center;border:0px solid black; padding-right:30px;"><span class="textborder"> {{MUNCIPALITY}} </span></td>
+                      </tr>
+                       <tr>
+                        <td colspan="3" style="text-align:center;border:0px solid black; padding-right:30px;">Building Owner Name</td>
+                      </tr>
+                      <tr>
+                        <td colspan="3" style="text-align:left;border:0px solid black; padding-right:30px;">Address <span class="textborder"> {{MUNCIPALITY}} </span></td>
+                      </tr>
+                      <tr>
+                        <td  style="text-align:left;border:0px solid black; padding-right:30px;">CTC NO <span class="textborder"> {{MUNCIPALITY}} </td>
+                        <td style="text-align:left;border:0px solid black; padding-right:30px;">Date Issued <span class="textborder"> {{MUNCIPALITY}} </td>
+                       <td style="text-align:left;border:0px solid black; padding-right:30px;">Place Issued <span class="textborder"> {{MUNCIPALITY}} </td>   
+                      </tr>
+                     </table>
+                   </td>
+                   <td width="50%" style="text-align:left;border:0px solid black; padding-right:0px;">
+                     <table width="100%" id="summary" style="border:1px solid black;">
+                      <tr>
+                        <td colspan="3" style="text-align:center;border:0px solid black; padding-right:30px;"><span class="textborder"> {{MUNCIPALITY}} </span></td>
+                      </tr>
+                       <tr>
+                        <td colspan="3" style="text-align:center;border:0px solid black; padding-right:30px;">Building Owner Name</td>
+                      </tr>
+                      <tr>
+                        <td colspan="3" style="text-align:left;border:0px solid black; padding-right:30px;">Address <span class="textborder"> {{MUNCIPALITY}} </span></td>
+                      </tr>
+                        <tr>
+                        <td  style="text-align:left;border:0px solid black; padding-right:30px;">CTC NO <span class="textborder"> {{MUNCIPALITY}} </td>
+                        <td style="text-align:left;border:0px solid black; padding-right:30px;">Date Issued <span class="textborder"> {{MUNCIPALITY}} </td>
+                       <td style="text-align:left;border:0px solid black; padding-right:30px;">Place Issued <span class="textborder"> {{MUNCIPALITY}} </td>   
+                      </tr>
+                     </table>
+                  </td>
+             </tr>
+        </table>
+    </td>
+  </tr>
+</table>
+</body>
+</html>
+
+
+

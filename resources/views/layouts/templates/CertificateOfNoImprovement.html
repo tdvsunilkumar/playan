@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <style type="text/css">
+        @page {sheet-size: A4; margin-top: 15mm; margin-bottom: 15mm; margin-left: 20mm; margin-right: 20mm; margin-header: 0mm;margin-footer: 0mm;}
+        @page rotated {
+            size: landscape;
+        }
+        @import url('https://fonts.googleapis.com/css?family=Fjalla+One|Montserrat:400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap');
+        * { margin: 0; padding: 0; }
+        body { font-family: 'Montserrat', sans-serif;font-size: 14px; }
+        p {margin: 0px}
+        table td, table th { border: 1px solid black; padding: 5px; }
+        .page-wrap { width: 800px; margin: 100px auto;}
+        table { border-collapse: collapse; }
+        h2, p, h1{margin: 0px; padding: 0px;}
+    </style>
+    <title>Certificate of No Improvement</title>
+</head>
+<body>    
+    <watermarkimage src="{{backgroundlogo}}" alpha="0.08" position="auto" size="150,150" />
+
+    <div style="border-bottom:2px solid black; padding-bottom:10px; width:100%; text-align:center;">
+        <div style="width:350px; margin-left: 150px;">
+            <div style="width:90px; float: left;">
+                <img src="{{LOGO}}" style="width:90px; height:90px;">
+            </div>
+            <div style="text-align:center; width: 250px; float: left;">
+                <p style="padding-top: 10px;">Republic of the Philippines</p>
+                <p style=""><strong>CITY OF PALAYAN</strong></p>
+                <p style="">PROVINCE OF NUEVA ECIJA</p>
+                <p style="font-size:14px; margin-top:5px;"><strong>OFFICE OF THE CITY ASSESSOR</strong></p>
+            </div>
+        </div>
+    </div>
+
+    <div style="clear:both"></div>
+
+    <div style="margin-top:100px; text-align:center;">
+        <span style="border-bottom:solid 1px #000; float:left; width: auto; font-size:18px; font-weight: bold;">CERTIFICATION OF NO IMPROVEMENT</span>
+    </div>
+
+    <div style="clear:both"></div>
+
+    <div style="width:100%; float:left;">
+        <div style="width: 100%; float: left; margin-left:0px; margin-top: 30px;">
+            <p style="font-size: 14px; font-style: italic;">TO WHOM IT MAY CONCERN:</p>
+        </div>
+
+        <div style="float: left; font-size: 14px; margin-left:70px; margin-top: 20px; line-height: 25px;">
+            <p style="word-spacing: 10px;">This is to certify that according to the records of this Office, Lot No.</p>
+        </div>
+
+        <div style="float: left; font-size: 14px;">
+            <div style="border-bottom: 1px solid black; text-align:center; width:530px; float:left;">{{rp_cadastral_lot_no}}</div>
+            <div style="width:90px; float:left; margin-left: 40px;">Located at</div>
+            <div style="width:60px; float:left; margin-top:5px;">barangay</div>
+            <div style="border-bottom: 1px solid black; text-align:center; width:100px; float:left;">{{brgy_name}}</div>
+            <div style="width:320px; float:left; margin-top:5px; word-spacing: 10px;">, Palayan City, declared under ARP No.</div>
+            <div style="border-bottom: 1px solid black; text-align:center; width:150px; float:left;">{{rp_tax_declaration_no}}</div>
+        </div>
+
+        <div style="clear:both;"></div>
+
+        <div style="float: left; font-size: 14px; margin-top: 30px; width: 100%;">
+            <div style="float: left; width:80px; word-spacing:5px;">the name</div>
+            <div style="border-bottom: 1px solid black; text-align:center; width: 562px; float:left;">{{ownerName}}</div>
+            <div style="float: left; word-spacing:5px; margin-top: 5px;">has no improvement found thereon.</div>
+        </div>
+
+        <div style="float: left; font-size: 14px; margin-top: 30px; width: 100%;">
+            <div style="float: left; width:200px; word-spacing:5px; margin-left:70px;">Issued upon the request of</div>
+            <div style="border-bottom: 1px solid black; text-align:center; width: 372px; float:left;">{{requestor}}</div>
+            <div style="float: left; word-spacing:5px; margin-top: 5px;">for whatever legal pupose it may serve.</div>
+        </div>
+
+        <div style="float: left; font-size: 14px; width: 100%; margin-top:25px;">
+            <div style="float: left; width:75px; margin-left: 70px; word-spacing:5px;">Issued this</div>
+            <div style="border-bottom: 1px solid black; text-align:center; width: 50px; float:left;">{{rpc_or_dateformatted_date}}</div>
+            <div style="float: left; width:45px; word-spacing:5px;">day of</div>
+            <div style="border-bottom: 1px solid black; text-align:center; width: 170px; float:left;">{{formatted_dateMont}}</div>
+            <div style="float: left; width:200px; word-spacing:5px;">hereat Palayan City.</div>
+        </div>
+
+        <div style="width: 100%; float:left; margin-top: 70px;">
+            <div style="width: 50%; float: left;">
+                <p style="font-size: 13px;">Verified by:</p>
+            </div>
+            <div style="width: 50%; float: left;">
+                <p style="font-size: 13px;">Approved by:</p>
+            </div>
+        </div>
+    </div>
+    <div style="width: 100%; float:left; margin-top: 50px;">
+        <div style="width:50%; float:left; text-align:center;">
+            <div style="width: 70%; margin-left:20%;">
+                <p style="text-align: center; border-bottom:1px solid black;">
+                    {{assessor}}
+                </p>
+                <p style="text-align:center; font-style:italic;">
+                    <small>{{assessordescription}}</small>
+                </p>
+            </div>
+        </div>
+        <div style="width:50%; float:left; text-align:right;">
+            <div style="width: 70%; margin-left:20%;">
+                <p style="text-align: center; border-bottom:1px solid black;">
+                    {{certifiedby}}
+                </p>
+                <p style="text-align:center;">
+                    <small>{{certifiedbydescription}}</small>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div style="clear:both;"></div>
+
+    <div style="float: left; font-size: 13px; line-height: 22px; width: 80px; text-align:right; padding-right:10px; margin-top:50px;">
+        <p>O.R. No.:</p>
+        <p>Dated:</p>
+        <p>Amount:</p>
+    </div>
+
+    <div style="float: left; font-size: 13px; width: 100px; line-height: 20px; text-align:center;">
+        <p style="font-weight: bold; border-bottom: 1px solid black;">{{rpc_or_no}}<p>
+        <p style="font-weight: bold; border-bottom: 1px solid black;">{{rpc_or_date}}</p>
+        <p style="font-weight: bold; border-bottom: 1px solid black; text-align:right;">{{rpc_or_amount}}</p>
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+

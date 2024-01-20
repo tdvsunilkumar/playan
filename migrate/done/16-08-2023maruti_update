@@ -1,0 +1,3 @@
+ALTER TABLE `cpdo_development_permits` ADD `cs_id` INT(11) NOT NULL COMMENT 'ref-Table : cpdo_status.id default = 1' AFTER `sl_id`, ADD `csd_id` INT(11) NOT NULL COMMENT 'ref-Table : cpdo_status_details.csd_id default = 1' AFTER `cs_id`;
+
+ALTER TABLE `cpdo_development_permits` ADD `is_active` INT(11) NULL DEFAULT '0' AFTER `cdp_total_amount`;

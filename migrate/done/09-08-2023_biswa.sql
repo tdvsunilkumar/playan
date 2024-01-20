@@ -1,0 +1,2 @@
+ALTER TABLE `hr_income_deduction_type` ADD `is_active` BOOLEAN NOT NULL DEFAULT TRUE AFTER `updated_by`;
+ALTER TABLE `hr_appointment_status` ADD `is_active` BOOLEAN NOT NULL DEFAULT TRUE AFTER `hras_description`;

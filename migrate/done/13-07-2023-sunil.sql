@@ -1,0 +1,1 @@
+ALTER TABLE `rpt_cto_billings` ADD `cb_or_no` VARCHAR(50) NULL AFTER `cb_control_no`;

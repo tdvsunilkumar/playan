@@ -1,0 +1,99 @@
+ALTER TABLE `eng_architectural_app` CHANGE `ebot_id` `ebot_id` INT(11) NULL COMMENT 'ref-Table: eng_bldg_occupancy_type.ebot_id Use / Character of occupancy';
+
+ALTER TABLE `eng_architectural_app` CHANGE `eeft_id` `eeft_id` VARCHAR(255) NOT NULL COMMENT 'ref-Table: eng_architectural_features_type.eaft_id';
+
+ALTER TABLE `eng_architectural_app` CHANGE `ectfc_id` `ectfc_id` VARCHAR(255) NOT NULL COMMENT 'ref-Table: eng_architectural_features_type.eaft_id';
+
+ALTER TABLE `eng_demolition_app` ADD `eda_tax_acct_no` VARCHAR(255) NULL AFTER `p_code`;
+
+ALTER TABLE `eng_demolition_app` ADD `eda_economic_act` VARCHAR(255) NULL AFTER `eda_form_of_own`;
+
+ALTER TABLE `eng_demolition_app` ADD `loclotno` VARCHAR(255) NULL AFTER `eda_location`, ADD `locblkno` VARCHAR(255) NULL AFTER `loclotno`, ADD `loctotno` VARCHAR(255) NULL AFTER `locblkno`, ADD `loctdno` VARCHAR(255) NULL AFTER `loctotno`, ADD `locstreet` VARCHAR(255) NULL AFTER `loctdno`;
+
+
+-- phpMyAdmin SQL Dump
+-- version 5.2.0
+-- https://www.phpmyadmin.net/
+--
+-- Host: 127.0.0.1
+-- Generation Time: Jun 03, 2023 at 06:19 AM
+-- Server version: 10.4.27-MariaDB
+-- PHP Version: 8.0.25
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `palayan`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `eng_conformance_to_fire_code`
+--
+
+CREATE TABLE `eng_conformance_to_fire_code` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `ectfc_description` varchar(30) NOT NULL,
+  `ectfc_is_active` int(11) NOT NULL DEFAULT 0,
+  `ectfc_created_by` int(11) NOT NULL DEFAULT 0,
+  `ectfc_modified_by` int(11) NOT NULL DEFAULT 0,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `eng_conformance_to_fire_code`
+--
+
+INSERT INTO `eng_conformance_to_fire_code` (`id`, `ectfc_description`, `ectfc_is_active`, `ectfc_created_by`, `ectfc_modified_by`, `created_at`, `updated_at`) VALUES
+(1, 'Number and Width of exit doors', 1, 1, 1, '2023-06-03 03:19:56', '2023-06-03 03:19:56'),
+(2, 'Width of Corridors', 1, 1, 1, '2023-06-03 03:19:56', '2023-06-03 03:19:56'),
+(3, 'Distance to Fire Exits', 1, 1, 1, '2023-06-03 03:19:56', '2023-06-03 03:19:56'),
+(4, 'Access to Public Street', 1, 1, 1, '2023-06-03 03:19:56', '2023-06-03 03:19:56'),
+(5, 'Fire Walls', 1, 1, 1, '2023-06-03 03:19:56', '2023-06-03 03:19:56'),
+(6, 'Fire Fighting and Safety Facil', 1, 1, 1, '2023-06-03 03:19:56', '2023-06-03 03:19:56'),
+(7, 'Smoke Detectors', 1, 1, 1, '2023-06-03 03:19:56', '2023-06-03 03:19:56'),
+(8, 'Emergency Lights', 1, 1, 1, '2023-06-03 03:19:56', '2023-06-03 03:19:56');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `eng_conformance_to_fire_code`
+--
+ALTER TABLE `eng_conformance_to_fire_code`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `eng_conformance_to_fire_code`
+--
+ALTER TABLE `eng_conformance_to_fire_code`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
+
+ALTER TABLE `eng_demolition_app` ADD `inchargeprcno` VARCHAR(255) NULL AFTER `eda_incharge_consultant_id`, ADD `inchargevalidity` DATE NULL AFTER `inchargeprcno`, ADD `inchargeptrno` VARCHAR(255) NOT NULL AFTER `inchargevalidity`, ADD `inchargedateissued` DATE NULL AFTER `inchargeptrno`, ADD `inchargeplaceissued` VARCHAR(255) NOT NULL AFTER `inchargedateissued`, ADD `inchargetin` VARCHAR(255) NULL AFTER `inchargeplaceissued`;
+
+ALTER TABLE `eng_demolition_app` ADD `inchargeaddress` TEXT NULL AFTER `eda_incharge_consultant_id`;
+
+ALTER TABLE `eng_demolition_app` ADD `applicantaddress` TEXT NULL AFTER `eda_applicant_consultant_id`, ADD `applicantctcno` VARCHAR(255) NULL AFTER `applicantaddress`, ADD `applicantdateissued` DATE NULL AFTER `applicantctcno`, ADD `applicantplaceissued` VARCHAR(255) NULL AFTER `applicantdateissued`;
+
+ALTER TABLE `eng_demolition_app` ADD `owneraddress` TEXT NULL AFTER `eda_owner_id`, ADD `ownerctcno` VARCHAR(255) NULL AFTER `owneraddress`, ADD `ownerdateissued` DATE NULL AFTER `ownerctcno`, ADD `ownerplaceissued` VARCHAR(255) NULL AFTER `ownerdateissued`;

@@ -1,0 +1,3 @@
+ALTER TABLE `eng_occupancy_apps` ADD `topno` VARCHAR(255) NULL AFTER `eoa_opd_modified_by`, ADD `orno` VARCHAR(255) NULL AFTER `topno`, ADD `ordate` DATE NULL AFTER `orno`, ADD `cashieramount` DOUBLE(10,2) NULL AFTER `ordate`;
+
+ALTER TABLE `cpdo_application_forms` ADD `topno` VARCHAR(255) NULL AFTER `caf_remarks`, ADD `orno` VARCHAR(255) NULL AFTER `topno`, ADD `ordate` DATE NULL AFTER `orno`, ADD `cashieramount` DOUBLE(10,2) NULL AFTER `ordate`;

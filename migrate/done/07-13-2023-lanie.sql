@@ -1,0 +1,1 @@
+ALTER TABLE ho_lab_requests CHANGE COLUMN cashire_id cashier_id int;

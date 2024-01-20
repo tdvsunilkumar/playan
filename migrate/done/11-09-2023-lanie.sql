@@ -1,0 +1,2 @@
+ALTER TABLE `welfare_social_welfare_assistance` ADD `wswa_approve_status` INT NOT NULL DEFAULT '0' AFTER `wswa_is_active`, ADD `wswa_second_approver_by` INT NOT NULL AFTER `wswa_approve_status`;
+ALTER TABLE `eco_housing_application` CHANGE `terms_condition` `terms_condition` TEXT DEFAULT NULL;

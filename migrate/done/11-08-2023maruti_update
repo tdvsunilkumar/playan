@@ -1,0 +1,2 @@
+ALTER TABLE `cpdo_module` ADD `cm_type` INT(11) NOT NULL AFTER `id`;
+ALTER TABLE `cpdo_services` ADD `cs_amount` DOUBLE(10,2) NOT NULL AFTER `top_transaction_type_id`;

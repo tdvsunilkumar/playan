@@ -1,0 +1,1 @@
+ALTER TABLE `rpt_properties` CHANGE `rp_app_memoranda` `rp_app_memoranda` VARCHAR(250) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL;

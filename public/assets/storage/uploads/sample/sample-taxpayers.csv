@@ -1,0 +1,3 @@
+id,rpo_custom_last_name,rpo_first_name,rpo_middle_name,suffix,full_name,rpo_address_house_lot_no,rpo_address_street_name,rpo_address_subdivision,p_barangay_id_no,p_telephone_no,p_mobile_no,p_fax_no,p_tin_no,p_email_address,country,gender,dateofbirth,civil_status,is_active,is_bplo,is_rpt,is_engg,is_fire_safety,is_online,created_by,updated_by,created_at,updated_at
+1,Fajardo Test,Ma. Larah ss,Alvare,NULL,#NAME?,NULL,NULL,NULL,163,1234567896,1232535623,22335566,45645666,Fajardotest@gmail.com,3,1,NULL,,1,0,1,0,0,1,1,1,2/16/23 3:56,8/3/23 10:09
+1,Pantillano,Proferia,D.,Sr.,"Proferia D. Pantillano, Sr.",,"Unit 606 ITC Building, Bel-Air",NULL,163,639658175177,639658175177,22335566,45645666,rogelmardenopol@gmai,3,1,NULL,,1,0,1,0,0,1,1,1,2/16/23 3:56,8/3/23 10:09

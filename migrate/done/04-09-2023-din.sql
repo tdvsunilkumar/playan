@@ -1,0 +1,1 @@
+ALTER TABLE `cto_collections` ADD `approved_counter` INT NOT NULL DEFAULT '1' AFTER `sent_by`;

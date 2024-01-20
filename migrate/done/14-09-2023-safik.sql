@@ -1,0 +1,1 @@
+ALTER TABLE `bplo_requirement_relations` ADD `is_required` INT(1) NOT NULL DEFAULT '0' AFTER `remark

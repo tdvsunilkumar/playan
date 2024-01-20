@@ -1,0 +1,1 @@
+ALTER TABLE `cto_cashier` ADD `is_collected` BOOLEAN NOT NULL DEFAULT FALSE AFTER `coa_no`;

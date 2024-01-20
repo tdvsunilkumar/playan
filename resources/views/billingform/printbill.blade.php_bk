@@ -1,0 +1,305 @@
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<style type="text/css">
+p{
+font-family: Gliny Hand Slab;
+    font-weight: 100;
+}
+.main td {
+  border: dotted 1px;
+}
+table{
+    border-collapse: separate;
+    empty-cells: hide;
+}
+</style>
+<!------ Include the above in your HEAD tag ---------->
+
+<div class="container" style="margin-top:10px;">
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="row">
+                <div class="col-xs-4 col-sm-4 col-md-4 text-center"></div>
+                <div class="col-xs-4 col-sm-4 col-md-4 text-center">
+                <p>PLAYAN CITY</p>
+                </div>
+                <div class="col-xs-4 col-sm-4 col-md-4 text-center"></div>
+            </div>
+            <div class="row" style="line-height:0;">
+                <div class="col-xs-4 col-sm-4 col-md-4 text-center"></div>
+                <div class="col-xs-4 col-sm-4 col-md-4 text-center">
+                <p>CITY TREASURE'S OFFICE</p>
+                </div>
+                <div class="col-xs-4 col-sm-4 col-md-4 text-center"></div>
+            </div>
+            <div class="row">
+                <div class="col-xs-4 col-sm-4 col-md-4 text-center"></div>
+                <div class="col-xs-4 col-sm-4 col-md-4 text-center">
+                <p>{{(isset($billDetails->rptProperty->propertyKindDetails->pk_description))?$billDetails->rptProperty->propertyKindDetails->pk_description:'Land'}} Tax Subdivision</p>
+                </div>
+                <div class="col-xs-4 col-sm-4 col-md-4">
+                    <p>Date : {{(isset($billDetails->cb_billing_date))?date("d/m/Y",strtotime($billDetails->cb_billing_date)):''}}</p>
+                </div>
+            </div>
+            
+            <div class="row" style="line-height:2;">
+                <div class="col-xs-2 col-sm-2 col-md-2 text-center"></div>
+                <div class="col-xs-8 col-sm-8 col-md-8 text-center">
+                <p>REAL PROPERTY TAX COMPUTATION</p>
+                </div>
+                <div class="col-xs-2 col-sm-2 col-md-2 text-center">
+                    
+                </div>
+            </div>
+            <div class="row" style="margin-top:20px;"></div>
+            <div class="row">
+                <div class="col-xs-8 col-sm-8 col-md-8">
+                    <p>OWNER/ADMINISTRATOR : {{(isset($billDetails->rptProperty->taxpayer_name))?$billDetails->rptProperty->taxpayer_name:''}}</p>
+                </div>
+                <div class="col-xs-4 col-sm-4 col-md-4">
+                    <p>TD NO : {{(isset($billDetails->rptProperty->barangay->brgy_code) && isset($billDetails->rptProperty->rp_td_no))?$billDetails->rptProperty->barangay->brgy_code.'-'.$billDetails->rptProperty->rp_td_no:''}}</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-8 col-sm-8 col-md-8">
+                    <p>ADDRESS : {{(isset($billDetails->rptProperty->property_owner_details->standard_address))?$billDetails->rptProperty->property_owner_details->standard_address:''}}</p>
+                </div>
+                <div class="col-xs-4 col-sm-4 col-md-4">
+                    <p>PIN : {{(isset($billDetails->rptProperty->complete_pin))?$billDetails->rptProperty->complete_pin:''}}</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-8 col-sm-8 col-md-8">
+                    <p>LOCATION : {{(isset($billDetails->rptProperty->loc_group_brgy_no))?$billDetails->rptProperty->loc_group_brgy_no:''}}</p>
+                </div>
+                @php
+                
+                
+                @endphp
+                <div class="col-xs-4 col-sm-4 col-md-4">
+                    <p>KIND : {{(isset($billDetails->rptProperty->propertyKindDetails->pk_code))?$billDetails->rptProperty->propertyKindDetails->pk_code:''}} CLASS : {{$class}} USE : {{$actualUse}}</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-8 col-sm-8 col-md-8">
+                    @if($billDetails->rptProperty->propertyKindDetails->pk_code == "L")
+                    <p>AREA / TCT No. : {{(isset($billDetails->rptProperty->total_land_area))?Helper::number_format($billDetails->rptProperty->total_land_area):''}} {{config('constants.lav_unit_measure')[$billDetails->rptProperty->landAppraisals[0]->lav_unit_measure]}} / {{(isset($billDetails->rptProperty->rp_oct_tct_cloa_no))?$billDetails->rptProperty->rp_oct_tct_cloa_no:''}}</p>
+                    @endif
+                    @if($billDetails->rptProperty->propertyKindDetails->pk_code == "B")
+                    <p>ARP of Lot : {{(isset($billDetails->rptProperty->rp_cadastral_lot_no_lref))?$billDetails->rptProperty->rp_cadastral_lot_no_lref:''}}</p>
+                    @endif
+                </div>
+                <div class="col-xs-4 col-sm-4 col-md-4">
+                    <p>TAX RATES : {{$rates->bsst_basic_rate}}% BT  {{$rates->bsst_sef_rate}}% SEF {{$rates->bsst_sh_rate}}% SH</p>
+                </div>
+            </div>
+             <div class="row">
+                <div class="col-xs-8 col-sm-8 col-md-8">
+                    @if($billDetails->rptProperty->propertyKindDetails->pk_code == "L" || $billDetails->rptProperty->propertyKindDetails->pk_code == "B")
+                    <p>LOT No. : {{(isset($billDetails->rptProperty->rp_cadastral_lot_no))?$billDetails->rptProperty->rp_cadastral_lot_no:''}}</p>
+                    @endif
+                </div>
+                <div class="col-xs-4 col-sm-4 col-md-4">
+                    <p>TAX YEARS : {{(isset($billDetails->cb_covered_from_year))?$billDetails->cb_covered_from_year:'1900'}} TO {{(isset($billDetails->cb_covered_to_year))?$billDetails->cb_covered_to_year:'1900'}}</p>
+                </div>
+            </div>
+            @if($billDetails->rptProperty->propertyKindDetails->pk_code == "B")
+            <div class="row">
+                <div class="col-xs-8 col-sm-8 col-md-8">
+                    <p>AREA : {{($billDetails->rptProperty->floorValues!= null)?Helper::number_format($billDetails->rptProperty->floorValues->sum('rpbfv_floor_area')):''}} sq.m.</p>
+                </div>
+                <div class="col-xs-4 col-sm-4 col-md-4">
+                    
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-8 col-sm-8 col-md-8">
+                    <p>UNIT : </p>
+                </div>
+                <div class="col-xs-4 col-sm-4 col-md-4">
+                    
+                </div>
+            </div>
+            @endif
+             <div class="row">
+                <div class="col-xs-8 col-sm-8 col-md-8">
+                    <p>SIR/MADAM : </p>
+                </div>
+                <div class="col-xs-4 col-sm-4 col-md-4">
+                    
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-1 col-sm-1 col-md-1">
+                   
+                </div>
+                <div class="col-xs-10 col-sm-10 col-md-10">
+                    <p style="font-size:15px;">This is to inform that the real property tax(s) due and payable for the year(s) 2023 to 2023 on the property located in the City and ownership is stated in your name for taxation process (as well as subsequesnt years untill you informed of any change/s), is as follow:</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-8 col-sm-8 col-md-8">
+                    <p>YOUR last payment ref. : OR No: G4877012, 27/12/2021 </p>
+                </div>
+                <div class="col-xs-4 col-sm-4 col-md-4">
+                    
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12">
+                    <table class="table main" style="
+    text-align: center;
+">
+                        <tr>
+                            <td><p>PERIOD</p></td>
+                            <td><p>ASSESSED VALUE</p></td>
+                            <td><p>BASIC</p></td>
+                            <td><p>PENALITY / (DISCOUNT)</p></td>
+                            <td><p>SEF</p></td>
+                            <td><p>PENALITY / (DISCOUNT)</p></td>
+                            <td><p>SOCIALIZE HOUSING</p></td>
+                            <td><p>PENALITY / (DISCOUNT)</p></td>
+                        </tr>
+                        @php
+                                    $totalDue = 0;
+                                    $basicAmountTotal = 0;
+                                    $basiInterst = 0;
+                                    $basicDisc = 0;
+                                    $sefAmount = 0;
+                                    $sefInterst = 0;
+                                    $sefDisc = 0;
+                                    $shAmount = 0;
+                                    $shInterst = 0;
+                                    $shDiscount = 0;
+                                    @endphp
+                        @foreach($billDetails->billingDetails as $bill)
+                        @php
+                                     $newBasicPenalty = ($bill->billingPenaltyDetails != null)?$bill->billingPenaltyDetails->basic_penalty_amount:0;
+                                     $newBasicDiscount = ($bill->billingDiscountDetails != null)?$bill->billingDiscountDetails->basic_discount_amount:0;
+                                     $newSefPenalty = ($bill->billingPenaltyDetails != null)?$bill->billingPenaltyDetails->sef_penalty_amount:0;
+                                     $newSefDiscount = ($bill->billingDiscountDetails != null)?$bill->billingDiscountDetails->sef_discount_amount:0;
+                                     $newShPenalty = ($bill->billingPenaltyDetails != null)?$bill->billingPenaltyDetails->sh_penalty_amount:0;
+                                     $newShDiscount = ($bill->billingDiscountDetails != null)?$bill->billingDiscountDetails->sh_discount_amount:0;
+
+                                    $totalAmountDue = ($bill->basic_amount+$newBasicPenalty)-$newBasicDiscount+($bill->sef_amount+$newSefPenalty)-$newSefDiscount+($bill->sh_amount+$newShPenalty)-$newShDiscount;
+                                    
+                                    $totalDue += $totalAmountDue;
+                                    $basicAmountTotal += $bill->basic_amount;
+                                    $basiInterst += ($bill->billingPenaltyDetails != null)?$bill->billingPenaltyDetails->basic_penalty_amount:0;
+                                    $basicDisc  += ($bill->billingDiscountDetails != null)?$bill->billingDiscountDetails->basic_discount_amount:0;
+                                    $sefAmount += $bill->sef_amount;
+                                    $sefInterst += ($bill->billingPenaltyDetails != null)?$bill->billingPenaltyDetails->sef_penalty_amount:0;
+                                    $sefDisc += ($bill->billingDiscountDetails != null)?$bill->billingDiscountDetails->sef_discount_amount:0;
+                                    $shAmount += $bill->sh_amount;
+                                    $shInterst += ($bill->billingPenaltyDetails != null)?$bill->billingPenaltyDetails->sh_penalty_amount:0;
+                                    $shDiscount += ($bill->billingDiscountDetails != null)?$bill->billingDiscountDetails->sh_discount_amount:0;
+                                    @endphp
+                        
+                        <tr>
+                            <td><p>{{($bill->sd_mode == 14)?$bill->cbd_covered_year.' - Annual':Helper::billing_quarters()[$bill->sd_mode]}}</p></td>
+                            <td><p>{{Helper::money_format($bill->cbd_assessed_value)}}</p></td>
+                            <td><p>{{Helper::money_format($bill->basic_amount)}}</p></td>
+                            <td><p>{{Helper::money_format(($bill->billingPenaltyDetails != null)?$bill->billingPenaltyDetails->basic_penalty_amount:0)}}({{Helper::money_format(($bill->billingDiscountDetails != null)?$bill->billingDiscountDetails->basic_discount_amount:0)}})</p></td>
+                            <td><p>{{Helper::money_format($bill->sef_amount)}}</p></td>
+                            <td><p>{{Helper::money_format(($bill->billingPenaltyDetails != null)?$bill->billingPenaltyDetails->sef_penalty_amount:0)}}({{Helper::money_format(($bill->billingDiscountDetails != null)?$bill->billingDiscountDetails->sef_discount_amount:0)}})</p></td>
+                            <td><p>{{Helper::money_format($bill->sh_amount)}}</p></td>
+                            <td><p>{{Helper::money_format(($bill->billingPenaltyDetails != null)?$bill->billingPenaltyDetails->sh_penalty_amount:0)}}({{Helper::money_format(($bill->billingDiscountDetails != null)?$bill->billingDiscountDetails->sh_discount_amount:0)}})</p></td>
+                        </tr>
+                        @endforeach
+                        <tr>
+                            <td style="border-right: 0px;"></td>
+                            <td><p>TOTAL</p></td>
+                            <td><p>{{Helper::money_format($billDetails->billingDetails->sum('basic_amount'))}}</p></td>
+                            <td><p>{{Helper::money_format($basiInterst)}}({{Helper::money_format($basicDisc)}})</p></td>
+                            <td><p>{{Helper::money_format($sefAmount)}}</p></td>
+                            <td><p>{{Helper::money_format($sefInterst)}}({{Helper::money_format($sefDisc)}})</p></td>
+                            <td><p>{{Helper::money_format($billDetails->billingDetails->sum('sh_amount'))}}</p></td>
+                            <td><p>{{Helper::money_format($shInterst)}}({{Helper::money_format($shDiscount)}})</p></td>
+                        </tr>
+                    </table>
+                </div>
+                
+            </div>
+
+            <div class="row">
+                <div class="col-xs-5 col-sm-5 col-md-5">
+                </div>
+                <div class="col-xs-7 col-sm-7 col-md-7">
+                    <table class="table" style="
+    
+    align:right;
+">
+                        <tr>
+                            <td><p></p></td>
+                            <td><p>BASIC</p></td>
+                            <td><p>SEF</p></td>
+                            <td><p>HOUSING</p></td>
+                            
+                        </tr>
+                        <tr>
+                            <td><p>TAX</p></td>
+                            <td><p>{{Helper::money_format($billDetails->billingDetails->sum('basic_amount'))}}</p></td>
+                            <td><p>{{Helper::money_format($billDetails->billingDetails->sum('sef_amount'))}}</p></td>
+                            <td><p>{{Helper::money_format($billDetails->billingDetails->sum('sh_amount'))}}</p></td>
+                            
+                        </tr>
+                       <tr>
+                            <td><p>PENALITY</p></td>
+                            <td><p>{{Helper::money_format($basiInterst)}}</p></td>
+                            <td><p>{{Helper::money_format($sefInterst)}}</p></td>
+                            <td><p>{{Helper::money_format($shInterst)}}</p></td>
+                            
+                        </tr>
+                        <tr>
+                            <td><p>DISCOUNT</p></td>
+                            <td><p>{{Helper::money_format($basicDisc)}}</p></td>
+                            <td><p>{{Helper::money_format($sefDisc)}}</p></td>
+                            <td><p>{{Helper::money_format($shDiscount)}}</p></td>
+                            
+                        </tr>
+                        <tr>
+                            <td><p>SUB TOTAL</p></td>
+                            <td><p>{{Helper::money_format($billDetails->billingDetails->sum('basic_amount')+$basiInterst-$basicDisc)}}</p></td>
+                            <td><p>{{Helper::money_format($billDetails->billingDetails->sum('sef_amount')+$sefInterst-$sefDisc)}}</p></td>
+                            <td><p>{{Helper::money_format($billDetails->billingDetails->sum('sh_amount')+$shInterst-$shDiscount)}}</p></td>
+                            
+                        </tr>
+                        <tr>
+                            <td><p>TOTAL TAX DUE</p></td>
+                            <td colspan="3" style=""><p>{{Helper::money_format($totalDue)}}</p></td>
+                            
+                            
+                            
+                        </tr>
+                    </table>
+                </div>
+                
+            </div>
+            <div class="row">
+                <div class="col-xs-8 col-sm-8 col-md-8">
+                    <p>Processed as of {{(isset($billDetails->cb_billing_date))?date("d/m/Y",strtotime($billDetails->cb_billing_date)):''}}</p>
+                </div>
+                <div class="col-xs-4 col-sm-4 col-md-4">
+                    
+                </div>
+            </div>
+            <div class="row" style="line-height:4;">
+                <div class="col-xs-8 col-sm-8 col-md-8">
+                    <p>Processed By :</p>
+                </div>
+                <div class="col-xs-4 col-sm-4 col-md-4">
+                    
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-8 col-sm-8 col-md-8">
+                    <p>{{$processedBy->name}}</p>
+                </div>
+                <div class="col-xs-4 col-sm-4 col-md-4">
+                    <p>{{(isset($billDetails->rptProperty->locality->tresurer->standard_name))?$billDetails->rptProperty->locality->tresurer->standard_name:''}}</p>
+                    <p>{{(isset($billDetails->rptProperty->locality->loc_treasurer_position))?$billDetails->rptProperty->locality->loc_treasurer_position:''}}</p>
+                </div>
+            </div>
+        </div>
+    </div>

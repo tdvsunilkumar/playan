@@ -1,0 +1,1 @@
+ALTER TABLE `ho_lab_requests` CHANGE `lab_is_free` `lab_is_free` INT(11) NOT NULL;

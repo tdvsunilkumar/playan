@@ -1,0 +1,1 @@
+ALTER TABLE cpdo_zoning_computation_clearance ADD is_active TINYINT AFTER cm_id;

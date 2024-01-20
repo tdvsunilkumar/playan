@@ -1,0 +1,3 @@
+ALTER TABLE `eng_electrical_feess_miscellaneos` CHANGE `eefm_amount` `eefpa_electic_meter_amount` DOUBLE(8,2) NOT NULL COMMENT 'Amount';
+
+ALTER TABLE `eng_electrical_feess_miscellaneos` ADD `eefpa_wiring_permit_amount` DOUBLE(8,2) NOT NULL AFTER `eefpa_electic_meter_amount`;

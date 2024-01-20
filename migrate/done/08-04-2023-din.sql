@@ -1,0 +1,1 @@
+ALTER TABLE `cto_replenish` ADD COLUMN IF NOT EXISTS `allotment_id` INT NULL DEFAULT NULL COMMENT 'cbo_allotment_obligations' AFTER `id`;

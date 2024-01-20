@@ -1,0 +1,1 @@
+ALTER TABLE `rpt_properties` ADD `permit_id` BIGINT(20) NULL AFTER `rp_bulding_permit_no`, ADD `is_manual_permit` TINYINT(1) NOT NULL DEFAULT '0' AFTER `permit_id`;

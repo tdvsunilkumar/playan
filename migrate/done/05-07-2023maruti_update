@@ -1,0 +1,1 @@
+ALTER TABLE `cto_tfocs` ADD `is_taxpayer_charges` INT(11) NOT NULL DEFAULT '0' AFTER `tfoc_eachlineof_bussiness`;

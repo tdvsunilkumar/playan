@@ -1,0 +1,5 @@
+ALTER TABLE `files_welfare_assistance` ADD COLUMN IF NOT EXISTS `wsr_type` int DEFAULT 0 COMMENT 'if type = 0 => welfare_swa_requirements.id, type = 1 => requirements.id' AFTER `wsr_id`;
+ALTER TABLE `files_welfare_pwd` ADD COLUMN IF NOT EXISTS `req_type` int DEFAULT 0 COMMENT 'if type = 0 => constant, type = 1 => requirements.id' AFTER `req_id`;
+ALTER TABLE `files_welfare_senior_citizen` ADD COLUMN IF NOT EXISTS `req_type` int DEFAULT 0 COMMENT 'if type = 0 => constant, type = 1 => requirements.id' AFTER `req_id`;
+ALTER TABLE `files_welfare_solo_parent` ADD COLUMN IF NOT EXISTS `req_type` int DEFAULT 0 COMMENT 'if type = 0 => constant, type = 1 => requirements.id' AFTER `req_id`;
+ALTER TABLE `files_welfare_travel_minor` ADD COLUMN IF NOT EXISTS `req_type` int DEFAULT 0 COMMENT 'if type = 0 => constant, type = 1 => requirements.id' AFTER `req_id`;

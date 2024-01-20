@@ -1,0 +1,4 @@
+ALTER TABLE `eng_electronics_app` CHANGE `eest_id` `eest_id` VARCHAR(255) NULL COMMENT 'ref-Table: eng_equipment_system_type.eest_id';
+ALTER TABLE `eng_electronics_app` CHANGE `ebot_id` `ebot_id` INT(11) NULL COMMENT 'ref-Table: eng_bldg_occupancy_type.ebot_id Use / Character of occupancy';
+
+ALTER TABLE `cto_cashier_details` ADD `isotehrtaxes` INT(11) NOT NULL DEFAULT '0' AFTER `ortype_id`;

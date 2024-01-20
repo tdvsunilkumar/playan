@@ -1,0 +1,1 @@
+ALTER TABLE `cbo_allotment_obligations` ADD COLUMN IF NOT EXISTS `obligation_type_id` INT NULL DEFAULT NULL COMMENT 'cbo_obligation_types' AFTER `id`;

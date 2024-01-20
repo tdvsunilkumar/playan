@@ -1,0 +1,1 @@
+ALTER TABLE `cto_cashier` ADD `or_assignment_id` INT(11) NULL AFTER `document_json`;

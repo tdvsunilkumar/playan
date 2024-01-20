@@ -1,0 +1,1 @@
+ALTER TABLE `cto_accounts_receivable_setups` CHANGE `ars_remarks` `ars_remarks` VARCHAR(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL;

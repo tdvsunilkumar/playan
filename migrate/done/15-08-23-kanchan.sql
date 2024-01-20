@@ -1,0 +1,1 @@
+ALTER TABLE `ho_medical_records` CHANGE `med_rec_nurse_note` `med_rec_nurse_note` TEXT CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL;

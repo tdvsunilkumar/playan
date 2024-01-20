@@ -1,0 +1,3 @@
+ALTER TABLE hematology_categories RENAME ho_hematology_categories;
+ALTER TABLE hematology_parameters RENAME ho_hematology_parameters;
+ALTER TABLE hematology_ranges RENAME ho_hematology_ranges;

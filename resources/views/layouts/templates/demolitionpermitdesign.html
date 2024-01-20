@@ -1,0 +1,496 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <style type="text/css">
+        @import url('https://fonts.googleapis.com/css?family=Fjalla+One|Montserrat:400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap');
+        * { margin: 0; padding: 0; }
+        @page {margin-top: 12mm; margin-bottom: 12mm; margin-header: 0mm;margin-footer: 0mm;}
+        body { font-family: 'Montserrat', sans-serif; font-size: 12px; }
+        table td, table th { border: 1px solid black; padding: 5px; }
+        p {margin: 0px; padding: 0px}
+        p .indent{text-indent: 25px; margin-left: 25px;}
+        h4 {margin: 0px; padding: 0px}
+        textarea { border: 0; font-size: 14px; font-family: 'Montserrat', sans-serif;overflow: hidden; resize: none; }
+        table { border-collapse: collapse; }
+        .mb-2{margin-bottom: 2mm}
+        .bg{background-color: red;}
+        .bg1{background-color: blue;}
+        .mask
+        {
+            border-style: solid;
+            border-width: 0 0 3px 3px;
+            position: absolute;
+            float: right;
+            clear: none;
+            right: -3px;
+            top: -3px;
+            background-color: white;
+            width: 50%;
+            height: 4em;
+        }
+    </style>
+  <title>Demolition Permit</title>
+</head>
+
+<body>
+  <div style="">
+      <table width="100%">
+          <tr>
+              <td width="100%" style="text-align:center; border:0px solid black; padding-top:0px">
+                  <p style="">Republic of the Philippines</p>
+                  <p style="text-transform: uppercase;"><strong>OFFICE OF THE BUILDING OFFICIAL</strong></p>
+                  <p style="">Palayan City</p>
+              </td>
+          </tr>
+          <tr>
+              <td width="100%" style="text-align:center; padding:0px; border:0px solid black;">
+                  <h3 style="text-transform: uppercase;">DEMOLITION PERMIT</h3>
+              </td>
+          </tr>
+      </table>
+      <div style="width: 27%; float:left; ">
+          <table>
+              <tr>
+                  <td style="width: 180px; padding:0px; text-align: center; border-top: none; border-right: none; border-bottom: solid 1px black; border-left:none">
+                      {{appno}}
+                  </td>
+              </tr>
+              <tr>
+                  <td style="width: 180px; padding:0px; text-align: center; border-top: none; border-right: none; border-bottom: none; border-left:none">
+                      <p style="font-weight: 500; text-align: center;">Application No.</p>
+                  </td>
+              </tr>
+          </table>
+      </div>
+      <div style="width:36%; float:left; padding-left:10%">
+          <table>
+              <tr>
+                  <td style="width: 180px; padding:0px; text-align: center; border-top: none; border-right: none; border-bottom: solid 1px black; border-left:none">
+                      &nbsp;
+                  </td>
+              </tr>
+              <tr>
+                  <td style="width: 180px; padding:0px; text-align: center; border-top: none; border-right: none; border-bottom: none; border-left:none">
+                      <p style="font-weight: 500; text-align: center;">Demolition Permit No.</p>
+                  </td>
+              </tr>
+          </table>
+      </div>
+      <div style="width: 27%; float:right;">
+          <table>
+              <tr>
+                  <td style="width: 180px; padding:0px; text-align: center; border-top: none; border-right: none; border-bottom: solid 1px black; border-left:none">
+                      {{permitno}}
+                  </td>
+              </tr>
+              <tr>
+                  <td style="width: 180px; padding:0px; text-align: center; border-top: none; border-right: none; border-bottom: none; border-left:none">
+                      <p style="font-weight: 500; text-align: center;">Building Permit No.</p>
+                  </td>
+              </tr>
+          </table>
+      </div>
+
+    <div style="clear: both;">
+        &nbsp;
+    </div>
+
+      <table width="100%" style="padding:0px">
+          <tr>
+              <td style="border:0px solid black; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; width: 100%;">
+                  <h4 style="padding:0px">BOX 1(TO BE ACCOMPLISHED IN PRINT BY OWNER/APPLICANT)</h4>
+              </td>
+          </tr>
+      </table>
+
+      <table width="100%" style="font-size:11px; padding:0px;">
+          <tr>
+              <td style="border: solid 1px #000; border-right: none; height: 35px; padding-top:0px; padding-bottom: 0px; vertical-align: top;">
+                  OWNER/APPLICANT
+              </td>
+              <td style="border: solid 1px #000; border-right: none; border-left: none; height: 35px; padding-top:0px; padding-bottom: 0px; vertical-align: top;">
+                  LAST NAME <br><b>{{lastname}}</b>
+              </td>
+              <td style="border: solid 1px #000; border-right: none; border-left: none; height: 35px; padding-top:0px; padding-bottom: 0px; vertical-align: top;">
+                  FIRST NAME <br><b>{{firstname}}</b>
+              </td>
+              <td style="border: solid 1px #000; border-right: none; border-left: none; height: 35px; padding-top:0px; padding-bottom: 0px; vertical-align: top;">
+                  MIDDLE NAME <br><b>{{middlename}}</b>
+              </td>
+              <td style="width:20%; border: solid 1px #000; height: 35px; padding-top:0px; padding-bottom: 0px; vertical-align: top;">
+                  TIN <br><b>{{tinno}}</b>
+              </td>
+          </tr>
+      </table>
+
+      <table width="100%" style="font-size:11px;">
+          <tr>
+              <td style="width:33%; height:40px; border:none; border-right: solid 1px #000; border-left: solid 1px #000; vertical-align: top;">
+                  FOR CONSTRUCTION OWNED<br>BY AN ENTERPRISE
+              </td>
+              <td style="width:33%; height:40px; border:none; border-right: solid 1px #000; border-left: solid 1px #000; vertical-align: top;">
+                  FORM OF OWNERSHIP :<b>{{formogowner}}</b>
+              </td>
+              <td style="width:33%; height:40px; border:none; border-right: solid 1px #000; border-left: solid 1px #000; vertical-align: top;">
+                  USE OR CHARACTER OF OCCUPANCY : <b>{{maineconomy}}</b>
+              </td>
+          </tr>
+      </table>
+
+      <table width="100%" style="font-size:11px; padding:0px;">
+          <tr>
+              <td style="border: solid 1px #000; border-right: none; height: 35px; padding-top:0px; padding-bottom: 0px; vertical-align: top;">
+                  ADDRESS <br><b>{{subdivision}}</b>
+              </td>
+              <td style="border: solid 1px #000; border-right: none; border-left: none; height: 35px; padding-top:0px; padding-bottom: 0px; vertical-align: top;">
+                  NO.<br><b>{{houseno}}</b>
+              </td>
+              <td style="border: solid 1px #000; border-right: none; border-left: none; height: 35px; padding-top:0px; padding-bottom: 0px; vertical-align: top;">
+                  STREET<br><b>{{street}}</b>
+              </td>
+              <td style="border: solid 1px #000; border-right: none; border-left: none; height: 35px; padding-top:0px; padding-bottom: 0px; vertical-align: top;">
+                  BARANGAY<br> <b>{{barangay}}</b>
+              </td>
+              <td style="border: solid 1px #000; height: 35px; border-right: none; border-left: none; padding-top:0px; padding-bottom: 0px; vertical-align: top;">
+                  CITY/MUNICIPALITY <br><b>{{location}}</b>
+              </td>
+              <td style="border: solid 1px #000; height: 35px; border-left: none; padding-top:0px; padding-bottom: 0px; vertical-align: top;">
+                  ZIP CODE
+              </td>
+              <td style="width:20%; border: solid 1px #000; height: 35px; padding-top:0px; padding-bottom: 0px; vertical-align: top;">
+                  TELEPHONE NO.<br><b>{{telephoneno}}</b>
+              </td>
+          </tr>
+      </table>
+
+      <table width="100%" style="font-size:11px;">
+          <tr>
+              <td style="width: 100%; border: solid 1px #000; border-bottom: none; border-top: none; height: 25px; padding-top:0px; padding-bottom: 0px;">
+                  <span>LOCATION OF CONSTRUCTION</span> &nbsp;&nbsp; 
+                  <span>LOT NO.:<b>{{loclotno}}</b> </span>
+                  <span>BLK NO.<b>{{locblkno}}</b></span>
+                  <span>TCT NO.<b>{{loctotno}}</b> </span>
+                  <span>TAX DEC. NO.<b>{{loctdno}}</b></span>
+              </td>
+          </tr>
+          <tr>
+              <td style="width: 100%; border: solid 1px #000; border-top: none; height: 25px; padding-top:0px; padding-bottom: 0px;">
+                  <span>STREET:<b>{{locstreet}}</b></span>
+                  <span>BARANGAY:<b>{{barangay}}</b> </span>
+                  <span>CITY/MUNICIPALITY:<b>{{MUNCIPALITY}}</b></span>
+              </td>
+          </tr>
+      </table>
+
+      <table width="100%" style="font-size:11px;">
+          <tr>
+              <td colspan="3" style="text-align:left; padding-bottom:0px; border:1px solid black; border-bottom: 0px; border-top:0px">
+                  <strong>SCOPE OF WORK:</strong>
+              </td>
+          </tr>
+          <tr>
+              <td style="width:100%; border:none; border-bottom:1px solid black; padding-top: 0px; border-right: solid 1px #000; border-left: solid 1px #000; vertical-align: top;">
+                  <table width="100%" style="font-size:10px;">
+                     {{scopeofwork}}
+                  </table>
+              </td>
+          </tr>
+      </table>
+
+      <table width="100%" style="padding:0px">
+          <tr>
+              <td style="border:0px solid black; padding-top: 5px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; width: 100%;">
+                  <h4 style="padding:0px">BOX 2 (TO BE ACCOMPLISHED BY FULL TIME INSPECTOR AND SUPERVISOR OF DEMOLITION WORK)</h4>
+              </td>
+          </tr>
+      </table>
+
+      <table width="100%" style="font-size:11px;">
+          <tr>
+              <td rowspan="6" style="width:50%; text-align: center; padding-bottom: 2px; padding-top: 45px; border-top: 1px solid black; border-right: none; border-bottom:1px solid black; border-left:1px solid black;">
+                    <u>&nbsp;&nbsp;{{inchargefullname}}&nbsp;&nbsp;</u><br>
+                    Architect or Civil Engineer<br>
+                    (Seal and Signature Over Printed Name)<br>
+                    Date _______________________
+              </td>
+              <td colspan="2" style="width:50%; vertical-align:bottom; padding-bottom: 2px; padding-top:20px">Address:{{inchargeaddress}}</td>
+          </tr>
+          <tr>
+              <td style="padding-bottom: 2px; padding-top:2px">Tel. No.</td>
+              <td style="padding-bottom: 2px; padding-top:2px"></td>
+          </tr>
+          <tr>
+              <td style="padding-bottom: 2px; padding-top:2px">PRC No.:{{inchargeprcno}}</td>
+              <td style="padding-bottom: 2px; padding-top:2px">Validity:{{inchargevalidity}}</td>
+          </tr>
+          <tr>
+              <td style="padding-bottom: 2px; padding-top:2px">PTR No.:{{inchargeptrno}}</td>
+              <td style="padding-bottom: 2px; padding-top:2px">Date Issued:{{inchargedateissued}}</td>
+          </tr>
+          <tr>
+              <td style="padding-bottom: 2px; padding-top:2px">Issued at:{{inchargeplaceissued}}</td>
+              <td style="padding-bottom: 2px; padding-top:2px">TIN:{{inchargetin}}:</td>
+          </tr>
+          <tr>
+              <td colspan="2" style="padding-bottom: 2px; padding-top:2px; border-top: none; border-right: 1px solid black; border-bottom:1px solid black; border-left:none;">&nbsp;</td>
+          </tr>
+      </table>
+
+      <table width="100%" style="padding:0px">
+          <tr>
+              <td style="border:0px solid black; padding-top: 5px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; width: 100%;">
+                  <h4 style="padding:0px">BOX 3 (Architect or Civil Engineer)</h4>
+              </td>
+          </tr>
+      </table>
+
+      <div style="width: 50%; float:left;">
+          <table width="100%" style="padding:0px; font-size:11px">
+              <tr>
+                  <td style="font-size:11px; border-top: 1px solid black; border-right: 1px solid black; border-bottom:none; border-left:1px solid black;">BUILDING OWNER</td>
+              </tr>
+              <tr>
+                  <td style=" text-align:center; padding-bottom: 2px; padding-top: 20px; border-top: none; border-right: 1px solid black; border-bottom:1px solid black; border-left:1px solid black;"><u>&nbsp;&nbsp;{{applicantname}}&nbsp;&nbsp;</u><br>
+                        (Signature Over Printed Name)<br>
+                        Date <u>&nbsp;&nbsp;{{dateapp}}&nbsp;&nbsp;</u></td>
+              </tr>
+              <tr>
+                  <td style="padding-bottom: 2px; padding-top:2px">ADDRESS:{{applicantaddress}}</td>
+              </tr>
+              <tr>
+                  <td style="padding-bottom: 2px; padding-top:2px">CTC NO.:{{appctcno}}</td>
+              </tr>
+              <tr>
+                  <td style="padding-bottom: 2px; padding-top:2px">DATE ISSUED:{{appdateissued}}</td>
+              </tr>
+              <tr>
+                  <td style="padding-bottom: 2px; padding-top:2px">PLACE ISSUED:{{placeissued}}</td>
+              </tr>
+          </table>
+      </div>
+
+      <div style="width: 50%; float:right;">
+          <table width="100%" style="padding:0px; font-size:11px">
+              <tr>
+                  <td style="font-size:11px; border-top: 1px solid black; border-right: 1px solid black; border-bottom:none; border-left:1px solid black;">WITH MY CONSENT: LOT OWNER</td>
+              </tr>
+              <tr>
+                  <td style=" text-align:center; padding-bottom: 2px; padding-top: 20px; border-top: none; border-right: 1px solid black; border-bottom:1px solid black; border-left:1px solid black;"><u>&nbsp;&nbsp;{{lotname}}&nbsp;&nbsp;</u><br>
+                        (Signature Over Printed Name)<br>
+                        Date <u>&nbsp;&nbsp;{{lotdate}}&nbsp;&nbsp;</u></td>
+              </tr>
+              <tr>
+                  <td style="padding-bottom: 2px; padding-top:2px">ADDRESS:{{lotaddress}}</td>
+              </tr>
+              <tr>
+                  <td style="padding-bottom: 2px; padding-top:2px">CTC NO.:{{lottaxcert}}</td>
+              </tr>
+              <tr>
+                  <td style="padding-bottom: 2px; padding-top:2px">DATE ISSUED:{{lotdateissued}}</td>
+              </tr>
+              <tr>
+                  <td style="padding-bottom: 2px; padding-top:2px">PLACE ISSUED:{{lotplaceissued}}</td>
+              </tr>
+          </table>
+      </div>
+
+      <div style="clear:both;"></div>
+
+      <table width="100%" style="padding:0px">
+          <tr>
+              <td style="border:0px solid black; padding-top: 5px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; width: 100%;">
+                  <h4 style="padding:0px">BOX 4</h4>
+              </td>
+          </tr>
+      </table>
+
+      <div style="width: 100%; border:solid 1px black; padding:5px;">
+          <div style="width: 100%;">
+              <p style="width: 200px; float: left;">Republic of the Philiphines</p>
+              <p style="float: left; margin-left: 100px;">) S.S.</p>
+          </div>
+
+          <div style="width: 100%;">
+              <p style="width: 300px; float: left;">City/Municipality Of _______________________</p>
+              <p style="float: left; margin-left: 0px;">)</p>
+          </div>
+
+          <p style="margin-left: 120px; padding-top:5px;">BEFORE ME, at the City/Municipality Of _____________________________ on _____________________________</p>
+          <p style="padding-top:5px;">personally appeared the following:</p>
+
+          <div style="width:200px; float: left; text-align: center; padding-top:10px;">
+              <p style="border-bottom:solid 1px black; text-align: center;">
+                {{applicantnew}}  &nbsp;
+              </p>
+                 Applicant
+          </div>
+
+          <div style="width:70px; float: left; text-align: center; padding-top:10px; margin-left: 37px;">
+              <p style="border-bottom:solid 1px black; text-align: center;">
+                 {{ctcnonew}} &nbsp;
+              </p>
+                CTC No.
+          </div>
+
+          <div style="width:150px; float: left; text-align: center; padding-top:10px; margin-left: 30px;">
+              <p style="border-bottom:solid 1px black; text-align: center;">
+                 {{dateissuednew}} &nbsp;
+              </p>
+                Date Issued
+          </div>
+
+          <div style="width:150px; float: left; text-align: center; padding-top:10px; margin-left: 30px;">
+              <p style="border-bottom:solid 1px black; text-align: center;">
+                 {{placeissuednew}} &nbsp;
+              </p>
+                Place Issued
+          </div>
+
+          <div style="clear:both;"></div>
+
+          <div style="width:200px; float: left; text-align: center; padding-top:10px;">
+              <p style="border-bottom:solid 1px black; text-align: center;">
+                  {{liancenedapplicant}} &nbsp;
+              </p>
+              License Architect or Civil Engineer<br><small>(Full-time inspector and Supervisor of Demolition work)</small>
+          </div>
+
+          <div style="width:70px; float: left; text-align: center; padding-top:10px; margin-left: 37px;">
+              <p style="border-bottom:solid 1px black; text-align: center;">
+                 {{liancenedctcno}} &nbsp;
+              </p>
+              CTC No.
+          </div>
+
+          <div style="width:150px; float: left; text-align: center; padding-top:10px; margin-left: 30px;">
+              <p style="border-bottom:solid 1px black; text-align: center;">
+                 {{lianceneddateissued}} &nbsp;
+              </p>
+               Date Issued
+          </div>
+
+          <div style="width:150px; float: left; text-align: center; padding-top:10px; margin-left: 30px;">
+              <p style="border-bottom:solid 1px black; text-align: center;">
+                {{liancenedplaceissued}}  &nbsp;
+              </p>
+               Place Issued
+          </div>
+<br>
+          <p>whose signature appears herein above, know to be the same persons who executed this standard prescribed from and acknowledge to me that the same is their free and voluntary act and deed.</p>
+
+          <p style="margin-left: 60px;">WITNESS MY HAND AND SEAL on the date and place above written.</p>
+
+          <div style="width: 100%;">
+              <p style="width:100%; float: left;">Doc. No.&nbsp;&nbsp;&nbsp;&nbsp;_______________________</p>
+              <p style="width:75%; float: left;">Page No.&nbsp;&nbsp;&nbsp;_______________________</p>
+              <p style="width:15%; float: left; margin-left: 0px; border-top: solid 1px black; text-align:center; padding-left:3%; padding-right:3%;">Notary Public</p>
+              
+              <p style="width:75%; float: left;">Book No.&nbsp;&nbsp;&nbsp;_______________________</p>
+              <p style="width:75%; float: left;">Series No. _______________________</p>
+          </div>
+      </div>
+    </div>
+
+    <div style="">
+        <h4 style="padding:0px"></h4>
+        <table width="100%" id="summary" style="border:none;">
+            <tr>
+                <td width="100%" style="text-align:left; border:none; padding-top: 40px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px;">
+                    <h4 style="padding:0px">BOX 5 TO BE ACCOMPLISHED BY THE PROCESSING AND EVALUATION DIVISION</h4>
+                </td>
+            </tr>
+        </table>
+      
+        <table width="100%" style="border:1px solid black; border-top: none; font-size: 10px;">
+            <tr>
+                <td style=" width:50%; text-align:left; border-bottom:1px solid black;">RECEIVED BY:</td>
+                <td style=" width:50%; text-align:left;border-bottom:1px solid black;">DATE:</td>
+            </tr>
+            <tr>
+                <td style="width:50%; text-align:left; vertical-align: top; border-top:0px solid black; border-right:0px solid black; border-bottom:1px solid black; border-left:1px solid black;">
+                    <table width="100%" style="font-size:10px;">
+                        <tr>
+                            <td style="border:none; padding:2px; padding-top: 10px;">
+                                Fee Paid:&nbsp;&nbsp;&nbsp;________________________________________________
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="border:none; padding:2px; padding-top: 10px;">
+                                Date Paid: ________________________________________________
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                <td style="width:50%; text-align:left; border-top:0px solid black; border-right:1px solid black; border-bottom:1px solid black; border-left:0px solid black;">
+                    <table width="100%" style="font-size:10px;">
+                        <tr>
+                            <td style="border:none; padding:2px; padding-top: 10px;">
+                                OR No:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;______________________________
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="border:none; padding:2px; padding-top: 10px;">
+                                Date Issued:  ______________________________
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+
+        <div style="width: 100%; border:solid 1px black; text-align: justify; padding:5px;">
+            <h4>BOX 6 TO BE ACCOMPLISHED BY THE BUILDING OFFICIAL </h4><br>
+            <h4>ACTION TAKEN:</h4>
+            <ul style="list-style-type: none;">
+                <li>Permit is hereby issued/granted to demolish your ______________________________________________________________ subject to the following condition</li>
+            </ul>
+            <ol type="1">
+                <li style="text-indent: -1px; margin-bottom:5px;">The demolition shall be undertaken in accordance with rule XI on protection and safety requirements for construction and demolition of building/structure of the implementing rules and regulations of the National Building Code of the Philippines (Pd 1096) and shall be under the direct responsibility of a full time supervising Architect or Civil Engineer in charge of demolition.</li>
+
+                <li style="text-indent: -1px; margin-bottom:5px;">The demolition shall be undertaken only after the building has been vacated and all utility lines such as electric, gas, telephone and water installations have been disconnected.</li>
+
+                <li style="text-indent: -1px; margin-bottom:5px;">The demolition work/s by this permit shall be completed within a period of _____( ) days from starting date thereof.</li>
+
+                <li style="text-indent: -1px; margin-bottom:5px;">Demolition.</li>
+
+                <li style="text-indent: -1px; margin-bottom:5px;">Precautions before demolition
+
+                    <ol type="i">
+                        <li style="margin-top:10px; margin-bottom:5px;">Before commencing the work of demolition of a building/ structure, all gas, electric, water and other meters shall be removed and the supply lines disconnected except such as are especially provided or required for use in the connection with the work of demolition.</li>
+                        <li style="margin-bottom:5px;">All fittings attached to the building and connected to any street lighting system, electrical supply or other utilities shall be removed.</li>
+                        <li style="margin-bottom:5px;">All electric power shall be shut off and all electric service lines shall be cut and disconnected by the power company at or outside the property line.</li>
+                        <li style="margin-bottom:5px;">All fittings attached to the building and connected to any street lighting system, electrical supply or other utilities shall be removed.</li>
+                        <li style="margin-bottom:5px;">All gas, water and other utility service lines shall be shut off and cut or capped or otherwise controlled at or outside the building line. In each case, the utility company involved shall be notified an advance and its approval or cooperation obtained.</li>
+                        <li style="margin-bottom:5px;">No electric cable or other apparatus, other than those especially required for use in the connection with the demolition work, shall remain electrically charged during demolition operations. When it is necessary to maintain any power, gas or the utility lines during the process of demolition, such lines shall be temporarily relocated and protected with substantial covering to the satisfaction of utility company concerned.</li>
+                        <li style="margin-bottom:5px;">All necessary steps shall be taken to prevent danger to persons arising from fire or explosion from leakage or accumulation of gas or vapour and from flooding from uncapped water mains, sewers and/or culverts.</li>
+                        <li style="margin-bottom:5px;">All entrances/exits to and from the building shall be properly protected as prevent any danger to persons engaged in the demolition work using such entrances/exits in the performance of their work.</li>
+                        <li style="margin-bottom:5px;">Glased sahes and glazed door shall be removed before the start of demolition operations.</li>
+                    </ol>
+                </li>
+
+                <li style="text-indent: -1px; margin-bottom:5px;">At least five(5) days before the actual demolition work is to be started, you are required to advise the office of the Building Official in writing.</li>
+
+                <li style="text-indent: -1px; margin-bottom:5px;">Strict compliance with the above conditions is required subject to monitoring by this office of the Building Official and revocation of this permit in case of violation.</li>
+            </ol>
+            <h4>PERMIT ISSUED BY:</h4><br><br>
+            <p style="text-align:center; border-top: 0px;">
+                <strong style="border-bottom:solid 1px black;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{bldofficialname}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong><br>
+                <strong>BUILDING OFFICIAL</strong><br>
+                Signature Over Printed Name<br>
+                Date ____________________
+            </p>
+        </div>
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+

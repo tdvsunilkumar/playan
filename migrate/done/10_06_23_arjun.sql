@@ -1,0 +1,1 @@
+ALTER TABLE `cto_payment_or_types` ADD `ora_document` TEXT NULL AFTER `ora_remarks`;

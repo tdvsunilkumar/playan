@@ -1,0 +1,1 @@
+ALTER TABLE `hr_leaves` ADD COLUMN IF NOT EXISTS  `leave_hours` DOUBLE NOT NULL AFTER `dayswithpay`;

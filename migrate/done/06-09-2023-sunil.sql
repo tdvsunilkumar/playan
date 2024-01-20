@@ -1,0 +1,1 @@
+ALTER TABLE `rpt_properties` ADD `rp_property_code_new` BIGINT(50) NULL AFTER `rp_property_code`;

@@ -1,0 +1,57 @@
+<style type="text/css">
+	*{ margin: 0; padding: 0;}
+	@page {margin-top: 12mm;
+	margin-bottom: 12mm; margin-header: 0mm;
+	margin-footer: 0mm;
+	background-image: url("assets/images/applicationPdf/CEC_Certificate1.jpg");
+	background-image-resize: 1}
+    body { font-family: 'Montserrat', sans-serif;font-size: 12px; }
+    table{border: none;}
+    table td, table th { padding: 5px; }
+    table.noborder{border: none;}
+    td.noborder{border: nonex;}
+    .w100{width: 100%}
+	.w60{width: 60%}
+	.w50{width: 50%}
+	.w40{width: 40%}
+	.w30{width: 30%}
+	.w20{width: 20%}
+</style>
+<title>Certificate of Environmental Clearance</title>
+<body>
+	<div>
+        <div style="padding-top:380px">
+	        <table width="100%" class="noborder">
+	            <tr>
+	                <td class="noborder" style="padding:0px; width: 80%; font-size:16px; text-align:center;">
+	                    <p><strong>This certificate is given to</strong></p>
+	                </td>
+	            </tr>
+	        </table>
+	        <table style="width:100%; padding-top: 5px;">
+	        	<tr>
+	        		<td style="text-align:center; padding:0px">
+	        			<strong style="padding:0px; font-size:28px;">{{business_name}}</strong><br>
+	        			<span style="font-size:16px;"> {{owner_name}} </span></br>
+						<span style="font-size:16px;"> {{complete_address}} </span>
+	        		</td>
+	        	</tr>
+	        	<tr>
+	        		<td style="text-align:center; line-height:25px; font-size: 16px; padding-top:10px">
+	        			<p>
+	        				For completing all the necessary requirements by this office<br>
+							Given this {{give_date}}   at Palayan City
+						</p>
+	        		</td>
+	        	</tr>
+	        	<tr>
+	        		<td style="text-align:center; line-height:25px; font-size: 16px; padding-top:200px">
+	        			<!-- <img src="{{signeture}}" style="width:150px"> -->
+	        			<p> {{ebir_inspected_by}} </p>
+						<p> {{hr_postion}} </p>
+	        		</td>
+	        	</tr>
+	        </table> 
+		</div>
+	</div>
+</body>

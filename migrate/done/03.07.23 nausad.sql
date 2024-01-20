@@ -1,0 +1,1 @@
+ALTER TABLE ho_medical_certificates ADD med_cert_date DATE AFTER or_amount;

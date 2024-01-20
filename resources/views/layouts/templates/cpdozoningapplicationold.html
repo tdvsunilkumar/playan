@@ -1,0 +1,215 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <style type="text/css">
+      @import url('https://fonts.googleapis.com/css?family=Fjalla+One|Montserrat:400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap');
+* { margin: 0; padding: 0; }
+body { font-family: 'Montserrat', sans-serif;font-size: 14px; }
+table td, table th { border: 1px solid black; padding: 5px; }
+.page-wrap { width: 800px; margin: 100px auto;}
+
+textarea { border: 0; font-size: 14px; font-family: 'Montserrat', sans-serif;overflow: hidden; resize: none; }
+table { border-collapse: collapse; }
+
+
+/*#header { height: 15px; width: 100%; margin: 20px 0; background: #222; text-align: center; color: white; font: bold 15px 'Montserrat', sans-serif text-decoration: uppercase; letter-spacing: 20px; padding: 8px 0px; }*/
+.header{margin: 20px 0;text-align: left;font-size: 45px;font-weight: 700; font-family: 'Fjalla One', sans-serif; text-decoration: uppercase;
+    letter-spacing: 1px;padding: 8px 0px;color:#1f4888;}
+.company-name {font-size: 20px;font-weight: 500;}
+
+#address { width: 250px; height: 150px; float: left;font-weight: 500; }
+/*#customer { overflow: hidden; }*/
+.company-address {font-size: 15px;color: #1f4888 !important;height: 115px !important;}
+.chklabel{margin-bottom: 5px; margin-left:5px !important;}
+#logo { text-align: right; float: right; position:}
+/*#logo:hover, #logo.edit { border: 1px solid #000; margin-top: 0px; max-height: 125px; }*/
+#logoctr { display: none; }
+
+#logohelp { text-align: left; display: none; font-style: italic; padding: 10px 5px;}
+#logohelp input { margin-bottom: 5px; }
+.edit #logohelp { display: block; }
+.edit #save-logo, .edit #cancel-logo { display: inline; }
+.edit #image, #save-logo, #cancel-logo, .edit #change-logo, .edit #delete-logo { display: none; }
+#customer-title { font-size: 20px; font-weight: bold; float: left;color: #1f4888; }
+
+#meta { margin-top: 1px; width: 300px; float: right; }
+#meta td { text-align: right;  }
+td,p{padding:1px;}
+#meta td.meta-head { text-align: left; background: #eee;font-weight: 500; }
+#meta td textarea { width: 100%; height: 20px; text-align: right; }
+textarea:hover, textarea:focus, #items td.total-value textarea:hover, #items td.total-value textarea:focus, .delete:hover { background-color:#EEFF88; }
+.pull-right{text-align: right;}
+.delete-wpr { position: relative; }
+.delete { display: block; color: #000; text-decoration: none; position: absolute; background: #EEEEEE; font-weight: bold; padding: 0px 3px; border: 1px solid; top: -6px; left: -22px; font-family: Verdana; font-size: 12px; }
+.footer-contain {text-align: center;font-size: 35px; font-weight: 700;color: #1f4888;}
+.font_change{white-space: pre !important;font-size: 12px;margin-left: 10px;}
+.textborder{border-bottom:1px solid black; width:200px !important;}
+    </style>
+
+    <title>Zonong Application</title>
+  </head>
+<body>
+<table style='width:700px;'>
+  <tr>
+    <td style="border: 1px solid black; margin-left: 50px;">
+        <table width="100%" id="summary" class="noborder">
+                <tr>
+                    <td  style="text-align:center;border:0px solid black;"><p style="font-size: 15px; padding-top:10px;">Republic of the Philippines</p>
+                      <p style="font-size: 20px;text-transform: uppercase;"><strong>City Planning And Developemnt Office</strong></p>
+                       <p style="font-size: 15px;"><span class="textborder">Palayan City</span></p>
+                    </td>
+                </tr>    
+                <tr>
+                    <td width="100%" style="text-align:center;border:0px solid black;padding-top:50px;"><p style="font-size: 20px;">Application For Certification Of Zoning Compliance</p>
+                    </td>
+                </tr>
+        </table>
+        <table width="100%" id="summary" class="noborder">
+            <tr> 
+                  <td width="60%" style="border:0px solid black; padding-right:30px; padding-top:30px;">
+                   <p style="font-size: 16px;font-weight: 500;">Control No: <u>{{controlno}}</u></p></td>
+                   <td width="40%" style="border:0px solid black; padding-right:30px;">
+                   <p style="font-size: 16px;font-weight: 500;">Date: <u>{{dateofapp}}</u></p></td>
+             </tr>
+            <tr>
+                  <td style="border:0px solid black; padding-right:30px;" colspan="2">
+                   <p style="font-size: 16px;font-weight: 500;">II. Complete Name & Address of Firm (if appliaction is Business firm)</p>
+                   <p>{{nameandfirm}}</p>
+                 </td>
+                   
+             </tr>
+              <tr>
+                  <td style="border:0px solid black; padding-right:30px;" colspan="2">
+                   <p style="font-size: 16px;font-weight: 500;">III. Authorized Representative: <u>{{representative}}</u></p></td>
+             </tr>
+              <tr>
+                  <td style="border:0px solid black; padding-right:30px;" colspan="2">
+                   <p style="font-size: 16px;font-weight: 500;">&nbsp;&nbsp;&nbsp;&nbsp;Telephoen No: <u>{{telephoneno}}</u></p></td>
+             </tr>
+        </table>
+          <table width="100%" id="summary" class="noborder">
+            <tr> 
+                  <td  style="border:0px solid black; padding-right:30px;" colspan="3">
+                   <p style="font-size: 16px;font-weight: 500; text-transform: uppercase;">IV. Project Description:</p></td>
+             </tr>
+             <tr> 
+                  <td  style="border:0px solid black; padding-right:30px;" colspan="3">
+                   <p style="font-size: 16px;font-weight: 500;">1. Nature Of Application</p></td>
+             </tr>
+              <tr>
+                 {{natureofapp}}
+             </tr>
+        </table>
+          <table width="100%" id="summary" class="noborder">
+            <tr>
+                  <td style="border:0px solid black; padding-right:30px;">
+                   <p style="font-size: 16px;font-weight: 500;">2.Purpose Of Application: <u>{{apppurpose}}</u></p></td>
+             </tr>
+            <tr>
+                  <td style="border:0px solid black; padding-right:30px;">
+                   <p style="font-size: 16px;font-weight: 500;">3.Type Of Project: <u>{{typeofproject}}</u></p></td>
+             </tr>
+            <tr>
+                  <td style="border:0px solid black; padding-right:30px;">
+                   <p style="font-size: 16px;font-weight: 500;">4.Location Of Project: <u>{{location}}</u></p></td>
+             </tr>
+             <tr>
+                  <td style="border:0px solid black; padding-right:30px;">
+                   <p style="font-size: 16px;font-weight: 500;">5.Project Tenure:</p><p> {{protenure}}</p></td>
+             </tr>
+             <tr>
+                  <td style="border:0px solid black; padding-right:30px;">
+                   <p style="font-size: 16px;font-weight: 500;">6.Project Site Area: <u>{{sitearea}}</u></p></td>
+             </tr>
+             <tr>
+                  <td style="border:0px solid black; padding-right:30px;">
+                   <p style="font-size: 16px;font-weight: 500;">7.Right Over Land: </p>
+                   <p>{{rightover}}</p></td>
+             </tr>
+              <tr>
+                  <td style="border:0px solid black; padding-right:30px;">
+                   <p style="font-size: 16px;font-weight: 500;">8.Land Classification Of Project size[Per Zoning Ordinance /Dominnat land use within 1km radius]</p>
+                   <p>{{landclassification}}</p></td>
+             </tr>
+              <tr>
+                  <td style="border:0px solid black; padding-right:30px;">
+                   <p style="font-size: 16px;font-weight: 500;">9.Use Of Project Size</p>
+                   <p>{{useofproject}}</p></td>
+             </tr>
+              <tr>
+                  <td style="border:0px solid black; padding-right:30px;">
+                   <p style="font-size: 16px;font-weight: 500;">10.Manufacturing Process [For Manufacturing Activities]</p>
+                   <p>10.1 Description Induvisiua activities.</p>
+                   <p>10.2 Raw Material Inputs</p></td>
+             </tr>
+             <tr>
+                  <td style="border:0px solid black; padding-right:30px;">
+                   <p style="font-size: 16px;font-weight: 500;">11.Product manufactures:{{promanufacturer}}</p>
+                   </td>
+             </tr>
+             <tr>
+                  <td style="border:0px solid black; padding-right:30px;">
+                   <p style="font-size: 16px;font-weight: 500;">12.Average Production outputs:{{averageoutput}}</p>
+                   </td>
+             </tr>
+             <tr>
+                  <td style="border:0px solid black; padding-right:30px;">
+                   <p style="font-size: 16px;font-weight: 500;">13.Power Requirements</p>
+                   <p>Source {{source}}</p>
+                   <p>Daily Consumption {{dailyconsumption}}</p>
+                   </td>
+             </tr>
+             <tr>
+                  <td style="border:0px solid black; padding-right:30px;">
+                   <p style="font-size: 16px;font-weight: 500;">14.Employment Size</p>
+                   <p>Current: {{current}}</p>
+                   <p>Projected: {{projected}}</p>
+                   </td>
+             </tr>
+        </table>
+          <table width="100%" id="summary" class="noborder">
+             <tr>
+                 <td width="50%" style="text-align:center;border:0px solid black;margin-left: 20px;"></td>
+                  <td width="50%" style="text-align:center;border:0px solid black;margin-left: 20px;">
+                    <p><span class="textborder">{{appliacant}}</span></p>
+                   <p style="font-size: 15px;font-weight: 400;">Appliacant</p>
+                 </td>
+            </tr>
+            <tr>
+                 <td width="50%" style="text-align:center;border:0px solid black;margin-left: 20px;"></td>
+                  <td width="50%" style="text-align:center;border:0px solid black;margin-left: 20px;">
+                    <p><span class="textborder">{{representative}}</span></p>
+                   <p style="font-size: 15px;font-weight: 400;">Representative</p>
+                 </td>
+            </tr>
+        </table>
+         <table width="100%" id="summary" class="noborder">
+             <tr>
+                  <td style="text-align:left;border:0px solid black;margin-left: 20px;">
+                   <p style="font-size: 15px;font-weight: 400;">Republic Of The Philiphines:</p>
+                   <p>(City/ Muncipality): <span class="textborder">Palayan</span></p>
+                 </td>
+            </tr>
+            <tr>
+                  <td style="text-align:left;border:0px solid black;margin-left: 20px;">
+                   <p style="font-size: 15px;font-weight: 400;">Subscribed And Swom Before me This <span class="textborder">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> day of <span class="textborder">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> 2023 <span class="textborder">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> the City / province Of Nueva Ecija Affiant Exhibited his/ her Cert No. A & B. <span class="textborder">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> Issued At <span class="textborder">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> on <span class="textborder">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> 2023</p>
+                   
+                 </td>
+            </tr>
+        </table>
+    </td>
+  </tr>
+</table>
+</body>
+</html>
+
+
+
+
+
+
+

@@ -1,0 +1,1 @@
+ALTER TABLE `hr_leave_parameter` ADD `hrlp_is_active` INT NOT NULL DEFAULT 1 AFTER `hrlp_description`;

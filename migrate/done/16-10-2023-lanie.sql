@@ -1,0 +1,3 @@
+ALTER TABLE `cbo_obligation_payroll` CHANGE `payroll_no` `payroll_no` VARCHAR(50) NOT NULL COMMENT 'ref-table: hr_payroll.hrpr_payroll_no';
+
+ALTER TABLE `hr_payroll` CHANGE `hrpr_monthly_rate` `hrpr_monthly_rate` DOUBLE NOT NULL COMMENT 'ref-Table: hr_appointment.hra_monthly_rate', CHANGE `hrpr_holiday_ot` `hrpr_holiday_ot` DOUBLE NOT NULL, CHANGE `hrpr_total_salary` `hrpr_total_salary` DOUBLE NOT NULL, CHANGE `hrpr_earnings` `hrpr_earnings` DOUBLE NOT NULL, CHANGE `hrpr_deductions` `hrpr_deductions` DOUBLE NOT NULL, CHANGE `hrpr_net_salary` `hrpr_net_salary` DOUBLE NOT NULL;

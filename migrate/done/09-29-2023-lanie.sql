@@ -1,0 +1,1 @@
+ALTER TABLE `eco_housing_application` ADD `top_transaction_no`	varchar(20) NOT NULL AFTER `remaining_amount`, ADD `trans_id` INT NOT NULL AFTER `top_transaction_no`;

@@ -1,0 +1,1 @@
+ALTER TABLE `users` ADD `is_activate_digitalsignature` INT(1) NOT NULL DEFAULT '0' AFTER `is_active_e_sign`;

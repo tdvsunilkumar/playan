@@ -1,0 +1,1 @@
+ALTER TABLE `rpt_property_building_floor_ad_items` CHANGE `rpbfai_total_area` `rpbfai_total_area` DECIMAL(20,3) NULL;

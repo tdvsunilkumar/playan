@@ -1,0 +1,330 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <style type="text/css">
+        @page {margin-top: 12mm; margin-bottom: 12mm; margin-header: 0mm;margin-footer: 0mm;}
+        @import url('https://fonts.googleapis.com/css?family=Fjalla+One|Montserrat:400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap');
+        * { margin: 0; padding: 0; }
+        body { font-family: 'Montserrat', sans-serif;font-size: 12px; }
+        table td, table th { border: 1px solid black; padding: 5px; }
+        p {margin: 0px}
+        .page-wrap { width: 800px; margin: 100px auto;}
+
+        textarea { border: 0; font-size: 14px; font-family: 'Montserrat', sans-serif;overflow: hidden; resize: none; }
+        table { border-collapse: collapse; }
+    </style>
+    <title>Zonong Application</title>
+</head>
+<body>
+    <table width="100%">
+        <tr>
+            <td style="text-align:center;border:0px solid black;">
+                <p style="padding-top:0px;">Republic of the Philippines</p>
+                <p style="text-transform: uppercase;"><strong>City Planning And Developemnt Office</strong></p>
+                <p style=""><span class="textborder">Palayan City</span></p>
+                <p style="text-transform: uppercase;"><strong>Application For Certification Of Zoning Compliance</strong></p>
+                <p style=""><span class="textborder">(PLEASE PRINT)</span></p>
+            </td>
+        </tr>
+    </table>
+
+    <table width="100%">
+        <tr>
+            <td width="50%" style="padding:0px; border:0px;">
+                <table width="100%">
+                    <tr>
+                        <td width="100px" style="padding:0px; border:0px;">
+                            CONTROL NO:
+                        </td>
+                        <td style="padding:0px; border-top: 0px; border-right: 0px; padding-bottom: 1px solid black; border-left: none;">{{controlno}}</td>
+                    </tr>
+                </table>
+            </td>
+            <td width="40%" style="padding:0 0 0 10%; border:0px;">
+                <table width="100%">
+                    <tr>
+                        <td width="50px" style="padding:0px; border:none;">
+                            DATE:
+                        </td>
+                        <td style="padding:0px; border-top: 0px; border-right: 0px; padding-bottom: 1px solid black; border-left: none;">{{dateofapp}}
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+
+    <div style="width:100%; float:left;">
+        <ol type="I">
+            <li style="display: inline-block;">
+                <div style="width:20%; float:left;">Name of Applicant:</div>
+                <div style="width:80%; float:right;">
+                    <table width="100%">
+                        <tr>
+                            <td style="padding:0px; padding-top: 0px; border-top: 0px; border-right: 0px; padding-bottom: 1px solid black; border-left: none;">{{client_name}}
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </li>
+            <li style="padding-top:5px;">Complete Name & Address of Firm (if appliaction is Business firm)
+                <table width="100%">
+                    <tr>
+                        <td style="padding:0px; padding-top: 5px; border-top: 0px; border-right: 0px; padding-bottom: 1px solid black; border-left: none;">{{nameandfirm}}
+                        </td>
+                    </tr>
+                </table>
+            </li>
+            <li>
+                <div style="width:27%; float:left; padding-top: 5px;">Authorized Representative</div>
+                <div style="width:73%; float:right;">
+                    <table width="100%">
+                        <tr>
+                            <td style="padding:0px; padding-top: 5px; border-top: 0px; border-right: 0px; padding-bottom: 1px solid black; border-left: none;">:{{representative}}
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div style="clear:both;"></div>
+
+                <div style="width:27%; float:left; padding-top: 5px;">Telephone No.</div>
+                <div style="width:73%; float:right;">
+                    <table width="100%">
+                        <tr>
+                            <td style="padding:0px; padding-top: 5px; border-top: 0px; border-right: 0px; padding-bottom: 1px solid black; border-left: none;">:{{telephoneno}}
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </li>
+            <li style="padding-top:5px;">PROJECT DESCRIPTION:
+                <ol type="1">
+                    <li>
+                        <div style="width:100%; float:left; padding-top: 5px;">Nature of Application:</div>
+                        <div style="clear:both;"></div>
+                        <table width="100%">
+                            <tr>
+                              {{natureofapp}}
+                           </tr>
+                      </table>
+                    </li>
+                    <li>
+                        <div style="width:27%; float:left; padding-top: 5px;">Purpose of Application:</div>
+                        <div style="width:73%; float:right;">
+                            <table width="100%">
+                                <tr>
+                                    <td style="padding:0px; padding-top: 5px; border-top: 0px; border-right: 0px; padding-bottom: 1px solid black; border-left: none;">{{apppurpose}}
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </li>
+                    <li>
+                      <div style="width:19%; float:left; padding-top: 5px;">Type of Project:</div>
+                        <div style="width:81%; float:right;">
+                            <table width="100%">
+                                <tr>
+                                    <td style="padding:0px; padding-top: 5px; border-top: 0px; border-right: 0px; padding-bottom: 1px solid black; border-left: none;">{{typeofproject}}
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </li>
+                    <li>
+                        <div style="width:23%; float:left; padding-top: 5px;">Location of Project:</div>
+                        <div style="width:77%; float:right;">
+                            <table width="100%">
+                                <tr>
+                                    <td colspan="3" style="padding:0px; padding-top: 5px; border-top: 0px; border-right: 0px; padding-bottom: 1px solid black; border-left: none;">{{location}}
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="width:33%; padding:0px; border-top: 0px; border-right: 0px; border-bottom: none; border-left: none;"><small>(Street)</small>
+                                    </td>
+                                    <td style="width:33%; padding:0px; border-top: 0px; border-right: 0px; border-bottom: none; border-left: none;"><small>(Barangay)</small>
+                                    </td>
+                                    <td style="width:33%; padding:0px; border-top: 0px; border-right: 0px; border-bottom: none; border-left: none;"><small>(City/Municipality)</small>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </li>
+                    <li>
+                        <div style="width:100%; float:left; padding-top: 5px;">Project Tenure:</div>
+                        <div style="clear:both;"></div>
+                       {{protenure}}
+                    </li>
+                    <li>
+                        <div style="width:27%; float:left; padding-top: 5px;">Project Site Area (sq.m.):</div>
+                        <div style="width:73%; float:right;">
+                            <table width="100%">
+                                <tr>
+                                    <td style="padding:0px; padding-top: 5px; border-top: 0px; border-right: 0px; padding-bottom: 1px solid black; border-left: none;">{{sitearea}}
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </li>
+                    <li>
+                        <div style="width:100%; float:left; padding-top: 5px;">Right Over Land:</div>
+                        <div style="clear:both;"></div>
+                        {{rightover}}
+                    </li>
+                    <li>
+                        <div style="width:100%; float:left; padding-top: 5px;">Land Classification of Project size[Per Zoning Ordinance /Dominant land use within</div>
+
+                        <div style="clear:both;"></div>
+
+                        <div style="width:17%; float:left; padding-top: 5px;">1km Radius</div>
+                        <div style="width:83%; float:right;">
+                            <table width="100%">
+                                <tr>
+                                    <td style="padding:0px; padding-top: 5px; border-top: 0px; border-right: 0px; padding-bottom: 1px solid black; border-left: none;">:{{landclassification}}
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </li>
+                    <li>
+                        <div style="width:21%; float:left; padding-top: 5px;">Use of Project Site:</div>
+                        <div style="width:79%; float:right;">
+                            <table width="100%">
+                                <tr>
+                                    <td style="padding:0px; padding-top: 5px; border-top: 0px; border-right: 0px; padding-bottom: 1px solid black; border-left: none;">{{useofproject}}
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </li>
+                    <li>
+                        <div style="width:100%; float:left; padding-top: 5px;">Manufacturing Process (For Manufacturing Activities)<br>
+                        Attach the following in separate sheet:<br>
+                        10.1 Description Individual activities.<br>
+                        10.2 Raw Material Inputs<br>
+                        10.3 Flow of Manufacturing Process (flow chart/diagram)
+                        </div>
+                    </li>
+                    <li>
+                        <div style="width:25%; float:left; padding-top: 5px;">Product Manufactured:</div>
+                        <div style="width:75%; float:right;">
+                            <table width="100%">
+                                <tr>
+                                    <td style="padding:0px; padding-top: 5px; border-top: 0px; border-right: 0px; padding-bottom: 1px solid black; border-left: none;">{{promanufacturer}}
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </li>
+                    <li>
+                        <div style="width:31%; float:left; padding-top: 5px;">Average Production Outputs:</div>
+                        <div style="width:69%; float:right;">
+                            <table width="100%">
+                                <tr>
+                                    <td style="padding:0px; padding-top: 5px; border-top: 0px; border-right: 0px; padding-bottom: 1px solid black; border-left: none;">{{averageoutput}}
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </li>
+                    <li style="">
+                        <div style="width:100%; float:left; padding-top: 5px;">Power Requirements:</div>
+
+                        <div style="clear:both;"></div>
+
+                        <div style="width:10%; float:left; padding-top: 0px;">Source:</div>
+                        <div style="width:90%; float:right;">
+                            <table width="100%">
+                                <tr>
+                                    <td style="padding:0px; padding-top: 0px; border-top: 0px; border-right: 0px; padding-bottom: 1px solid black; border-left: none;"> {{source}}
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+
+                        <div style="clear:both;"></div>
+
+                        <div style="width:23%; float:left; padding-top: 5px;">Daily Consumption:</div>
+                        <div style="width:77%; float:right;">
+                            <table width="100%">
+                                <tr>
+                                    <td style="padding:0px; padding-top: 5px; border-top: 0px; border-right: 0px; padding-bottom: 1px solid black; border-left: none;">  {{dailyconsumption}}
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </li>
+                    <li style="">
+                        <div style="width:100%; float:left; padding-top: 5px;">Employment Size:</div>
+
+                        <div style="clear:both;"></div>
+
+                        <div style="width:10%; float:left; padding-top: 0px;">Current:</div>
+                        <div style="width:90%; float:right;">
+                            <table width="100%">
+                                <tr>
+                                    <td style="padding:0px; padding-top: 0px; border-top: 0px; border-right: 0px; padding-bottom: 1px solid black; border-left: none;"> {{source}}
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+
+                        <div style="clear:both;"></div>
+
+                        <div style="width:10%; float:left; padding-top: 5px;">Projected:</div>
+                        <div style="width:90%; float:right;">
+                            <table width="100%">
+                                <tr>
+                                    <td style="padding:0px; padding-top: 5px; border-top: 0px; border-right: 0px; padding-bottom: 1px solid black; border-left: none;">  {{dailyconsumption}}
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </li>
+                </ol>
+            </li>
+        </ol>
+    </div>
+
+    <div style="width:40%; float:right; text-align: center; padding-top: 20px;">
+        <p style="border-bottom:solid 1px black;">{{appliacant}}</p>
+        <p style="">Applicant</p>
+    </div>
+
+    <div style="clear:both;"></div>
+
+    <div style="width:40%; float:right; text-align: center; padding-top: 20px;">
+        <p style="border-bottom:solid 1px black;">By: {{representative}}</p>
+        <p style="font-weight: 400;">Representative</p>
+    </div>
+
+    <div style="clear:both;"></div>
+
+    <table width="100%">
+        <tr>
+            <td style="text-align:left;border:0px solid black;">
+                <p style="">Republic of the Philiphines:</p>
+                <p>PALAYAN CITY, NUEVA ECIJA) S.S.</p>
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align:left;border:0px solid black;">
+                <p style="font-weight: 400;">SUBSCRIBED AND SWORN <span>_______</span> Before me this <span>_________</span> day of <span>_________________</span>2023<span>____________</span>in the City/Province of Nueva Ecija affiant exhibited his/ her Res. Cert. No. A & B<span> ___________________</span> Issued at <span>__________________________________________</span> on <span>__________________________________________2023</p>
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align:left;border:0px solid black;">
+                Doc. No.<u> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</u><br>
+                Page No.<u> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</u><br>
+                Book No.<u> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</u><br>
+                Series of 2023
+            </td>
+        </tr>
+        
+    </table>
+</body>
+</html>

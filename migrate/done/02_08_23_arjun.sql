@@ -1,0 +1,1 @@
+ALTER TABLE `ho_lab_requests` ADD `hp_code` INT(11) NOT NULL COMMENT 'ref-table:hr_profile. hp_code. Get Doctor Name ' AFTER `cit_id`;

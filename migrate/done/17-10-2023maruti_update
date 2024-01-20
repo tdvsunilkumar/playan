@@ -1,0 +1,6 @@
+ALTER TABLE `cpdo_application_forms` ADD `frgn_caf_id` VARCHAR(255) NULL AFTER `id`;
+ALTER TABLE `cpdo_application_forms` ADD `is_approved` INT(11) NULL DEFAULT '0' AFTER `is_synced`;
+ALTER TABLE `eng_job_requests` ADD `frgn_ejr_id` VARCHAR(255) NULL AFTER `id`;
+ALTER TABLE `eng_job_requests` ADD `is_approved` INT(11) NULL DEFAULT '0' AFTER `is_synced`;
+ALTER TABLE `eng_occupancy_apps` ADD `frgn_eoa_id` VARCHAR(255) NULL AFTER `id`;
+ALTER TABLE `eng_occupancy_apps` ADD `is_synced` INT(11) NOT NULL DEFAULT '0' AFTER `is_approve`, ADD `is_approved` INT(11) NOT NULL DEFAULT '0' AFTER `is_synced`;

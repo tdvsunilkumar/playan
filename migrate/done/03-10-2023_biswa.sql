@@ -1,0 +1,2 @@
+ALTER TABLE `bplo_business` CHANGE `busn_bldg_area` `busn_bldg_area` DOUBLE(10,3) NULL DEFAULT NULL, CHANGE `busn_bldg_total_floor_area` `busn_bldg_total_floor_area` DOUBLE(10,3) NULL DEFAULT NULL;
+ALTER TABLE `bplo_business_history` CHANGE `busn_bldg_area` `busn_bldg_area` DOUBLE(10,3) NULL DEFAULT NULL, CHANGE `busn_bldg_total_floor_area` `busn_bldg_total_floor_area` DOUBLE(10,3) NULL DEFAULT NULL;

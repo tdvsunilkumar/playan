@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <style type="text/css">
+        @page {sheet-size: A4; margin-top: 15mm; margin-bottom: 15mm; margin-left: 15mm; margin-right: 15mm; margin-header: 0mm;margin-footer: 0mm;}
+        @page rotated {
+            size: landscape;
+        }
+        @import url('https://fonts.googleapis.com/css?family=Fjalla+One|Montserrat:400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap');
+        * { margin: 0; padding: 0; }
+        body { font-family: 'Montserrat', sans-serif;font-size: 12px; }
+        p {margin: 0px}
+        table td, table th { border: 1px solid black; padding: 5px; }
+        .page-wrap { width: 800px; margin: 100px auto;}
+        table { border-collapse: collapse; }
+        h2, p, h1{margin: 0px; padding: 0px;}
+    </style>
+    <title>Certificate of Land Holdings</title>
+</head>
+<body>    
+    <watermarkimage src="{{backgroundlogo}}" alpha="0.08" position="auto" size="150,150" />
+
+    <div style="border-bottom:2px solid black; padding-bottom:10px; width:100%; text-align:center;">
+        <div style="width:340px; margin-left: 170px;">
+            <div style="width:90px; float: left;">
+                <img src="{{LOGO}}" style="width:90px; height:90px;">
+            </div>
+            <div style="text-align:center; width: 250px; float: left;">
+                <p style="padding-top: 15px;">Republic of the Philippines</p>
+                <p style=""><strong>CITY OF PALAYAN</strong></p>
+                <p style="font-size:14px; margin-top:5px;"><strong>OFFICE OF THE CITY ASSESSOR</strong></p>
+            </div>
+        </div>
+    </div>
+
+    <div style="clear:both"></div>
+
+    <div style="margin-top:100px; text-align:center;">
+        <span style="border-bottom:solid 1px #000; float:left; width: auto; font-size:18px; font-weight: bold;">CERTIFICATION OF LAND HOLDINGS</span>
+    </div>
+
+    <div style="clear:both"></div>
+
+    <div style="width:100%; float:left;">
+        <div style="width: 100%; float: left; margin-left:0px; margin-top: 30px;">
+            <p style="font-size: 13px;"><strong>TO WHOM IT MAY CONCERN:</strong></p>
+        </div>
+
+        <div style="float: left; font-size: 13px; margin-left:70px; line-height: 25px;">
+            <p style="word-spacing: 10px;">THIS IS TO CERTIFY that according to the records kept on file in this office.</p>
+        </div>
+
+        <div style="float: left; font-size: 13px; line-height: 20px;">
+            <p style="font-weight: bold; border-bottom: 1px solid black; text-align:center;">{{ownerName}}<p>
+            <p style="word-spacing: 10px;">is the owner of the Real Property described hereunder, viz:</p>
+        </div>
+
+        <div style="clear:both;"></div>
+
+        <table style="width: 100%; margin-top:30px;">
+            <tr>
+                <td style="text-align:center; font-weight:bold;">ARP<br>NO.</td>
+                <td style="text-align:center; font-weight:bold;">DECLARANT</td>
+                <td style="text-align:center; font-weight:bold;">LOCATION</td>
+                <td style="text-align:center; font-weight:bold;">AREA</td>
+                <td style="text-align:center; font-weight:bold;">MARKET<br>VALUE</td>
+                <td style="text-align:center; font-weight:bold;">ASSESSED<br>VALUE</td>
+            </tr>
+            {{DynamicTbl}}{{DynamicTblMech}}{{DynamicTblBuild}}
+        </table>
+
+        <div style="float: left; font-size: 13px; margin-left:70px; margin-top: 30px; width: 100%;">
+            <div style="float: left; width:280px; word-spacing:5px;">This certification is issued upon request of</div>
+            <div style="font-weight: bold; border-bottom: 1px solid black; text-align:center; width: 330px; float:left;">{{requestor}}</div>
+        </div>
+
+        <div style="float: left; font-size: 13px; width: 100%; margin-top:5px;">
+            <div style="float: left; width:28px; word-spacing:5px;">this</div>
+            <div style="font-weight: bold; border-bottom: 1px solid black; text-align:center; width: 45px; float:left;">{{rpc_or_dateformatted_date}}</div>
+            <div style="float: left; width:45px; word-spacing:5px;">day of</div>
+            <div style="font-weight: bold; border-bottom: 1px solid black; text-align:center; width: 170px; float:left;">{{formatted_dateMont}}</div>
+            <div style="float: left; width:270px; word-spacing:5px;">hereat Palayan City reference purposes.</div>
+        </div>
+
+        <div style="width: 100%; float:left; margin-top: 70px;">
+            <div style="width: 50%; float: left;">
+                <p style="font-size: 13px;">Verified by:</p>
+            </div>
+            <div style="width: 50%; float: left;">
+                <p style="font-size: 13px;">By:</p>
+            </div>
+        </div>
+    </div>
+    <div style="width: 100%; float:left; margin-top: 50px;">
+        <div style="width:50%; float:left;">
+            <div style="">
+                <p style="font-weight: bold; text-align: center;">
+                    <strong>{{assessor}}</strong>
+                </p>
+                <p style="text-align:center; font-style:italic;">
+                    <small>{{assessordescription}}</small>
+                </p>
+            </div>
+        </div>
+
+        <div style="width:50%; float:left; text-align:right;">
+            <div style="">
+                <p style="font-weight: bold; text-align: center;">
+                    <strong>{{certifiedby}}</strong>
+                </p>
+                <p style="text-align:center; font-style:italic;">
+                    <small>{{certifiedbydescription}}</small>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div style="clear:both;"></div>
+
+    <div style="float: left; font-size: 13px; line-height: 22px; width: 80px; text-align:right; padding-right:10px; margin-top:50px;">
+        <p>O.R. No.:</p>
+        <p>Dated:</p>
+        <p>Amount:</p>
+    </div>
+
+    <div style="float: left; font-size: 13px; width: 100px; line-height: 20px; text-align:center;">
+        <p style="font-weight: bold; border-bottom: 1px solid black;">{{rpc_or_no}}<p>
+        <p style="font-weight: bold; border-bottom: 1px solid black;">{{rpc_or_date}}</p>
+        <p style="font-weight: bold; border-bottom: 1px solid black;">{{rpc_or_amount}}</p>
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+

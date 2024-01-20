@@ -1,0 +1,336 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <style type="text/css">
+      @import url('https://fonts.googleapis.com/css?family=Fjalla+One|Montserrat:400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap');
+* { margin: 0; padding: 0; }
+body { font-family: 'Montserrat', sans-serif;font-size: 14px; }
+table td, table th { border: 1px solid black; padding: 5px; }
+.page-wrap { width: 800px; margin: 100px auto;}
+
+textarea { border: 0; font-size: 14px; font-family: 'Montserrat', sans-serif;overflow: hidden; resize: none; }
+table { border-collapse: collapse; }
+
+
+/*#header { height: 15px; width: 100%; margin: 20px 0; background: #222; text-align: center; color: white; font: bold 15px 'Montserrat', sans-serif text-decoration: uppercase; letter-spacing: 20px; padding: 8px 0px; }*/
+.header{margin: 20px 0;text-align: left;font-size: 45px;font-weight: 700; font-family: 'Fjalla One', sans-serif; text-decoration: uppercase;
+    letter-spacing: 1px;padding: 8px 0px;color:#1f4888;}
+.company-name {font-size: 20px;font-weight: 600;}
+
+#address { width: 250px; height: 150px; float: left;font-weight: 500; }
+/*#customer { overflow: hidden; }*/
+.company-address {font-size: 15px;color: #1f4888 !important;height: 115px !important;}
+.chklabel{margin-bottom: 5px; margin-left:5px !important;}
+#logo { text-align: right; float: right; position:}
+/*#logo:hover, #logo.edit { border: 1px solid #000; margin-top: 0px; max-height: 125px; }*/
+#logoctr { display: none; }
+
+#logohelp { text-align: left; display: none; font-style: italic; padding: 10px 5px;}
+#logohelp input { margin-bottom: 5px; }
+.edit #logohelp { display: block; }
+.edit #save-logo, .edit #cancel-logo { display: inline; }
+.edit #image, #save-logo, #cancel-logo, .edit #change-logo, .edit #delete-logo { display: none; }
+#customer-title { font-size: 20px; font-weight: bold; float: left;color: #1f4888; }
+
+#meta { margin-top: 1px; width: 300px; float: right; }
+#meta td { text-align: right;  }
+td,p{padding:1px;}
+#meta td.meta-head { text-align: left; background: #eee;font-weight: 500; }
+#meta td textarea { width: 100%; height: 20px; text-align: right; }
+textarea:hover, textarea:focus, #items td.total-value textarea:hover, #items td.total-value textarea:focus, .delete:hover { background-color:#EEFF88; }
+.pull-right{text-align: right;}
+.delete-wpr { position: relative; }
+.delete { display: block; color: #000; text-decoration: none; position: absolute; background: #EEEEEE; font-weight: bold; padding: 0px 3px; border: 1px solid; top: -6px; left: -22px; font-family: Verdana; font-size: 12px; }
+.footer-contain {text-align: center;font-size: 35px; font-weight: 700;color: #1f4888;}
+.font_change{white-space: pre !important;font-size: 12px;margin-left: 10px;}
+.textborder{border:1px solid black;}
+    </style>
+
+    <title>Sanitary Permit</title>
+  </head>
+<body>
+<table style='width:1000px;'>
+  <tr>
+    <td style="border: 1px solid black;">
+        <table width="100%" id="summary" class="noborder">
+                <tr>
+                    <td width="10%" style="text-align:center;border:0px solid black;"><img src="{{LOGO}}" style="max-width:100px;max-height:100px; padding-bottom:10px;"></td>
+                    <td width="80%" style="text-align:center;border:0px solid black;"><p style="font-size: 15px; padding-top:10px;">Republic of the Philippines</p><p style="font-size: 15px; font-weight: 600; text-transform: uppercase;">DEPARTMENT OF PUBLIC WORKS AND HIGHWAYS</p><p style="font-size: 15px; text-transform: uppercase;">DEPARTMENT OF THE LOCAL BUILDING OFFICIAl</p>
+                    </td>
+                    <td width="10%" style="text-align:center;border:0px solid black;"><img src="{{LOGO2}}" style="max-width:100px;max-height:100px; padding-bottom:10px;"></td>
+                </tr>
+        </table>
+         <table width="100%" id="summary" class="noborder">
+                   <tr><td colspan="2" style="text-align:center; border:0px solid black;font-size: 17px; text-transform: uppercase;">Sanitary/Plumbing Permit</td>
+                   </tr>
+        </table>
+         <table width="100%" id="summary" class="noborder">  
+                   <tr>
+                    <td  width="50%" style="text-align:center; border:0px solid black;font-size: 17px;">
+                    <p style="font-weight: 500;">Application No: {{appno}}</p>
+                    </td>
+                    <td  width="50%" style="text-align:center; border:0px solid black;font-size: 17px;">
+                      <p style="font-weight: 500;">Permit No: {{permitno}}</p>
+                    </td>
+                  </tr>  
+                  <tr>
+                    <td  width="50%" style="text-align:center; border:0px solid black;font-size: 17px;">
+                    <p style="font-weight: 500;">App date: {{dateofapp}}</p>
+                    </td>
+                    <td  width="50%" style="text-align:center; border:0px solid black;font-size: 17px;">
+                      <p style="font-weight: 500;">Issued date: {{dateissued}}</p>
+                    </td>
+                  </tr>
+        </table>
+        <table width="100%" id="summary" style="border:1px solid black;">
+             <tr>
+                  <td colspan="3" style="text-align:left;border:0px solid black; padding-right:30px;">
+                   <p style="font-size: 12px;font-weight: 600;">NAME OWNER APPLICANT</p></td>
+                   
+             </tr>
+            <tr>
+                  <td style="text-align:right;border:0px solid black; padding-right:30px;">
+                   <p style="font-size: 16px;font-weight: 500;">Last Name: {{lastname}} </p></td>
+                   <td style="text-align:right;border:0px solid black; padding-right:30px;">
+                   <p style="font-size: 16px;font-weight: 500;">First Name: {{firstname}} </p></td>
+                   <td style="text-align:right;border:0px solid black; padding-right:30px;">
+                   <p style="font-size: 16px;font-weight: 500;">MI: {{middlename}} </p></td>
+                   <td style="text-align:right;border:0px solid black; padding-right:30px;">
+                   <p style="font-size: 16px;font-weight: 500;">TAX ACCT NO: {{acctno}} </p></td>
+             </tr>
+             <tr>
+                  <td colspan="3" style="text-align:left;border:0px solid black; padding-right:30px;">
+                   <p style="font-size: 12px;font-weight: 600;">FOR CONSTRUCTION OWNED BY AN ENTERPRIZE</p></td>
+                   
+             </tr>
+             <tr>
+                  <td colspan="2" style="text-align:right;border:0px solid black; padding-right:30px;">
+                   <p style="font-size: 16px;font-weight: 500;">FORM OF OWNERSHIP: {{formogowner}} </p></td>
+                   <td colspan="2" style="text-align:right;border:0px solid black; padding-right:30px;">
+                   <p style="font-size: 16px;font-weight: 500;">Main Economy Activity: {{maineconomy}} </p></td>
+             </tr>
+              <tr>
+                  <td colspan="3" style="text-align:left;border:0px solid black; padding-right:30px;">
+                   <p style="font-size: 16px;font-weight: 500;">Address: {{address}}</p></td>
+                   
+             </tr>
+             <tr>
+                  <td colspan="3" style="text-align:left;border:0px solid black; padding-right:30px;">
+                   <p style="font-size: 16px;font-weight: 500;">Location Of Construction: {{location}} </p></td>
+                   
+             </tr>
+         </table>
+         <table width="100%" id="summary" style="border:1px solid black;">
+            <tr>
+              <td  colspan="2" style="text-align:left;border:0px solid black; padding-right:30px;"><p style="font-size: 16px;font-weight: 500;">SCOPE OF WORK:</p></td>
+            </tr>
+            <tr>
+                  <td width="50%" style="text-align:left;border:0px solid black; padding-right:30px;">
+                  {{scopeofwork}}</td>
+                <!--    <td width="33%" style="text-align:left;border:0px solid black; padding-right:30px;">
+                     <p style="font-size: 16px;font-weight: 500;">Addition Of <span class="textborder"> {{MUNCIPALITY}} </span></p>
+                     <p style="font-size: 16px;font-weight: 500;">Repair Of <span class="textborder"> {{MUNCIPALITY}} </span></p>
+                     <p style="font-size: 16px;font-weight: 500;">Rewmoval OF <span class="textborder"> {{MUNCIPALITY}} </span></p>
+                   <p style="font-size: 16px;font-weight: 500;"> </td> -->
+                  <td width="50%" style="text-align:left;border:0px solid black; padding-right:30px;">
+                   <p style="font-size: 16px;font-weight: 500;"><input type="checkbox">Other Specify</p>
+                   <p style="font-size: 16px;font-weight: 500;"><span class="textborder"> {{textb}} </span> OF <span class="textborder"> {textb}} </span></p>
+                    <p style="font-size: 16px;font-weight: 500;"><span class="textborder"> {{textb}} </span> OF <span class="textborder"> {{textb}} </span></p>
+                 </td>
+             </tr>
+         </table>
+          <table width="100%" id="summary" style="border:1px solid black;">
+            <tr>
+              <td  colspan="2" style="text-align:left;border:0px solid black; padding-right:30px;"><p style="font-size: 16px;font-weight: 500;">IFIXTURE TO BE INSTALLED:</p></td>
+            </tr>
+            <tr>
+                  <td width="100%" style="text-align:left;border:0px solid black; padding-right:30px;">
+                    <table width="100%" id="summary" style="border:0px solid black;">
+                      <tr style="border:0px solid black;">
+                       <Th>qty</Th> <TH>fixture Type</TH> <TH>Kind of Fixture</TH> <TH>qty</TH> <TH>fixture type</TH> <TH>Kind of Fixture</TH> 
+                      </tr>
+                      <tr>
+                        <td  style="text-align:left;border:0px solid black; padding-right:30px;"><span class="textborder"> {{waterqty}} </span></td>
+                        <td  style="text-align:left;border:0px solid black; padding-right:30px;"><span class="textborder"> {{watertype}} </span></td>
+                        <td  style="text-align:left;border:0px solid black; padding-right:30px;">water closet</td>
+                        <td  style="text-align:left;border:0px solid black; padding-right:30px;"><span class="textborder"> {{bidetteqty}}</span></td>
+                        <td  style="text-align:left;border:0px solid black; padding-right:30px;"><span class="textborder"> {{bidetetype}}</span></td>
+                        <td  style="text-align:left;border:0px solid black; padding-right:30px;">bidette</td>
+                      </tr>
+                      <tr>
+                        <td  style="text-align:left;border:0px solid black; padding-right:30px;"><span class="textborder"> {{floorqty}} </span></td>
+                        <td  style="text-align:left;border:0px solid black; padding-right:30px;"><span class="textborder"> {{floortype}} </span></td>
+                        <td  style="text-align:left;border:0px solid black; padding-right:30px;">Floor Drain</td>
+                        <td  style="text-align:left;border:0px solid black; padding-right:30px;"><span class="textborder"> {{laundryqty}} </span></td>
+                        <td  style="text-align:left;border:0px solid black; padding-right:30px;"><span class="textborder"> {{laundrytype}} </span></td>
+                        <td  style="text-align:left;border:0px solid black; padding-right:30px;">Laundray Trayn</td>
+                      </tr>
+                        <tr>
+                        <td  style="text-align:left;border:0px solid black; padding-right:30px;"><span class="textborder"> {{Lavourtonesqty}} </span></td>
+                        <td  style="text-align:left;border:0px solid black; padding-right:30px;"><span class="textborder"> {{Lavourtonestype}} </span></td>
+                        <td  style="text-align:left;border:0px solid black; padding-right:30px;">Lavaourtones</td>
+                        <td  style="text-align:left;border:0px solid black; padding-right:30px;"><span class="textborder"> {{dentalqty}} </span></td>
+                       <td  style="text-align:left;border:0px solid black; padding-right:30px;"><span class="textborder"> {{dentaltype}} </span></td>
+                        <td  style="text-align:left;border:0px solid black; padding-right:30px;">Dental Cuspidor</td>
+                      </tr>
+                      <tr>
+                        <td  style="text-align:left;border:0px solid black; padding-right:30px;"><span class="textborder"> {{ktchenqty}} </span></td>
+                        <td  style="text-align:left;border:0px solid black; padding-right:30px;"><span class="textborder"> {{ktchentype}} </span></td>
+                        <td  style="text-align:left;border:0px solid black; padding-right:30px;">Kitchen Sink</td>
+                        <td  style="text-align:left;border:0px solid black; padding-right:30px;"><span class="textborder"> {{gasqty}} </span></td>
+                        <td  style="text-align:left;border:0px solid black; padding-right:30px;"><span class="textborder"> {{gastype}} </span></td>
+                        <td  style="text-align:left;border:0px solid black; padding-right:30px;">Gas Heater</td>
+                      </tr>
+                        <tr>
+                        <td  style="text-align:left;border:0px solid black; padding-right:30px;"><span class="textborder"> {{faucetqty}} </span></td>
+                        <td  style="text-align:left;border:0px solid black; padding-right:30px;"><span class="textborder"> {{faucettype}} </span></td>
+                        <td  style="text-align:left;border:0px solid black; padding-right:30px;">Faucet</td>
+                        <td  style="text-align:left;border:0px solid black; padding-right:30px;"><span class="textborder"> {{electricqty}} </span></td>
+                        <td  style="text-align:left;border:0px solid black; padding-right:30px;"><span class="textborder"> {{electrictype}} </span></td>
+                        <td  style="text-align:left;border:0px solid black; padding-right:30px;">Electric Heater</td>
+                      </tr>
+                        <tr>
+                        <td  style="text-align:left;border:0px solid black; padding-right:30px;"><span class="textborder"> {{showerqty}} </span></td>
+                        <td  style="text-align:left;border:0px solid black; padding-right:30px;"><span class="textborder"> {{showertype}} </span></td>
+                        <td  style="text-align:left;border:0px solid black; padding-right:30px;">shower Head</td>
+                        <td  style="text-align:left;border:0px solid black; padding-right:30px;"><span class="textborder"> {{waterboilerqty}} </span></td>
+                        <td  style="text-align:left;border:0px solid black; padding-right:30px;"><span class="textborder"> {{waterboilertype}} </span></td>
+                        <td  style="text-align:left;border:0px solid black; padding-right:30px;">Water Boiler</td>
+                      </tr>
+                        <tr>
+                        <td  style="text-align:left;border:0px solid black; padding-right:30px;"><span class="textborder"> {{watermeterqty}} </span></td>
+                        <td  style="text-align:left;border:0px solid black; padding-right:30px;"><span class="textborder"> {{watermetertype}} </span></td>
+                        <td  style="text-align:left;border:0px solid black; padding-right:30px;">Water Meter</td>
+                        <td  style="text-align:left;border:0px solid black; padding-right:30px;"><span class="textborder"> {{drinkingqty}} </span></td>
+                        <td  style="text-align:left;border:0px solid black; padding-right:30px;"><span class="textborder"> {{drinkingtype}} </span></td>
+                        <td  style="text-align:left;border:0px solid black; padding-right:30px;">Drinking Fountain</td>
+                      </tr>
+                        <tr>
+                        <td  style="text-align:left;border:0px solid black; padding-right:30px;"><span class="textborder"> {{greaseqty}} </span></td>
+                        <td  style="text-align:left;border:0px solid black; padding-right:30px;"><span class="textborder"> {{greasetype}} </span></td>
+                        <td  style="text-align:left;border:0px solid black; padding-right:30px;">Grease Trap</td>
+                        <td  style="text-align:left;border:0px solid black; padding-right:30px;"><span class="textborder"> {{barqty}} </span></td>
+                        <td  style="text-align:left;border:0px solid black; padding-right:30px;"><span class="textborder"> {{bartype}} </span></td>
+                        <td  style="text-align:left;border:0px solid black; padding-right:30px;">Bar Sink</td>
+                      </tr>
+                        <tr>
+                        <td  style="text-align:left;border:0px solid black; padding-right:30px;"><span class="textborder">{{bathtubsqty}}</span></td>
+                        <td  style="text-align:left;border:0px solid black; padding-right:30px;"><span class="textborder">{{bathtubstype}}</span></td>
+                        <td  style="text-align:left;border:0px solid black; padding-right:30px;">Bath Tubs</td>
+                        <td  style="text-align:left;border:0px solid black; padding-right:30px;"><span class="textborder">{{sodaqty}}</span></td>
+                         <td  style="text-align:left;border:0px solid black; padding-right:30px;"><span class="textborder">{{sodatype}}</span></td>
+                        <td  style="text-align:left;border:0px solid black; padding-right:30px;">Soda Fountain Sinks</td>
+                      </tr>
+                        <tr>
+                        <td  style="text-align:left;border:0px solid black; padding-right:30px;"><span class="textborder">{{slopqty}}</span></td>
+                        <td  style="text-align:left;border:0px solid black; padding-right:30px;"><span class="textborder">{{sloptype}}</span></td>
+                        <td  style="text-align:left;border:0px solid black; padding-right:30px;">Slop sink</td>
+                        <td  style="text-align:left;border:0px solid black; padding-right:30px;"><span class="textborder">{{laboutaryqty}}</span></td>
+                        <td  style="text-align:left;border:0px solid black; padding-right:30px;"><span class="textborder">{{laboutarytype}}</span></td>
+                        <td  style="text-align:left;border:0px solid black; padding-right:30px;">Labouratory Sink</td>
+                      </tr>
+                        <tr>
+                        <td  style="text-align:left;border:0px solid black; padding-right:30px;"><span class="textborder">{{urinalqty}}</span></td>
+                        <td  style="text-align:left;border:0px solid black; padding-right:30px;"><span class="textborder">{{urinaltype}}</span></td>
+                        <td  style="text-align:left;border:0px solid black; padding-right:30px;">Urinal</td>
+                        <td  style="text-align:left;border:0px solid black; padding-right:30px;"><span class="textborder">{{sterilizeqty}}</span></td>
+                        <td  style="text-align:left;border:0px solid black; padding-right:30px;"><span class="textborder">{{sterilizetype}}</span></td>
+                        <td  style="text-align:left;border:0px solid black; padding-right:30px;">Sterilize</td>
+                      </tr>
+                      <tr>
+                        <td  style="text-align:left;border:0px solid black; padding-right:30px;"><span class="textborder">{{airqty}}</span></td>
+                         <td  style="text-align:left;border:0px solid black; padding-right:30px;"><span class="textborder">{{airtype}}</span></td>
+                        <td  style="text-align:left;border:0px solid black; padding-right:30px;">Air Conditioning Unit</td>
+                        <td  style="text-align:left;border:0px solid black; padding-right:30px;"><span class="textborder">{{swimmingqty}}</span></td>
+                        <td  style="text-align:left;border:0px solid black; padding-right:30px;"><span class="textborder">{{swimmingtype}}</span></td>
+                        <td  style="text-align:left;border:0px solid black; padding-right:30px;">Swimming Pool</td>
+                      </tr>
+                       <tr>
+                        <td  style="text-align:left;border:0px solid black; padding-right:30px;"><span class="textborder">{{watertankqty}}</span></td>
+                       <td  style="text-align:left;border:0px solid black; padding-right:30px;"><span class="textborder">{{watertanktype}}</span></td>
+                        <td  style="text-align:left;border:0px solid black; padding-right:30px;">Water Tank reservor</td>
+                        <td  style="text-align:left;border:0px solid black; padding-right:30px;"><span class="textborder">{{othrtqty}}</span></td>
+                        <td  style="text-align:left;border:0px solid black; padding-right:30px;"><span class="textborder">{{othrttype}}</span></td>
+                        <td  style="text-align:left;border:0px solid black; padding-right:30px;">Other Specify</td>
+                      </tr>
+                     </table>
+                   </td>
+             </tr>
+         </table>
+           <table width="100%" id="summary" style="border:0px solid black;">
+              <tr>
+                 <td width="50%" style="text-align:left;border:0px solid black; padding-right:30px;">
+                  Water Supply</td>
+             </tr>
+              <tr>
+                 <td width="50%" style="text-align:left;border:0px solid black; padding-right:30px;">
+                  {{watersupply}}</td>
+             </tr>
+               <tr>
+                 <td width="50%" style="text-align:left;border:0px solid black; padding-right:30px;">
+                   System Of Disposal</td>
+             </tr>
+              <tr>
+                  <td width="50%" style="text-align:left;border:0px solid black; padding-right:30px;">
+                  {{systemofdisposal}}</td>
+                  </td>
+             </tr>
+            
+              <tr>
+                  <td  colspan="1" style="text-align:left;border:0px solid black; padding-right:30px;">
+                    <p>NUMBER OF STOREY OF BUILDING</p>
+                   </td>
+                   <td  style="text-align:left;border:0px solid black; padding-right:30px;">
+                    <p>Total Area OF Building Subdivision <span class="textborder"> {{totalarea}} </span> SQ M.</p>
+                  </td>
+             </tr>
+             <tr>
+                  <td  colspan="1" style="text-align:left;border:0px solid black; padding-right:30px;">
+                    <p>Proposed Date of start of installation <span class="textborder"> {{dateofinstall}} </span></p>
+                   </td>
+                   <td  style="text-align:left;border:0px solid black; padding-right:30px;">
+                    <p>Total Cost Of installatuion P <span class="textborder"> {{totalcostinstall}} </span></p>
+                  </td>
+             </tr>
+                 <tr>
+                  <td  colspan="1" style="text-align:left;border:0px solid black; padding-right:30px;">
+                    <p>Expected Date of start of Completion <span class="textborder"> {{dateofcompletion}} </span></p>
+                   </td>
+                   <td  style="text-align:left;border:0px solid black; padding-right:30px;">
+                    <p>Prepared By<span class="textborder"> {{prepareby}} </span></p>
+                  </td>
+             </tr>
+        </table>
+           <table width="100%" id="summary" style="border:1px solid black;">
+            <tr>
+              <td   style="text-align:left;border:0px solid black; padding-right:30px;"><p style="font-size: 25px;font-weight: 500;">ACTION TAKEN:</p></td>
+            </tr>
+            <tr>
+                  <td  width="70%" style="text-align:left;border:0px solid black; padding-right:30px;">
+                   <p style="font-size: 16px;font-weight: 600;">PERMIT IS  HEREBY ISSUED SUBJECT TO THE FOLLOWING</p><br><br>
+                   <p style="font-size: 12px;font-weight: 600;">1.That The Proposed Mechnanical Work shall be in accordance with the mechanical plans filed with the Office and in conformity with the latest Philippine Mechanical Code, The National Building Code and It's IRR</p>
+                   <p style="font-size: 12px;font-weight: 600;">2.That Prior to any mechanical installation. a duly accomplished prescribed "NOTICE OF CONSTRUCTION" shall be submitted to the office of BUilding Official.</p>
+                   <p style="font-size: 12px;font-weight: 600;">3.That upon completion of the mechanical works, The licensed supervisor/in-charge shall submit the entry to the logbook duly signed and sealed to the building official including as build plans and other documents and shall also accomplish the certificate of completion stating that the mechanical works comfort to the provision of the Philippine Mechanical Code, The National Building Code and It's IRR</p>
+                   <p style="font-size: 12px;font-weight: 600;">4.that the pwermit is null and void unless accompanied by the building permit.</p>
+                  <p style="font-size: 12px;font-weight: 600;">5.that a Certificate of operation shall be Issued for the continuous use of mechanical installations..</p>
+                 </td>
+                  <td  width="30%" style="text-align:center;border:0px solid black; padding-right:30px;">
+                  <p style="font-size: 20px;font-weight: 600;"><span class="textborder"> {{bldofficialname}} </span><br>
+                    BUILDING OFFICIAL</p>
+                     <p style="font-size: 20px;font-weight: 600;"><span class="textborder"> {{date}} </span><br>
+                    DATE</p>
+                 </td>
+             </tr>
+         </table>
+    </td>
+  </tr>
+</table>
+</body>
+</html>
+
+
+

@@ -1,0 +1,1 @@
+ALTER TABLE `treasurer_income_accounts` ADD `fund_code_id` INT NULL DEFAULT NULL AFTER `id`, ADD `gl_account_id` INT NOT NULL AFTER `fund_code_id`;

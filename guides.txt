@@ -1,0 +1,350 @@
+***** MAKE MODEL
+php artisan make:model YourNewModel
+
+***** MAKE SEEDS
+php artisan make:seeder UserSeeder
+
+php artisan db:seed 
+php artisan db:seed --class=UserSeeder
+php artisan migrate:fresh --seed 
+php artisan migrate:fresh --seed --seeder=UserSeeder
+php artisan db:seed --force
+
+***** MAKE MIGRATION
+php artisan make:migration create_batches_table
+php artisan migrate:rollback --step=1
+php artisan migrate
+php artisan migrate:reset
+php artisan migrate:refresh
+php artisan migrate:refresh --seed
+
+php artisan db:seed --class=UserSeeder
+php artisan migrate:fresh --seed --seeder=UserSeeder
+
+php artisan migrate:refresh --path=/database/migrations/fileName.php
+
+php artisan make:model ModelName -m
+
+***** RELOAD LARAVEL CLASS 
+composer dump-autoload
+
+TRUNCATE table gso_departmental_requests;
+TRUNCATE table gso_departmental_requests_items;
+TRUNCATE table cbo_allotment_obligations;
+TRUNCATE table cbo_allotment_breakdowns;
+TRUNCATE table cbo_allotment_obligations_requests;
+TRUNCATE table gso_purchase_requests;
+TRUNCATE table bac_rfqs;
+TRUNCATE table bac_rfqs_lines;
+TRUNCATE table bac_rfqs_suppliers;
+TRUNCATE table bac_rfqs_suppliers_canvass;
+TRUNCATE table bac_abstract;
+TRUNCATE table bac_resolution;
+TRUNCATE table gso_purchase_orders;
+TRUNCATE table gso_purchase_orders_posting;
+TRUNCATE table gso_purchase_orders_posting_lines;
+TRUNCATE table cbo_budgets;
+TRUNCATE table cbo_budget_breakdowns;
+TRUNCATE table gso_issuances;
+TRUNCATE table gso_issuances_details;
+
+update users_role_groups set is_active = 1 where user_id = 1;
+update users_role_modules set is_active = 1 where user_id = 1;
+update users_role_sub_modules set is_active = 1 where user_id = 1;
+
+https://sql2builder.github.io/
+
+https://code.jquery.com/ui/1.12.1/jquery-ui.min.js
+
+="insert into acctg_account_general_ledgers values ('"&A2&"','"&B2&"','"&C2&"','"&D2&"',"&E2&",'"&F2&"','"&G2&"','"&H2&"','"&I2&"',"&J2&",'"&K2&"','"&L2&"','"&M2&"','"&N2&"','"&O2&"','"&P2&"');"
+
+
+<?php
+https://gist.github.com/stenito/fa3e840a8ee63acaf44be4647b2da160
+
+function getPublicIP() {
+  // create & initialize a curl session
+  $curl = curl_init();
+
+  // set our url with curl_setopt()
+  curl_setopt($curl, CURLOPT_URL, "http://httpbin.org/ip");
+
+  // return the transfer as a string, also with setopt()
+  curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
+
+  // curl_exec() executes the started curl session
+  // $output contains the output string
+  $output = curl_exec($curl);
+
+  // close curl resource to free up system resources
+  // (deletes the variable made by curl_init)
+  curl_close($curl);
+
+  $ip = json_decode($output, true);
+
+  return $ip['origin'];
+}
+
+?>
+
+UPDATE hr_employees as hr
+    SET hr.fullname = 
+	CASE 
+    /* full */
+	WHEN hr.title IS NOT NULL AND hr.firstname IS NOT NULL AND hr.middlename IS NOT NULL AND hr.lastname IS NOT NULL AND hr.suffix IS NOT NULL
+    THEN CONCAT(hr.title,' ',hr.firstname,' ',hr.middlename,' ',hr.lastname,', ',hr.suffix)
+	/* title */
+    WHEN hr.title IS NULL AND hr.firstname IS NOT NULL AND hr.middlename IS NOT NULL AND hr.lastname IS NOT NULL AND hr.suffix IS NOT NULL 		
+    THEN CONCAT(hr.firstname,' ',hr.middlename,' ',hr.lastname,', ',hr.suffix)
+    /* suffix */
+    WHEN hr.title IS NOT NULL AND hr.firstname IS NOT NULL AND hr.middlename IS NOT NULL AND hr.lastname IS NOT NULL AND hr.suffix IS NULL 	
+    THEN CONCAT(hr.title,' ',hr.firstname,' ',hr.middlename,' ',hr.lastname)
+	/* middlename */
+    WHEN hr.title IS NOT NULL AND hr.firstname IS NOT NULL AND hr.middlename IS NULL AND hr.lastname IS NOT NULL AND hr.suffix IS NOT NULL 	
+    THEN CONCAT(hr.title,' ',hr.firstname,' ',hr.lastname,', ',hr.suffix)
+    /* title & suffix */
+	WHEN hr.title IS NULL AND hr.firstname IS NOT NULL AND hr.middlename IS NULL AND hr.lastname IS NOT NULL AND hr.suffix IS NOT NULL 	
+    THEN CONCAT(hr.firstname,' ',hr.lastname,', ',hr.suffix)
+    /* title & middlename */
+    WHEN hr.title IS NULL AND hr.firstname IS NOT NULL AND hr.middlename IS NOT NULL AND hr.lastname IS NOT NULL AND hr.suffix IS NULL 	
+    THEN CONCAT(hr.firstname,' ',hr.middlename,' ',hr.lastname)
+    /* suffix & middlename */
+    WHEN hr.title IS NULL AND hr.firstname IS NOT NULL AND hr.middlename IS NULL AND hr.lastname IS NOT NULL AND hr.suffix IS NULL 	
+    THEN CONCAT(hr.title,' ',hr.firstname,' ',hr.lastname)
+	END;
+
+UPDATE `cbo_allotment_obligations` LEFT JOIN gso_purchase_requests ON cbo_allotment_obligations.departmental_request_id = gso_purchase_requests.departmental_request_id
+SET cbo_allotment_obligations.status = 
+CASE 
+WHEN gso_purchase_requests.status = 'completed' THEN 'completed'
+WHEN gso_purchase_requests.status = 'draft' THEN 'completed'
+WHEN gso_purchase_requests.status = 'for approval' THEN 'for approval'
+WHEN gso_purchase_requests.status = 'cancelled' THEN 'cancelled'
+END;
+
+
+TRUNCATE gso_departmental_requests;
+TRUNCATE gso_departmental_requests_disapprovals;
+TRUNCATE gso_departmental_requests_items;
+TRUNCATE gso_issuances;
+TRUNCATE gso_issuances_details;
+TRUNCATE gso_project_procurement_management_plans;
+TRUNCATE gso_project_procurement_management_plans_details;
+TRUNCATE gso_project_procurement_management_plans_status;
+TRUNCATE gso_property_accountabilities;
+TRUNCATE gso_purchase_orders;
+TRUNCATE gso_purchase_orders_posting;
+TRUNCATE gso_purchase_orders_posting_lines;
+TRUNCATE gso_purchase_requests;
+TRUNCATE bac_abstract;
+TRUNCATE bac_resolution;
+TRUNCATE bac_rfqs;
+TRUNCATE bac_rfqs_lines;
+TRUNCATE bac_rfqs_suppliers;
+TRUNCATE bac_rfqs_sippliers_canvass;
+TRUNCATE cbo_allotment_obligations;
+TRUNCATE cbo_allotment_obligations_requests;
+TRUNCATE cbo_allotment_breakdowns;
+TRUNCATE cbo_budgets;
+TRUNCATE cbo_budgets_breakdowns;
+TRUNCATE acctg_payables;
+TRUNCATE acctg_vouchers;
+TRUNCATE acctg_vouchers_series;
+TRUNCATE acctg_disbursements;
+
+
+
+TRUNCATE table cbo_allotment_breakdowns;
+TRUNCATE table cbo_allotment_obligations;
+TRUNCATE table cbo_allotment_obligations_requests;
+TRUNCATE table cto_disburse;
+TRUNCATE table cto_disburse_details;
+TRUNCATE table cto_replenish;
+TRUNCATE table cto_replenish_details;
+TRUNCATE table acctg_vouchers;
+TRUNCATE table acctg_vouchers_series;
+TRUNCATE table acctg_disbursements;
+TRUNCATE table acctg_payables;
+TRUNCATE table gso_departmental_requests;
+TRUNCATE table gso_departmental_requests_disapprovals;
+TRUNCATE table gso_departmental_requests_items;
+
+
+
+
+
+body * { 
+    font-family: arial,sans-serif; 
+}
+.row > * {
+    flex-shrink: 0;
+    width: 100%;
+    max-width: 100%;
+    padding-right: calc(var(--bs-gutter-x) * .5);
+    padding-left: calc(var(--bs-gutter-x) * .5);
+    margin-top: var(--bs-gutter-y);
+}
+.col-sm-12 {
+    position: relative;
+    float: left;
+    width: 100%;
+}
+.col-md-9 {
+    position: relative;
+    float: left;
+    width: 60%;
+}
+.col-md-3 {
+    position: relative;
+    float: left;    
+    text-align: right;
+    width: 40%;
+}
+.col-sm-9 {
+    position: relative;
+    float: left;
+    width: 75%;
+}
+.col-sm-3 {
+    position: relative;
+    float: left;    
+    width: 25%;
+}
+.offset-sm-6 {
+    margin-left: 50%;
+}
+.fw-bold {
+    font-weight: 700 !important;
+}
+.fs-1 {
+    font-size: 2rem !important;
+}
+.fs-4 {
+    font-size: 1.25rem !important;
+}
+.fs-5 {
+    font-size: 1rem !important;
+}
+.fs-6 {
+    font-size: 0.9375rem !important;
+}
+.text-center {
+    text-align: center !important;
+}
+.pb-2 {
+    padding-bottom: 0.5rem !important;
+}
+.m-0 {
+    margin: 0 !important;
+}
+.mb-1 {
+    margin-bottom: 0.25rem !important;
+}
+.mb-0 {
+    margin-bottom: 0 !important;
+}
+.mt-3 {
+    margin-top: 1rem !important;
+}
+.mt-4 {
+    margin-top: 1.5rem !important;
+}
+.mt-5 {
+    margin-top: 3rem !important;
+}
+img {
+    position: absolute; 
+    left: 0px; 
+    top: 25px; 
+    width: 120px;
+}
+#report-card p span.fw-bold {
+    float: left;
+    width: 140px;
+}
+table {
+    table-layout: fixed;
+    border-top: 1px solid #333;
+    border-right: 1px solid #333;
+    width: 100%;
+    min-width: 100%;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+table th {
+    background: #eaeaea;
+    color: #333;
+    border-left: 1px solid #333;
+    border-bottom: 1px solid #333;
+    text-align: center;
+    font-size: 1rem;
+    padding: 0.5rem 0rem !important;
+}
+table td {
+    border-left: 1px solid #333;
+    border-bottom: 1px solid #333;
+    text-align: left;
+    padding: .5rem;
+    font-size: .85rem;
+    padding: 0.5rem !important;
+}
+table td:nth-child(4) {
+    min-width: 200px !important;
+    max-width: 200px !important;
+    word-wrap: break-word;
+    white-space: normal;
+}
+.border-bottom {
+    border-bottom: 1px solid #333;
+}
+
+
+cto_cashier
+
+created_at
+or_register_id
+
+cto_payment_or_types (ortype_id in cto_cashier)
+
+cto_payment_or_registers (cpot_id)
+
+
+
+
+FORM code
+cto_cashier > cto_payment_or_assignments (or_assignment_id)
+
+
+cto_payment_or_assignments > cto_payment_or_types (ortype_id)
+
+gl_id = sl_id
+
+
+tax_credit_amount
+
+git rm -r --cached vendor
+
+
+cto_payment_or_registers > cto_cashier (or_register_id)
+
+
+https://github.com/jenssegers/agent
+
+update gso_suppliers as supplier 
+LEFT JOIN cbo_payee as payee ON supplier.id = payee.scp_id 
+SET supplier.payee_id = payee.id 
+WHERE payee.paye_type = 2;
+
+update hr_employees as employee 
+LEFT JOIN cbo_payee as payee ON employee.id = payee.hr_employee_id 
+SET employee.payee_id = payee.id WHERE payee.paye_type = 1;
+
+update acctg_payables as payables 
+LEFT JOIN gso_purchase_orders as purchase ON payables.trans_no = purchase.purchase_order_no
+LEFT JOIN gso_suppliers as supplier ON purchase.supplier_id = supplier.id
+SET payables.payee_id = supplier.payee_id
+WHERE payables.trans_type = 'Purchase Order';
+
+update acctg_disbursements LEFT JOIN acctg_vouchers ON acctg_disbursements.voucher_id = acctg_vouchers.id set acctg_disbursements.status = 'draft', acctg_disbursements.posted_at = NULL, acctg_disbursements.posted_by = NULL, acctg_disbursements.sent_at = NULL, acctg_disbursements.sent_by = NULL, acctg_disbursements.approved_at = NULL, acctg_disbursements.approved_by = NULL WHERE acctg_vouchers.is_payables = 1;
+
+update acctg_incomes set posted_at = NULL, posted_by = NULL, sent_at = NULL, sent_by = NULL, approved_at = NULL, approved_by = NULL, status = 'draft';

@@ -1,0 +1,2 @@
+ALTER TABLE `hr_official_works` ADD COLUMN IF NOT EXISTS `is_copied` int DEFAULT 0 COMMENT 'is copied to timecard';
+ALTER TABLE `hr_timecards` ADD COLUMN IF NOT EXISTS `is_copied` int DEFAULT 0 COMMENT 'is copied to timekeeping';

@@ -1,0 +1,1 @@
+ALTER TABLE `cto_cash_reciepts` CHANGE `or_no` `or_no` VARCHAR(50) NULL;

@@ -1,0 +1,1 @@
+ALTER TABLE `eco_residential_name` CHANGE `residential_name` `residential_name` INT(11) NOT NULL;

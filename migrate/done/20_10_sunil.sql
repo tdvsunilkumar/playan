@@ -1,0 +1,1 @@
+ALTER TABLE `rpt_properties` CHANGE `rp_bulding_permit_no` `rp_bulding_permit_no` VARCHAR(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL;

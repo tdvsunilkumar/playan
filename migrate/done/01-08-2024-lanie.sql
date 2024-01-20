@@ -1,0 +1,2 @@
+ALTER TABLE `cto_check_disbursements` ADD `payment_type` INT NOT NULL DEFAULT 1 COMMENT 'table-ref: acctg_payment_types' AFTER `disbursement_no`;
+ALTER TABLE `cto_check_disbursements` ADD `transaction_no` VARCHAR(20) NOT NULL AFTER `payment_type`;

@@ -1,0 +1,12 @@
+ALTER TABLE `cpdo_application_forms` CHANGE `caf_email` `caf_email` VARCHAR(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL;
+ALTER TABLE `cpdo_development_permits` ADD `nameofproject` VARCHAR(255) NULL AFTER `tfoc_id`, ADD `locationofproject` INT(11) NULL AFTER `nameofproject`;
+ALTER TABLE `cpdo_inspection_reports`  ADD `cir_penalty` INT(11) NULL DEFAULT '0'  AFTER `cir_isapprove`;
+ALTER TABLE `cpdo_inspection_reports` ADD `cir_upload_documents_json` TEXT NULL AFTER `cir_penalty`;
+ALTER TABLE `cpdo_application_forms` ADD `penaltyamount` DOUBLE(10,2) NULL DEFAULT '0.00' AFTER `caf_total_amount`;
+ALTER TABLE `cpdo_application_forms` ADD `totalamount` DOUBLE(14,2) NULL DEFAULT '0' AFTER `caf_total_amount`;
+
+ALTER TABLE `cpdo_development_inspection_reports` ADD `cir_penalty` INT(11) NULL DEFAULT '0' AFTER `cir_isapprove`;
+
+ALTER TABLE `cpdo_development_inspection_reports` ADD `cir_upload_documents_json` TEXT NULL AFTER `cir_penalty`;
+
+ALTER TABLE `cpdo_development_permits` ADD `penaltyamount` DOUBLE(14,2) NULL DEFAULT '0' AFTER `cdp_total_amount`, ADD `totalamount` DOUBLE(14,2) NULL DEFAULT '0' AFTER `penaltyamount`;

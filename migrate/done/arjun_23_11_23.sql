@@ -1,0 +1,3 @@
+ALTER TABLE `ho_fam_plan` CHANGE `house_lot_no` `house_lot_no` VARCHAR(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL COMMENT 'house lot number';
+ALTER TABLE `ho_fam_plan` CHANGE `street_name` `street_name` VARCHAR(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL COMMENT 'stree name';
+ALTER TABLE `ho_fam_plan` CHANGE `subdivision` `subdivision` VARCHAR(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL COMMENT 'subdivision';

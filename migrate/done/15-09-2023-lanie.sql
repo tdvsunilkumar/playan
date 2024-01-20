@@ -1,0 +1,1 @@
+ALTER TABLE `hr_loan_applications` ADD `hrla_balance` DOUBLE NOT NULL AFTER `hrla_installment_amount`;

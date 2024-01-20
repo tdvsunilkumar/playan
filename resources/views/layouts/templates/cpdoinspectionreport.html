@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <style type="text/css">
+        @page {margin-top: 10mm; margin-bottom: 10mm; margin-header: 0mm;margin-footer: 0mm;}
+        @import url('https://fonts.googleapis.com/css?family=Fjalla+One|Montserrat:400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap');
+        * { margin: 0; padding: 0; }
+        body { font-family: 'Montserrat', sans-serif;font-size: 14px; }
+        table td, table th { border: 1px solid black; padding: 5px; }
+        .page-wrap { width: 800px; margin: 100px auto;}
+
+        textarea { border: 0; font-size: 14px; font-family: 'Montserrat', sans-serif;overflow: hidden; resize: none; }
+        table { border-collapse: collapse; }
+    </style>
+
+    <title>Inspection Report</title>
+</head>
+<body>
+    <table width="100%">
+        <tr>
+            <td style="border: 0px solid black;">
+                <table width="100%">
+                    <tr>
+                        <td width="100%" style="text-align:center; border:0px solid black; padding-bottom: 30px;">
+                            <p style="font-size: 20px;"><strong>SITE INSPECTION REPORT</strong></p>
+                        </td>
+                    </tr>
+                </table>
+
+                <table width="100%">
+                    <tr> 
+                        <td style="border:0px solid black; width: 180px; padding:3px;">
+                           <p style="font-weight: 600;">Date Of Inspection</p>
+                        </td>
+                        <td style="border:0px solid black; padding:3px;">
+                            <p style="font-weight: 600;">: <u>{{dateofinspection}}</u></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="border:0px solid black; width: 180px; padding:3px;">
+                           <p style="font-weight: 600;">Name Of Project</p>
+                        </td>
+                        <td style="border:0px solid black; padding:3px;">
+                            <p style="font-weight: 600;">: <u>{{nameofproject}}</u></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="border:0px solid black; width: 180px; padding:3px;">
+                           <p style="font-weight: 600;">Location Of Project</p>
+                        </td>
+                        <td style="border:0px solid black; padding:3px;">
+                            <p style="font-weight: 600;">: <u>{{location}}</u></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="border:0px solid black; width: 180px; padding:3px;">
+                           <p style="font-weight: 600;">Owner Developer</p>
+                        </td>
+                        <td style="border:0px solid black; padding:3px;">
+                            <p style="font-weight: 600;">: <u>{{ownername}}</u></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="border:0px solid black; width: 180px; padding:3px;">
+                           <p style="font-weight: 600;">Site Zoning Classification</p>
+                        </td>
+                        <td style="border:0px solid black; padding:3px;">
+                            <p style="font-weight: 600;">: <u>{{sitezoning}}</u></p>
+                        </td>
+                    </tr>
+                </table>
+
+                <table width="100%" style="border: none;">
+                    <tr>
+                        <td width="100%" style="padding: 1px; border-top:1px solid black; border-right:none; border-bottom:none; border-left:none;">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="100%" style="padding: 1px; border-top:1px solid black; border-right:none; border-bottom:none; border-left:none;">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="100%" style="padding: 1px; border-top:1px solid black; border-right:none; border-bottom:none; border-left:none;">
+                        </td>
+                    </tr>
+                </table>
+
+                <table width="100%">
+                    <tr>
+                        <td style="text-align:left; border:0px solid black;">
+                            <p style="padding-top:10px;"><strong>FINDINGS:</strong></p>
+                        </td>
+                    </tr>
+                </table>
+
+                <table width="100%">
+                    <tr>
+                        <td colspan="4" style="text-align:left; border:0px solid black;">
+                            <strong>A. PROJECT SITE</strong>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="4" style="text-align:left; border:0px solid black; padding-top:0px; padding-left: 50px;">
+                            <p style="">A.1 Existing Land Use <u>RESIDENTIAL</u></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        {{$htmldyna}}
+                    </tr>
+                </table>
+
+                <table width="100%">
+                    <tr>
+                        <td style="text-align:left;border:0px solid black;">
+                            <strong>B. VICINITY</strong>
+                        </td>
+                    </tr>
+                </table>
+
+                <table width="100%">
+                    <tr>
+                        <td style="text-align:left; border:0px solid black;">
+                            B.1 Dominant Land Use
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:left; border:0px solid black; padding-left: 50px;">
+                            <p>B.2 Brief description of existing development at the periphery of the project site.</p>
+                        </td>
+                    </tr>
+                </table>
+
+                <table width="100%">
+                    <tr>
+                        <td style="text-align:left; padding-top: 2px; padding-bottom: 2px; border:0px solid black; width: 50px; padding-left:50px;">
+                            North
+                        </td>
+                        <td style="text-align:left; padding-top: 2px; padding-bottom: 2px; border:0px solid black;">
+                            :<u>{{north}}</u>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:left; padding-top: 2px; padding-bottom: 2px; border:0px solid black; width: 50px; padding-left:50px;">
+                            South
+                        </td>
+                        <td style="text-align:left; padding-top: 2px; padding-bottom: 2px; border:0px solid black;">
+                            :<u>{{south}}</u>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:left; padding-top: 2px; padding-bottom: 2px; border:0px solid black; width: 50px; padding-left:50px;">
+                            East
+                        </td>
+                        <td style="text-align:left; padding-top: 2px; padding-bottom: 2px; border:0px solid black;">
+                            :<u>{{east}}</u>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:left; padding-top: 2px; padding-bottom: 2px; border:0px solid black; width: 50px; padding-left:50px;">
+                            West
+                        </td>
+                        <td style="text-align:left; padding-top: 2px; padding-bottom: 2px; border:0px solid black;">
+                            :<u>{{west}}</u>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:left; padding-top: 2px; padding-bottom: 2px; border:0px solid black; width: 50px; padding-left:50px;">
+                            Long
+                        </td>
+                        <td style="text-align:left; padding-top: 2px; padding-bottom: 2px; border:0px solid black;">
+                            :<u>{{long}}</u>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:left; padding-top: 2px; padding-bottom: 2px; border:0px solid black; width: 50px; padding-left:50px;">
+                            Lat
+                        </td>
+                        <td style="text-align:left; padding-top: 2px; padding-bottom: 2px; border:0px solid black;">
+                            :<u>{{lat}}</u>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" style="text-align:left; border:0px solid black; width: 50px; padding-left:50px;">
+                            B3 Description Of Access Road/ Road Right Of Way
+                        </td>
+                    </tr>
+                </table>
+
+                <table width="100%">
+                    <tr>
+                        <td style="text-align:center; border-top:none; border-right: none; border-bottom:1px solid black; border-left:none;">
+                            <p style="">{{ctdesc}}</p>
+                        </td>
+                    </tr>
+                </table>
+
+                <table width="100%" id="summary" class="noborder">
+                    <tr>
+                        <td colspan="2" style="text-align:left;border:0px solid black; padding-left: 50px; padding-top: 20px;">
+                            <p style="">B4. Presence Of existing Utilities</p>
+                        </td>
+                    </tr>
+                     <tr>
+                        <td style="text-align:left; padding: 0px; padding-top: 10px; border:0px solid black; width: 250px; padding-left:50px;">
+                            (x) Water Supply (source)
+                        </td>
+                        <td style="text-align:left; padding: 0px; padding-top: 10px; border-top: none; border-right: none; border-bottom:1px solid black; border-left: none;">
+                            :{{watersupply}}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:left; padding: 0px; padding-top: 10px; border:0px solid black; width: 250px; padding-left:50px;">
+                            (x) Power Supply Source
+                        </td>
+                        <td style="text-align:left; padding: 0px; padding-top: 10px; border-top: none; border-right: none; border-bottom:1px solid black; border-left: none;">
+                            :{{powersupply}}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:left; padding: 0px; padding-top: 10px; border:0px solid black; width: 250px; padding-left:50px;">
+                            (&nbsp;&nbsp;) Drainage
+                        </td>
+                        <td style="text-align:left; padding: 0px; padding-top: 10px; border-top: none; border-right: none; border-bottom:1px solid black; border-left: none;">
+                            :{{drainage}}
+                        </td>
+                    </tr>
+                     <tr>
+                        <td style="text-align:left; padding: 0px; padding-top: 10px; border:0px solid black; width: 250px; padding-left:50px;">
+                            (&nbsp;&nbsp;) Other (Specify)
+                        </td>
+                        <td style="text-align:left; padding: 0px; padding-top: 10px; border-top: none; border-right: none; border-bottom:1px solid black; border-left: none;">
+                            :{{otherspecify}}
+                        </td>
+                    </tr>
+                </table>
+
+                <table width="100%" id="summary" class="noborder">
+                    <tr>
+                        <td style="text-align:left; padding-top: 20px; border:0px solid black;">
+                            Remarks:
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:left; padding-top: 0px; border-top: none; border-right: none; border-bottom:1px solid black; border-left: none;">
+                            {{remarks}}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:left; padding-top: 15px; border-top: none; border-right: none; border-bottom:1px solid black; border-left: none;">
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+
+    <div style="clear: both;"></div>
+
+    <div style="width: 50%; float:left;">
+        <p style="text-align: left; font-style: italic; padding-top:0px;">Prepared By:</p>
+        <p style="text-align:center; margin:0px;">
+           
+        </p>
+        <p style="text-align:center; padding-top:50px; margin:-10px;"><strong>{{preparename}}</strong></p>
+        <p style="font-style: italic; text-align:center; padding:0px; margin:0px;">{{prePosition}}</p>
+    </div>
+
+    <div style="width: 50%; float:right;">
+        <p style="text-align: left; font-style: italic; padding-top:0px;">Recommending Approval:</p>
+        <p style="text-align:center; margin:0px;">
+           
+        </p>
+        <p style="text-align:center; padding-top:60px; margin:-25px;"><strong>{{recomname}}</strong></p>
+        <p style="font-style: italic; text-align:center; padding:0px; margin:0px;">{{recomPosition}}</p>
+    </div>
+
+    <div style="clear: both;"></div>
+    <table width="100%">
+        <tr>
+            <td style="text-align:left;border:0px solid black;"><br><br>
+                <p>Amount Due:&nbsp;&nbsp;<span class="textborder">{{Amount}}</span></p>
+                <p>O. R. Number: &nbsp;&nbsp;<span class="textborder">{{ornumber}}</span></p>
+                <p>Date: &nbsp;&nbsp;<span class="textborder">{{dateissued}}</span></p>
+            </td>
+        </tr>
+    </table>
+
+</body>
+</html>
+
+
+
+
+
+
+

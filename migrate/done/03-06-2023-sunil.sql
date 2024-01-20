@@ -1,0 +1,1 @@
+ALTER TABLE `rpt_cto_taxrates` ADD `assessed_value_max_amount` DECIMAL(20,2) NULL AFTER `bsst_sh_rate`;

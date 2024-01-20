@@ -1,0 +1,2 @@
+ALTER TABLE `rpt_properties` CHANGE `rp_pin_no` `rp_pin_no` VARCHAR(10) NOT NULL;
+ALTER TABLE `rpt_properties` CHANGE `rp_bound_north` `rp_bound_north` VARCHAR(150) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL, CHANGE `rp_bound_south` `rp_bound_south` VARCHAR(150) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL, CHANGE `rp_bound_east` `rp_bound_east` VARCHAR(150) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL, CHANGE `rp_bound_west` `rp_bound_west` VARCHAR(150) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL;

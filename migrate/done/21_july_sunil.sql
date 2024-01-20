@@ -1,0 +1,2 @@
+ALTER TABLE `rpt_properties` ADD `pr_tax_arp_no` VARCHAR(50) NULL COMMENT 'combination of (rvy_revision_year-dist_code+barangay number - rp_td_no)' AFTER `rp_tax_declaration_no`;
+ALTER TABLE `rpt_properties` ADD `rp_pin_declaration_no` VARCHAR(50) NULL COMMENT 'combination of (rvy_revision_year-dist_code-barangay number-rp_section_no-rp_pin_no-rp_pin_suffix)' AFTER `rp_pin_suffix`;

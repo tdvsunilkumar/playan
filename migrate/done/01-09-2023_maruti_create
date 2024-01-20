@@ -1,0 +1,1 @@
+ALTER TABLE `eng_fixture_types` ADD `eft_fees` DOUBLE(10,2) NULL AFTER `eft_description`;

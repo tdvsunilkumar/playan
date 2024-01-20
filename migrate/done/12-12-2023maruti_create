@@ -1,0 +1,1 @@
+ALTER TABLE `cpdo_development_permits` ADD `cdf_remarks` TEXT NULL AFTER `req_file`;

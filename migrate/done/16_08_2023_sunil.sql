@@ -1,0 +1,1 @@
+ALTER TABLE `rpt_properties` ADD `rp_tax_declaration_aform` VARCHAR(100) NULL AFTER `rp_tax_declaration_no`;

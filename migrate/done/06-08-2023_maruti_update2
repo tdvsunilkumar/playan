@@ -1,0 +1,1 @@
+ALTER TABLE `eng_excavation_ground_app` CHANGE `eegt_id` `eegt_id` VARCHAR(255) NOT NULL COMMENT 'ref-Table: eng_excavation_ground_type.eegt_id';

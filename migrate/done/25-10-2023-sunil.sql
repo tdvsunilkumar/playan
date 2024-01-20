@@ -1,0 +1,1 @@
+ALTER TABLE `rpt_properties` CHANGE `rp_building_name` `rp_building_name` VARCHAR(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL, CHANGE `rp_building_cct_no` `rp_building_cct_no` VARCHAR(40) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL, CHANGE `rp_building_unit_no` `rp_building_unit_no` VARCHAR(40) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL;

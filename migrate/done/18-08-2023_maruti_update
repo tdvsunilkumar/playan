@@ -1,0 +1,1 @@
+ALTER TABLE `cto_payment_or_types` ADD `or_short_name` VARCHAR(255) NULL AFTER `ortype_name`;

@@ -1,0 +1,2 @@
+ALTER TABLE `cpdo_certificate` ADD `issued_certificate` INT(11) NOT NULL DEFAULT '0' AFTER `cc_approval_status`;
+ALTER TABLE `cpdo_development_certificate` ADD `issued_certificate` INT(11) NOT NULL DEFAULT '0' AFTER `cc_approval_status`;

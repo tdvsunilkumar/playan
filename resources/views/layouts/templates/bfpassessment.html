@@ -1,0 +1,250 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <style type="text/css">
+      @import url('https://fonts.googleapis.com/css?family=Fjalla+One|Montserrat:400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap');
+* { margin: 0; padding: 0; }
+body { font-family: 'Montserrat', sans-serif;font-size: 14px; }
+table td, table th { border: 1px solid black; padding: 5px; }
+table .noborder td{border: 0px solid black !important;}
+.page-wrap { width: 800px; margin: 100px auto;}
+
+textarea { border: 0; font-size: 14px; font-family: 'Montserrat', sans-serif;overflow: hidden; resize: none; }
+table { border-collapse: collapse; }
+
+
+/*#header { height: 15px; width: 100%; margin: 20px 0; background: #222; text-align: center; color: white; font: bold 15px 'Montserrat', sans-serif text-decoration: uppercase; letter-spacing: 20px; padding: 8px 0px; }*/
+.header{margin: 20px 0;text-align: left;font-size: 45px;font-weight: 700; font-family: 'Fjalla One', sans-serif; text-decoration: uppercase;
+    letter-spacing: 1px;padding: 8px 0px;color:#1f4888;}
+.company-name {font-size: 20px;font-weight: 600;}
+
+#address { width: 250px; height: 150px; float: left;font-weight: 500; }
+/*#customer { overflow: hidden; }*/
+.company-address {font-size: 15px;color: #1f4888 !important;height: 115px !important;}
+
+#logo { text-align: right; float: right; position:}
+/*#logo:hover, #logo.edit { border: 1px solid #000; margin-top: 0px; max-height: 125px; }*/
+#logoctr { display: none; }
+
+#logohelp { text-align: left; display: none; font-style: italic; padding: 10px 5px;}
+#logohelp input { margin-bottom: 5px; }
+.edit #logohelp { display: block; }
+.edit #save-logo, .edit #cancel-logo { display: inline; }
+.edit #image, #save-logo, #cancel-logo, .edit #change-logo, .edit #delete-logo { display: none; }
+#customer-title { font-size: 20px; font-weight: bold; float: left;color: #1f4888; }
+
+#meta { margin-top: 1px; width: 300px; float: right; }
+#meta td { text-align: right;  }
+#meta td.meta-head { text-align: left; background: #eee;font-weight: 500; }
+#meta td textarea { width: 100%; height: 20px; text-align: right; }
+textarea:hover, textarea:focus, #items td.total-value textarea:hover, #items td.total-value textarea:focus, .delete:hover { background-color:#EEFF88; }
+.pull-right{text-align: right;}
+.delete-wpr { position: relative; }
+.delete { display: block; color: #000; text-decoration: none; position: absolute; background: #EEEEEE; font-weight: bold; padding: 0px 3px; border: 1px solid; top: -6px; left: -22px; font-family: Verdana; font-size: 12px; }
+.footer-contain {text-align: center;font-size: 35px; font-weight: 700;color: #1f4888;}
+.font_change{white-space: pre !important;font-size: 12px;margin-left: 10px;}
+    </style>
+
+    <title>Bfp Assessment</title>
+  </head>
+
+<body>
+<table style='width:700px;'>
+  <tr>
+    <td style="border:0px;">
+        <table width="100%" id="summary" class="noborder">
+                 <tr>
+                    <td width='33%'> <center><p><u>Region III, Nueva Ecija</u></p>
+                        <p><u>PALAYAN CITY FIRESTATION</u></p>
+                        <p><u>BARANGAY SINGALAT, PALAYAN CITYNUEVA ECUA</u></p></td>
+                    <td  width='34%'><p>Republic of the Philippines</p>
+                            <p>Department f Interrior and Local Government</p>
+                            <p>BARANGAY SINGALAT, PALAYAN CITYNUEVA ECUA</p></td>
+                     <td><p>OPS No.<u style="width: 20px;"></u></p>
+                        <p>Date:11-12-2022</p> </td>       
+                </tr>
+        </table> 
+        <table width="100%" id="summary" class="noborder">
+                 <tr>
+                    <td style="text-align: center;"><p style="text-decoration: uppercase;font-size: 20px;">ORDER OF PAYMENT</p></td>
+                </tr>
+        </table> 
+        <table width="100%" id="summary" class="noborder" style="margin-top:20px;">
+                <tr>
+                    <td width="60%"><strong>NAME OF STABLEISHMENT/PROJECT :</strong>{{NAME}}</td>
+                </tr>
+                <tr>
+                    <td width="60%"><strong>LOCATION :</strong> {{LOCATION}}</td>
+                </tr>
+                <tr>
+                    <td width="60%"><strong>OWNER/NAME OF REPRESENTATIVE :</strong>{{OWNERNAME}}</td>
+                </tr>
+        </table>
+        <table width="100%" id="summary" class="noborder">
+            <tr>
+                 <td colsspan="2"><p><strong>FIRE SAFETY CLEARANCE APPLYING FOR :</strong></p></td>
+            </tr>
+            <tr>
+            <td colsspan="2"><p><img src="{{UNCHKED}}" style="max-width:22px;"> Fire Safety Evaluation Clearance(FSIC)</p></td>
+            <td colsspan="2"><p><img src="{{UNCHKED}}" style="max-width:22px;"> Fire Safety Inspection Certificate(FSIC)</p></td>
+            <td colsspan="2"><p><img src="{{UNCHKED}}" style="max-width:22px;">Others:<u>(Pis indicate)</p></td>
+            </tr>
+        </table> 
+        <table width="100%" id="summary" class="noborder">
+                 <tr>
+                    <td style="text-align: left;"><p>APPLICABLE FEES (FILL-up)</p></td>
+                </tr>
+        </table> 
+        <table width="100%" id="summary">
+            <thead>
+                 <th>Nature Of Payment</th>
+                 <th>Account</th>
+                 <th>Basic of Computation</th>
+                 <th>Total</th>
+            </thead>
+            <tbody>
+                 <tr class="font-style" style="border: 2px solid #000">
+                    <td><p>Fire Code Construction Tax(0.10% of the verified estimated value of)</p>
+                        <p>buildings or structures to be erected,from the owner thereof,but not exceed to PhP 50,000.00</p>
+                    </td>
+                    <td>628-BFP-01</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr class="font-style" style="border: 2px solid #000">
+                    <td><p>Fire Code Realty Tax (0.10% of the assessed value of buildings or structures annualy payable upon payment<br> of the real estate tax, except on structures used as single family dwelling)</p></td>
+                    <td>628-BFP-02</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr class="font-style"style="border: 2px solid #000">
+                    <td><p>Fire Code Premium Tax (2% of all premiums, excluding re-insurance premiums for the sale of fire, erthquake <br>and explosion hazard insurance collected by companies, persons or agents licensed to sell such insurances<br> in the Philippines)</p></td>
+                    <td>628-BFP-03</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                 <tr class="font-style"style="border: 2px solid #000">
+                    <td><p>Fire Code Sales Tax (2% of gross sales of companies, persons or agents selling firefighting equipment, <br>appliances or devices, including hazard detection and warning systems)</p></td>
+                    <td>628-BFP-04</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                 <tr class="font-style"style="border: 2px solid #000">
+                    <td><p>Fire Code Proceeds Tax(2% of the service fees received from fire, erthquake, and explosion<br> hazard reinsurance surveys and post loss service of insurance adiustement <br>companies doing business in the Philippines directly through agents)</p></td>
+                    <td>628-BFP-05</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                 <tr class="font-style" style="border: 2px solid #000">
+                    <td><p>Fire Sefety Inspection Fee(15% of all fees charged by the local Government Unit or <br>Philippine Economic Zone Authority (PEZA),but in no case shall be lower than Php 500.00)</p></td>
+                    <td>628-BFP-06</td>
+                    <td>{{TOTALAMT}}</td>
+                    <td>{{FIREFEES}}</td>
+                </tr>
+                <tr>
+                    <td>
+                        <table width="100%" id="summary" class="noborder" style="margin-top:20px;">
+                                <tr>
+                                   <td> <p><input type="checkbox" class="">Calcium carbide</p></td>
+                                   <td><p><input type="checkbox" class="">Pyroxylin</p></td>
+                                   <td><p><input type="checkbox" class="">Matches</p></td>
+                                   <td> <p><input type="checkbox" class="">Nitrate,etc</p></td>
+                                </tr>
+                                <tr>
+                                   <td><p><input type="checkbox" class="">Shredded <br> cornbustible  materials</p></td>
+                                   <td><p><input type="checkbox" class="">Tar,resin etc</p></td>
+                                   <td><p><input type="checkbox" class="">LPG for bulk <br> storage</p></td>
+                                   <td><p><input type="checkbox" class="">LPG other <br>than bulk storage</p></td>
+                                </tr>
+                                 <tr>
+                                   <td><p><input type="checkbox" class="">Other Flammable <br> Gases</p></td>
+                                   <td><p><input type="checkbox" class="">Flammable liquids having flash point of -6.67*c or below</p></td>
+                                   <td><p><input type="checkbox" class="">Flammable liquids having flash point of <br>above -6.67 *C and below 22.8*C</p></td>
+                                   <td></td>
+                                </tr>
+                                 <tr>
+                                   <td><p><input type="checkbox" class="">Liquids having flash point of 22.8*C to 93.3*C</p></td>
+                                   <td><p><input type="checkbox" class="">Combustible liquids having flash point greater than 93.3*C</p></td>
+                                   <td></td><td></td>
+                                </tr>
+                        </table>
+                    </td>
+                    <td>628-BFP-07</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                 <tr class="font-style"style="border: 2px solid #000">
+                        <td><p>Conveyance Clearance Fee (based on their capacity as indicated on RIPP of RA 9514 Section 12.0.0.4)</p></td>
+                        <td>628-BFP-08</td>
+                        <td></td>
+                        <td></td>
+                </tr>
+                <tr class="font-style"style="border: 2px solid #000">
+                    <td><p>Installation clearance Fee(refer to Section 12.0.0.4 of the RIRR of RA 9514)</p></td>
+                    <td>628-BFP-09</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr class="font-style"style="border: 2px solid #000">
+                    <td><p>Fire Code Administrative Fines (Fire Code Administrative Fines is based on RIRR of RA 9514 Section 12.0.04)</p></td>
+                    <td>628-BFP-10</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                 <tr>
+                    <td><p>Other Fees (refer to Section 12.0.0.4 of the RIRR of RA 9514)</p>
+                        <table width="100%" id="summary" class="noborder" style="margin-top:20px;">
+                                <tr>
+                                   <td><p><input type="checkbox" class="">Fireworks Display</p></td>
+                                   <td><p><input type="checkbox" class="">Fumigation/Fogging</p></td>
+                                   <td><p><input type="checkbox" class="">Fire Drill</p></td>
+                                   <td><p><input type="checkbox" class="">Fire Prevention and Safety Seminar</p></td>
+                                </tr>
+                                <tr>
+                                   <td><p><input type="checkbox" class="">Electrical <br> Installation</p></td>
+                                   <td><p><input type="checkbox" class="">Fire Incident <br> Clearance</p></td>
+                                   <td><p><input type="checkbox" class="">Appeal Fee</p></td>
+                                   <td><p><input type="checkbox" class="">Soundstage and Approved<br> Production Facilities and  Locations</p></td>
+                                </tr>
+                                 <tr>
+                                   <td><p><input type="checkbox" class="">Filling Fee for FSEC </p></td>
+                                   <td> <p><input type="checkbox" class="">Protest Fee </p><p><input type="checkbox" class="">Open Flame</p></td>
+                                   <td><p><input type="checkbox" class="">Welding Cutting and Other Hotworks</p></td>
+                                   <td><p><input type="checkbox" class="">Certified True copy of FSEC/FSIC/Other Clearance</p></td>
+                                </tr>
+                        </table>
+                    </td>
+                    <td>628-BFP-07</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                 <tr class="font-style"style="border: 2px solid #000">
+                    <td> <p><input type="checkbox" class=""> Certificate of Competency (COC) fees</p>
+                    </td>
+                    <td>628-BFP-11-b</td>
+                    <td></td>
+                    <td></td>
+                 </tr>
+                 <tr class="font-style"style="border: 2px solid #000">
+                    <td> <b><p>TOTAL AMOUNT OF FIRE CODE FEES:</p></b>
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td><b>{{FIREFEES}}</b></td>
+                 </tr>
+            </tbody>
+        </table> 
+    </td>
+  </tr>
+</table>
+ 
+
+</body>
+</html>
+
+
+

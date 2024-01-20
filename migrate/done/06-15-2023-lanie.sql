@@ -1,0 +1,1 @@
+ALTER TABLE cho_registration RENAME ho_registration

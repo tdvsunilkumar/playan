@@ -1,0 +1,495 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <style type="text/css">
+        @import url('https://fonts.googleapis.com/css?family=Fjalla+One|Montserrat:400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap');
+        * { margin: 0; padding: 0; }
+        body { font-family: 'Montserrat', sans-serif; font-size: 12px; }
+        table td, table th { border: 1px solid black; padding: 5px; }
+        p {margin: 0px; padding: 0px}
+        h4 {margin: 0px; padding: 0px}
+        textarea { border: 0; font-size: 14px; font-family: 'Montserrat', sans-serif;overflow: hidden; resize: none; }
+        table { border-collapse: collapse; }
+        .mb-2{margin-bottom: 2mm}
+        .bg{background-color: red;}
+        .bg1{background-color: blue;}
+        .mask
+        {
+            border-style: solid;
+            border-width: 0 0 3px 3px;
+            position: absolute;
+            float: right;
+            clear: none;
+            right: -3px;
+            top: -3px;
+            background-color: white;
+            width: 50%;
+            height: 4em;
+        }
+    </style>
+  <title>Architectural Permit</title>
+</head>
+
+<body>
+  <div style="">
+      <table width="100%">
+          <tr>
+              <td width="100%" style="text-align:center; border:0px solid black;">
+                  <p style="">Republic of the Philippines</p>
+                  <p style="">City/Municipality of______________</p>
+                  <p style="">Provision of____________________________</p>
+                  <p style="text-transform: uppercase;"><strong>OFFICE OF THE BUILDING OFFICIAL</strong></p>
+              </td>
+          </tr>
+          <tr>
+              <td width="100%" style="text-align:center; border:0px solid black;">
+                  <h2 style="text-transform: uppercase;">ARCHITECTURAL PERMIT</h2>
+              </td>
+          </tr>
+      </table>
+      <div style="width: 27%; float:left; ">
+          <p style="font-weight: 500;">APPLICATION NO.</p>
+          <table>
+              <tr>
+                  {{Applicationno}}
+              </tr>
+          </table>
+      </div>
+      <div style="width:36%; float:left; padding-left: 15%;">
+          <p style="font-weight: 500;">AP NO.</p>
+          <table style="text-align:right;">
+              <tr>
+                  <td style="width:18px; height: 18px;"></td>
+                  <td style="width:18px; height: 18px;"></td>
+                  <td style="width:18px; height: 18px;"></td>
+                  <td style="width:18px; height: 18px;"></td>
+                  <td style="width:18px; height: 18px;"></td>
+                  <td style="width:18px; height: 18px;"></td>
+                  <td style="width:18px; height: 18px;"></td>
+                  <td style="width:18px; height: 18px;"></td>
+              </tr>
+          </table>
+      </div>
+      <div style="width: 21%; float:right;">
+          <p style="font-weight: 500; padding: 0px;">BUILDING PERMIT NO.</p>
+          <table>
+              <tr>
+                  {{permitno}}
+              </tr>
+          </table>
+      </div>
+
+      <div style="clear: both;"></div>
+
+      <table width="100%" style="padding:0px">
+          <tr>
+              <td style="border:0px solid black; padding-top: 5px; width: 100%;">
+                  <h4 style="padding:0px">BOX 1(TO BE ACCOMPLISHED IN PRINT BY OWNER/APPLICANT)</h4>
+              </td>
+          </tr>
+      </table>
+
+      <table width="100%" style="font-size:11px; padding:0px;">
+          <tr>
+              <td style="border: solid 1px #000; border-right: none; height: 35px; padding-top:0px; padding-bottom: 0px; vertical-align: top;">
+                  OWNER/APPLICANT  
+              </td>
+              <td style="border: solid 1px #000; border-right: none; border-left: none; height: 35px; padding-top:0px; padding-bottom: 0px; vertical-align: top;">
+                  LAST NAME<br><b>{{lastname}}</b>
+              </td>
+              <td style="border: solid 1px #000; border-right: none; border-left: none; height: 35px; padding-top:0px; padding-bottom: 0px; vertical-align: top;">
+                  FIRST NAME <br><b>{{firstname}}</b>
+              </td>
+              <td style="border: solid 1px #000; border-right: none; border-left: none; height: 35px; padding-top:0px; padding-bottom: 0px; vertical-align: top;">
+                  MI  <br><b>{{middlename}}</b>
+              </td>
+              <td style="width:20%; border: solid 1px #000; height: 35px; padding-top:0px; padding-bottom: 0px; vertical-align: top;">
+                  TIN <br> {{acctno}}
+              </td>
+          </tr>
+      </table>
+
+      <table width="100%" style="font-size:11px;">
+          <tr>
+              <td style="width:33%; height:40px; border:none; border-right: solid 1px #000; border-left: solid 1px #000; vertical-align: top;">
+                  FOR CONSTRUCTION OWNED<br>BY AN ENTERPRISE
+              </td>
+              <td style="width:33%; height:40px; border:none; border-right: solid 1px #000; border-left: solid 1px #000; vertical-align: top;">
+                  FORM OF OWNERSHIP <br> {{formogowner}}
+              </td>
+              <td style="width:33%; height:40px; border:none; border-right: solid 1px #000; border-left: solid 1px #000; vertical-align: top;">
+                  MAIN ECONOMIC ACTIVITY/XIND<br>
+                  {{maineconomy}}
+              </td>
+          </tr>
+      </table>
+
+      <table width="100%" style="font-size:11px; padding:0px;">
+          <tr>
+              <td style="border: solid 1px #000; border-right: none; height: 35px; padding-top:0px; padding-bottom: 0px; vertical-align: top;">
+                  ADDRESS<br><b>{{subdivision}}</b>
+              </td>
+              <td style="border: solid 1px #000; border-right: none; border-left: none; height: 35px; padding-top:0px; padding-bottom: 0px; vertical-align: top;">
+                  NO<br><b>{{houseno}}</b>
+              </td>
+              <td style="border: solid 1px #000; border-right: none; border-left: none; height: 35px; padding-top:0px; padding-bottom: 0px; vertical-align: top;">
+                  STREET<br><b>{{street}}</b>:
+              </td>
+              <td style="border: solid 1px #000; border-right: none; border-left: none; height: 35px; padding-top:0px; padding-bottom: 0px; vertical-align: top;">
+                  BATANGAY
+              </td>
+              <td style="border: solid 1px #000; height: 35px; border-right: none; border-left: none; padding-top:0px; padding-bottom: 0px; vertical-align: top;">
+                  CITY/MUNICIPALITY
+              </td>
+              <td style="border: solid 1px #000; height: 35px; border-left: none; padding-top:0px; padding-bottom: 0px; vertical-align: top;">
+                  ZIP CODE
+              </td>
+              <td style="width:20%; border: solid 1px #000; height: 35px; padding-top:0px; padding-bottom: 0px; vertical-align: top;">
+                  TELEPHONE NO<br><b>{{telephone}}</b>
+              </td>
+          </tr>
+      </table>
+
+      <table width="100%" style="font-size:11px;">
+          <tr>
+              <td style="width: 100%; border: solid 1px #000; border-bottom: none; border-top: none; height: 25px; padding-top:0px; padding-bottom: 0px;">
+                  <span>LOCATION OF CONSTRUCTION</span> &nbsp;&nbsp; 
+                  <span>Lot No.<u>&nbsp;&nbsp;&nbsp;&nbsp;{{lotno}}&nbsp;&nbsp;&nbsp;&nbsp;</u> </span>
+                  <span>Blk NO.<u>&nbsp;&nbsp;&nbsp;&nbsp;{{blkno}}&nbsp;&nbsp;&nbsp;&nbsp;</u> </span>
+                  <span>TCT NO.<u>&nbsp;&nbsp;&nbsp;&nbsp;{{tctno}}&nbsp;&nbsp;&nbsp;&nbsp;</u> </span>
+                  <span>Txa Dec NO.<u>&nbsp;&nbsp;&nbsp;&nbsp;{{taxdecno}}&nbsp;&nbsp;&nbsp;&nbsp;</u> </span>
+              </td>
+          </tr>
+          <tr>
+              <td style="width: 100%; border: solid 1px #000; border-top: none; height: 25px; padding-top:0px; padding-bottom: 0px;">
+                  <span>Street<u>&nbsp;&nbsp;&nbsp;&nbsp;{{streetnew}}&nbsp;&nbsp;&nbsp;&nbsp;</u> </span>
+                  <span>Barangay<u>&nbsp;&nbsp;&nbsp;&nbsp;{{barangay}}&nbsp;&nbsp;&nbsp;&nbsp;</u></span>
+                  <span>City/Municipality of <u>&nbsp;&nbsp;&nbsp;&nbsp; {{location}}&nbsp;&nbsp;&nbsp;&nbsp;</u> </span>
+              </td>
+          </tr>
+      </table>
+
+      <table width="100%" style="font-size:11px;">
+          <tr>
+              <td colspan="3" style="text-align:left; border:1px solid black; border-bottom: 0px; border-top:0px">
+                  <strong>SCOPE OF WORK:</strong>
+              </td>
+          </tr>
+          <tr>
+              <td style="width:33%; border:none; border-bottom:1px solid black; border-right: none; border-left: solid 1px #000; vertical-align: top;">
+                  <table width="100%" style="font-size:10px;">
+                      <tr><td>{{scopeofwork}}</td></tr>
+                  </table>
+              </td>
+          </tr>
+      </table>
+
+      <table width="100%" style="padding:0px">
+          <tr>
+              <td style="border:0px solid black; padding-top: 5px; width: 100%;">
+                  <h4 style="padding:0px">BOX 2 (TO BE ACCOMPLISHED BY THE DESIGN PROFESSIONAL)</h4>
+              </td>
+          </tr>
+      </table>
+
+      <table width="100%" style="border:1px solid black;">
+          <tr>
+              <td colspan="4" style="border-bottom: none; font-size:10px">
+                  <strong>1. ARCHITECTURAL FACILITIES AND OTHER FEATURES PURSUANT TO BATAS PAMBANSA BLANG 344, RECURRING CERTAIN &nbsp;&nbsp;&nbsp;&nbsp;BUILDING, INSTITUTIONS, ESTABLISHMENTS AND PUBLIC AND UTILITIES TO INSTALL FACILITIES AND OTHER DEVICES</strong>
+              </td>
+          </tr>
+          <tr>
+              <td style="width:25%; border:none; border-bottom:1px solid black; border-top:none; border-right: none; border-left: 1px solid black; vertical-align: top;">
+                  <table style="font-size:10px;">
+                      <tr>
+                          <td style="border:none; padding:2px;">
+                              <img src="" style="height:15px; width:15px; padding-right:5px; vertical-align: middle;">STARS
+                          </td>
+                      </tr>
+                      <tr>
+                          <td style="border:none; padding:2px;">
+                              <img src="" style="height:15px; width:15px; padding-right:5px; vertical-align: middle;">WALKWAYS
+                          </td>
+                      </tr>
+                      <tr>
+                          <td style="border:none; padding:2px;">
+                              <img src="" style="height:15px; width:15px; padding-right:5px; vertical-align: middle;">CORROORS
+                          </td>
+                      </tr>
+                      <tr>
+                          <td style="border:none; padding:2px;">
+                              <img src="" style="height:15px; width:15px; padding-right:5px; vertical-align: middle;">DOORS, ENTRANCES & THRESHOLDS
+                          </td>
+                      </tr>
+                  </table>
+              </td>
+              <td style="width:25%; border:none; border-bottom:1px solid black; border-top:none; border-right: none; border-left: none; vertical-align: top;">
+                  <table style="font-size:10px;">
+                      <tr>
+                          <td style="border:none; padding:2px;">
+                              <img src="" style="height:15px; width:15px; padding-right:5px; vertical-align: middle;">WASH ROOMS AND TOILETS
+                          </td>
+                      </tr>
+                      <tr>
+                          <td style="border:none; padding:2px;">
+                              <img src="" style="height:15px; width:15px; padding-right:5px; vertical-align: middle;">LIFT/ELEVATORS
+                          </td>
+                      </tr>
+                      <tr>
+                          <td style="border:none; padding:2px;">
+                              <img src="" style="height:15px; width:15px; padding-right:5px; vertical-align: middle;">RAMPS
+                          </td>
+                      </tr>
+                      <tr>
+                          <td style="border:none; padding:2px;">
+                              <img src="" style="height:15px; width:15px; padding-right:5px; vertical-align: middle;">PARKING AREA
+                          </td>
+                      </tr>
+                  </table>
+              </td>
+              <td style="width:25%; border:none; border-bottom:1px solid black; border-top:none; border-right: none; border-left: none; vertical-align: top;">
+                  <table style="font-size:10px;">
+                      <tr>
+                          <td style="border:none; padding:2px;">
+                              <img src="" style="height:15px; width:15px; padding-right:5px; vertical-align: middle;">SWITCHES, CONTROLS, BUZZERS
+                          </td>
+                      </tr>
+                      <tr>
+                          <td style="border:none; padding:2px;">
+                              <img src="" style="height:15px; width:15px; padding-right:5px; vertical-align: middle;">HANDRALS
+                          </td>
+                      </tr>
+                      <tr>
+                          <td style="border:none; padding:2px;">
+                              <img src="" style="height:15px; width:15px; padding-right:5px; vertical-align: middle;">THRESHOLDS
+                          </td>
+                      </tr>
+                      <tr>
+                          <td style="border:none; padding:2px;">
+                              <img src="" style="height:15px; width:15px; padding-right:5px; vertical-align: middle;">FLOOR FINISHES
+                          </td>
+                      </tr>
+                  </table>
+              </td>
+              <td style="width:25%; border:none; border-bottom:1px solid black; border-top:none; border-right: 1px solid black; border-left: none; vertical-align: top;">
+                  <table style="font-size:10px;">
+                      <tr>
+                          <td style="border:none; padding:2px;">
+                              <img src="" style="height:15px; width:15px; padding-right:5px; vertical-align: middle;">DRINKING FOUNTAINS
+                          </td>
+                      </tr>
+                      <tr>
+                          <td style="border:none; padding:2px;">
+                              <img src="" style="height:15px; width:15px; padding-right:5px; vertical-align: middle;">PUBLIC TELEPHONES
+                          </td>
+                      </tr>
+                      <tr>
+                          <td style="border:none; padding:2px;">
+                              <img src="" style="height:15px; width:15px; padding-right:5px; vertical-align: middle;">SEATING ACCOM...
+                          </td>
+                      </tr>
+                      <tr>
+                          <td style="border:none; padding:2px;">
+                              <img src="" style="height:15px; width:15px; padding-right:5px; vertical-align: middle;">OTHERS (Specify)____________
+                          </td>
+                      </tr>
+                  </table>
+              </td>
+          </tr>
+      </table>
+
+      <table width="100%" style="border:1px solid black; border-top:none;">
+          <tr>
+              <td width="35%" style="text-align:left; border:1px solid black; border-top: none; font-size:10px; text-transform: uppercase; vertical-align: top;">
+                  <strong>2. Percentage OF Site Occupancy</strong>
+                  <table width="100%" style="font-size:10px;">
+                      <tr>
+                          <td style="border:none; padding:2px;">
+                              Percentage OF Building Footprint <u>&nbsp;&nbsp;{{footprint}}&nbsp;&nbsp;</u>%
+                          </td>
+                      </tr>
+                      <tr>
+                          <td style="border:none; padding:2px;">
+                              Percentage OF Impervious Surface Area <u>&nbsp;&nbsp;{{imperviousarea}}&nbsp;&nbsp;</u>%
+                          </td>
+                      </tr>
+                      <tr>
+                          <td style="border:none; padding:2px;">
+                              Percentage OF Unpaved Surface Area <u>&nbsp;&nbsp;{{unpavedarea}}&nbsp;&nbsp;</u>%
+                          </td>
+                      </tr>
+                      <tr>
+                          <td style="border:none; padding:2px;">
+                              OTHERS (Specify)<u>&nbsp;&nbsp;{{otherper}}&nbsp;&nbsp;</u>
+                          </td>
+                      </tr>
+                  </table>
+              </td>
+              <td width="65%" style="text-align:left; border:1px solid black; border-top:none;">
+                  <strong style="font-size:10px;">3. COMFORMANCE TO FIRE CODE OF THE PHILIPPINES (P.D 1185)</strong>
+                  <table width="100%" style="font-size:10px; padding: 0px;">
+                      <tr>
+                          <td width="55%" style="text-align:left; padding-left:0px; border:0px solid black; ">
+                              <span style="width:100%">
+                                  <img src="" style="height:15px; width:15px; padding-right:5px; padding-bottom: 3px; vertical-align: middle;">Number And Width Of exit Doors Fire Walls
+                              </span>
+                              <p>
+                                  <img src="" style="height:15px; width:15px; padding-right:5px; padding-bottom: 3px; vertical-align: middle;">Woth OF Corridors
+                              </p>
+                              <p>
+                                  <img src="" style="height:15px; width:15px; padding-right:5px; padding-bottom: 3px; vertical-align: middle;">Distance of Fire Exits
+                              </p>
+                              <p>
+                                  <img src="" style="height:15px; width:15px; padding-right:5px; vertical-align: middle;">Access To Public Street
+                              </p>
+                          </td>
+                          <td width="45%" style="text-align:left;border:0px solid black;">
+                              <p>
+                                  <img src="" style="height:15px; width:15px; padding-right:5px; padding-bottom: 3px; vertical-align: middle;">Fire Walls &nbsp;&nbsp;&nbsp;
+                                  <img src="" style="height:15px; width:15px; padding-right:5px; padding-bottom: 3px; vertical-align: middle;">Others (Specify)
+                              </p>
+                              <p>
+                                  <img src="" style="height:15px; width:15px; padding-right:5px; padding-bottom: 3px; vertical-align: middle;">Fire Fighting and Safety facilities
+                              </p>
+                              <p>
+                                  <img src="" style="height:15px; width:15px; padding-right:5px; padding-bottom: 3px; vertical-align: middle;">Smoke Detectors
+                              </p>
+                              <p>
+                                  <img src="" style="height:15px; width:15px; padding-right:5px; vertical-align: middle;">Emergency Lights
+                              </p>
+                          </td>
+                      </tr>
+                  </table>
+              </td>
+          </tr>
+      </table>
+
+      <table width="100%" style="padding:0px">
+          <tr>
+              <td style="border:0px solid black; padding-top: 5px; width: 100%;">
+                  <h4 style="padding:0px">BOX 3</h4>
+              </td>
+          </tr>
+      </table>
+      <table width="100%" id="summary" style="border:none;">
+          <tr>
+              <td width="49%" style="text-align:left; border:0px solid black; padding-right:1%; padding-left: 0px; padding-top: 0px; padding-bottom:0px;">
+                <table width="100%" id="summary" style="border:1px solid black; font-size: 10px;">
+                    <tr>
+                        <td style="text-align:left;border-bottom:1px solid black;">DESIGN PROFESSIONAL,PLANS AND SPECIFICATIONS</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:left;border:0px solid black;">PRINT NAME<span class="textborder">{{signfullname}}</span>
+                        </td>
+                    </tr>
+                  <tr>
+                    <td style="text-align:left;border:0px solid black;">PRC NO<span class="textborder">{{signprcno}}</span></td>
+                  </tr>
+                  <tr>
+                    <td style="text-align:left;border:0px solid black;">ADDRESS<span class="textborder">{{signaddress}}</span></td>
+                  </tr>
+                  <tr>
+                    <td style="text-align:left;border:0px solid black;">VALIDITY<span class="textborder">{{signvalidity}}</span></td>
+                  </tr>
+                  <tr>
+                    <td style="text-align:left;border:0px solid black;">PTR NO<span class="textborder">{{signptr}}</span></td>
+                  </tr>
+                  <tr>
+                    <td style="text-align:left;border:0px solid black;">DATE ISSUED<span class="textborder">{{signdateissued}}</span></td>
+                  </tr>
+                  <tr>
+                    <td style="text-align:left;border:0px solid black;">PLACE ISSUED<span class="textborder">{{signplaceissued}}</span></td>
+                  </tr>
+                  <tr>
+                    <td style="text-align:left;border:0px solid black;">TIN<span class="textborder">{{tesigntintb}}</span></td>
+                  </tr>
+                </table>
+              </td>
+              <td width="49%" style="text-align:left; border:0px solid black; padding-left:1%; padding-top:0px; padding-right:0px; padding-bottom:0px">
+                  <table width="100%" id="summary" style="border:1px solid black; font-size:10px;">
+                      <tr>
+                          <td style="text-align:left;border-bottom:1px solid black;">SUPERVISOR/IN-CHARGE OF ELECTRONICS WORKS</td>
+                      </tr>
+                      <tr>
+                        <td style="text-align:left;border:0px solid black; ">PRINT NAME<span class="textborder">{{inchargefullname}}</span></td>
+                      </tr>
+                      <tr>
+                        <td style="text-align:left;border:0px solid black; ">PRC NO<span class="textborder">{{inchargeprcno}}</span></td>
+                      </tr>
+                      <tr>
+                        <td style="text-align:left;border:0px solid black; ">ADDRESS<span class="textborder">{{inchargeaddress}}</span></td>
+                      </tr>
+                      <tr>
+                        <td style="text-align:left;border:0px solid black; ">VALIDITY<span class="textborder">{{inchargevalidity}}</span></td>
+                      </tr>
+                      <tr>
+                        <td style="text-align:left;border:0px solid black; ">PTR NO<span class="textborder">{{inchargeptrno}}</span></td>
+                      </tr>
+                      <tr>
+                        <td style="text-align:left;border:0px solid black; ">DATE ISSUED<span class="textborder">{{inchargedateissued}}</span></td>
+                      </tr>
+                      <tr>
+                        <td style="text-align:left;border:0px solid black; ">PLACE ISSUED<span class="textborder">{{inchargeplaceissued}}</span></td>
+                      </tr>
+                      <tr>
+                        <td style="text-align:left;border:0px solid black; ">TIN<span class="textborder">{{inchargetin}}</span></td>
+                      </tr>
+                  </table>
+              </td>
+          </tr>
+      </table>
+      <table width="100%" id="summary" style="border:0px solid black;">
+        <tr>
+          <td width="50%" style="text-align:left;border:0px solid black; padding-right:30px;">
+            <p style="font-size: 12px;font-weight: 600;">BUILDING OWNER</p>
+          </td>
+          <td width="50%" style="text-align:left;border:0px solid black; padding-right:30px;">
+            <p style="font-size: 12px;font-weight: 600;">WITH</p>
+          </td>
+        </tr>
+        <tr>
+          <td width="50%" style="text-align:left;border:0px solid black; padding-right:30px;">
+            <table width="100%" id="summary" style="border:1px solid black;">
+              <tr>
+                <td colspan="2" style="text-align:left;border:0px solid black; padding-right:30px;"><span class="textborder">{{applicantname}}</span></td>
+              </tr>
+              <tr>
+                <td colspan="2" style="text-align:left;border:0px solid black; padding-right:30px;">Building Owner Name</td>
+              </tr>
+              <tr>
+                <td colspan="2" style="text-align:left;border:0px solid black; padding-right:30px;">Address <span class="textborder">{{applicantaddress}}</span></td>
+              </tr>
+              <tr>
+                <td style="text-align:left;border:0px solid black; padding-right:30px;">CTC NO <span class="textborder">{{appctcno}}</td>
+                      <td style="text-align:left;border:0px solid black; padding-right:30px;">Date Issued <span class="textborder">{{appdateissued}}</td>
+                     <td style="text-align:left;border:0px solid black; padding-right:30px;">Place Issued <span class="textborder">{{placeissued}}</td>   
+                    </tr>
+                   </table>
+                 </td>
+                 <td width="50%" style="text-align:left;border:0px solid black; padding-right:30px;">
+                   <table width="100%" id="summary" style="border:1px solid black;">
+                    <tr>
+                      <td colspan="2" style="text-align:left;border:0px solid black; padding-right:30px;"><span class="textborder">{{lotname}}</span></td>
+              </tr>
+              <tr>
+                <td colspan="2" style="text-align:left;border:0px solid black; padding-right:30px;">Building Owner Name</td>
+              </tr>
+              <tr>
+                <td colspan="2" style="text-align:left;border:0px solid black; padding-right:30px;">Address <span class="textborder">{{lotaddress}}</span></td>
+              </tr>
+              <tr>
+                <td style="text-align:left;border:0px solid black; padding-right:30px;">CTC NO <span class="textborder">{{lottaxcert}}</td>
+                      <td style="text-align:left;border:0px solid black; padding-right:30px;">Date Issued <span class="textborder">{{lotdateissued}}</td>
+                     <td style="text-align:left;border:0px solid black; padding-right:30px;">Place Issued <span class="textborder">{{lotplaceissued}}</td>   
+                    </tr>
+                   </table>
+                </td>
+           </tr>
+      </table>
+    </div>
+</body>
+</html>

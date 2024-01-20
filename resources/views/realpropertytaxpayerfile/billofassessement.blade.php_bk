@@ -1,0 +1,165 @@
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<style type="text/css">
+p{
+font-family: Gliny Hand Slab;
+    font-weight: 100;
+}
+.main td {
+  border: dotted 1px;
+}
+table{
+    border-collapse: separate;
+    empty-cells: hide;
+}
+</style>
+<!------ Include the above in your HEAD tag ---------->
+
+<div class="container" style="margin-top:10px;">
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="row">
+                <div class="col-xs-4 col-sm-4 col-md-4 text-center"></div>
+                <div class="col-xs-4 col-sm-4 col-md-4 text-center">
+                <p style="font-size: 17px;">REPUBLIC OF PHILIPPINES</p>
+                </div>
+                <div class="col-xs-4 col-sm-4 col-md-4 text-center"></div>
+            </div>
+            <div class="row" style="line-height:0;">
+                <div class="col-xs-4 col-sm-4 col-md-4 text-center"></div>
+                <div class="col-xs-4 col-sm-4 col-md-4 text-center">
+                <p style="font-size: 17px;"><b>CITY OF PLAYAN</b></p>
+                </div>
+                <div class="col-xs-4 col-sm-4 col-md-4 text-center"></div>
+            </div>
+            <div class="row">
+                <div class="col-xs-4 col-sm-4 col-md-4 text-center"></div>
+                <div class="col-xs-4 col-sm-4 col-md-4 text-center">
+                <p style="font-size: 17px;">{{(isset($propOwnerDetails->barangy->province->prov_desc))?strtoupper($propOwnerDetails->barangy->province->prov_desc):''}}</p>
+                </div>
+                <div class="col-xs-4 col-sm-4 col-md-4">
+                    
+                </div>
+            </div>
+            
+            
+            <div class="row" style="margin-top:20px;"></div>
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12">
+                    <p style="font-size: 17px;"><b>{{ (isset($propOwnerDetails->standard_name))?$propOwnerDetails->standard_name:'' }}</b></p>
+                </div>
+                
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12">
+                    <p style="font-size: 17px;">{{(isset($propOwnerDetails->standard_address))?$propOwnerDetails->standard_address:''}}</p>
+                </div>
+                
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12">
+                    <p style="font-size: 17px;">Administrator : </p>
+                </div>
+                
+            </div>
+           
+             <div class="row" style="line-height:2;">
+                <div class="col-xs-2 col-sm-2 col-md-2 text-center"></div>
+                <div class="col-xs-8 col-sm-8 col-md-8 text-center">
+                <p><b><h4>NOTICE OF ASSESSMENT AND TAX BILL (NATB)</h4></b></p>
+                </div>
+                <div class="col-xs-2 col-sm-2 col-md-2 text-center">
+                    
+                </div>
+            </div>
+            
+            
+            
+             <div class="row">
+                <div class="col-xs-8 col-sm-8 col-md-8">
+                    <p>SIR/MADAM : </p>
+                </div>
+                <div class="col-xs-4 col-sm-4 col-md-4">
+                    
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-1 col-sm-1 col-md-1">
+                   
+                </div>
+                <div class="col-xs-10 col-sm-10 col-md-10">
+                    <p style="font-size:15px;">This is to inform that the real property tax(s) due and payable for the year(s) 2023 to 2023 on the property located in the City and ownership is stated in your name for taxation process (as well as subsequesnt years untill you informed of any change/s), is as follow:</p>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12">
+                    <table class="table main" style="
+    text-align: center;
+">
+                         <tr>
+                            <td colspan="6"><p>A.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; NOTICE OF ASSESSMENT</p></td>
+                            <td colspan="4"><p>B.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; TAX BILLS</p></td>
+                            
+                        </tr>
+                        <tr>
+                            <td colspan="6"><p>SUMMARY OF REAL PROPERTY ASSESSMENT</p></td>
+                            <td colspan="4"><p>TAX DUES</p></td>
+                            
+                        </tr>
+                        <tr>
+                            <td><p>T.D No./ARP No.</p></td>
+                            <td><p>PROPERTY INDEX NO</p></td>
+                            <td><p>LOCATION</p></td>
+                            <td><p>CLASSIFICATION</p></td>
+                            <td><p>MARKET VALUE</p></td>
+                            <td><p>ASSESSED VALUE</p></td>
+                            <td><p>BASIC TAX</p></td>
+                            <td><p>SEF TAX</p></td>
+                            <td><p>SOCIALIZED HOUSING TAX</p></td>
+                            <td><p>TOTAL</p></td>
+                        </tr>
+                        @foreach($rptProperties as $prop)
+                        <tr>
+                            <td><p>{{ $prop->td_no }}</p></td>
+                            <td><p>{{ $prop->pin }}</p></td>
+                            <td><p>{{ $prop->barangay_details->brgy_name }}</p></td>
+                            <td><p>{{ ($prop->propertyKindDetails != null && $prop->class_for_kind != null)?$prop->propertyKindDetails->pk_code.' - '. $prop->class_for_kind->pc_class_code:''}}</p></td>
+                            <td><p>{{ Helper::money_format( $prop->market_value_for_all_kind ) }}</p></td>
+                            <td><p>{{ Helper::money_format( $prop->assessed_value_for_all_kind ) }}</p></td>
+                            <td><p>{{ Helper::money_format( $prop->basic_due ) }}</p></td>
+                            <td><p>{{ Helper::money_format( $prop->sef_due ) }}</p></td>
+                            <td><p>{{ Helper::money_format( $prop->sh_due ) }}</p></td>
+                            <td><p>{{ Helper::money_format( $prop->total_due ) }}</p></td>
+                        </tr>
+                        @endforeach
+                         <tr>
+                            <td colspan="4" class="text-center"><i><p style=" width: 320px; padding: 5px; border: 1px solid grey; margin: 0;">THIS SERVES AS A NOTICE OF ASSESSMENT OF REAL PROPERTY PURSUANT TO SEC 223 OF RA 7160.</p></i></td>
+                            <td colspan="2"><p><b>{{(isset($propOwnerDetails->barangy->locality->tresurer->standard_name))?$propOwnerDetails->barangy->locality->tresurer->standard_name:''}}</b></p>
+                                <p><small><i>City Treasurer</i></small></p></td>
+                            <td colspan="4"><p><b>{{(isset($propOwnerDetails->barangy->locality->assessor->standard_name))?$propOwnerDetails->barangy->locality->assessor->standard_name:''}}</b></p>
+                                <p><small><i>City Assessor</i></small></p></td>
+                        </tr>
+                      
+                    </table>
+                </div>
+                
+            </div>
+
+            
+            <div class="row">
+                <div class="col-xs-1 col-sm-1 col-md-1">
+                    <p>NOTE :</p>
+                </div>
+                <div class="col-xs-6 col-sm-6 col-md-6">
+                    <ol>
+                        <li>Kindly inform the Assessor's Office of any error or ommission that you may have discovered in this Notice.</li>
+                        <li>Please present this Notice to the Office of the Treasurer when payment is made. Payments may be made every quarter in four (4) equal installment not later than March 31 - (Ist Quarter); June 30th - (2nd Quarter); September 30th - (3rd Quarter); and December 31st - (4th Quarter).</li>
+                        <li>Payments for the entire year should be made not later than March 31st.</li>
+                        <li>This Notice pertains only to current year taxes and does not include delinquencies for previous years, which are subject to a separate Notice when applicable Delinquent payments are assessed with a penalty of 2% per month of delinquency, or a fraction thereof.</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>

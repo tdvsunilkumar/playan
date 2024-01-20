@@ -1,0 +1,1 @@
+ALTER TABLE `hr_appointment` CHANGE `hra_hourly_rate` `hra_hourly_rate` DOUBLE(10,5) NULL DEFAULT NULL COMMENT 'hra_monthly_rate / 160';

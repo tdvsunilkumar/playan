@@ -1,0 +1,1 @@
+ALTER TABLE `hr_leaves` CHANGE `remainingdays` `remainingdays` DOUBLE NULL DEFAULT NULL;

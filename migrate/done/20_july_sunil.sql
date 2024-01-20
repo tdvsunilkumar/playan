@@ -1,0 +1,3 @@
+ALTER TABLE `rpt_plant_trees_appraisals` CHANGE `rpta_date_planted` `rpta_date_planted` YEAR NOT NULL;
+ALTER TABLE `rpt_properties` CHANGE `rp_pin_suffix` `rp_pin_suffix` VARCHAR(4) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL, CHANGE `rp_depreciation_rate` `rp_depreciation_rate` DECIMAL(5,2) NULL, CHANGE `rp_accum_depreciation` `rp_accum_depreciation` DECIMAL(14,3) NULL, CHANGE `rpb_accum_deprec_market_value` `rpb_accum_deprec_market_value` DECIMAL(14,3) NULL;
+ALTER TABLE `cto_cashier` ADD `rp_property_code` BIGINT NULL COMMENT 'Reference Table rpt_properties.rp_property_code' AFTER `cashier_particulars`;

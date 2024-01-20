@@ -1,0 +1,1 @@
+ALTER TABLE `cto_accounts_receivables` ADD `is_approved` TINYINT NOT NULL DEFAULT '0' AFTER `last_updated`, ADD `acknowledged_date` DATETIME NULL AFTER `is_approved`;

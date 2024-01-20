@@ -1,0 +1,1 @@
+ALTER TABLE `rpt_appraisers` CHANGE `is_sgd` `is_sgd` TINYINT(4) NULL DEFAULT '0';

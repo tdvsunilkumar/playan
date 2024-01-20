@@ -1,0 +1,1 @@
+ALTER TABLE `gso_purchase_orders_posting_lines` ADD COLUMN IF NOT EXISTS `quantity_withdrawn` DOUBLE DEFAULT 0 AFTER `quantity`;

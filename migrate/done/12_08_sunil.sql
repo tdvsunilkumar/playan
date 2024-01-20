@@ -1,0 +1,2 @@
+ALTER TABLE `rpt_properties` CHANGE `rp_pin_suffix_lref` `rp_pin_suffix_lref` VARCHAR(5) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL;
+ALTER TABLE `rpt_property_machine_appraisals` CHANGE `rpma_date_acquired` `rpma_date_acquired` DATE NULL DEFAULT NULL, CHANGE `rpma_date_installed` `rpma_date_installed` DATE NULL DEFAULT NULL, CHANGE `rpma_date_operated` `rpma_date_operated` DATE NULL DEFAULT NULL;

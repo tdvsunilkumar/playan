@@ -1,0 +1,8 @@
+ALTER TABLE ho_issuances DROP COLUMN ho_inv_posting_id;
+ALTER TABLE ho_issuances DROP COLUMN item_id;
+ALTER TABLE ho_issuances DROP COLUMN issuance_quantity;
+ALTER TABLE ho_issuances DROP COLUMN issuance_uom;
+ALTER TABLE ho_issuances DROP COLUMN is_parent;
+ALTER TABLE ho_issuances DROP COLUMN parent_id;
+ALTER TABLE ho_issuance_details DROP COLUMN hp_code;
+ALTER TABLE ho_issuance_details ADD COLUMN is_parent tinyint AFTER id;

@@ -1,0 +1,1 @@
+ALTER TABLE `rpt_locality` ADD `bfp_inspection_order` INT(1) NOT NULL DEFAULT '0' AFTER `asment_id`;

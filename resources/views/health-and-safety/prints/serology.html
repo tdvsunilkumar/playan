@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <style type="text/css">
+        @page {sheet-size: A4; margin-top: 10mm; margin-bottom: 10mm; margin-left: 12mm; margin-right: 12mm; margin-header: 0mm;margin-footer: 0mm;}
+        @page rotated {
+            size: portrait;
+        }
+        @import url('https://fonts.googleapis.com/css?family=Fjalla+One|Montserrat:400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap');
+        * { margin: 0; padding: 0; }
+        body { font-family: 'Montserrat', sans-serif;font-size: 12px; }
+        p {margin: 0px}
+        table td, table th { border: 1px solid black; padding: 5px; }
+        .page-wrap { width: 800px; margin: 100px auto;}
+        table { border-collapse: collapse; }
+        h2, p, h1, h5{margin: 0px; padding: 0px;}
+    </style>
+    <title>Serology: {{ser_lab_num}}</title>
+</head>
+<body>    
+    <watermarkimage src="{{watermark}}" alpha="0.1" position="55, 40" size="100,100" />
+    <div width="100%" style="text-align:center; border:0px solid black; padding-bottom:10px; padding-top: 0px;">
+        <div style="text-align:right; padding:0px; border:0px solid black; width:80px; float:left; margin-left:150px">
+            <img src="{{logo}}" style="width:80px; height:80px;">
+        </div>
+        <div style="text-align:center; padding:0px; border:0px solid black; margin-left: -230px; width: auto; float: left;">
+            <p style="">REPUBLIC OF THE PHILIPPINES</p>
+            <p style="">PROVINCE OF NUEVA ECIJA</p>
+            <p style="padding-bottom:10px">CITY OF PALAYAN</p>
+            <p></p>
+            <p><strong>CITY HEALTH OFFICE</strong></p>
+            <p><strong>CLINICAL LABORATORY</strong></p>
+        </div>
+    </div>
+
+    <div style="clear:both"></div>
+
+    <table width="100%">
+        <tr>
+            <td style="padding:0px; width: 8%; border:none;">
+                <strong>Lab. No.</strong>
+            </td>
+            <td style="padding:0px; border:none;">
+                <strong>:</strong>
+            </td>
+            <td style="padding:0px; width: 38%; text-align: center; border:none; border-bottom:1px solid black;">
+                <strong>{{ser_lab_num}}</strong>
+            </td>
+            <td style="padding:0px; width: 10%; border:none; text-align:right;">
+                <strong>Age / Sex:</strong>
+            </td>
+            <td style="padding:0px; width: 25%; text-align: center; border:none; border-bottom:1px solid black;">
+                <strong>{{age}} / {{gender}}</strong>
+            </td>
+            <td style="padding:0px; width: 5%; border:none; text-align: right;">
+                <strong>Date:</strong>
+            </td>
+            <td style="padding:0px; width: 20%; text-align: center; border:none; border-bottom:1px solid black;">
+                <strong>{{date}}</strong>
+            </td>
+        </tr>
+    </table>
+
+    <table width="100%">
+        <tr>
+            <td style="padding:0px; width: 8%; border:none;">
+                <strong>Name</strong>
+            </td>
+            <td style="padding:0px; border:none;">
+                <strong>:</strong>
+            </td>
+            <td style="padding:0px; width: 38%; text-align: center; border:none; border-bottom:1px solid black;">
+                <strong>{{name}}</strong>
+            </td>
+            <td style="padding:0px; width: 20.4%; border:none; text-align:right;">
+                <strong>Requesting Physician:</strong>
+            </td>
+            <td style="padding:0px; width: 37.6%; text-align: center; border:none; border-bottom:1px solid black;">
+                <strong>{{physician}}</strong>
+            </td>
+        </tr>
+    </table>
+
+    <div style="margin-top:10px; text-align:center;">
+        <h2>SEROLOGY</h2>
+    </div>
+
+    <div style="clear:both"></div>
+
+    <table style="width:100%; font-size:13px;">
+        <tr>
+            <td rowspan="3" style="width: 25%; border:none; vertical-align: top; padding-top: 2px; padding-bottom:2px;"><strong>Examination Requested:</strong></td>
+            <td style="text-align: center; border:none; width: 25px; padding: 0px; padding-top: 2px; padding-bottom:2px; border-bottom: 1px solid black; border-top: 1px solid black;">{{HBsAg Screening}}</td>
+            <td style="border:none; padding-top: 2px; padding-bottom:2px;">Hepatitis B Surface Antigen Screening Test</td>
+        </tr>
+        <tr>
+            <td style="text-align: center; border:none; width: 25px; padding-top: 2px; padding-bottom:2px; border-bottom: 1px solid black; border-top: 1px solid black;">{{Syphilis Screening}}</td>
+            <td style="border:none; padding-top: 2px; padding-bottom:2px;">Syphilis Screening Test</td>
+        </tr>
+    </table>
+
+    <table style="width:100%; font-size:13px; margin-top:30px;">
+        <tr>
+            <td style="text-align:center; font-weight:bold;">TEST</td>
+            <td style="text-align:center; font-weight:bold;">SPECIMEN</td>
+            <td style="text-align:center; font-weight:bold;">BRAND</td>
+            <td style="text-align:center; font-weight:bold;">LOT #</td>
+            <td style="text-align:center; font-weight:bold;">EXPIRY</td>
+            <td style="text-align:center; font-weight:bold;">RESULTS</td>
+        </tr>
+        {{test_results}}
+        <!-- <tr>
+            <td style="text-align:letf; font-weight:bold;">HBsAg Screening</td>
+            <td style="text-align:center; font-weight:bold;">{{hepa_specimen}}</td>
+            <td style="text-align:center; font-weight:bold;">{{hepa_brand}}</td>
+            <td style="text-align:center; font-weight:bold;">{{hepa_lot}}</td>
+            <td style="text-align:center; font-weight:bold;">{{hepa_exp}}</td>
+            <td style="text-align:center; font-weight:bold;">{{hepa_result}}</td>
+        </tr>
+
+        <tr>
+            <td style="text-align:left;">
+                <strong>Syphilis Screening Test</strong>
+                <p>(Immunochromatography)</p>
+            </td>
+            <td style="text-align:center; font-weight:bold;">{{syphilis_specimen}}</td>
+            <td style="text-align:center; font-weight:bold;">{{syphilis_brand}}</td>
+            <td style="text-align:center; font-weight:bold;">{{syphilis_lot}}</td>
+            <td style="text-align:center; font-weight:bold;">{{syphilis_exp}}</td>
+            <td style="text-align:center; font-weight:bold;">{{syphilis_result}}</td>
+        </tr> -->
+    </table>
+    <table>
+        <tr>
+            <td width="10%" style="font-style: italic; font-weight:bold; border: none;text-align:right">REMARKS: </td>
+            <td width="90%" style="font-style: italic; font-weight:bold; border:0 2px solid;">{{ser_remarks}}</td>
+        </tr>
+        <tr>
+            <td  style="font-style: italic; font-weight:bold; border: none;"></td>
+            <td style="border: none;border-top:1px solid #000;"></td>
+        </tr>
+
+    </table>
+    <div style="width: 100%; float:left; margin-top: 55px;">
+        <div style="width:50%; float:left;">
+            <div style="width:300px;">
+                <p style="border-bottom: solid 1px black; font-weight: bold; text-align: center; padding-left:20px padding-right:20px;word">
+                    <strong>&nbsp;{{medical_tech}}</strong>
+                </p>
+                <p style="text-align:center;">
+                    {{med_tech_position}}
+                </p>
+            </div>
+        </div>
+
+        <div style="width:50%; float:left; text-align:right;">
+            <div style="width:250px; float: right;">
+                <p style="border-bottom: solid 1px black; font-weight: bold; text-align: center; padding-left:20px padding-right:20px;">
+                    <strong>{{officer}}</strong>
+                </p>
+                <p style="text-align:center;">{{officer_position}}</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+
+

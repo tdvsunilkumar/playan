@@ -1,0 +1,1 @@
+ALTER TABLE `gso_project_procurement_management_plans_details` ADD IF NOT EXIST `division_id` INT NULL DEFAULT NULL AFTER `ppmp_id`;

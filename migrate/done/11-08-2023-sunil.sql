@@ -1,0 +1,1 @@
+ALTER TABLE `cto_accounts_receivables` ADD `cron_job_last_update` TINYINT(1) NOT NULL AFTER `acknowledged_date`;

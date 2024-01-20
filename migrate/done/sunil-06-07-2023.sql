@@ -1,0 +1,5 @@
+ALTER TABLE `rpt_cto_tax_revenues` ADD `pk_code` INT NULL COMMENT 'id of reference table rpt_property_kinds' AFTER `tax_what_year`;
+ALTER TABLE `rpt_cto_billings` ADD `pk_id` INT NULL AFTER `pk_code`;
+ALTER TABLE `rpt_cto_tax_revenues` CHANGE `pk_code` `pk_id` INT(11) NULL DEFAULT NULL COMMENT 'id of reference table rpt_property_kinds';
+ALTER TABLE `cto_top_transactions` CHANGE `amount` `amount` DOUBLE(14,3) NOT NULL COMMENT 'Total Amount';
+ALTER TABLE `rpt_cto_billings` ADD `transaction_id` BIGINT NULL COMMENT 'Ref-Table: cto_top_transactions.id .. when the Tax Order Of Payment has been created by the City Treasurer\'s Office.' AFTER `cb_control_no`, ADD `transaction_no` VARCHAR(250) NULL COMMENT 'Ref-Table: cto_top_transactions.transaction_no .. when the Tax Order Of Payment has been created by the City Treasurer\'s Office.' AFTER `transaction_id`;

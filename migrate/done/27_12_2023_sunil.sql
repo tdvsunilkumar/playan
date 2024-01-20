@@ -1,0 +1,2 @@
+ALTER TABLE rpt_properties DROP CONSTRAINT rpt_properties_rvy_revision_year_id_foreign;
+ALTER TABLE rpt_properties DROP CONSTRAINT rpt_properties_brgy_code_id_foreign;

@@ -1,0 +1,1 @@
+ALTER TABLE `bfp_fees_masters` CHANGE `fmaster_description` `fmaster_description` TEXT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'Account Code';

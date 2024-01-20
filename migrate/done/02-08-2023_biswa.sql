@@ -1,0 +1,1 @@
+ALTER TABLE `hr_income_and_deduction` ADD `hridt_id` INT(11) NOT NULL COMMENT 'ref-Table: hr_income_deduction_type.hridt_id' AFTER `id`;

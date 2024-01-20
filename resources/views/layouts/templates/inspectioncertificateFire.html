@@ -1,0 +1,328 @@
+<style type="text/css">
+	*{ margin: 0; padding: 0;}
+	@page {margin-top: 12mm; margin-bottom: 12mm; margin-header: 0mm;margin-footer: 0mm;}
+    body { font-family: 'Montserrat', sans-serif;font-size: 12px; }
+    table{border: none;}
+    table td, table th { padding: 5px; }
+    table.noborder{border: none;}
+    td.noborder{border: nonex;}
+    .mainborder {border: 3px solid black;}
+    .insideborder {border: 1px solid black; margin:2px;}:
+    .w100{width: 100%}
+	.w60{width: 60%}
+	.w50{width: 50%}
+	.w40{width: 40%}
+	.w30{width: 30%}
+	.w20{width: 20%}
+</style>
+
+<body style="background: #c8efb7;">
+	<div style="border:5px solid #220044; padding:2px">
+        <div style="border:1px solid #220044; padding:5px">
+	        <table width="100%" class="noborder">
+	            <tr>
+	                <td class="noborder" style="padding:0px; width: 10%;"><img src="{{LOGO}}" style="width:110px; height:110px;"></td>
+	                <td class="noborder" style="padding:0px; width: 80%; text-align:center;">
+	                    <p>Republic of the Philippines</p>
+	                    <p><strong>Department of Interior and Local Government</strong></p>
+	                    <h3><strong>BUREAU FIRE OF PROTECTION</strong></h3>
+	                    <p>REGIONAL OFFICE III</p>
+	                    <p>Nueva Ecija Province Office</p>
+	                    <p><strong>PALAYAN CITY FIRE STATION - NUEVA ECIJA</strong></p>
+	                    <p>Brgy.Singalat,Palayan City</p>
+	                    <p>(Telephone/Fax Number:(044) 940-1072/0943 066 962)</p>
+	                    <p>Email Address:palayancityfs@gmail.com</p>
+	                </td>
+	                <td class="noborder" style="padding: 0px; width: 10%; text-align:right;"><img src="{{logoright}}" style="width:100px; height:100px;"></td>       
+	            </tr>
+	        </table>
+	        <table style="width:100%;" class="noborder" width="100%">
+	            <tr>
+	                <td style="width: 70%; text-align: left; padding-left: 50px;">
+	                	<h2 style="text-decoration: uppercase; color:red;">FSIC NO. R<span style="border-bottom: solid 1px red;"> {{fsic}} </span>
+	                	</h2>
+	                </td>
+	                <td style="width: 30%; text-align: center; padding-right: 50px;">
+	                	<p style="float: right; text-align: center;">
+	                		<span style="border-bottom: solid 1px #220044;"> {{bfpcert_approved_date}}</span> 
+	                		<br>
+	                		<span> Date</span> 
+	                	</p>
+	                </td>
+	            </tr>
+	        </table>
+	        <table style="width:100%; padding-top:10px;">
+	        	<tr>
+	        		<td colspan="3" style="text-align:center; color: #000000; padding:0px"><h1>FIRE SAFETY INSPECTION CERTIFICATE</h1></td>
+	        	</tr>
+	        	<tr>
+	        		<td style="width:25%;"></td>
+	        		<td style="padding-top: 10px; width:50%; ">
+	        			<p>
+	        				<img src="{{unchecked}}" style="width:14px;">
+	        				<span>FOR CERTIFICATE OF OCCUPANCY </span>
+	        			</p>
+	        			<p>
+							<img src="{{checked}}" style="width:14px;">
+	        				<span style="margin-top: -10px;">FOR BUSINESS PERMIT (NEW/RENEWAL)</span>
+	        			</p>
+	        			<p>
+	        				<img src="{{unchecked}}" style="width:14px;">
+	        				<span>OTHERS_____________________________________________</span>
+	        			</p>
+	        		</td>
+	        		<td style="width:25%;"></td>
+	        	</tr>
+	        </table>
+	        <table style="width:100%;">
+	        	<tr>
+	        		<td style="text-align:left; padding-top:5px;">
+	        			<h3>TO WHOM IT MAY CONCERN:</h3>
+	        		</td>
+	        	</tr>
+	        </table>
+	        <table width="100%" style="width:100%;">
+	        	<tr style="width: 100%;">
+	        		<td width='100%' style="width:100%; text-align:left; padding: 0px; line-height: 20px;">
+	        			<p style="font-size: 13px; word-spacing: 10px;">
+	        				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;By virtue of the provision of RA 9514 otherwise known as the Fire Code of the Philippines of 2008, the application for <b>FIRE SAFETY INSPECTION CERTIFICATE</b> of <br>
+	        			</p>
+	        		</td>
+	        	</tr>
+	        </table>
+	        <table width="100%">
+	            <tr>
+	                <td width='100%' style="text-align: center; padding: 0px; border-bottom:1px solid #000;"><h2 style="text-decoration: uppercase;"> {{busn_name}} </h2></td>  
+	            </tr>
+	            <tr>
+	                <td width='100%' style="text-align: center; padding: 0px;">
+	                	<p style="text-decoration: uppercase; font-style: italic;">(Name of Establishment)</p>
+	                </td>
+	            </tr>
+	        </table>
+	        <table width="100%">
+	            <tr>
+	            	<td width="30%" style="padding:0">
+	            		<p style="font-size: 13px; word-spacing: 8px;">owned and managed by</p>
+	            	</td>
+	                <td width="43%" style="text-align: center; padding: 0px; border-bottom:1px solid #000;">
+	                	<h3 style="text-decoration: uppercase;"> {{client}} </h3>
+	                </td>
+	                <td width="27%" style="padding:0">
+	                	<p style="font-size: 13px; word-spacing: 8px; ">with postal address at</p>
+	                </td>
+	            </tr>
+	            <tr>
+	                <td colspan="3" style="text-align: center; padding: 0px;">
+	                	<p style="text-decoration: uppercase; font-style: italic;">(Name of the Owner/Representative)</p>
+	                </td>
+	            </tr>
+	        </table>
+	        <table width="100%">
+	            <tr>
+	                <td width='100%' style="text-align: center; padding: 0px; border-bottom:1px solid #000;"><h4 style="text-decoration: uppercase;">BRGY. {{address}} </h4></td>  
+	            </tr>
+	            <tr>
+	                <td width='100%' style="text-align: center; padding: 0px;">
+	                	<p style="text-decoration: uppercase; font-style: italic;">(Address)</p>
+	                </td>
+	            </tr>
+	        </table>
+	        <table width="100%" style="width:100%;">
+	        	<tr style="width: 100%;">
+	        		<td width='100%' style="width:100%; text-align:left; padding: 0px; line-height: 20px;">
+	        			<p style="font-size: 13px; word-spacing: 5px;">
+	        				is hereby <b>GRANTED</b> after said building structure or facility has been duly inspected with the finding that it has fully complied with fire safety and protection requirements of the Fire Code of the Philippines of 2008 and its Revised implementing Rules and Regulations. 
+	        			</p>
+	        		</td>
+	        	</tr>
+	        </table>
+	        <table width="100%" style="padding-top:10px">
+	            <tr>
+	            	<td width="40%" style="padding:0">
+	            		<p style="font-size: 13px; word-spacing: 8px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This certification is valid for</p>
+	            	</td>
+	                <td width="65%" style="text-align: center; padding: 0px; border-bottom:1px solid #000;">
+	                	<span style="text-decoration: uppercase;"> {{busn_name}} </span> <b>with {{area}} sqm floor area</b>
+	                </td>
+	            </tr>
+	            <tr>
+	            	<td width="40%"></td>
+	                <td width="60%" style="text-align: center; padding: 0px;">
+	                	<p style="text-decoration: uppercase; font-style: italic;">(Description)</p>
+	                </td>
+	            </tr>
+	        </table>
+
+	        <table width="100%" style="padding-top:10px">
+	            <tr>
+	            	<td width="60%" style="text-align: center; padding: 0px; border-bottom:1px solid #000;">
+	                	<span style="text-decoration: uppercase;">located at</span> <span>BRGY. {{address}}</span>
+	                </td>
+	            	<td width="10%" style="padding:0">
+	            		<p style="font-size: 13px; word-spacing: 5px;">valid until</p>
+	            	</td>
+	            	<td width="30%" style="text-align: center; padding: 0px; border-bottom:1px solid #000;">
+	                	<b> {{bfpcert_date_expired}} </b>
+	                </td>
+	                
+	            </tr>
+			</table>
+            <table width="100%" style="width:100%; padding-top:10px;">
+	        	<tr style="width: 100%;">
+	        		<td width='100%' style="width:100%; text-align:left; padding: 0px; line-height: 20px;">
+	        			<p style="font-size: 13px; word-spacing: 7px;">
+	        				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Violation of Fire Code provisions shall cause this certificate null and void after appropriate proceeding and shall hold the penalties provided for by the said Fire Code.
+	        			</p>
+	        		</td>
+	        	</tr>
+	        </table>
+
+	        <table style="width:100%; padding-top:5px; float: left;">
+	        	<tr>
+	        		<td style="width:50%; padding:0px;">
+	        			<table style="width:50%; padding-top:5px; float: left;">
+				        	<tr>
+				        		<td colspan="3" style="text-align:left; padding:0px; "><b>Fire Code Fees:</b></td>
+				        	</tr>
+				        	<tr>
+				        		<td style="padding: 0px; width:100%;">
+				        			<p>
+				        				<span>Amount Paid: ₱  {{oramount}} </span>
+				        			</p>
+				        		</td>
+				        	</tr>
+				        	<tr>
+				        		<td style="padding: 0px; width:100%;">
+				        			<p>
+				        				<span>O.R. Number: {{orno}} </span>
+				        			</p>
+				        		</td>
+				        	</tr>
+							
+							<tr>
+				        		<td style="padding: 0px; width:100%;">
+				        			<p style="text-align: center; padding: 0px; border-bottom:1px solid #000; width: 100%;">
+				        				<span>Date:<span style="text-align: center; padding: 0px; border-bottom:1px solid #000; width: 100%;"> {{ordateformart}} </span>
+				        			</p>
+				        		</td>
+				        	</tr>
+				        </table>
+	        		</td>
+	        		<td style="width:50%; padding:0px;">
+	        			<table style="width:100%; padding-top:5px;">
+				        	<tr>
+				        		<td style="text-align:left; padding:0px;"><b>RECOMMENDING APPROVAL:</b></td>
+				        	</tr>
+				        	<tr>
+				        		<td></td>
+				        	</tr>
+							
+				        	<tr>
+				                <td width="65%" style="text-align: center; padding: 0px; border-bottom:1px solid #000;">
+				                	<b> {{recommending}} </b>
+				                </td>
+				            </tr>												
+		            		<tr>
+				                <td width="60%" style="text-align: center; padding: 0px;">
+				                	<p style="text-decoration: uppercase;"> {{bfpcert_approved_recommending_position}} </p>
+				                </td>
+				            </tr>
+				        </table>
+	        		</td>
+	        	</tr>
+	        </table>
+
+	        <table style="width:100%; padding-top:0px;">
+	        	<tr>
+	        		<td style="width:50%;">
+	        			<table style="width:50%; float: left;">
+				        	<tr>
+				        		<td colspan="3" style="text-align:left; padding:0px; "></td>
+				        	</tr>
+				        	<tr>
+				        		<td style="padding: 0px; width:100%;">
+				        			
+				        		</td>
+				        	</tr>
+				        	<tr>
+				        		<td style="padding: 0px; width:100%;">
+				        			
+				        		</td>
+				        	</tr>
+				        	<tr>
+				        		<td style="padding: 0px; width:100%;">
+				        			
+				        		</td>
+				        	</tr>
+				        </table>
+	        		</td>
+	        		<td style="width:50%;">
+	        			<table style="width:100%;">
+				        	<tr>
+				        		<td style="text-align:left; padding:0px;"><b>APPROVED:</b></td>
+				        	</tr>
+				        	<tr>
+				        		<td></td>
+				        	</tr>
+				        	<tr>
+				                <td width="65%" style="text-align: center; padding: 0px; border-bottom:1px solid #000;">
+				                	<b> {{approved}} </b>
+				                </td>
+				            </tr>												
+			        		<tr>
+				                <td width="60%" style="text-align: center; padding: 0px;">
+				                	<p style="text-decoration: uppercase;"> {{bfpcert_approved_position}} </p>
+				                </td>
+				            </tr>
+				        </table>
+	        		</td>
+	        	</tr>
+	        </table>
+            
+			<table width="100%">
+	            <tr>
+	                <td style="text-align: center;">
+	                    <p style="text-align: center; font-style: italic;padding-top:50px;"><b>NOTE:"This Certificate does not take the place of any license required by law and is not transferable. Any change in the use of occupancy of the premises shall require a new certificate."</b></p>
+	                </td>
+	            </tr>
+	        </table>
+
+	        <table width="100%" id="summary" class="noborder">
+	            <tr>
+	        		<td colspan="3" style="text-align:center; padding-top:2px;padding-bottom: 2px;"><h2>THIS CERTIFICATE SHALL BE POSTED CONSPICUOUSLY</h2></td>
+	        	</tr>
+			</table>
+
+        	<table width="100%">
+                <tr>
+                    <td style="text-align: center;">
+                    	<p style="; color:red;padding-bottom: 2px;">PAALALA: "MAHIGPIT NA IPINAGBABAWAL NG BUREAU OF FIRE PROTECTION SA MGA KAWANI NITO ANG MAGBENTA O MAGREKOMENDA NG ANUMANG BRAND NG FIRE EXTINGUISHER"</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align: center;padding-bottom: 2px;">
+                    	<h2>"FIRE SAFETY IS OUR MAIN CONCERN"</h2>
+                    </td>
+                </tr>
+        	</table>
+            <style>
+  .watermark {
+    padding: 8px;
+    border: 1px solid black;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' height='100px' width='100px'><text transform='translate(20, 100) rotate(-45)' fill='rgba(245, 45, 45, 0.2)' font-size='20'>Applications/Owner's COPY</text></svg>");
+    background-size: 100% 100%;
+    font-weight: 800;
+  }
+</style>
+         	<table>
+                <tr>
+                    <td class="watermark" style="padding:8px; border:1px solid black;background: #fff;font-weight: 800;">
+                    	<b style="font-style:italic;">Applications/Owner's COPY</b>
+                    </td>
+                </tr>
+        	</table>
+		</div>
+	</div>
+	<p style="margin-left:10px;margin-top:0px;">BFP-QSF-FSED-005 Rev. 03 (03.03.20)</p>
+</body>

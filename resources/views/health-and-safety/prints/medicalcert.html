@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <style type="text/css">
+        @page {sheet-size: Folio; margin-top: 25mm; margin-bottom: 25mm; margin-left: 25mm; margin-right: 25mm; margin-header: 0mm;margin-footer: 0mm;}
+        @import url('https://fonts.googleapis.com/css?family=Fjalla+One|Montserrat:400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap');
+        * { margin: 0; padding: 0; }
+        body { font-family: 'Montserrat', sans-serif;font-size: 14px; }
+        p {margin: 0px}
+        table td, table th { border: 1px solid black; padding: 5px; }
+        .page-wrap { width: 800px; margin: 100px auto;}
+        table { border-collapse: collapse; }
+    </style>
+    <title>Medical Certificate: {{name}}</title>
+</head>
+<body>    
+    <div width="100%" style="text-align:center; border:0px solid black; border-bottom: solid 2px #000; padding-bottom:3px; padding-top: 0px;">
+        <div style="text-align:left; padding:0px; border:0px solid black; width:80px; float:left;">
+            <img src="{{logo}}" style="width:80px; height:80px;">
+        </div>
+        <div style="text-align:center; padding:0px; border:0px solid black; margin-left: -80px; width: auto; float: left;">
+            <p>Republic of the Philippines</p>
+            <p>Province of Nueva Ecija</p>
+            <p style="font-size: 18px;">CITY OF PALAYAN</p>
+            <br>
+            <br>
+            <p style="font-weight: bold; font-size: 18px;">CITY HEALTH OFFICE</p>
+        </div>
+    </div>
+
+    <div style="clear:both"></div>
+
+    <div style="width: 130px; margin-top:70px; float: right;">
+        <p style="text-align:center; font-size: 14; border-bottom:1px solid black;">
+            {{date}}
+        </p>
+        <p style="text-align:center;">Date</p>
+    </div>
+    <div style="clear:both"></div>
+
+    <div style="width: 100%; float: left; margin-top:10px; margin-left:0px; margin-right:30px;">
+        <p style="font-size: 13px;">FROM THE DESK OF:</p>
+        <p style="font-size: 13px; margin-top: 10px; font-weight:bold;">
+            {{officer_name}}<br>
+            {{position}}<br>
+            LICENSE No.: {{liscense}}
+        </p>
+
+        <div style="font-weight: bold; font-size:16px; float: left; text-align:center; margin-top:60px;">
+            <span style="border-bottom: 1px solid black; text-align:center;">MEDICAL CERTIFICATE</span>
+        </div>
+
+        <p style="margin-top:30px; margin-bottom:10px; font-size: 14;">TO WHOM IT MAY CONCERN:</p>
+        <p style="text-align:justify; text-indent: 50px; font-size: 14;">
+            This is to certify that I have been seen and examined Mr./Mrs./Ms. <strong><u>{{name}}</u>, <u>{{age}}</u> from <strong><u>BRGY, {{brgy}}, PALAYAN CITY</u></strong> this <stong><u>{{date}},</u></strong> because ______________________________________________________
+        </p>
+
+        <p style="margin-top:50px; text-indent: 50px;">
+            PERTINENT P.E. FINDINGS:
+        </p>
+        <p style="text-align:justify; margin-top:250px; text-indent: 50px;">
+            This medical certificate was issued upon the request of the patient for any purpose it may serve except medical-legal.
+        </p>
+    </div>
+    <div style="width: 100%; margin-top:50px; font-size:14px;">
+        <div style="width:55%; float:right; margin-right:15px;">
+            <p style="border-bottom: solid 1px black; font-weight: bold; text-align: center; padding-left:20px; padding-right:20px;"><strong>{{officer_name}}</strong></p>
+            <p style="text-align:center;"><strong>{{position}}</strong><br>LICENSE No.: {{liscense}}</p>
+        </div>
+        <p style="font-size: 12px; margin-top:85px;">*NOT VALID WITHOUT DRYSEAL.</p>
+    </div>
+   
+</body>
+</html>
+
+
+
+
+
+
+

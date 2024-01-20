@@ -1,0 +1,3 @@
+ALTER TABLE `cto_cashier` ADD `burial_id` INT(11) NOT NULL DEFAULT '0' AFTER `ctc_place_of_issuance`, ADD `burial_expired_name` VARCHAR(255) NULL AFTER `burial_id`;
+
+ALTER TABLE `cto_cashier_details` ADD `burial_id` INT(11) NULL DEFAULT '0' AFTER `pap_id`;

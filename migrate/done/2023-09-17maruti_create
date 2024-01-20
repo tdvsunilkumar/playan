@@ -1,0 +1,1 @@
+ALTER TABLE `eng_occupancy_apps` ADD `is_online` INT(11) NOT NULL DEFAULT '0' AFTER `is_approve`;

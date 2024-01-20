@@ -1,0 +1,1 @@
+DROP TABLE `palayan`.`ip_settings`;

@@ -1,0 +1,1 @@
+ALTER TABLE `cto_tfocs` ADD `is_business_tax_essential` INT(11) NULL DEFAULT '0' AFTER `total_of_gl_id`, ADD `is_business_tax_non_essential` INT(11) NULL DEFAULT '0' AFTER `is_business_tax_essential`;

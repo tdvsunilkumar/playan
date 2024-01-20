@@ -1,0 +1,1 @@
+ALTER TABLE `acctg_vouchers` ADD COLUMN IF NOT EXISTS `total_deductions` DOUBLE NULL DEFAULT NULL AFTER `total_disbursement`;

@@ -1,0 +1,2 @@
+RENAME TABLE `palayan_uat`.`cto_paymnet_or_registers` TO `palayan_uat`.`cto_payment_or_registers`;
+ALTER TABLE `cto_cashier` ADD `or_register_id` INT(11) NULL COMMENT 'OR Register ID Ref-Table: cto_payment_or_registers.id' AFTER `or_assignment_id`, ADD `coa_no` INT(11) NULL COMMENT 'Ref-Table: cto_payment_or_registers.coa_no' AFTER `or_register_id`;

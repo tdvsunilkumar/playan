@@ -1,0 +1,1 @@
+ALTER TABLE `rpt_property_approvals` CHANGE `rp_app_appraised_by` `rp_app_appraised_by` INT(11) NULL, CHANGE `rp_app_recommend_by` `rp_app_recommend_by` INT(11) NULL, CHANGE `rp_app_approved_by` `rp_app_approved_by` INT(11) NULL;

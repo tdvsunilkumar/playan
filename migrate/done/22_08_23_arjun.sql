@@ -1,0 +1,1 @@
+ALTER TABLE `ho_request_permit` CHANGE `brgy_id` `brgy_id` INT(11) NOT NULL DEFAULT '0' COMMENT 'ref-table:barangays.id get brgy_name, mun_desc';

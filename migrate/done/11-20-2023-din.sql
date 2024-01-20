@@ -1,0 +1,2 @@
+ALTER TABLE `sms_messages` ADD COLUMN IF NOT EXISTS `masking_code` VARCHAR(40) NULL DEFAULT NULL AFTER `message_type_id`;
+ALTER TABLE `sms_messages` CHANGE `message_type_id` `type_id` INT(10) UNSIGNED NOT NULL COMMENT 'sms_types';

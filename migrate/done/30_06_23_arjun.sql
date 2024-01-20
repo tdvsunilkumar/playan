@@ -1,0 +1,1 @@
+ALTER TABLE `bplo_business` ADD `is_individual` INT(11) NULL AFTER `busn_series_no`;

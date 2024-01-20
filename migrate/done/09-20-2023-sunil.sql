@@ -1,0 +1,1 @@
+ALTER TABLE `cto_accounts_receivable_details` ADD `short_collection_amount` DECIMAL(20,3) NULL AFTER `sh_penalty_amount`;

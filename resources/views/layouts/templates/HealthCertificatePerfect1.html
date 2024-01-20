@@ -1,0 +1,222 @@
+<style type="text/css">
+	*{ margin: 0; padding: 0;}
+	@page {sheet-size: Letter-L; size: landscape; margin-top: 9mm; margin-bottom: 5mm; margin-left: 12mm; margin-right: 6mm; margin-header: 0mm;margin-footer: 0mm; background-image: url("assets/storage/uploads/logo/HealthCertificatePerfect.jpeg"); background-image-resize: 1; background-repeat: no-repeat;}
+
+    body { font-family: 'Futura', sans-serif; font-size: 15px; color:#000;}
+    table{border: none; border-collapse: collapse;}
+    table td, table th { padding: 5px; }
+    table.noborder{border: none;}
+    td.noborder{border: nonex;}
+    p {margin: 0px;}
+    h2{margin: 0px; padding: 0px;}
+    .w100{width: 100%}
+	.w60{width: 60%}
+	.w50{width: 50%}
+	.w40{width: 40%}
+	.w30{width: 30%}
+	.w20{width: 20%}
+	.bg1{background-color: black}
+	.bg{background-color: #f2f2f2;}
+	.box1{width:44%; margin-left: 3%; margin-right: 3%; float:left; height: 50px; background-color: #f2f2f2; font-size: 12px; text-transform: uppercase;}
+	.box2{width:45%; margin-left: 6%; margin-right: 3%; float:left; height: 50px; background-color: #f2f2f2; font-size: 12px; text-transform: uppercase;}
+	.box3{width:44%; margin-left: 3%; margin-right: 3%; float:left; height: 67px; background-color: #f2f2f2; font-size: 12px; text-transform: uppercase;}
+	.box4{width:45%; margin-left: 6%; margin-right: 3%; float:left; height: 67px; background-color: #f2f2f2; font-size: 12px; text-transform: uppercase;}
+	.box5{width:95%; margin-left: 3%; margin-right: 3%; float:left; height: 50px; background-color: #f2f2f2; font-size: 12px; font-weight: bold; text-transform: uppercase;}
+	.mt42{margin-top: 42px;}
+	.mt43{margin-top: 43px;}
+	.mt44{margin-top: 44px;}
+	.mt45{margin-top: 45px;}
+	.container{width: 100%; float: left;}
+	.w50{width: 50%;}
+	.w100{width: 100%}
+	.fL{float: left}
+	.pt210{padding-top: 221px}
+	.pt199{padding-top:199px}
+	.pl50{padding-left:0px;}
+	.regNo{padding-top: 1px; text-align: left; padding-left:290px;}
+	.ordinanceNo{padding-top: 135px; text-align: left; padding-left:60px; font-size: 16px; letter-spacing: 0px;}
+	.tblrow{padding-top: 20px; text-align: left; padding-left:10px; padding-right: 17px; text-transform: uppercase;}
+	.occupation{padding-top: 18px; text-align: left; padding-left:139px; padding-right: 17px; text-transform: uppercase;}
+	.ageSexNat{padding-top: 18px; text-align: left; padding-left:50px;}
+	.workplace{padding-top: 18px; text-align: left; padding-left:139px; padding-right: 17px; text-transform: uppercase;}
+	.photoSign{padding-top: 10px; text-align: left; padding-left:10px; padding-right: 17px; text-transform: uppercase;}
+	.photoSign .photo{width: 170px; float:left; }
+	.photoSign .sign{ float:left;text-align: center;}
+
+	.cerDate{padding-top: 1px; text-align: center; padding-left: 3%; width: 97%}
+	.cerTables {float: left; margin-left: 3.5%; width: 96%}
+	.cerTables table{width: 100%; text-align: center;}
+	.cerTables table th{height: 35px; vertical-align: middle;}
+	.cerTables table td{height: 35px; vertical-align: middle;}
+</style>
+<body>
+	<div class="container">
+        <div class="w50 fL">
+	        <div class="w100 pt210">
+	        	<div class="regNo">
+	        		<p style="text-align:left; width:62px; float:left;">Reg. No.</p>
+	        		<p style="text-align:left; width:110px; float:left;">{{REGISTRATION}}</p>
+	        	</div>
+	        	<div class="ordinanceNo">
+	        		<p>
+	        			Pursuant to the provision of P.D. 522, P.D. 856 and City Ordinance No. <u>22-A</u> s. <u>223</u>, the Cetificate is issued for
+	        		</p>
+	        	</div>
+	        	<div class="tblrow">
+	        		<table style="width:100%;">
+	        			<tr>
+	        				<td style="width:110px; padding:0px;">NAME</td>
+	        				<td style="width:20px; padding:0px; font-weight: bold;">:</td>
+	        				<td style="padding:0px; text-align:left; padding-left:0px">{{OWNERNAME}}</td>
+	        			</tr>
+	        		</table>
+	        	</div>
+
+	        	<div class="tblrow">
+	        		<table style="width:100%;">
+	        			<tr>
+	        				<td style="width:110px; padding:0px;">OCCUPATION</td>
+	        				<td style="width:20px; padding:0px; font-weight: bold;">:</td>
+	        				<td style="padding:0px;">{{occupation}}</td>
+	        			</tr>
+	        		</table>
+	        	</div>
+
+	        	<div class="tblrow">
+	        		<table>
+	        			<tr>
+	        				<td style="width:40px; padding:0px;">AGE<b>:</b></td>
+	        				<td style="width:65px; padding:0px;">{{age}}</td>
+	        				<td style="width:40px; padding:0px;">SEX<b>:</b></td>
+	        				<td style="width:70px; padding:0px;">{{GENDER}}</td>
+	        				<td style="width:70px; padding:0px;">NATIONALITY</td>
+	        				<td style="padding:0px; padding-left: 10px;">{{nationality}}</td>
+	        			</tr>
+	        		</table>
+	        	</div>
+
+	        	<div class="tblrow">
+	        		<table>
+	        			<tr>
+	        				<td style="width:130px; padding:0px; padding-top:1px;">PLACE OF WORK<b>:</b></td>
+	        				<td style="padding:0px; padding-top:1px;">{{WORKPLACE}}</td>
+	        			</tr>
+	        		</table>
+	        	</div>
+
+	        	<div class="photoSign">
+	        		<div class="photo">
+	        			<img src="assets/storage/uploads/logo/noimage.png" style="width:151px; height:145px; margin-top:9px">
+	        		</div>
+	        		<div class="sign">
+	        			<p style="margin-top:20px;"></p>
+	        			<p style="margin-top:23px; font-size:12px;">SIGNATURE</p>
+
+	        			<p style="margin-top:12px;">{{r_apv_name}}</p>
+	        			<p style="font-size:12px;">{{hahc_recommending_approver_position}}</p>
+
+	        			<p style="margin-top:11px;">{{apv_name}}</p>
+	        			<p style="margin-top:1px; font-size:12px;">{{hahc_approver_position}}</p>
+	        		</div>
+	        	</div>
+	        </div>
+		</div>
+
+		<div class="w50">
+			<div style="text-align:right; font-size:12px;">
+				EHS FORM NO. 102-A
+			</div>
+			<div style="padding-top:60px; padding-left: 180px; ">
+				This Health Certificate is non-transferable always wear your certificate in the upper left side front portion of your garment while working.
+			</div>
+
+			<div style="padding-top:16px; padding-left: 33px;">
+				Valid only until the nest date of examination, as indicated below.
+			</div>
+
+	        <div class="cerDate" style="padding-top:13px;">
+	        	<p style="text-align:center; width:210px; float:left;">{{DATE}}</p>
+	        	<p style="text-align:center; width:220px; float:left; margin-left: 45px;">{{EXPIRE}}</p>
+	        </div>
+
+	        <div class="cerDate" style="padding-top:2px;">
+	        	<p style="text-align:center; width:210px; float:left;">Date of Issuance</p>
+	        	<p style="text-align:center; width:220px; float:left; margin-left: 45px;">Date of Expiration</p>
+	        </div>
+
+	        <div class="cerTables" style=" margin-top: 20px;">
+	        	<table>
+	        		<tr>
+	        			<td><h2 style="text-align:center; color:red; font-size: 20px;">IMMUNIZATION</h2></td>
+	        		</tr>
+	        	</table>
+	        	
+	        	<table>
+	        		<tr>
+	        			<th style="width:25%; border:1px solid #000;">DATE</th>
+	        			<th style="width:31%; border:1px solid #000;">KIND</th>
+	        			<th style="border:1px solid #000;">RESULTS</th>
+	        		</tr>
+	        		<tr>
+	        			<td style="border:1px solid black;">{{t1r1c1}}</td>
+	        			<td style="border:1px solid black;">{{t1r1c2}}</td>
+	        			<td style="border:1px solid black;">{{t1r1c3}}</td>
+	        		</tr>
+	        		<tr>
+	        			<td style="border:1px solid black;">{{t1r2c1}}</td>
+	        			<td style="border:1px solid black;">{{t1r2c2}}</td>
+	        			<td style="border:1px solid black;">{{t1r2c3}}</td>
+	        		</tr>
+	        	</table>
+
+	        	<table>
+	        		<tr>
+	        			<td><h2 style="text-align:center; color:red; font-size: 20px;">X-RAY</h2></td>
+	        		</tr>
+	        	</table>
+	        	
+	        	<table style="">
+	        		<tr>
+	        			<th style="width:25%; border:1px solid #000;">DATE</th>
+	        			<th style="width:31%; border:1px solid #000;">KIND</th>
+	        			<th style="border:1px solid #000;">RESULTS</th>
+	        		</tr>
+	        		<tr>
+	        			<td style="border:1px solid black;">{{t2r1c1}}</td>
+	        			<td style="border:1px solid black;">{{t2r1c2}}</td>
+	        			<td style="border:1px solid black;">{{t2r1c3}}</td>
+	        		</tr>
+	        		<tr>
+	        			<td style="border:1px solid black;">{{t2r2c1}}</td>
+	        			<td style="border:1px solid black;">{{t2r2c2}}</td>
+	        			<td style="border:1px solid black;">{{t2r2c3}}</td>
+	        		</tr>
+	        	</table>
+
+	        	<table>
+	        		<tr>
+	        			<td style="padding-top:5px;"><h2 style="text-align:center; color:red; font-size: 20px;">STOOL AND OTHER EXAM. RQRD.</h2></td>
+	        		</tr>
+	        	</table>
+
+	        	<table>
+	        		<tr>
+	        			<th style="width:25%; border:1px solid #000;">DATE</th>
+	        			<th style="width:31%; border:1px solid #000;">KIND</th>
+	        			<th style="border:1px solid #000;">RESULTS</th>
+	        		</tr>
+	        		<tr>
+	        			<td style="border:1px solid black;">{{t3r1c1}}</td>
+	        			<td style="border:1px solid black;">{{t3r1c2}}</td>
+	        			<td style="border:1px solid black;">{{t3r1c3}}</td>
+	        		</tr>
+	        		<tr>
+	        			<td style="border:1px solid black;">{{t3r2c1}}</td>
+	        			<td style="border:1px solid black;">{{t3r2c2}}</td>
+	        			<td style="border:1px solid black;">{{t3r2c3}}</td>
+	        		</tr>
+	        	</table>
+	        </div>
+		</div>
+	</div>
+</body>

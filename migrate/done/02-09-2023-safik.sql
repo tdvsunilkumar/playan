@@ -1,0 +1,1 @@
+ALTER TABLE `profile_municipalities` ADD `mun_display_for_economic` INT(1) NOT NULL DEFAULT '0' AFTER `mun_display_for_accounting`;

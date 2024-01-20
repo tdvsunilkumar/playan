@@ -1,0 +1,1 @@
+ALTER TABLE `eng_job_requests` ADD `is_online` INT(11) NULL DEFAULT '0' AFTER `is_approved`;

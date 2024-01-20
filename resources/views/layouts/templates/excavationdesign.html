@@ -1,0 +1,410 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <style type="text/css">
+        @import url('https://fonts.googleapis.com/css?family=Fjalla+One|Montserrat:400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap');
+        * { margin: 0; padding: 0; }
+        @page {margin-top: 12mm; margin-bottom: 12mm; margin-header: 0mm;margin-footer: 0mm;}
+        body { font-family: 'Montserrat', sans-serif; font-size: 12px; }
+        table td, table th { border: 1px solid black; padding: 5px; }
+        p {margin: 0px; padding: 0px}
+        h4 {margin: 0px; padding: 0px}
+        textarea { border: 0; font-size: 14px; font-family: 'Montserrat', sans-serif;overflow: hidden; resize: none; }
+        table { border-collapse: collapse; }
+        .mb-2{margin-bottom: 2mm}
+        .bg{background-color: red;}
+        .bg1{background-color: blue;}
+        .mask
+        {
+            border-style: solid;
+            border-width: 0 0 3px 3px;
+            position: absolute;
+            float: right;
+            clear: none;
+            right: -3px;
+            top: -3px;
+            background-color: white;
+            width: 50%;
+            height: 4em;
+        }
+    </style>
+  <title>EXCAVATION AND GROUND PREPARATION PERMIT</title>
+</head>
+
+<body>
+  <div style="">
+      <table width="100%">
+          <tr>
+              <td width="100%" style="text-align:center; border:0px solid black;">
+                  <p style="">Republic of the Philippines</p>
+                  <p style="">City/Municipality of {{MUNCIPALITY}} </p>
+                  <p style="">Provision of {{MUNCIPALITY}}</p>
+                  <p style="text-transform: uppercase;"><strong>OFFICE OF THE BUILDING OFFICIAL</strong></p>
+              </td>
+          </tr>
+          <tr>
+              <td width="100%" style="text-align:center; border:0px solid black;">
+                  <h2 style="text-transform: uppercase;">EXCAVATION AND GROUND PREPARATION PERMIT</h2>
+              </td>
+          </tr>
+      </table>
+      <div style="width: 27%; float:left; ">
+          <p style="font-weight: 500;">APPLICATION NO.</p>
+          <table>
+              <tr>
+                  {{appno}}
+              </tr>
+          </table>
+      </div>
+      <div style="width:36%; float:left; padding-left: 15%;">
+          <p style="font-weight: 500;">EGPP NO.</p>
+          <table style="text-align:right;">
+              <tr>
+                  <td style="width:18px; height: 18px;"></td>
+                  <td style="width:18px; height: 18px;"></td>
+                  <td style="width:18px; height: 18px;"></td>
+                  <td style="width:18px; height: 18px;"></td>
+                  <td style="width:18px; height: 18px;"></td>
+                  <td style="width:18px; height: 18px;"></td>
+                  <td style="width:18px; height: 18px;"></td>
+                  <td style="width:18px; height: 18px;"></td>
+              </tr>
+          </table>
+      </div>
+      <div style="width: 21%; float:right;">
+          <p style="font-weight: 500; padding: 0px;">BUILDING PERMIT NO.</p>
+          <table>
+              <tr>
+                 {{permitno}}
+              </tr>
+          </table>
+      </div>
+
+      <div style="clear: both;"></div>
+
+      <table width="100%" style="padding:0px">
+          <tr>
+              <td style="border:0px solid black; padding-top: 5px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; width: 100%;">
+                  <h4 style="padding:0px">BOX 1(TO BE ACCOMPLISHED IN PRINT BY OWNER/APPLICANT)</h4>
+              </td>
+          </tr>
+      </table>
+
+      <table width="100%" style="font-size:11px; padding:0px;">
+          <tr>
+              <td style="border: solid 1px #000; border-right: none; height: 35px; padding-top:0px; padding-bottom: 0px; vertical-align: top;">
+                  OWNER/APPLICANT
+              </td>
+              <td style="border: solid 1px #000; border-right: none; border-left: none; height: 35px; padding-top:0px; padding-bottom: 0px; vertical-align: top;">
+                  LAST NAME<br><b>{{lastname}}</b>
+              </td>
+              <td style="border: solid 1px #000; border-right: none; border-left: none; height: 35px; padding-top:0px; padding-bottom: 0px; vertical-align: top;">
+                  FIRST NAME<br><b>{{firstname}}</b>
+              </td>
+              <td style="border: solid 1px #000; border-right: none; border-left: none; height: 35px; padding-top:0px; padding-bottom: 0px; vertical-align: top;">
+                  MIDDLE NAME <br><b>{{middlename}}</b>
+              </td>
+              <td style="width:20%; border: solid 1px #000; height: 35px; padding-top:0px; padding-bottom: 0px; vertical-align: top;">
+                  TIN  <br><b>{{acctno}}</b>
+              </td>
+          </tr>
+      </table>
+
+      <table width="100%" style="font-size:11px;">
+          <tr>
+              <td style="width:33%; height:40px; border:none; border-right: solid 1px #000; border-left: solid 1px #000; vertical-align: top;">
+                  FOR CONSTRUCTION OWNED<br>BY AN ENTERPRISE
+              </td>
+              <td style="width:33%; height:40px; border:none; border-right: solid 1px #000; border-left: solid 1px #000; vertical-align: top;">
+                  FORM OF OWNERSHIP <br><b>{{formogowner}}</b>
+              </td>
+              <td style="width:33%; height:40px; border:none; border-right: solid 1px #000; border-left: solid 1px #000; vertical-align: top;">
+                  USE OR CHARACTOR OF OCCUPANCY<br>
+                  {{characterofoccupancy}}
+              </td>
+          </tr>
+      </table>
+
+      <table width="100%" style="font-size:11px; padding:0px;">
+          <tr>
+              <td style="border: solid 1px #000; border-right: none; height: 35px; padding-top:0px; padding-bottom: 0px; vertical-align: top;">
+                  ADDRESS:<b>{{subdivision}}</b>
+              </td>
+              <td style="border: solid 1px #000; border-right: none; border-left: none; height: 35px; padding-top:0px; padding-bottom: 0px; vertical-align: top;">
+                  NO.:<b>{{houseno}}</b>
+              </td>
+              <td style="border: solid 1px #000; border-right: none; border-left: none; height: 35px; padding-top:0px; padding-bottom: 0px; vertical-align: top;">
+                  STREET:<b>{{street}}</b>
+              </td>
+              <td style="border: solid 1px #000; border-right: none; border-left: none; height: 35px; padding-top:0px; padding-bottom: 0px; vertical-align: top;">
+                  BARANGAY
+              </td>
+              <td style="border: solid 1px #000; height: 35px; border-right: none; border-left: none; padding-top:0px; padding-bottom: 0px; vertical-align: top;">
+                  CITY/MUNICIPALITY
+              </td>
+              <td style="border: solid 1px #000; height: 35px; border-left: none; padding-top:0px; padding-bottom: 0px; vertical-align: top;">
+                  ZIP CODE
+              </td>
+              <td style="width:20%; border: solid 1px #000; height: 35px; padding-top:0px; padding-bottom: 0px; vertical-align: top;">
+                  TELEPHONE NO.:<b>{{telephoneno}}</b>
+              </td>
+          </tr>
+      </table>
+
+      <table width="100%" style="font-size:11px;">
+          <tr>
+              <td style="width: 100%; border: solid 1px #000; border-bottom: none; border-top: none; height: 25px; padding-top:0px; padding-bottom: 0px;">
+                  <span>LOCATION OF CONSTRUCTION</span> &nbsp;&nbsp; 
+                  <span>LOT NO.<u>&nbsp;&nbsp;&nbsp;&nbsp;{{lotno}}&nbsp;&nbsp;&nbsp;&nbsp;</u> </span>
+                  <span>BLK NO.<u>&nbsp;&nbsp;&nbsp;&nbsp;{{blkno}}&nbsp;&nbsp;&nbsp;&nbsp;</u> </span>
+                  <span>TCT NO.<u>&nbsp;&nbsp;&nbsp;&nbsp;{{tctno}}&nbsp;&nbsp;&nbsp;&nbsp;</u> </span>
+                  <span>TAX DEC. NO.<u>&nbsp;&nbsp;&nbsp;&nbsp;{{taxdecno}}&nbsp;&nbsp;&nbsp;&nbsp;</u> </span>
+              </td>
+          </tr>
+          <tr>
+              <td style="width: 100%; border: solid 1px #000; border-top: none; height: 25px; padding-top:0px; padding-bottom: 0px;">
+                  <span>STREET<u>&nbsp;&nbsp;&nbsp;&nbsp;{{street}}&nbsp;&nbsp;&nbsp;&nbsp;</u> </span>
+                  <span>BARANGAY<u>&nbsp;&nbsp;&nbsp;&nbsp;{{barangay}}&nbsp;&nbsp;&nbsp;&nbsp;</u> </span>
+                  <span>CITY/MUNICIPALITY :&nbsp;&nbsp;&nbsp;&nbsp; {{location}}&nbsp;&nbsp;&nbsp;&nbsp;</span>
+              </td>
+          </tr>
+      </table>
+
+      <table width="100%" style="font-size:11px;">
+          <tr>
+              <td colspan="3" style="text-align:left; border:1px solid black; border-bottom: 0px; border-top:0px">
+                  <strong>SCOPE OF WORK:</strong>
+              </td>
+          </tr>
+          <tr>
+              <td style="width:100%; border:none; border-bottom:1px solid black; border-right: solid 1px #000; border-left: solid 1px #000; vertical-align: top;">
+                  <table width="100%" style="font-size:10px;">
+                              {{scopeofwork}}
+                  </table>
+              </td>
+          </tr>
+      </table>
+
+      <table width="100%" style="font-size:11px;">
+          <tr>
+              <td colspan="3" style="text-align:left; border:1px solid black; border-bottom: 0px; border-top:0px">
+                  <strong>USE OR CHARACTER OF OCCUPANCY</strong>
+              </td>
+          </tr>
+          <tr>
+              <td style="width:100%; border:none; border-bottom:1px solid black; border-right: 1px solid black; border-left: solid 1px #000; vertical-align: top;">
+                  <table width="100%" style="font-size:10px;">
+                     {{occupancyhtml}}
+                  </table>
+              </td>
+          </tr>
+      </table>
+
+      <table width="100%" id="summary" style="border:none;">
+          <tr>
+              <td width="49%" style="text-align:left; border:none; padding-top: 5px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px;">
+                  <h4 style="padding:0px">BOX 2</h4>
+              </td>
+              <td width="49%" style="text-align:left; border:none; padding-top: 5px; padding-right: 0px; padding-bottom: 0px; padding-left: 1%;">
+                  <h4 style="padding:0px">BOX 3</h4>
+              </td>
+          </tr>
+      </table>
+
+      <table width="100%" style="border:none;">
+          <tr>
+              <td width="49%" style="text-align:left; border:0px solid black; padding-right:1%; padding-left: 0px; padding-top: 0px; padding-bottom:0px;">
+                  <table width="100%" style="border:1px solid black; font-size: 10px;">
+                      <tr>
+                          <td style=" width:100%; text-align:left;border-bottom:1px solid black;">DESIGN PROFESSIONAL,PLANS AND SPECIFICATIONS</td>
+                      </tr>
+                      <tr>
+                          <td style="width:100%; padding:0px; text-align:center;border-bottom:1px solid black; padding-top:70px">{{signfullname}}<br>________________________ <br>Date  {{signdateissued}}<br>_____________________ <br>
+                            ARCHITECT OR CIVIL ENGINEER<br>
+                            (Signed and Sealed Owner/Partner Name)
+                          </td>
+                      </tr>
+                      <tr>
+                          <td style="width:100%; text-align:left; border-bottom:1px solid black;">Address: {{signaddress}}</td>
+                      </tr>
+                      <tr>
+                          <td style="padding:0px">
+                              <table style="width:100%">
+                                  <tr>
+                                      <td style="width:50%; text-align:left; border-top:0px solid black; border-right:1px solid black; border-bottom: 0px solid black; border-left: 0px solid black;">
+                                          PRC NO : {{signprcno}}
+                                      </td>
+                                      <td style="width:50%; text-align:left; border-top:0px solid black; border-right:0px solid black; border-bottom: 0px solid black; border-left: 0px solid black;">
+                                          Validity : {{signvalidity}}
+                                      </td>
+                                  <tr>
+                              </table>
+                          </td>
+                      </tr>
+                      <tr>
+                          <td style="padding:0px">
+                              <table style="width:100%">
+                                  <tr>
+                                      <td style="width:50%; text-align:left; border-top:0px solid black; border-right:1px solid black; border-bottom: 0px solid black; border-left: 0px solid black;">
+                                          PTR NO. : {{signptr}}
+                                      </td>
+                                      <td style="width:50%; text-align:left; border-top:0px solid black; border-right:0px solid black; border-bottom: 0px solid black; border-left: 0px solid black;">
+                                          Date Issued : {{signdateissued}}
+                                      </td>
+                                  <tr>
+                              </table>
+                          </td>
+                      </tr>
+                      <tr>
+                          <td style="padding:0px">
+                              <table style="width:100%">
+                                  <tr>
+                                      <td style="width:50%; text-align:left; border-top:0px solid black; border-right:1px solid black; border-bottom: 0px solid black; border-left: 0px solid black;">
+                                          Issued at :{{signplaceissued}}
+                                      </td>
+                                      <td style="width:50%; text-align:left; border-top:0px solid black; border-right:0px solid black; border-bottom: 0px solid black; border-left: 0px solid black;">
+                                          TIN : {{signtin}}
+                                      </td>
+                                  <tr>
+                              </table>
+                          </td>
+                      </tr>
+                  </table>
+              </td>
+              <td width="49%" style="text-align:left; border:0px solid black; padding-left:1%; padding-right: 0px; padding-top: 0px; padding-bottom:0px;">
+                  <table width="100%" style="border:1px solid black; font-size: 10px;">
+                      <tr>
+                          <td style=" width:100%; text-align:left;border-bottom:1px solid black;">FULL TIME INSPECTION SUPERVISOR OF CONSTRUCTION WORKS</td>
+                      </tr>
+                      <tr>
+                          <td style="width:100%; padding:0px; text-align:center;border-bottom:1px solid black; padding-top:70px">{{inchargefullname}} <br>________________________<br>Date  {{inchargedateissued}} <br>____________________ <br>
+                            ARCHITECT OR CIVIL ENGINEER<br>
+                            (Signed and Sealed Owner/Partner Name)
+                          </td>
+                      </tr>
+                      <tr>
+                          <td style="width:100%; text-align:left; border-bottom:1px solid black;">Address</td>
+                      </tr>
+                      <tr>
+                          <td style="padding:0px">
+                              <table style="width:100%">
+                                  <tr>
+                                      <td style="width:50%; text-align:left; border-top:0px solid black; border-right:1px solid black; border-bottom: 0px solid black; border-left: 0px solid black;">
+                                          PRC NO : {{inchargeprcno}}
+                                      </td>
+                                      <td style="width:50%; text-align:left; border-top:0px solid black; border-right:0px solid black; border-bottom: 0px solid black; border-left: 0px solid black;">
+                                          Validity : {{inchargevalidity}}
+                                      </td>
+                                  <tr>
+                              </table>
+                          </td>
+                      </tr>
+                      <tr>
+                          <td style="padding:0px">
+                              <table style="width:100%">
+                                  <tr>
+                                      <td style="width:50%; text-align:left; border-top:0px solid black; border-right:1px solid black; border-bottom: 0px solid black; border-left: 0px solid black;">
+                                          PTR NO : {{inchargeptrno}}
+                                      </td>
+                                      <td style="width:50%; text-align:left; border-top:0px solid black; border-right:0px solid black; border-bottom: 0px solid black; border-left: 0px solid black;">
+                                          Date Issued: {{inchargedateissued}} 
+                                      </td>
+                                  <tr>
+                              </table>
+                          </td>
+                      </tr>
+                      <tr>
+                          <td style="padding:0px">
+                              <table style="width:100%">
+                                  <tr>
+                                      <td style="width:50%; text-align:left; border-top:0px solid black; border-right:1px solid black; border-bottom: 0px solid black; border-left: 0px solid black;">
+                                          Issued at : {{inchargeplaceissued}}
+                                      </td>
+                                      <td style="width:50%; text-align:left; border-top:0px solid black; border-right:0px solid black; border-bottom: 0px solid black; border-left: 0px solid black;">
+                                          TIN : {{inchargetin}}
+                                      </td>
+                                  <tr>
+                              </table>
+                          </td>
+                      </tr>
+                  </table>
+              </td>
+          </tr>
+      </table>
+
+      <table width="100%" id="summary" style="border:none;">
+          <tr>
+              <td width="49%" style="text-align:left; border:none; padding-top: 5px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px;">
+                  <h4 style="padding:0px">BOX 4</h4>
+              </td>
+              <td width="49%" style="text-align:left; border:none; padding-top: 5px; padding-right: 0px; padding-bottom: 0px; padding-left: 1%;">
+                  <h4 style="padding:0px">BOX 5</h4>
+              </td>
+          </tr>
+      </table>
+
+      <table width="100%" style="border:none;">
+          <tr>
+              <td width="49%" style="text-align:left; border:0px solid black; padding-right:1%; padding-left: 0px; padding-top: 0px; padding-bottom:0px;">
+                  <table width="100%" style="border:1px solid black; font-size: 10px;">
+                      <tr>
+                          <td style=" width:100%; text-align:left;border-bottom:none;">BUILDING OWNER</td>
+                      </tr>
+                      <tr>
+                          <td style="width:100%; padding:0px; text-align:center;border-top:none; padding-top:70px; padding-bottom:10px"> {{applicantname}}<br>________________________ <br>
+                            Signature over printed name<br>
+                            Date {{dateapp}}<br>___________________
+                          </td>
+                      </tr>
+                      <tr>
+                          <td style="width:100%; text-align:left; border-top:none;">Address : {{applicantaddress}}</td>
+                      </tr>
+                      <tr>
+                          <td style="padding:0px">
+                              <table style="width:100%">
+                                  <tr>
+                                      <td style="width:33.33%; height: 50px; vertical-align: top; text-align:left; border-top:0px solid black; border-right:1px solid black; border-bottom: 0px solid black; border-left: 0px solid black;">C.T.C No. : {{appctcno}}</td>
+                                      <td style="width:33.33%; text-align:left; vertical-align: top; border-top:0px solid black; border-right:1px solid black; border-bottom: 0px solid black; border-left: 0px solid black;">O.R. No.</td>
+                                      <td style="width:33.33%; text-align:left; vertical-align: top; border-top:0px solid black; border-right:0px solid black; border-bottom: 0px solid black; border-left: 0px solid black;">Date of Issue : {{appdateissued}}</td>
+                                  </tr>
+                              </table>
+                          </td>
+                      </tr>
+                  </table>
+              </td>
+              <td width="49%" style="text-align:left; border:0px solid black; padding-left:1%; padding-right: 0px; padding-top: 0px; padding-bottom:0px;">
+                  <table width="100%" style="border:1px solid black; font-size: 10px;">
+                      <tr>
+                          <td style=" width:100%; text-align:left;border-bottom:none;">WITH MY CONSENT LOT OWNER</td>
+                      </tr>
+                      <tr>
+                          <td style="width:100%; padding:0px; text-align:center;border-top:none; padding-top:70px; padding-bottom:10px">{{lotname}} <br>________________________ <br>
+                            Signature over printed name<br>
+                            Date {{lotdate}}________________________
+                          </td>
+                      </tr>
+                      <tr>
+                          <td style="width:100%; text-align:left; border-top:none;">Address : {{lotaddress}}</td>
+                      </tr>
+                      <tr>
+                          <td style="padding:0px">
+                              <table style="width:100%">
+                                  <tr>
+                                      <td style="width:33.33%; height: 50px; vertical-align: top; text-align:left; border-top:0px solid black; border-right:1px solid black; border-bottom: 0px solid black; border-left: 0px solid black;">C.T.C No. {{lottaxcert}}</td>
+                                      <td style="width:33.33%; text-align:left; vertical-align: top; border-top:0px solid black; border-right:1px solid black; border-bottom: 0px solid black; border-left: 0px solid black;">O.R. No.</td>
+                                      <td style="width:33.33%; text-align:left; vertical-align: top; border-top:0px solid black; border-right:0px solid black; border-bottom: 0px solid black; border-left: 0px solid black;">Date of Issue {{lotdateissued}}</td>
+                                  </tr>
+                              </table>
+                          </td>
+                      </tr>
+                  </table>
+              </td>
+          </tr>
+      </table>
+    </div>
+</body>
+</html>

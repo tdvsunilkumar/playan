@@ -1,0 +1,195 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <style type="text/css">
+      @import url('https://fonts.googleapis.com/css?family=Fjalla+One|Montserrat:400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap');
+* { margin: 0; padding: 0; }
+body { font-family: 'Montserrat', sans-serif;font-size: 14px; }
+table td, table th { border: 1px solid black; padding: 5px; }
+.page-wrap { width: 800px; margin: 100px auto;}
+
+textarea { border: 0; font-size: 14px; font-family: 'Montserrat', sans-serif;overflow: hidden; resize: none; }
+table { border-collapse: collapse; }
+
+
+/*#header { height: 15px; width: 100%; margin: 20px 0; background: #222; text-align: center; color: white; font: bold 15px 'Montserrat', sans-serif text-decoration: uppercase; letter-spacing: 20px; padding: 8px 0px; }*/
+.header{margin: 20px 0;text-align: left;font-size: 45px;font-weight: 700; font-family: 'Fjalla One', sans-serif; text-decoration: uppercase;
+    letter-spacing: 1px;padding: 8px 0px;color:#1f4888;}
+.company-name {font-size: 20px;font-weight: 600;}
+
+#address { width: 250px; height: 150px; float: left;font-weight: 500; }
+/*#customer { overflow: hidden; }*/
+.company-address {font-size: 15px;color: #1f4888 !important;height: 115px !important;}
+.chklabel{margin-bottom: 5px; margin-left:5px !important;}
+#logo { text-align: right; float: right; position:}
+/*#logo:hover, #logo.edit { border: 1px solid #000; margin-top: 0px; max-height: 125px; }*/
+#logoctr { display: none; }
+
+#logohelp { text-align: left; display: none; font-style: italic; padding: 10px 5px;}
+#logohelp input { margin-bottom: 5px; }
+.edit #logohelp { display: block; }
+.edit #save-logo, .edit #cancel-logo { display: inline; }
+.edit #image, #save-logo, #cancel-logo, .edit #change-logo, .edit #delete-logo { display: none; }
+#customer-title { font-size: 20px; font-weight: bold; float: left;color: #1f4888; }
+
+#meta { margin-top: 1px; width: 300px; float: right; }
+#meta td { text-align: right;  }
+td,p{padding:1px;}
+#meta td.meta-head { text-align: left; background: #eee;font-weight: 500; }
+#meta td textarea { width: 100%; height: 20px; text-align: right; }
+textarea:hover, textarea:focus, #items td.total-value textarea:hover, #items td.total-value textarea:focus, .delete:hover { background-color:#EEFF88; }
+.pull-right{text-align: right;}
+.delete-wpr { position: relative; }
+.delete { display: block; color: #000; text-decoration: none; position: absolute; background: #EEEEEE; font-weight: bold; padding: 0px 3px; border: 1px solid; top: -6px; left: -22px; font-family: Verdana; font-size: 12px; }
+.footer-contain {text-align: center;font-size: 35px; font-weight: 700;color: #1f4888;}
+.font_change{white-space: pre !important;font-size: 12px;margin-left: 10px;}
+.textborder{border:1px solid black;}
+    </style>
+
+    <title>Sign Permit</title>
+  </head>
+<body>
+<table style='width:1000px;'>
+  <tr>
+    <td style="border: 1px solid black;">
+       <table width="100%" id="summary" style="border:0px solid black;">
+              <tr>
+                  <td  width="50%" style="text-align:left;border:0px solid black; padding-right:0px;">
+                     <table width="100%" id="summary" style="border:1px solid black;">
+                      <tr>
+                      <td style="text-align:left;border:0px solid black; padding-right:20px;">BUILDING OWNER</td>
+                      </tr>
+                      <tr>
+                      <td style="text-align:left;border:0px solid black; padding-right:20px;">PRINT NAME<span class="textborder">{{applicantname}}</span></td>
+                      </tr>
+                      <tr>
+                      <td style="text-align:left;border:0px solid black; padding-right:20px;">DATE<span class="textborder">{{dateapp}}</span></td>
+                      </tr>
+                      <tr>
+                      <td style="text-align:left;border:0px solid black; padding-right:20px;">ADDRESS<span class="textborder">{{applicantaddress}}</span></td>
+                      </tr>
+                      <tr>
+                      <td  style="text-align:left;border:0px solid black; padding-right:30px;">CTC NO <span class="textborder">{{appctcno}}</span></td>
+                      </tr>\
+                      <tr>
+                      <td style="text-align:left;border:0px solid black; padding-right:30px;">Date Issued <span class="textborder">{{appdateissued}}</span></td>
+                      </tr> 
+                      <tr> 
+                       <td style="text-align:left;border:0px solid black; padding-right:30px;">Place Issued <span class="textborder">{{placeissued}}</span></td>   
+                      </tr>
+                     </table>
+                   </td>
+                   <td width="50%" style="text-align:left;border:0px solid black; padding-right:0px;">
+                     <table width="100%" id="summary" style="border:1px solid black;">
+                       <tr>
+                      <td style="text-align:left;border:0px solid black; padding-right:20px;">WITH MY CONSENT: LOT OWNER</td>
+                      </tr>
+                      <tr>
+                      <td style="text-align:left;border:0px solid black; padding-right:20px;">PRINT NAME<span class="textborder">{{lotname}}</span></td>
+                      </tr>
+                      <tr>
+                      <td style="text-align:left;border:0px solid black; padding-right:20px;">DATE<span class="textborder">{{lotdate}}</span></td>
+                      </tr>
+                      <tr>
+                      <td style="text-align:left;border:0px solid black; padding-right:20px;">ADDRESS<span class="textborder">{{lotaddress}}</span></td>
+                      </tr>
+                      <tr>
+                      <td  style="text-align:left;border:0px solid black; padding-right:30px;">CTC NO <span class="textborder">{{lottaxcert}}</span></td>
+                      </tr>\
+                      <tr>
+                      <td style="text-align:left;border:0px solid black; padding-right:30px;">Date Issued <span class="textborder">{{lotdateissued}}</span></td>
+                      </tr> 
+                      <tr> 
+                       <td style="text-align:left;border:0px solid black; padding-right:30px;">Place Issued <span class="textborder">{{lotplaceissued}}</span></td>   
+                      </tr>
+                     </table>
+                  </td>
+             </tr>
+          </table>
+          <table width="100%" id="summary" style="border:1px solid black;">
+                      <tr>
+                      <td style="text-align:left;border:0px solid black; padding-right:20px;">FEE PAID<span class="textborder">{{textb}}</span></td>
+                      <td style="text-align:left;border:0px solid black; padding-right:20px;">DATE PAID<span class="textborder">{{textb}}</span></td>
+                      <td style="text-align:left;border:0px solid black; padding-right:20px;">OFFICIAL RECEIPT NO<span class="textborder">{{textb}}</span></td>
+                      <td  style="text-align:left;border:0px solid black; padding-right:30px;">FEE PAID<span class="textborder">{{MUNCIPALITY}}</span></td>
+                      </tr>
+                     </table>
+          <table width="100%" id="summary" style="border:1px solid black;">
+            <tr>
+              <td   style="text-align:left;border:0px solid black; padding-right:30px;"><p style="font-size: 18px;font-weight: 500;">ACTION TAKEN:</p></td>
+            </tr>
+            <tr>
+                  <td  style="text-align:left;border:0px solid black; padding-right:30px;">
+                   <p style="font-size: 12px;font-weight: 600;">Permit is hereby issued/granted to ___________________ with postal address at ____________________________
+to install/erect/construct/attach/paint ______________with the word __________________________________ at
+the premises of ___________________________________ as per submitted plans pursuant to pertinent provisions of the
+“National Building Code” (PD 1096) and its implementing Rules and Regulations and to the following conditions:</p><br><br>
+                   <p style="font-size: 12px;font-weight: 600;">1.That under Article 1723 of the Civil Code of the Philippines, the engineer or architect who drew up the plans and specifications is
+liable for a building/structure is responsible for damages if within fifteen (15) years from the completion of the structure, it should
+collapse due to defect in the plans or specifications or defects in the ground. The engineer or architect who supervises the
+construction shall be solidarily liable with the contractor should the edifice collapse due to defect in the construction or the use if
+inferior materials.</p>
+                   <p style="font-size: 12px;font-weight: 600;">2.That the proposed construction/erection/addition, etc. shall be in conformity with the provisions of the “National Building
+Code” (D.P 1096).</p>
+                   <p style="font-size: 12px;font-weight: 600;margin-left:50px;">a.That prior to commencement of the proposed projects and construction an actual relocation survey shall be
+conducted by responsible licensed Geodetic Engineer</p>
+                   <p style="font-size: 12px;font-weight: 600;margin-left:50px;">b.That before commencing the excavation the person making or causing the excavation the person making or causing
+the excavation to be made shall verify in writing the owner of adjoining building not less than ten (10) days before such
+excavation is to be made show how the adjoining building should be protected.</p>
+                  <p style="font-size: 12px;font-weight: 600;margin-left:50px;">c.That the owner of the fence shall engage the services of responsible licensed Architect or Civil Engineer to be
+undertake the full time inspection and supervision of the construction work.</p>
+                  <p style="font-size: 12px;font-weight: 600;margin-left:50px;">d.That there shall be kept at the jobsite at all times a logbook wherein the actual or progress of construction including
+test conducted, weather condition and other pertinent data are to be recorded, same shall be made available for
+scrutiny and comments by the OBO representative during the conduct if his/her inspection pursuant to Section 207 of
+the National Building Code.</p>
+                  <p style="font-size: 12px;font-weight: 600;margin-left:50px;">e.That upon completion of the construction/sign structure, the responsible licensed supervising architect or civil engineer
+shall submit the logbook duly signed and sealed to the Building Official including as-built plans and specifications.</p>
+                  <p style="font-size: 12px;font-weight: 600;margin-left:50px;">f.That he shall also prepare and submit a certificate of completion of the project stating that the construction/sign
+structure conforms to the provision of the “National Building Code” (PD 1096) as well as with plans and specifications.</p>
+             
+                  <p style="font-size: 12px;font-weight: 600; ">3.That no sign shall be used and no change in the existing character of occupancy classification of a building/structure or portion
+thereof shall be made until the Building Official has issued a Certificate of Use or Occupancy thereof as provided in the “National Building
+Code” (PD 1096);</p>
+                   <p style="font-size: 12px;font-weight: 600;">4.That this permit shall not serve as an exemption from securing permit/written clearances from various government authorities
+exercising regulatory function affecting building and other related structures.</p>
+                  <p style="font-size: 12px;font-weight: 600;">5.Signs shall adhere to the Code of Ethics for Advertising and Promotions and to the rules and regulations of the appropriate agency incharge of the conduct of the business.</p>
+                  <p style="font-size: 12px;font-weight: 600;">6.Signs shall promote and uphold the public goods especially in historical monuments and shrines, natural scenic areas, parks,
+parkways and their immediate approaches. Immediate approaches shall mean a distance not exceeding fifty (50.00) meters from the periphery
+of said areas</p>  <p style="font-size: 12px;font-weight: 600;">7.Signs shall display or convey only message or visuals that conform to public decency and good taste</p>
+                  <p style="font-size: 12px;font-weight: 600;">8.Signs shall follow standards of design, construction and maintenance in the interest of the public safety, good viewing and to
+promote proper urban design or community architecture</p>
+                   <p style="font-size: 12px;font-weight: 600;">9.Sign structure may be constructed only in areas where zoning regulations permit them and in accordance with the accepted
+standards of design, construction and maintenance.</p>
+                  <p style="font-size: 12px;font-weight: 600;">10.Signs and sign structures shall be constructed in accordance with the provisions of Section 2003 of the “National Building Code” (PD
+1096). Plans of sign structure exceeding three (3.00) meters in height from the ground shall be signed and sealed by the responsible designing
+architect or civil engineer.</p>
+                  <p style="font-size: 12px;font-weight: 600;">11.Signs and sign structures built within highly restrictive fire zones shall be of incombustible materials. No combustible materials other
+than approved plastic shall be used in construction of electrical signs..</p>
+                  <p style="font-size: 12px;font-weight: 600;">12.Signs and sign structures equipped with electrical devices shall have an electrical plan conforming with the provisions of the latest
+edition of the Philippines Electrical Code duly signed and sealed by the responsible Professional Electrical Engineer, if the installation or the
+machinery is rated less than 500 kVA or less than 600 volts.</p>
+                   <p style="font-size: 12px;font-weight: 600;">13.Signs shall be placed in a such manner that no part of its surface will interfere in any way with the free use of a doorway, a fire
+escape, standpipe or other required means of exit and fire-protective devices.</p>
+                   <p style="font-size: 12px;font-weight: 600;">14.Signs, which are written in foreign language, shall gave corresponding translation in English or in the local dialect.</p>
+                    <p style="font-size: 12px;font-weight: 600;">15.The bottom line of all signboards adjacent to each other shall follow a common base line as determined by the Building Official.</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td  width="30%" style="text-align:right;border:0px solid black; padding-right:30px;">
+                  <p style="font-size: 20px;font-weight: 600;"><span class="textborder">{{bldofficialname}}</span><br>
+                    BUILDING OFFICIAL</p>
+                 </td>
+             </tr>
+         </table>
+    </td>
+  </tr>
+</table>
+</body>
+</html>
+
+
+

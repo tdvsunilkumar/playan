@@ -1,0 +1,1 @@
+ALTER TABLE `hr_changeof_schedules` ADD `approved_at` TIMESTAMP NULL AFTER `status`, ADD `approved_by` VARCHAR(255) NULL AFTER `approved_at`, ADD `disapproved_at` TIMESTAMP NULL AFTER `approved_by`, ADD `disapproved_by` INT(11) NULL AFTER `disapproved_at`;

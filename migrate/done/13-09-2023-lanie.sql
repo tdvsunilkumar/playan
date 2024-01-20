@@ -1,0 +1,11 @@
+ALTER TABLE `hr_income_and_deduction` CHANGE `hrlc_id` `hrlc_id` INT(11) NULL COMMENT 'ref-Table: hr_loan_cycle.hrlc_id';
+ALTER TABLE `hr_payroll` ADD `hrpr_aut_cost` DOUBLE NOT NULL AFTER `hrpr_aut`;
+ALTER TABLE `hr_payroll` ADD `hrpr_reg_ot_cost` DOUBLE NOT NULL AFTER `hrpr_reg_ot`;
+ALTER TABLE `hr_payroll` ADD `hrpr_rd_ot_cost` DOUBLE NOT NULL AFTER `hrpr_rd_ot`;
+ALTER TABLE `hr_payroll` ADD `hrpr_rh` DOUBLE NOT NULL AFTER `hrpr_rd_ot_cost`;
+ALTER TABLE `hr_payroll` ADD `hrpr_rh_cost` DOUBLE NOT NULL AFTER `hrpr_rh`;
+ALTER TABLE `hr_payroll` ADD `hrpr_sh` DOUBLE NOT NULL AFTER `hrpr_rh_cost`;
+ALTER TABLE `hr_payroll` ADD `hrpr_sh_cost` DOUBLE NOT NULL AFTER `hrpr_sh`;
+ALTER TABLE `hr_payroll` ADD `hrpr_dh` DOUBLE NOT NULL AFTER `hrpr_sh_cost`;
+ALTER TABLE `hr_payroll` ADD `hrpr_dh_cost` DOUBLE NOT NULL AFTER `hrpr_dh`;
+ALTER TABLE `hr_timekeeping` ADD `hrtk_aut_cost` DOUBLE NOT NULL AFTER `updated_at`;

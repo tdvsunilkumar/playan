@@ -1,0 +1,2 @@
+ALTER TABLE `cpdo_development_permits` ADD `topno` VARCHAR(255) NULL AFTER `cdf_remarks`, ADD `orno` VARCHAR(255) NULL AFTER `topno`, ADD `ordate` DATE NULL AFTER `orno`, ADD `cashieramount` DOUBLE(10,2) NULL AFTER `ordate`;
+ALTER TABLE `cto_cashier` ADD `is_online` INT(11) NULL DEFAULT '0' AFTER `is_collected`;

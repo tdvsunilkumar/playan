@@ -1,0 +1,1 @@
+ALTER TABLE `ho_issuances` ADD `is_active` tinyint AFTER `issuance_series`;

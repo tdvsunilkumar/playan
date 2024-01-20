@@ -1,0 +1,1 @@
+ALTER TABLE `bfp_certificates` CHANGE `bfpcert_date_expired` `bfpcert_date_expired` DATE NULL DEFAULT NULL COMMENT 'Date Expired';

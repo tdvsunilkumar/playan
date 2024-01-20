@@ -1,0 +1,213 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <style type="text/css">
+      @import url('https://fonts.googleapis.com/css?family=Fjalla+One|Montserrat:400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap');
+* { margin: 0; padding: 0; }
+body { font-family: 'Montserrat', sans-serif;font-size: 14px; }
+table td, table th { border: 1px solid black; padding: 5px; }
+.page-wrap { width: 800px; margin: 100px auto;}
+
+textarea { border: 0; font-size: 14px; font-family: 'Montserrat', sans-serif;overflow: hidden; resize: none; }
+table { border-collapse: collapse; }
+
+
+/*#header { height: 15px; width: 100%; margin: 20px 0; background: #222; text-align: center; color: white; font: bold 15px 'Montserrat', sans-serif text-decoration: uppercase; letter-spacing: 20px; padding: 8px 0px; }*/
+.header{margin: 20px 0;text-align: left;font-size: 45px;font-weight: 700; font-family: 'Fjalla One', sans-serif; text-decoration: uppercase;
+    letter-spacing: 1px;padding: 8px 0px;color:#1f4888;}
+.company-name {font-size: 20px;font-weight: 600;}
+
+#address { width: 250px; height: 150px; float: left;font-weight: 500; }
+/*#customer { overflow: hidden; }*/
+.company-address {font-size: 15px;color: #1f4888 !important;height: 115px !important;}
+
+#logo { text-align: right; float: right; position:}
+/*#logo:hover, #logo.edit { border: 1px solid #000; margin-top: 0px; max-height: 125px; }*/
+#logoctr { display: none; }
+
+#logohelp { text-align: left; display: none; font-style: italic; padding: 10px 5px;}
+#logohelp input { margin-bottom: 5px; }
+.edit #logohelp { display: block; }
+.edit #save-logo, .edit #cancel-logo { display: inline; }
+.edit #image, #save-logo, #cancel-logo, .edit #change-logo, .edit #delete-logo { display: none; }
+#customer-title { font-size: 20px; font-weight: bold; float: left;color: #1f4888; }
+
+#meta { margin-top: 1px; width: 300px; float: right; }
+#meta td { text-align: right;  }
+#meta td.meta-head { text-align: left; background: #eee;font-weight: 500; }
+#meta td textarea { width: 100%; height: 20px; text-align: right; }
+textarea:hover, textarea:focus, #items td.total-value textarea:hover, #items td.total-value textarea:focus, .delete:hover { background-color:#EEFF88; }
+
+.delete-wpr { position: relative; }
+.delete { display: block; color: #000; text-decoration: none; position: absolute; background: #EEEEEE; font-weight: bold; padding: 0px 3px; border: 1px solid; top: -6px; left: -22px; font-family: Verdana; font-size: 12px; }
+.footer-contain {text-align: center;font-size: 35px; font-weight: 700;color: #1f4888;}
+.font_change{white-space: pre !important;font-size: 12px;margin-left: 10px;}
+    </style>
+
+    <title>Application Form</title>
+  </head>
+
+<body>
+<table>
+  <tr>
+    <td style="border:0px;">
+<table width="100%" id="summary">
+        <tr>
+            <th  colspan="2" style="text-align: center;"><p style="text-align: center;text-decoration: uppercase;font-size: 20px;">APPLICATION FORM FOR Business PERMIT</p><p style="text-align: center;text-decoration: uppercase;font-size: 20px;">TAX YEAR</p><p style="text-align: center;text-decoration: uppercase;font-size: 20px;">PALAYAN CITY</p></th>
+           
+        </tr>
+         <tr>
+            <td colspan="2"> <p style="font-weight:600;font-size: 20px;text-decoration: uppercase;">INSTRUCTIONS</p>
+  <p>1.provide accurate information and print legelyby to vaoid delays.incomplete Application will be retured<br>&nbsp;&nbsp;to applicant.<p>
+    <p>2.ensure that all documents attached to this form(if any) are complete and properly filled out.<p></td>
+           
+        </tr>
+        <tr>
+            <td colspan="2"><p style="font-weight:600;font-size: 20px;text-decoration: uppercase;">APPLICATION SECTION</p></td>
+        </tr>
+          <tr>
+            <td colspan="2"><p style="font-weight:600;font-size: 20px;text-decoration: uppercase;">1. BASIC INFORMATION</p></td>
+        </tr>     
+        <tr>
+            <td width="40%">{ISNEW}</td><td width="60%"><span>Mode of Payment:{MODEOFPAYMENT}</span></td>
+        </tr> 
+        <tr>
+            <td width="50%"><p>Date of Application:{DATEOFAPPLICATION}</p></td><td width="50%"><p>Registartion No:{REGISTARATIONNO}</p></td>
+        </tr> 
+         <tr>
+            <td width="50%"><p>TIN No:{TINNO}</p></td><td width="50%"><p>Registartion Date:{REGISTARATIODATE}</p></td>
+        </tr> 
+        <tr>
+            <td colspan="2"><p>Type of Business:{TYPEBUSSINESS}</p></td>
+        </tr> 
+        <tr>
+            <td colspan="2"><p>Amendent &nbsp;&nbsp;&nbsp;From:{FROM}</p></td>
+        </tr> 
+        <tr>
+            <td colspan="2"><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;To:{TO}</p></td>
+        </tr> 
+        <tr>
+            <td colspan="2"><p>Are you enjoying tax incentive from any Governmnet Entity?{TAXENJOY}  <span>&nbsp;&nbsp;&nbsp;&nbsp;Please specify entity</span></p></td>
+        </tr> 
+       
+</table> 
+<table width="100%" id="summary">
+        <tr>
+            <td colspan="3"><p style="font-weight:700;font-size: 18px;text-decoration: uppercase;text-align: center;">Name of Taxpayer/Registrant</p></td>
+        </tr> 
+        <tr>
+             <td width="33%"><p>Last Name:{LNAME}</p></td><td width="34%"><p>First Name:{FNAME}</p></td><td width="33%"><p>Middle Name:{MNAME}</p></td>
+        </tr>
+        <tr>
+            <td colspan="3"><p >Business Name:{BUSSINESSNAME}</p></td>
+        </tr>  
+        <tr>
+            <td colspan="3"><p >Trade Name/ Franchies:{TRADENAME}</p></td>
+        </tr> 
+</table>  
+<table width="100%" id="summary">
+        <tr>
+            <td colspan="3"><p style="font-weight:600;font-size: 20px;text-decoration: uppercase;">2. OTHER INFORMATION</p></td>
+        </tr> 
+        <tr>
+            <td colspan="3"><p >Business Address:{BUSSINESSADDRESS}</p></td>
+        </tr>
+        <tr >
+            <td colspan="2" width="50%"><p>Postal Code:{POSTALCODE}</p></td><td width="50%"><p>Email Address:{EMAILADDRESS}</p></td>
+        </tr>  
+        <tr >
+            <td colspan="2" width="50%"><p>Telephone No.:{TELEPHONE}</p></td><td width="50%"><p>Mobile No.:{MOBILE}</p></td>
+        </tr> 
+        <tr>
+            <td colspan="3"><p >Owner Address:{OWNERADDRESS}</p></td>
+        </tr>
+        <tr >
+            <td colspan="2" width="50%"><p>Postal Code:{POSTALCODEOW}</p></td><td width="50%"><p>Email Address:{EMAILADDRESSOW}</p></td>
+        </tr>  
+        <tr >
+            <td colspan="2" width="50%"><p>Telephone No.:{TELEPHONEOW}</p></td><td width="50%"><p>Mobile No.:{MOBILEOW}</p></td>
+        </tr>            
+</table>
+<table width="100%" id="summary">
+        <tr>
+            <td colspan="2"><p >In Case of emergency, provide name of contact person:{CONATCTPERSON}</p></td>
+        </tr>
+        <tr>
+        <td width="50%"><p>Telephone/Mobile No.:{CONTACTPMOBILE}</p></td><td width="50%"><p>Email Address:{CONATCTEAMIL}</p></td>
+      </tr>
+  </table>
+  <table width="100%" id="summary">
+        <tr>
+            <td width="33%"><p>Business Area(in sq.m.):{BAREA}</p></td><td width="34%"><p>Total No. of Employees in Establishment:{EMPESTA}</p></td><td width="33%"><p>No. of Employees Residing Within LGU:{EMPLGU}</p></td>
+        </tr>
+         <tr>
+            <td colspan="3"><p style="font-weight:600;font-size: 20px;text-decoration: uppercase;">NOTE: Fill Up Only If Business Place is Rented</p></td>
+        </tr>
+         <tr>
+            <td colspan="3"><p>Lessor's Full Name:{LFULLNAME}</p></td>
+        </tr>
+         <tr>
+            <td colspan="3"><p>Lessor's Full Address:{LFULLADDRESS}</p></td>
+        </tr>
+         <tr>
+            <td colspan="3"><p>Lessor's Telephone/Mobile No.:{LTELENO}</p></td>
+        </tr>
+        <tr>
+            <td colspan="3"><p>Lessor's Email Address:{LEMAILADDRESS}</p></td>
+        </tr>
+        <tr>
+            <td colspan="3"><p>Monthly Rental:{MONTHLYRENTAL}</p></td>
+        </tr>
+       <tr>
+            <td colspan="3"><p style="font-weight:600;font-size: 20px;text-decoration: uppercase;">3. Business ACTIVITY</p></td>
+        </tr>     
+  </table>
+   <table width="100%" id="summary">
+       <tr>
+            <td rowspan="3"><p>Line of Business</p></td>
+            <td rowspan="3"><p>No of Units</p></td>
+            <td rowspan="3"><p>Capitalization<br> (For New Bussiness)</p></td>
+            <td colspan="2"><p>Gross Cell Receipt For Renewal</p></td>
+        </tr>  
+        <tr>
+            <td><p>Essential</p></td>
+            <td><p>Non Essential</p></td>
+        </tr> 
+  </table>
+ <table width="100%" id="summary">
+       <tr>
+            <td width="25%"><p>{LINEOFBUSSINESS}</p></td>
+            <td width="25%"><p>{NOOFUNITS}</p></td>
+            <td width="25%"><p>{CAPITALIZATION}</p></td>
+            <td width="12.5%"><p>{ESSENTIAL}</p></td>
+            <td width="12.5%"><p>{NONESSESTIAL}</p></td>
+        </tr> 
+  </table>
+<table width="100%" id="summary">
+       <tr>
+            <td colspan="2"><p><span style="font-weight:600;font-size: 20px;text-decoration: uppercase;">I Declare Under penaly of perjury<span> that the for goining information are true based on my personal knowledge and authentic records, further i agree to comply with the regularory requirement and other defeciencies within 30 days from release of the Business permit.<br><br></p></td>
+        </tr> 
+         <tr>
+            <td width="50%"></td><td width="50%"></p></td>
+        </tr>
+         <tr style="height:50px;">
+            <td width="50%"><p></p></td><td width="50%" style="text-align:center;font-weight:600;font-size: 20px;text-decoration: uppercase !important;"><p>Signature of Applicant/taxpayer over printed name</p></td>
+        </tr>
+        <tr style="height:50px;">
+            <td width="50%"><p></p></td><td width="50%" style="text-align:center;font-weight:600;font-size: 20px;text-decoration: uppercase !important;"><p>position/Title</p></td>
+        </tr>
+  </table>
+    </td>
+  </tr>
+</table>
+ 
+
+</body>
+</html>
+
+
+

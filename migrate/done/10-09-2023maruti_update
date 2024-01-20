@@ -1,0 +1,2 @@
+ALTER TABLE `cpdo_application_requirement` ADD `is_synced` INT(11) NOT NULL DEFAULT '0' AFTER `req_id`;
+ALTER TABLE `cpdo_file` ADD `is_synced` INT(11) NOT NULL DEFAULT '0' AFTER `cf_is_active`;

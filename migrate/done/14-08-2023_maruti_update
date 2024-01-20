@@ -1,0 +1,3 @@
+ALTER TABLE `cpdo_application_forms` ADD `caf_excempted` INT(11) NOT NULL DEFAULT '0' COMMENT 'Excemption?' AFTER `cm_id`;
+
+ALTER TABLE `cpdo_application_forms` ADD `czcc_id` INT NULL COMMENT 'ref-Table : cpdo_zoning_clearance_computation_czcc_id' AFTER `caf_amount`, ADD `caf_total_amount` DOUBLE(8,2) NOT NULL COMMENT 'Total Amount it will show in Order of Payment' AFTER `czcc_id`;

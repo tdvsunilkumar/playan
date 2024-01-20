@@ -1,0 +1,1 @@
+ALTER TABLE `cto_cashier_income` ADD `barangay_id` INT(11) NULL DEFAULT '0' AFTER `taxpayer_name`;

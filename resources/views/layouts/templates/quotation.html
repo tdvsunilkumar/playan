@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="en">
+   <head>
+      <!-- Required meta tags -->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <style type="text/css">
+         @import url('https://fonts.googleapis.com/css?family=Fjalla+One|Montserrat:400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap');
+         * { margin: 0; padding: 0; }
+         body { font-family: 'Montserrat', sans-serif;font-size: 14px; }
+         table td, table th { border: 1px solid black; padding: 5px; }
+         .page-wrap { width: 800px; margin: 100px auto;}
+         textarea { border: 0; font-size: 14px; font-family: 'Montserrat', sans-serif;overflow: hidden; resize: none; }
+         table { border-collapse: collapse; }
+         /*#header { height: 15px; width: 100%; margin: 20px 0; background: #222; text-align: center; color: white; font: bold 15px 'Montserrat', sans-serif text-decoration: uppercase; letter-spacing: 20px; padding: 8px 0px; }*/
+         .header{margin: 20px 0;text-align: left;font-size: 45px;font-weight: 700; font-family: 'Fjalla One', sans-serif; text-decoration: uppercase;
+         letter-spacing: 1px;padding: 8px 0px;color:#1f4888;}
+         .company-name {font-size: 20px;font-weight: 600;}
+         #address { width: 250px; height: 150px; float: left;font-weight: 500; }
+         /*#customer { overflow: hidden; }*/
+         .company-address {font-size: 15px;color: #1f4888 !important;height: 115px !important;}
+         .chklabel{margin-bottom: 5px; margin-left:5px !important;}
+         #logo { text-align: right; float: right; position:}
+         /*#logo:hover, #logo.edit { border: 1px solid #000; margin-top: 0px; max-height: 125px; }*/
+         #logoctr { display: none; }
+         #logohelp { text-align: left; display: none; font-style: italic; padding: 10px 5px;}
+         #logohelp input { margin-bottom: 5px; }
+         .edit #logohelp { display: block; }
+         .edit #save-logo, .edit #cancel-logo { display: inline; }
+         .edit #image, #save-logo, #cancel-logo, .edit #change-logo, .edit #delete-logo { display: none; }
+         #customer-title { font-size: 20px; font-weight: bold; float: left;color: #1f4888; }
+         #meta { margin-top: 1px; width: 300px; float: right; }
+         #meta td { text-align: right;  }
+         td,p{padding:1px;}
+         #meta td.meta-head { text-align: left; background: #eee;font-weight: 500; }
+         #meta td textarea { width: 100%; height: 20px; text-align: right; }
+         textarea:hover, textarea:focus, #items td.total-value textarea:hover, #items td.total-value textarea:focus, .delete:hover { background-color:#EEFF88; }
+         .pull-right{text-align: right;}
+         .delete-wpr { position: relative; }
+         .delete { display: block; color: #000; text-decoration: none; position: absolute; background: #EEEEEE; font-weight: bold; padding: 0px 3px; border: 1px solid; top: -6px; left: -22px; font-family: Verdana; font-size: 12px; }
+         .footer-contain {text-align: center;font-size: 35px; font-weight: 700;color: #1f4888;}
+         .font_change{white-space: pre !important;font-size: 12px;margin-left: 10px;}
+      </style>
+      <title>BPLO Clearance</title>
+   </head>
+   <body>
+      <table style='width:700px;'>
+         <tr>
+            <td style="border: 0px solid black;">
+               <table width="100%" id="summary" class="noborder">
+                  <tr>
+                     <td  width="20%" style="text-align:right;border:0px solid black;"></td>
+                     <td width="60%" style="border:0px solid black;text-align:center;">
+                        <p style="font-size: 15px; padding-top:10px;">Republic of the Philippines</p>
+                        <p style="font-size: 15px;">Province of Nueva Ecija</p>
+                        <p style="font-weight: 600;"><strong>CITY GOVERNMENT OF PALAYAN</strong></p>
+                     </td>
+                     <td width="20%" style="text-align:right;border:0px solid black;"></td>
+                  </tr>
+               </table>
+               <table width="100%" id="summary" class="noborder">
+                  <tr>
+                     <td width='40%' style="text-align: left;border:0px solid black;">
+                        <p>Project Refernece Number</p>
+                     </td>
+                     <td width='60%' style="border:1px solid black !important;">
+                        <p>AGUSTAIN ANINAIA</p>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td width='40%' style="text-align: left;border:0px solid black;">
+                        <p>Name of the Project</p>
+                     </td>
+                     <td width='60%' style="border:1px solid black !important;">
+                        <p>{{projectname}}</p>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td width='40%' style="text-align: left;border:0px solid black;">
+                        <p>Requesting Agency</p>
+                     </td>
+                     <td width='60%' style="border:1px solid black !important;">
+                        <p>{{agency}}</p>
+                     </td>
+                  </tr>
+               </table>
+               <table width="100%" id="summary" class="noborder">
+                  <tr>
+                     <td style="text-align:center; border:0px solid black;font-size: 17px;">
+                        <p style="font-weight: 600;"><strong><u>REQUEST FOR QUOTATION</u></strong></p>
+                     </td>
+                  </tr>
+               </table>
+               <table width="100%" id="summary" class="noborder">
+                  <tr>
+                     <td width='20%' style="text-align: left;border:0px solid black;">
+                        <p>Company Name</p>
+                     </td>
+                     <td width='40%' style="border:1px solid black !important;">
+                        <p>AGUSTAIN ANINAIA</p>
+                     </td>
+                     <td width='20%' style="text-align: center;border:0px solid black;">
+                        <p>Date</p>
+                     </td>
+                     <td width='20%' style="border:1px solid black !important;">
+                        <p>{{quotation_date}}</p>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td width='20%' style="text-align: left;border:0px solid black;">
+                        <p>Address</p>
+                     </td>
+                     <td width='40%' style="border:1px solid black !important;">
+                        <p>PUBLIC LAND</p>
+                     </td>
+                     <td width='20%' style="text-align: center;border:0px solid black;">
+                        <p>Quotation No.</p>
+                     </td>
+                     <td width='20%' style="border:1px solid black !important;">
+                        <p>{{quotation}}</p>
+                     </td>
+                  </tr>
+               </table>
+               <table width="100%" id="summary" class="noborder">
+                  <tr>
+                     <td style="text-align:left;border:0px solid black;margin-left: 20px;">
+                        <p style="font-size: 15px;font-weight: 400;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Please quote your lowest price on the item/s listed below, subject to the General Conditions on the last page, 
+                           stating the shortest time of delivery and submit your quotation duly signed by your representative not later than  						
+                           <u>&nbsp;&nbsp;submission of deadline&nbsp;&nbsp;</u>  in the return envelope attached herewith.
+                           The opening of quotation will be on	
+                           <u>18th</u> day of <u>November, 2022</u>
+                        </p>
+                     </td>
+                  </tr>
+               </table>
+               <table width="40%" id="summary" class="noborder" style="margin-left: 420px;">
+                  <tr>
+                     <td width='30%' style="text-align: center;border:1px solid black !important;">
+                        <p>{{prepared_by}}</p>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td width='10%' style="text-align: center;border:0px solid black;">
+                        <p>BAC SECRETARIAT</p>
+                     </td>
+                  </tr>
+               </table>
+               <table width="100%" id="summary" class="noborder">
+                  <tr>
+                     <td width="10%" style="text-align:left;border:0px solid black;margin-left: 20px;">
+                        <p style="font-size: 15px;font-weight: 500;">Note:</p>
+                     </td>
+                     <td width="40%" style="font-size: 12px;text-align: left;border:0px solid black;margin-left: 400px">
+                        <p>1. THE APPROVED BUDGET FOR THE CONTRACT IS </p>
+                     </td>
+                     <td width="50%" style="text-align: center;border:1px solid black;">
+                        <p>total sum of amount of selected PR</p>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td width="10%" style="text-align:left;border:0px solid black;margin-left: 20px;">
+                        <p style="font-size: 15px;font-weight: 500;"></p>
+                     </td>
+                     <td width="40%" style="font-size: 12px;text-align: left;border:0px solid black;margin-left: 400px">
+                        <p>2. ALL ENTRIES MUST BE LEGIBLY WRITTEN				
+                        </p>
+                     </td>
+                     <td width="50%" style="text-align: center;border:0px solid black;">
+                        <p></p>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td width="10%" style="text-align:left;border:0px solid black;margin-left: 20px;">
+                        <p style="font-size: 15px;font-weight: 500;"></p>
+                     </td>
+                     <td width="40%" style="font-size: 12px;text-align: left;border:0px solid black;margin-left: 400px">
+                        <p>3. DELIVERY PERIOD WITHIN						 days (from receipt of Purchase Order)						
+                        </p>
+                     </td>
+                     <td width="50%" style="text-align: center;border:0px solid black;">
+                        <p></p>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td width="10%" style="text-align:left;border:0px solid black;margin-left: 20px;">
+                        <p style="font-size: 15px;font-weight: 500;"></p>
+                     </td>
+                     <td width="40%" style="text-align: left;border:0px solid black;margin-left: 400px">
+                        <p>
+                  <tr>
+                  <td width="10%" style="text-align:left;border:0px solid black;margin-left: 20px;">
+                  <p style="font-size: 15px;font-weight: 500;"></p></td>
+                  <td width="40%" style="font-size: 12px;text-align: left;border:0px solid black;margin-left: 400px"><p>3. DELIVERY PERIOD WITHIN						 days (from receipt of Purchase Order)						
+                  </p></td>
+                  <td width="50%" style="text-align: center;border:0px solid black;"><p></p></td>
+                  </tr>						
+               </table>
+               <table width="100%" id="summary">
+                  <thead>
+                     <tr>
+                        <th>Item No.</th>
+                        <th>Qty</th>
+                        <th>Unit</th>
+                        <th>Description</th>
+                        <th>Brand and Model</th>
+                        <th>Unit Price</th>
+                        <th>Total Amount</th>
+                     </tr>
+                  </thead>
+                  <tbody>
+                     <!-- <tr>
+                        <td>1.001-001768</td>
+                        <td>OSCAR ANKITA MARRIED TO MYRNA D</td>
+                        <td>ATATE</td>
+                        <td>OSCAR ANKITA MARRIED TO MYRNA D OSCAR ANKITA MARRIED TO MYRNA D </td>
+                        <td>130,000.00</td>
+                        <td>19,500.00</td>
+                        <td>19,500.00</td>
+                     </tr>
+                     <tr>
+                        <td>1.001-001768</td>
+                        <td>OSCAR ANKITA MARRIED TO MYRNA D</td>
+                        <td>ATATE</td>
+                        <td>OSCAR ANKITA MARRIED TO MYRNA D OSCAR ANKITA MARRIED TO MYRNA D </td>
+                        <td>130,000.00</td>
+                        <td>19,500.00</td>
+                        <td>19,500.00</td>
+                     </tr> -->
+                     {{DynamicTbl}}
+                     <tr>
+                        <td style="border:0px solid black;"></td>
+                        <td style="border:0px solid black;"></td>
+                        <td style="border:0px solid black;"></td>
+                        <td style="border:0px solid black;"></td>
+                        <td style="border:0px solid black;"></td>
+                        <td style="text-align: center;border:0px solid black;">total</td>
+                        <td style="border:1px solid black;">19,500.00</td>
+                     </tr>
+                  </tbody>
+               </table>
+               <table width="100%" id="summary" class="noborder">
+                  <tr>
+                     <td width="60%" style="text-align:left;border:0px solid black;">
+                        <p style="font-size: 14px;">After having carefully read and accepted your General Conditions. I/We quote you on the item at prices noted above.													
+                        </p>
+                        <p style="font-size: 14px;">Canvassed By : <u></u>							
+                           Printed Name and Signature
+                        </p>
+                     </td>
+                     <td width="20%" style="text-align:left;border:0px solid black;">
+                        <p style="font-size: 14px;">Delivery Period:</p>
+                     </td>
+                     <td width="20%" style="text-align:center;border:0px solid black;">
+                        <p style="border-bottom:1px solid black;">{{delivery_period}}</p>
+                     </td>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td width="60%" style="text-align:left;border:0px solid black;">
+                     </td>
+                     <td width="20%" style="text-align:left;border:0px solid black;">
+                        <p style="font-size: 14px;">Warranty:</p>
+                     </td>
+                     <td width="20%" style="text-align:center;border:0px solid black;">
+                        <p style="border-bottom:1px solid black;"></p>
+                     </td>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td width="60%" style="text-align:left;border:0px solid black;">
+                     </td>
+                     <td width="20%" style="text-align:center;border:0px solid black;">
+                        <p></p>
+                     </td>
+                     <td width='20%' style="text-align:center;border-left: 0px solid black !important;border-right: 0px solid black !important;">Printed name/ Signature			
+                     </td>
+                  </tr>
+                  <tr>
+                     <td width="60%" style="text-align:left;border:0px solid black;">
+                     </td>
+                     <td width="20%" style="text-align:center;border:0px solid black;">
+                        <p></p>
+                     </td>
+                     <td width='20%' style="text-align:center;border-left: 0px solid black !important;border-right: 0px solid black !important;">Contact Number			
+                     </td>
+                  </tr>
+                  <tr>
+                     <td width="60%" style="text-align:left;border:0px solid black;">
+                     </td>
+                     <td width="20%" style="text-align:center;border:0px solid black;">
+                        <p></p>
+                     </td>
+                     <td width='20%' style="text-align:center;border-left: 0px solid black !important;border-right: 0px solid black !important;">Email Address			
+                     </td>
+                  </tr>
+                  <tr>
+                     <td width="60%" style="text-align:left;border:0px solid black;">
+                     </td>
+                     <td width="20%" style="text-align:center;border:0px solid black;">
+                        <p></p>
+                     </td>
+                     <td width='20%' style="text-align:center;border-left: 0px solid black !important;border-right: 0px solid black !important;">Date			
+                     </td>
+                  </tr>
+               </table>
+            </td>
+         </tr>
+      </table>
+   </body>
+</html>

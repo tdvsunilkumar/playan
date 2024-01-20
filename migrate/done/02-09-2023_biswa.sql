@@ -1,0 +1,1 @@
+ALTER TABLE `bplo_business_history` ADD `online_busn_bldg_tax_declaration_no` VARCHAR(255) NULL AFTER `busn_bldg_property_index_no`, ADD `online_busn_bldg_property_index_no` VARCHAR(255) NULL AFTER `online_busn_bldg_tax_declaration_no`;

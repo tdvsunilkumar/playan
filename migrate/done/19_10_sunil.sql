@@ -1,0 +1,1 @@
+ALTER TABLE `cto_receivables` ADD `taxpayer_id` BIGINT(20) NULL COMMENT 'Ref-Table: clients.rpo_code' AFTER `ars_category`, ADD `taxpayer_name` TEXT NULL COMMENT 'Taxpayer Name complete name' AFTER `taxpayer_id`, ADD `pk_id` BIGINT(20) NULL COMMENT '1=Building, 2=Land, 3=Machineries' AFTER `taxpayer_name`;

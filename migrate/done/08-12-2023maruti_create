@@ -1,0 +1,1 @@
+ALTER TABLE `eng_occupancy_apps` ADD `eoa_is_permit_released` INT(11) NOT NULL DEFAULT '0' AFTER `is_online`, ADD `eoa_permit_released_date_time` DATETIME NULL AFTER `eoa_is_permit_released`, ADD `eoa_permit_released_by` INT(11) NOT NULL DEFAULT '0' AFTER `eoa_permit_released_date_time`;

@@ -1,0 +1,1 @@
+ALTER TABLE `cto_receivables` ADD `covered_year` YEAR NULL AFTER `category`;

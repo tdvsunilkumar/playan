@@ -1,0 +1,1 @@
+ALTER TABLE `rpt_property_machine_appraisals` CHANGE `rpma_depreciation_rate` `rpma_depreciation_rate` DECIMAL(20,3) NULL DEFAULT NULL, CHANGE `rpma_depreciation` `rpma_depreciation` DECIMAL(20,3) NULL DEFAULT NULL;

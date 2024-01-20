@@ -1,0 +1,1 @@
+ALTER TABLE `ho_medical_certificates` CHANGE `incedent_datetime` `incedent_datetime` DATETIME NULL DEFAULT NULL;

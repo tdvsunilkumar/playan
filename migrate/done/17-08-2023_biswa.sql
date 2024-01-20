@@ -1,0 +1,1 @@
+ALTER TABLE `bplo_business` ADD `rp_code` INT(11) NULL AFTER `busn_bldg_is_owned`, ADD `rp_property_code` VARCHAR(255) NULL AFTER `rp_code`;

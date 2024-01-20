@@ -1,0 +1,497 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <style type="text/css">
+        @import url('https://fonts.googleapis.com/css?family=Fjalla+One|Montserrat:400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap');
+        * { margin: 0; padding: 0; }
+        @page {margin-top: 20mm; margin-bottom: 12mm; margin-header: 0mm;margin-footer: 0mm;}
+        body { font-family: 'Montserrat', sans-serif;font-size: 14px; }
+        table td, table th { border: 1px solid black; padding: 5px; }
+        table .noborder td{border: 0px solid black !important;}
+        .page-wrap { width: 800px; margin: 100px auto;}
+        p{margin: 0px; padding: 0px}
+        h1, h2, h3 {margin: 0px; padding: 0px;}
+        ul, li{list-style-type: none;}
+        td{padding-top: 2px; padding-bottom: 2px;}
+        textarea { border: 0; font-size: 14px; font-family: 'Montserrat', sans-serif;overflow: hidden; resize: none; }
+        table { border-collapse: collapse; }
+        .header{text-align: right; background-image: url("assets/images/applicationPdf/FSIC_Header-old.png"); background-repeat: no-repeat; background-size: cover; height: 100px; width: 103%;padding-top: -5px;padding-bottom: 5px; position:absolute;left:30px; right:0px; top:15px; margin: auto;}
+        .headerlogo{float: left; width: 80px; margin: 10px 10px 10px 15px;}
+        .headerinfo{text-align: center; color: #fff; width: 450px; text-align: center; margin-left: 60px;}
+        .headerinfo h3{margin: 0px; padding: 0px; width: 100%; margin-left: -60px}
+        .headerinfo div{margin: 0px; padding: 0px; width: 100%; margin-left: -60px; line-height: normal; font-size: 11px}
+
+        .footer{ text-align: right; background-image: url("assets/images/applicationPdf/FSIC_Header.png"); background-repeat: no-repeat; background-size: cover; height: 100px; width: 103%; position:absolute; left:30px; right:0px; bottom:250px; margin: auto;}
+        .footerlogo{float: left; width: 80px; margin: 5px 0px 0px 15px;}
+        .footerinfo{text-align: center; color: #fff; width: 450px; text-align: center; margin-left: 60px;}
+        .footerinfo h3{margin: 0px; padding: 0px; width: 100%; margin-left: -60px}
+        .footerinfo div{margin: 0px; padding: 0px; width: 100%; margin-left: -60px; line-height: normal; font-size: 11px}
+        /*#header { height: 15px; width: 100%; margin: 20px 0; background: #222; text-align: center; color: white; font: bold 15px 'Montserrat', sans-serif text-decoration: uppercase; letter-spacing: 20px; padding: 8px 0px; }*/
+        
+    </style>
+    
+    
+ <title>Fire Protection Application</title>
+  </head>
+
+<body>
+    <watermarkimage src="{{fsicwatermark}}" alpha="1" position="20, 107" size="170,66" />
+    <htmlpageheader name="MyHeader1" style="height: 100px;">
+        <div class="header">
+            <div class="headerlogo" style="margin-top: 10px;">
+                <img src="{{FSIC_Logo}}" style="height:80px; width:80px">
+            </div>
+            <div class="headerinfo" style="padding-left:36px;padding-bottom: 5px;">
+                <h3>BUREAU OF FIRE PROTECTION</h3>
+                <div class="" style="font-weight:bold">
+                    <p>Region III</p>
+                    <p>Nueva Ecija Provincial Office</p>
+                    <p>Palayan City Fire Station</p>
+                    <p>Barangay Atate, Palayan City</p>
+                </div>
+            </div>
+        </div>
+        <div style="position: absolute; top: 87px; left: 394px; font-size: 9px; color:#fff; font-weight: ;">
+            <span style="margin-left:10px">
+                <img src="{{telephoneicon}}" style="width:15px; height: 15px; vertical-align:middle;">
+                0943-066-9962
+            </span>
+
+            
+            &nbsp;&nbsp;
+            <span>
+                <img src="{{browsericon}}" style="width:15px; height: 15px; vertical-align:middle;">
+                &nbsp;
+            </span>
+        </div>
+        
+        
+        <div style="width: 100%; position: absolute; top: 65px; left: 600px; right:40px">
+            <div style="width: 20%; position: absolute; right: 0px; text-align:center; margin-top: 20px">
+                <p style="font-weight: 500;">APPLICATION NUMBER</p>
+                <table>
+                    <tr>
+                        {{application_no}}
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </htmlpageheader>
+
+
+    <htmlpagefooter name="MyFooter1" style="height: 100px;">
+        <div style="border-top: dotted 1px black; width:100%; float: left; margin-left: 0px; margin-bottom: 5px; position:absolute; bottom: 340px; left:0px">&nbsp;
+        </div>
+
+        <div class="footer">
+            <div class="footerlogo">
+                <img src="{{FSIC_Logo}}" style="height:80px; width:80px">
+            </div>
+            <div class="footerinfo" style="padding-left:36px;">
+                <h3>BUREAU OF FIRE PROTECTION</h3>
+                <div class="" style="font-weight:bold">
+                    <p>Region III</p>
+                    <p>Nueva Ecija Provincial Office</p>
+                    <p>Palayan City Fire Station</p>
+                    <p>Barangay Atate, Palayan City</p>
+                </div>
+            </div>
+        </div>
+       <div style="position: absolute; bottom: 270px; left: 394px; font-size: 9px; color:#fff; font-weight: ;">
+            <span style="margin-left:10px;">
+                <img src="{{telephoneicon}}" style="width:15px; height: 15px; vertical-align:middle;">
+                0943-066-9962
+            </span>
+            
+            <span>
+                <img src="{{browsericon}}" style="width:15px; height: 15px; vertical-align:middle;">
+                <!-- <p style="margin-top:-35px;padding-left: 120px;font-size: 9px;">Palayancityfirestation<br>@gmail.com</p> -->
+                <div style="margin-top:-30px;padding-left: 100px;font-size: 9px;">Palayancityfirestation<br>@gmail.com</div>
+            </span>
+        </div>
+
+        <div style="width: 100%; position: absolute; bottom: 235px; left: 600px; right:40px">
+            <div style="width: 20%; position: absolute; right: 0px; text-align:center; margin-top: 20px">
+                <p style="font-weight: 500;">APPLICATION NUMBER</p>
+                <table>
+                    <tr>
+                        {{application_no}}
+                       
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div style="position:absolute; bottom:215px; right:40px; left: 320px; text-align: center; margin:0 auto;">
+            <p style="background-color:#d0cece; width:30%; font-weight: bold; padding-left: 15px; padding-right:15px; padding-top:5px; padding-bottom:5px;">CLAIM STUB</p>
+        </div>
+
+        <div style="position:absolute; bottom:130px; right:40px; left: 40px;">
+            <table width="100%" style="font-size: 12px;">
+                <tr>
+                    <td style="text-align: left; border: none; padding-left:30px;">
+                        <p style="text-decoration: uppercase;">
+                            <strong>CERTIFIED BY:</strong>
+                        </p>
+                    </td>
+                </tr>
+                
+                <tr>
+                    
+                    <td width="40%" style="text-align: center; border: none; padding:0px;">
+                        <p style="">
+                            <strong style="border-bottom: 1px solid black;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{bff_certified_by}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong>
+                        </p>
+                    </td>
+                    <td width="30%" style="text-align: center; border: none; padding:0px;">
+                        
+                    </td>
+                    <td width="30%" style="text-align: center; border: none; padding:0px;">
+                        <b style="border-bottom: 1px solid black;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{bff_certified_date}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+                        </strong>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="30%" style="text-align: center; border: none; padding:0px;">
+                        
+                        <strong>&nbsp;&nbsp;&nbsp;{{bff_certified_position}}&nbsp;&nbsp;&nbsp;</strong>
+                    </td>
+                    <td width="30%" style="text-align: center; border: none; padding:0px;">
+                    </td>
+                    <td width="30%" style="text-align:center; border: none; padding:0px;">
+                       
+                        <strong>DATE </strong>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div style="position:absolute; bottom:20px; left:0px;">
+            <table width="100%" style="">
+                <tr>
+                    <td width="100%" style="text-align: center; border-top:none; border-bottom:none; text-align:center;padding-bottom: 0px; font-size:11px; text-align:center; color:#2A2827; font-style: italic; padding-left:50px; padding-right:50px; border-left: 0px; border-right: none;font-weight: 800;"><b style="font-weight: 800;color: #000;">NOTE:</b> AUTHORIZED REPRESENTATIVE MUST PRESENT AN AUTHORIZATION LETTER AND COPY OF OWNER’S IDENTIFICATION CARD
+                    </td>
+                </tr>
+                <tr>
+                    <td width="100%" style="text-align: center; border-top:none; border-bottom:none; text-align:center; font-size:10px; text-align:center; color:red; padding-bottom: 0px; padding-left:50px; padding-right:50px; border-left: 0px; border-right: none;">
+                        <strong>PAALALA:</strong><b> “MAHIGPIT NA IPINAGBABAWAL NG PAMUNUAN NG BUREAU OF FIRE PROTECTION SA MGA KAWANI NITO ANG MAGBENTA O MAGREKOMENDA NG ANUMANG BRAND NG FIRE EXTINGUISHER”</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="color: #06028c; padding-top:0px; padding-bottom: 0px; font-size: 12px; font-weight:bold; text-align: center; border-top:none; border-bottom:solid 5px rgb(136, 14, 14); border-left: 0px; border-right: none;">“FIRE SAFETY IS OUR MAIN CONCERN”
+                    </td>
+                </tr>
+            </table>
+
+            <table width="100%">
+                <tr>
+                    <td style="border:none; padding:none; font-weight: bold; font-size:10px; padding-left:40px;">
+                        BFP-QSF-FSED-002 REV.02 (08.24.20)
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </htmlpagefooter>
+
+
+    <sethtmlpageheader name="MyHeader1" page="all" value="on" show-this-page="0" />
+    <sethtmlpagefooter name="MyFooter1" page="all" value="on" />
+    
+    <div style="width: 100%; float:left; position: relative;">
+        <div style="width: 80%; float:left;">
+            <h3 style="font-family:Arial;font-style:italic;  margin-top: 28px;margin-left: -22px; font-size: 18.7px;font-weight:bold;">FIRE SAFETY INSPECTION CERTIFICATE APPLICATION FORM</h3>
+        </div>
+        
+    </div>
+
+    <div style="font-size: 12px; margin-top:5px;">
+        <p style="font-weight:bold; font-style:italic;color: black;">CHECK BOX OF CERTIFICATE APPLIED FOR</p>
+    </div>
+
+    <table width="100%">
+        <tr>
+            <td width="50%" style="text-align: left; padding-left: 5px;border-top:3px solid #000 ;">
+                <p style="text-decoration: uppercase;font-size:11px;">
+                    <b>NAME OF OWNER</b>
+                </p>
+            </td>
+            <td width="50%" style="text-align: left; padding-left: 5px;border-top:3px solid #000 ;">
+                <p style="text-decoration: uppercase;font-size:11px;">
+                    <strong>{{owner}}</strong>
+                </p>
+            </td>
+        </tr>
+        
+        <tr>
+            <td width="50%" style="text-align: left; padding-left: 5px; padding-top: 2px; padding-bottom:2px;">
+                <p style="text-decoration: uppercase;font-size:11px;">
+                    BUILDING/ FACILITY/ STRUCTURE/ BUSINESS/ESTABLISHMENT NAME
+                </p>
+            </td>
+            <td width="50%" style="text-align: left;padding-left: 5px; padding-top: 2px; padding-bottom:2px;">
+                <p style="text-decoration: uppercase;font-size:11px;">
+                    {{busn_name}}
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td width="50%" style="text-align: left; padding-left: 5px; padding-top: 2px; padding-bottom:2px;">
+                <p style="text-decoration: uppercase;font-size:11px;">
+                    EXACT ADDRESS
+                </p>
+            </td>
+            <td width="50%" style="text-align: left;padding-left: 5px; padding-top: 2px; padding-bottom:2px;">
+                <p style="text-decoration: uppercase;font-size:11px;">
+                    BRGY.{{address}}
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td width="50%" style="text-align: left;padding-left: 5px; padding-top: 2px; padding-bottom:2px;">
+                <p style="text-decoration: uppercase;font-size:11px;">
+                    AUTHORIZED REPRESENTATIVE
+                </p>
+            </td>
+            <td width="50%" style="text-align: left;padding-left: 5px; padding-top: 2px; padding-bottom:2px;">
+                <p style="text-decoration: uppercase;font-size:11px;">
+                    {{representative}}
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td width="50%" style="text-align: left;padding-left: 5px; padding-top: 2px; padding-bottom:2px;">
+                <p style="text-decoration: uppercase;font-size:11px;">
+                    TYPE OF OCCUPANCY/ BUSINESS NATURE
+                </p>
+            </td>
+            <td width="50%" style="text-align: left;padding-left: 5px; padding-top: 2px; padding-bottom:2px;">
+                <p style="text-decoration: uppercase;font-size:11px;">
+                    {{bot_occupancy_type}}
+                </p>
+            </td>
+        </tr>
+    <tr>
+        <td colspan="2" style="padding: 0px;margin:0px">
+            <table width="100%">
+                <tr>
+                    <td width="70%" style="text-align: left;padding-left: 5px; padding-top: 2px; padding-bottom:2px;border-left: 0px;border-right: 0px;border-top: 0px;">
+                        <p style="text-decoration: uppercase;font-size:11px;">
+                            TOTAL FLOOR AREA(M<sup class="superscript">2</sup>): {{busn_bldg_total_floor_area}} 
+                        </p>
+                    </td>
+                    <td width="30%" style="text-align: left;padding-left: 5px; padding-top: 2px; padding-bottom:2px;margin-right: 0px;border-top: 0px;border-right: 0px;">
+                        <p style="text-decoration: uppercase;font-size:11px;">
+                            NO. OF STOREY: {{bff_no_of_storey}}
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="70%" style="text-align: left;padding-left: 5px; padding-top: 2px; padding-bottom:2px;border-left: 0px;border-right: 0px;">
+                        <p style="text-decoration: uppercase;font-size:11px;">
+                            CONTACT NUMBER: {{p_telephone_no}}
+                        </p>
+                    </td>
+                    <td width="30%" style="text-align: left;padding-left: 5px; padding-top: 2px; padding-bottom:2px;margin-right: 0px;border-right: 0px;">
+                        <p style="text-decoration: uppercase;font-size:11px;">
+                            EMAIL ADDRESS: {{p_email_address}}
+                        </p>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    
+</table>
+    <table width="100%">
+        <tr>
+            <td width='100%' style="background-color:rgb(136, 14, 14);text-align: center; color: #fff; font-size:14px; font-style: italic; font-weight: bold; border-top:0px; border-bottom:0px; padding-top:2px; padding-bottom: 2px;">ATTACHED DOCUMENTARY REQUIREMENTS </td>
+        </tr>
+    </table>
+
+    <table width="100%">
+        <tr>
+            <td width='100%' style="background-color:#d0cece; text-align: center; color: #000; font-weight: bold; font-size:12px; border-top:0px; border-bottom:0px; padding-top:3px; padding-bottom: 3px;">
+                <img src="{{uncheck}}" style="height:15px; width:15px; padding-right:5px; vertical-align: middle;">FSIC FOR CERTIFICATE OF OCCUPANCY
+            </td>
+        </tr>
+    </table>
+
+    <div style="width:100%; font-size: 10px; border-left: solid 1px black; border-right: solid 1px black; ">
+        <ul type="" style="padding-left: 5px; margin-top: 0px; margin-bottom:0px;">
+            <li style="list-style-type: none;">[  ] ENDORSEMENT FROM OFFICE OF THE BUILDING OFFICIAL (OBO)</li>
+            <li>[  ] CERTIFICATE OF COMPLETION </li>
+            <li>[  ] CERTIFIED TRUE COPY OF ASSESSMENT FEE FOR SECURING CERTIFICATE OF OCCUPANCY FROM OBO </li>
+            <li>[  ] AS-BUILT PLAN (IF NECESSARY)</li>
+            <li>[  ] ONE (1) SET OF FIRE SAFETY COMPLIANCE AND COMMISSIONING REPORT (FSCCR) (IF NECESSARY)</li>
+        </ul>
+    </div>
+
+    <table width="100%">
+        <tr>
+            <td width='100%' style="background-color:#d0cece; text-align: center; color: #000; font-weight: bold; font-size:12px; border-top:0px; border-bottom:0px; padding-top:3px; padding-bottom: 3px;">FSIC FOR BUSINESS PERMIT</td>
+        </tr>
+    </table>
+
+    <table width="100%">
+        <tr>
+            <td width='50%' style="background-color:#d0cece; text-align: center; color: #000; font-weight: bold; font-size:12px; border-top:0px; border-bottom:1px solid black; border-top: 1px solid black; padding-top:3px; padding-bottom: 3px;">
+                {{bff_req_new_businessdata}}
+                FOR NEW BUSINESS </td>
+            
+            <td width='50%' style="background-color:#d0cece; text-align: center; color: #000; font-weight: bold; font-size:12px; border-top:0px; border-bottom:1px solid black; border-top: 1px solid black; padding-top:3px; padding-bottom: 3px;">
+               {{bff_req_renew_businessdata}}
+               FOR RENEWAL OF BUSINESS </td>
+        </tr>
+    </table>
+
+    <div style="width:100%; float:left;">
+        <div style="width:49.88%; font-size: 10px; float: left; border-left: solid 1px black;">
+            <ul type="" style="padding-left: 5px; margin-top: 0px; margin-bottom:0px;text-transform: uppercase;">
+               
+                {{dataCategoryRequirmentnew}}
+            </ul>
+        </div>
+        <div style="width:49.8%; font-size: 10px; float: left; border-right: solid 1px black;">
+            <ul type="" style="padding-left: 5px; margin-top: 0px; margin-bottom:0px;text-transform: uppercase;">
+                {{dataCategoryRequirmentRenew}}
+            </ul>
+        </div> 
+    </div>
+
+    <table width="100%">
+        <tr>
+            <td width="100%" style="padding-left: 5px; font-style: italic; font-size:11px; border-top:0px; border-top:0px;padding-bottom: 0px;font-weight: 800;">
+                <b style="font-weight:800;">NOTE:</b> Incomplete documentary requirements will be returned to the applicant
+            </td>
+        </tr>
+    </table>
+
+    <table width="100%" style="font-size: 11px;">
+        <tr>
+            <td width="100%" colspan="3" style="padding-left: 5px; padding-top: 2px; border-top: none; border-bottom: none; text-align:center;">
+                I hereby certify the correctness of the information provided above and the completeness of the attached documents.
+            </td>
+        </tr>
+        <tr>
+            <td width="65%" style="padding: 0; padding-top: 20px; border-top: 0px; border-bottom: 0px solid #000; border-right: 0px; text-align: center;">
+                <p>{{representative}}</p>
+            </td>
+            <td width="10%" style="border:none; padding:none;"></td>
+            <td width="25%" style="padding:0px; padding-top: 20px; border-top: 0px; border-bottom: 0px solid #000; border-left: 0px solid black; text-align: center;">
+                <p style="border-bottom: 1px solid #000;">{{application_date}}</p>
+            </td>
+        </tr>
+        <tr>
+            <td width="65%" style="text-align: center; padding: 5px;padding-bottom:0px;  padding-top: 0px; border:none; border-left:1px solid black;"><p style="border-top: 1px solid black;">OWNER/AUTHORIZED REPRESENTATIVE'S SIGNATURE OVER PRINTED NAME</p></td>
+            <td width="10%" style="border: none;"></td>
+            <td width="25%" style="text-align: center;padding-bottom:0px; padding-top: 0px; border:none; border-left: ; border-right:1px solid black;"> DATE </td>
+        </tr>
+    </table>
+
+    <table width="100%">
+        <tr>
+            <td width='50%' style="padding: 0px; padding-left:5px; padding-top:28px; padding-bottom: 0px; font-size: 11px;"> VERIFIED BY BFP-CRO: <u>{{bff_verified_by}}</u>
+            </td>
+            <td width='50%' style="padding: 0px; padding-left:5px; padding-top:20px; padding-bottom: 2px; font-size: 11px;text-align: right;padding-right: 10px;"> <p style="border-bottom:1px solid #000;">{{bff_veridifed_date}}</p> DATE/TIME &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </td>
+        </tr>
+    </table>
+
+    <table width="100%">
+        <tr>
+            <td width='100%' style="background-color:rgb(136, 14, 14);text-align: center; color: #fff; font-size:14px; font-style: italic; font-weight: bold; border-top:0px; border-bottom:0px; padding-top:2px; padding-bottom: 2px;">FSIC MONITORING (TO BE FILLED-UP BY BFP PERSONNEL ONLY)
+            </td>
+        </tr>
+    </table>
+
+    <table width="100%" style="font-size:11px">
+        <tr>
+            <td colspan="2" style="text-align: center; font-weight: bold; padding-top:2px; padding-bottom: 2px;"> CRO </td>
+            <td colspan="2" style="text-align: center; font-weight: bold; padding-top:2px; padding-bottom: 2px;"> FCA </td>
+            <td colspan="2" style="text-align: center; font-weight: bold; padding-top:2px; padding-bottom: 2px;"> FCCA </td>
+            <td colspan="2" style="text-align: center; font-weight: bold; padding-top:2px; padding-bottom: 2px;"> C,FSES </td>
+            <td colspan="2" style="text-align: center; font-weight: bold; padding-top:2px; padding-bottom: 2px;"> FSI </td>
+            <td colspan="2" style="text-align: center; font-weight: bold; padding-top:2px; padding-bottom: 2px;"> C,FSES </td>
+            <td colspan="2" style="text-align: center; font-weight: bold; padding-top:2px; padding-bottom: 2px;"> CFM/MFM </td>
+            <td colspan="2" style="text-align: center; font-weight: bold; padding-top:2px; padding-bottom: 2px;"> CRO </td>
+        </tr>
+        <tr>
+            <td colspan="2" style="padding-top:2px; padding-bottom: 2px;"> DATE:{{bff_cro_date}}
+            </td>
+            <td colspan="2" style="padding-top:2px; padding-bottom: 2px;"> DATE:{{bff_fca_date}}
+            </td>
+            <td colspan="2" style="padding-top:2px; padding-bottom: 2px;"> DATE:{{bff_fcca_date}}
+            </td>
+            <td colspan="2" style="padding-top:2px; padding-bottom: 2px;"> DATE:{{bff_cfses1_date}}
+            </td>
+            <td colspan="2" style="padding-top:2px; padding-bottom: 2px;"> DATE:{{bff_fsi_date}}
+            </td>
+            <td colspan="2" style="padding-top:2px; padding-bottom: 2px;"> DATE:{{bff_cfses2_date}}
+            </td>
+            <td colspan="2" style="padding-top:2px; padding-bottom: 2px;"> DATE:{{bff_cfm_mfm_date}}
+            </td>
+            <td colspan="2" style="padding-top:2px; padding-bottom: 2px;"> DATE: </td>
+        </tr>
+        <tr>
+            <td style="padding-top:2px; padding-bottom: 2px;">IN</td>
+            <td style="padding-top:2px; padding-bottom: 2px;" style="padding-top:2px; padding-bottom: 2px;">OUT</td>
+            <td style="padding-top:2px; padding-bottom: 2px;">IN</td>
+            <td style="padding-top:2px; padding-bottom: 2px;">OUT</td>
+            <td style="padding-top:2px; padding-bottom: 2px;">IN</td>
+            <td style="padding-top:2px; padding-bottom: 2px;">OUT</td>
+            <td style="padding-top:2px; padding-bottom: 2px;">IN</td>
+            <td style="padding-top:2px; padding-bottom: 2px;">OUT</td>
+            <td style="padding-top:2px; padding-bottom: 2px;">IN</td>
+            <td style="padding-top:2px; padding-bottom: 2px;">OUT</td>
+            <td style="padding-top:2px; padding-bottom: 2px;">IN</td>
+            <td style="padding-top:2px; padding-bottom: 2px;">OUT</td>
+            <td style="padding-top:2px; padding-bottom: 2px;">IN</td>
+            <td style="padding-top:2px; padding-bottom: 2px;">OUT</td>
+            <td style="padding-top:2px; padding-bottom: 2px;">IN</td>
+            <td style="padding-top:2px; padding-bottom: 2px;">OUT</td>
+        </tr>
+        <tr>
+            <td style="padding-top:2px; padding-bottom: 2px;">&nbsp;{{bff_cro_out}}</td>
+            <td style="padding-top:2px; padding-bottom: 2px;">{{bff_cro_in}}</td>
+            <td style="padding-top:2px; padding-bottom: 2px;">{{bff_fca_in}}</td>
+            <td style="padding-top:2px; padding-bottom: 2px;">{{bff_fca_out}}</td>
+            <td style="padding-top:2px; padding-bottom: 2px;">{{bff_fcca_in}}</td>
+            <td style="padding-top:2px; padding-bottom: 2px;">{{bff_fcca_out}}</td>
+            <td style="padding-top:2px; padding-bottom: 2px;">{{bff_cfses1_in}}</td>
+            <td style="padding-top:2px; padding-bottom: 2px;">{{bff_cfses1_out}}</td>
+            <td style="padding-top:2px; padding-bottom: 2px;">{{bff_fsi_in}}</td>
+            <td style="padding-top:2px; padding-bottom: 2px;">{{bff_fsi_out}}</td>
+            <td style="padding-top:2px; padding-bottom: 2px;">{{bff_cfses2_in}}</td>
+            <td style="padding-top:2px; padding-bottom: 2px;">{{bff_cfses2_out}}</td>
+            <td style="padding-top:2px; padding-bottom: 2px;">{{bff_cfm_mfm_in}}</td>
+            <td style="padding-top:2px; padding-bottom: 2px;">{{bff_cfm_mfm_out}}</td>
+            <td style="padding-top:2px; padding-bottom: 2px;"></td>
+            <td style="padding-top:2px; padding-bottom: 2px;"></td>
+        </tr>
+    </table>
+
+    <table width="100%">
+        <tr>
+            <td width="100%" style="text-align: center; border-top:none; border-bottom:none; text-align:center; font-size:10px; text-align:center; color:red; padding-bottom: 0px;padding-top: 10px;">
+                <strong>PAALALA:</strong><b> "MAHIGPIT NA IPINAGBABAWAL NG PAMUNUAN NG BUREAU OF FIRE PROTECTION SA MGA KAWANI NITO ANG MAGBENTA O MAGREKOMENDA NG ANUMANG BRAND NG FIRE EXTINGUISHER"</b>
+            </td>
+        </tr>
+        <tr>
+            <td style="color: #06028c; padding-top:0px; border-top:none; 0px; font-size: 12px; font-weight:bold; text-align: center; border-top:none;">
+                "FIRE SAFETY IS OUR MAIN CONCERN"
+            </td>
+        </tr>
+    </table>
+
+    <table width="100%">
+        <tr>
+            <td style="border:none; padding:none; font-weight: bold; font-size:10px;">
+                BFP-QSF-FSED-002 REV.02 (08.24.20)
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

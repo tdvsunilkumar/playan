@@ -1,0 +1,1 @@
+UPDATE `rpt_locality` SET `loc_address` = 'New City Hall, Palayan City Hall, Nueva Ecija - Aurora Rd, Palayan City, 3132 Nueva Ecija' WHERE `rpt_locality`.`id` = 4;

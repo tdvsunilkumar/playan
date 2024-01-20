@@ -1,0 +1,2 @@
+ALTER TABLE `ho_serology` DROP `ser_hep_test`, DROP `ser_hiv_test`, DROP `ser_syp_test`, DROP `ser_hep_specimen`, DROP `ser_hep_brand`, DROP `ser_hep_lot`;
+ALTER TABLE `bfp_inspection_orders` CHANGE `bio_inspection_no` `bio_inspection_no` VARCHAR(11) NOT NULL COMMENT 'Pre-Numbered';

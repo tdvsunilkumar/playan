@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="en">
+   <head>
+      <!-- Required meta tags -->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <style type="text/css">
+         @import url('https://fonts.googleapis.com/css?family=Fjalla+One|Montserrat:400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap');
+         * { margin: 0; padding: 0; }
+         body { font-family: 'Montserrat', sans-serif;font-size: 14px; }
+         table td, table th { border: 1px solid black; padding: 5px; }
+         .page-wrap { width: 800px; margin: 100px auto;}
+         textarea { border: 0; font-size: 14px; font-family: 'Montserrat', sans-serif;overflow: hidden; resize: none; }
+         table { border-collapse: collapse; }
+         /*#header { height: 15px; width: 100%; margin: 20px 0; background: #222; text-align: center; color: white; font: bold 15px 'Montserrat', sans-serif text-decoration: uppercase; letter-spacing: 20px; padding: 8px 0px; }*/
+         .header{margin: 20px 0;text-align: left;font-size: 45px;font-weight: 700; font-family: 'Fjalla One', sans-serif; text-decoration: uppercase;
+         letter-spacing: 1px;padding: 8px 0px;color:#1f4888;}
+         .company-name {font-size: 20px;font-weight: 600;}
+         #address { width: 250px; height: 150px; float: left;font-weight: 500; }
+         /*#customer { overflow: hidden; }*/
+         .company-address {font-size: 15px;color: #1f4888 !important;height: 115px !important;}
+         .chklabel{margin-bottom: 5px; margin-left:5px !important;}
+         #logo { text-align: right; float: right; position:}
+         /*#logo:hover, #logo.edit { border: 1px solid #000; margin-top: 0px; max-height: 125px; }*/
+         #logoctr { display: none; }
+         #logohelp { text-align: left; display: none; font-style: italic; padding: 10px 5px;}
+         #logohelp input { margin-bottom: 5px; }
+         .edit #logohelp { display: block; }
+         .edit #save-logo, .edit #cancel-logo { display: inline; }
+         .edit #image, #save-logo, #cancel-logo, .edit #change-logo, .edit #delete-logo { display: none; }
+         #customer-title { font-size: 20px; font-weight: bold; float: left;color: #1f4888; }
+         #meta { margin-top: 1px; width: 300px; float: right; }
+         #meta td { text-align: right;  }
+         td,p{padding:1px;}
+         #meta td.meta-head { text-align: left; background: #eee;font-weight: 500; }
+         #meta td textarea { width: 100%; height: 20px; text-align: right; }
+         textarea:hover, textarea:focus, #items td.total-value textarea:hover, #items td.total-value textarea:focus, .delete:hover { background-color:#EEFF88; }
+         .pull-right{text-align: right;}
+         .delete-wpr { position: relative; }
+         .delete { display: block; color: #000; text-decoration: none; position: absolute; background: #EEEEEE; font-weight: bold; padding: 0px 3px; border: 1px solid; top: -6px; left: -22px; font-family: Verdana; font-size: 12px; }
+         .footer-contain {text-align: center;font-size: 35px; font-weight: 700;color: #1f4888;}
+         .font_change{white-space: pre !important;font-size: 12px;margin-left: 10px;}
+      </style>
+      
+      <title>BPLO Clearance</title>
+   </head>
+   <body>
+      <table style='width:700px;'>
+         <tr>
+            <td style="border: 0px solid black;">
+               <table width="100%" id="summary" class="noborder">
+                  <tr>
+                     <td width="100%" style="border:0px solid black;text-align:center;">
+                        <p style="font-weight: 600;"><strong>ABSTRACT OF CANVASS</strong></p>
+                        <p style="font-size: 15px;">Date: july 18,2020</p>
+                     </td>
+                  </tr>
+                  <tr>
+                  <td WIDTH="100%" style="border:0px solid black;text-align:left;">
+                    <p style="font-size: 15px;">name of Project: {{projectname}}</p>
+                    <p style="font-size: 15px;">Requesting Agency: {{agency}}</p>
+                    <p style="font-size: 15px;">ABC:</p>
+                 </td>
+                </tr>
+               </table>
+
+               <table width="100%" id="summary" class="noborder">
+                  <tr>
+                    <th width='5%' style="text-align: left;border:1px solid black;">Item No.</th>
+                    <th width='5%' style="text-align: left;border:1px solid black;">Articals/Items</th>
+                    <th width='10%' style="text-align: left;border:1px solid black;">Qty.</th>
+                    <th width='10%' style="text-align: left;border:1px solid black;">Unit</th>
+                    <th width='20%' style="text-align: left;border:1px solid black;">G-RAM Technology Computer Trading & Services
+                    <p style="border-top: 1px solid black !important">(Supplier 1)</p>
+                    <p style="border-top: 1px solid black !important;">Unitcost|Total</p></th>
+                    <th width='10%' style="text-align: left;border:1px solid black;">Micro valley
+                    <p style="border-top: 1px solid black !important">(Supplier 1)</p>
+                    <p style="border-top: 1px solid black !important;">Unitcost|Total</p></th>
+                    <th width='10%' style="text-align: left;border:1px solid black;">Silicon Valley
+                    <p style="border-top: 1px solid black !important">(Supplier 1)</p>
+                    <p style="border-top: 1px solid black !important;">Unitcost|Total</p></th>
+                    <th width='10%' style="text-align: left;border:1px solid black;">Price Difference</th>
+                    <th width='10%' style="text-align: left;border:1px solid black;">Remarks Reason</th>
+                  </tr>
+                  <tr>{{DynamicTbl}}</tr>
+                  <!-- <tr>
+                    <td></td>
+                    <td>Specifications</td>
+                    <td></td>
+                    <td></td>
+                    <td rowspan="6">Brand Model Brand:ACER nitor 5; AN 515-57-905F</td>
+                    <td></td>
+                    <td rowspan="6">Brand: ASUS TUF: Gaming A15; FX506HEB-HN236T; NVIDIA; Geforce; RTX 3050 Ti; 4GB w/Intel core i7-11800H</td>
+                    <td></td> 
+                    <td>Valley Disqualified</td>   
+                  </tr>
+                  <tr>
+                     <td></td>
+                     <td>Intel core i7-11800H OCTA</td>
+                     <td></td>
+                     <td></td>
+                     <td></td>
+                     <td></td>
+                     <td></td> 
+                   </tr>
+                   <tr>
+                     <td></td>   
+                     <td>16GB DDR4 3200, 4GB RTX</td>
+                     <td></td>
+                     <td></td>
+                     <td></td>
+                     <td></td>
+                     <td></td> 
+                    
+                   </tr>
+                   <tr>
+                     <td></td> 
+                     <td>3050 Ti-Graphics, 16,IFHD</td>
+                     <td></td>
+                     <td></td>
+                     <td></td>
+                     <td></td>
+                     <td></td> 
+                       
+                   </tr>
+                   <tr>
+                     <td></td>   
+                     <td>144HZ Display, MICA Silver</td>
+                     <td></td>
+                     <td></td>
+                     <td></td>
+                     <td></td>
+                     <td></td> 
+                     
+                   </tr>
+                   <tr>
+                     <td></td> 
+                     <td>Windows11, office H/S with</td>
+                     <td></td>
+                     <td></td>
+                     <td></td>
+                     <td></td>
+                     <td></td> 
+                       
+                   </tr>
+                   <tr>
+                     <td></td>  
+                     <td>bag</td>
+                     <td></td>
+                     <td></td>
+                     <td></td>
+                     <td></td>
+                     <td></td>
+                     <td></td>
+                     <td></td> 
+                   </tr>
+                   <tr>
+                     <td>2</td> 
+                     <td>belden CATSE 305 MTR Cable</td>
+                     <td>2</td>
+                     <td>bxs</td>
+                     <td>8155.00|16,310.00</td>
+                     <td>8000.00|16,000</td>
+                     <td>7995.00|15,990.00</td>
+                     <td>320.00</td>
+                     <td></td> 
+                   </tr>
+                   <tr>
+                     <td></td> 
+                     <td></td>
+                     <td></td>
+                     <td></td>
+                     <td>Brand : Belden</td>
+                     <td></td>
+                     <td>Brand : Belden</td>
+                     <td></td>
+                     <td></td> 
+                   </tr>
+                   <tr>
+                     <td>3</td> 
+                     <td>Computer ink 001 (Black 10, cyan 4, Magenta 4, Yellow 4)</td>
+                     <td>22</td>
+                     <td>btls</td>
+                     <td>9,028.00|9,028.00</td>
+                     <td>400.00|8,800.00</td>
+                     <td>6,840.00|6,840.00</td>
+                     <td>2,366.00</td>
+                     <td></td> 
+                   </tr>
+                   <tr>
+                     <td></td> 
+                     <td></td>
+                     <td></td>
+                     <td></td>
+                     <td>Brand : Epson</td>
+                     <td></td>
+                     <td>Brand : Epson</td>
+                     <td></td>
+                     <td></td> 
+                   </tr>
+                   <tr>
+                     <td>4</td> 
+                     <td>Rj 45 CAT5E 100pc per box/pack</td>
+                     <td>1</td>
+                     <td>box</td>
+                     <td>500.00|500.00</td>
+                     <td>2000.00|2000.00</td>
+                     <td>20.00|2000.00</td>
+                     <td></td>
+                     <td></td> 
+                   </tr>
+                   <tr>
+                     <td></td> 
+                     <td></td>
+                     <td></td>
+                     <td></td>
+                     <td>Brand : Tyco</td>
+                     <td></td>
+                     <td></td>
+                     <td></td>
+                     <td></td> 
+                   </tr>
+                   <tr>
+                     <td></td> 
+                     <td></td>
+                     <td></td>
+                     <td></td>
+                     <td>Canvassed by:</td>
+                     <td>Canvassed by:</td>
+                     <td>Canvassed by:</td>
+                     <td></td>
+                     <td></td> 
+                   </tr>
+                   <tr>
+                     <td></td> 
+                     <td></td>
+                     <td></td>
+                     <td></td>
+                     <td>Walk in:</td>
+                     <td>Panfilo Dasin Jr:</td>
+                     <td>Walk in:</td>
+                     <td></td>
+                     <td></td> 
+                   </tr>
+                   <tr>
+                     <td></td> 
+                     <td></td>
+                     <td></td>
+                     <td></td>
+                     <td>106,494.00</td>
+                     <td>111,800.00</td>
+                     <td>99,825.00</td>
+                     <td>8169.00</td>
+                     <td></td> 
+                   </tr> -->
+                   <tr>
+                     <td colspan="9">Recommendations : Award to the lowest bidder, SILICON VALLEY with bid amount of Php99,825.00</td> 
+                   </tr>
+                </table><br><br>
+                <table width="100%" id="summary" class="noborder">
+                  <tr>
+                      <td width="25%" style="text-align:left;border:0px solid black;"><p><strong>ADORAS MONGAYA</strong><br>Member TWG</p></td>
+                      <td width="25%" style="text-align:center;border:0px solid black;"><p><strong>TRINIDAD O. JOSE</strong><br>Member TWG</p>
+                         </td>
+                         <td width="25%" style="text-align:left;border:0px solid black;"><p><strong>ROSALIE P. RAZON</strong><br>Member TWG</p></td>
+                         <td width="25%" style="text-align:center;border:0px solid black;"><p><strong>CHRISTINA R. YAMBOT</strong><br>Head TWG</p>
+                            </td>
+                  </tr><br>
+                  <tr>
+                     <td width="25%" style="text-align:left;border:0px solid black;"></td>
+                     <td width="25%" style="text-align:center;border:0px solid black;"><p><strong>ELSTE D. PACTS</strong><br>Member TWG</p></td>
+                        <td width="25%" style="text-align:left;border:0px solid black;"><p><strong>RENE ANDASAN</strong><br>Member TWG</p></td>
+                        <td width="25%" style="text-align:center;border:0px solid black;"></td>       
+                     </tr>
+               </table>
+            </td>
+         </tr>
+      </table>
+   </body>
+</html>

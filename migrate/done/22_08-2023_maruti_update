@@ -1,0 +1,3 @@
+ALTER TABLE `cto_payment_or_assignments` ADD `cpor_id` INT(11) NOT NULL COMMENT 'cto_paymnet_or_registers.id' AFTER `ortype_id`, ADD `or_count` INT(11) NOT NULL COMMENT 'cto_payment_or_register.or_count' AFTER `cpor_id`;
+
+ALTER TABLE `cto_payment_or_assignments` ADD `ora_date_returned` DATE NULL AFTER `ora_completed_date`;

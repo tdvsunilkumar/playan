@@ -1,0 +1,1 @@
+ALTER TABLE `ho_lab_requests` CHANGE `lab_reg_date` `lab_reg_date` DATETIME NULL DEFAULT NULL;

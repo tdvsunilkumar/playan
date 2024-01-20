@@ -1,0 +1,1 @@
+ALTER TABLE `cto_charge_types` ADD `is_essential` INT NOT NULL DEFAULT '0' AFTER `ctype_desc`;

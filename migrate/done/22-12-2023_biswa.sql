@@ -1,0 +1,1 @@
+ALTER TABLE `cto_top_transactions` ADD `is_printed` BOOLEAN NULL DEFAULT FALSE AFTER `attachment`;

@@ -1,0 +1,2 @@
+ALTER TABLE `cto_cashier` ADD `cpdo_type` INT(11) NULL DEFAULT '0' AFTER `tfoc_is_applicable`;
+ALTER TABLE `cto_tfocs` CHANGE `is_taxpayer_charges` `is_taxpayer_charges` INT(11) NULL DEFAULT '0';

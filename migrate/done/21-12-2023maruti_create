@@ -1,0 +1,1 @@
+ALTER TABLE `eng_bldg_fees_details` ADD `ebfd_completion_date` DATE NULL AFTER `ebfd_construction_date`;

@@ -1,0 +1,1 @@
+ALTER TABLE `rpt_properties` CHANGE `pk_is_active` `pk_is_active` INT(11) NOT NULL COMMENT '0=in-active,1=active,2=Drafted during general reviosion,9=Cancelled but becuase of previous owner which we can create in approval form';

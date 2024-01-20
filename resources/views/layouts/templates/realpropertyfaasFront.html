@@ -1,0 +1,344 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <style type="text/css">
+      @import url('https://fonts.googleapis.com/css?family=Fjalla+One|Montserrat:400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap');
+* { margin: 0; padding: 0; }
+body { font-family: 'Montserrat', sans-serif;font-size: 14px; }
+table td, table th { border: 1px solid black; padding: 5px; }
+table .noborder td{border: 0px solid black !important;}
+.page-wrap { width: 800px; margin: 100px auto;}
+
+textarea { border: 0; font-size: 14px; font-family: 'Montserrat', sans-serif;overflow: hidden; resize: none; }
+table { border-collapse: collapse; }
+
+
+/*#header { height: 15px; width: 100%; margin: 20px 0; background: #222; text-align: center; color: white; font: bold 15px 'Montserrat', sans-serif text-decoration: uppercase; letter-spacing: 20px; padding: 8px 0px; }*/
+.header{margin: 20px 0;text-align: left;font-size: 45px;font-weight: 700; font-family: 'Fjalla One', sans-serif; text-decoration: uppercase;
+    letter-spacing: 1px;padding: 8px 0px;color:#1f4888;}
+.company-name {font-size: 20px;font-weight: 600;}
+
+#address { width: 250px; height: 150px; float: left;font-weight: 500; }
+/*#customer { overflow: hidden; }*/
+.company-address {font-size: 15px;color: #1f4888 !important;height: 115px !important;}
+
+#logo { text-align: right; float: right;}
+/*#logo:hover, #logo.edit { border: 1px solid #000; margin-top: 0px; max-height: 125px; }*/
+#logoctr { display: none; }
+
+#logohelp { text-align: left; display: none; font-style: italic; padding: 10px 5px;}
+#logohelp input { margin-bottom: 5px; }
+.edit #logohelp { display: block; }
+.edit #save-logo, .edit #cancel-logo { display: inline; }
+.edit #image, #save-logo, #cancel-logo, .edit #change-logo, .edit #delete-logo { display: none; }
+#customer-title { font-size: 20px; font-weight: bold; float: left;color: #1f4888; }
+
+#meta { margin-top: 1px; width: 300px; float: right; }
+#meta td { text-align: right;  }
+#meta td.meta-head { text-align: left; background: #eee;font-weight: 500; }
+#meta td textarea { width: 100%; height: 20px; text-align: right; }
+textarea:hover, textarea:focus, #items td.total-value textarea:hover, #items td.total-value textarea:focus, .delete:hover { background-color:#EEFF88; }
+.pull-right{text-align: right;}
+.delete-wpr { position: relative; }
+.delete { display: block; color: #000; text-decoration: none; position: absolute; background: #EEEEEE; font-weight: bold; padding: 0px 3px; border: 1px solid; top: -6px; left: -22px; font-family: Verdana; font-size: 12px; }
+.footer-contain {text-align: center;font-size: 35px; font-weight: 700;color: #1f4888;}
+.font_change{white-space: pre !important;font-size: 12px;margin-left: 10px;}
+    </style>
+
+    <title>Bureau Cheque</title>
+  </head>
+
+  <body>
+    <table style='width:700px;'>
+      <tr>
+        <td style="border:0px;">
+           
+            <table width="100%" id="summary" class="noborder">
+                <tr>
+                     <td><p style="text-align: center;"><b>REAL PROPERTY FIELD APPRAISAL & ASSESSMENT SHEET-LAND/PLANTS TREES</b></p>
+                    </td>
+                </tr>
+            </table> 
+            <table width="100%" id="summary" class="noborder">
+                <tr>
+                     <td style="text-align: right;"><p >TRANSACTION CODE <b><u>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GR&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</u></b></p></td>
+                </tr>
+            </table>
+           
+            <table width="100%" id="summary">
+                <tr>
+                     <td style="border-right: 0px;">
+                        <p style="text-align: left;">APP NO :</p>
+                        <p style="text-align: center;"><b>03002-00304</b></p>
+                    </td>
+                    <td style="border-left: 0px;"><p style="text-align: left;">PIN :</p>
+                        <p style="text-align: center;"> <b>03002-00304</b></p>
+                    
+                    </td>
+                    </td>
+                </tr>
+            </table> 
+            <table width="100%" id="summary">
+                <tr>
+                     <td style="border-right: 0px;">
+                        <p style="text-align: left;">OCT/TCT No. :</p>
+                        <p style="text-align: center;"><b>03002-00304</b></p>
+                    </td>
+                    <td style="border-left: 0px;"><p style="text-align: left;">Lot No. :</p>
+                        <p style="text-align: center;"> <b>PLAN H, 149192</b></p>
+                    
+                    </td>
+                    </td>
+                </tr>
+            </table> 
+            <table width="100%" id="summary">
+                <tr>
+                     <td width="50%">
+                        <p style="text-align: left;">Owner:</p><br><br>
+                        <p style="text-align: left;font-size: 11px;"><b>RIVISON ORO VENTURE HOLDING CORP.REP.BY MS. MARLENE R. LAMATA</b></p>
+                    </td>
+                    <td width="50%"><p style="text-align: left;">Address:</p><br><br>
+                        <p style="text-align: left;font-size: 11px;"> <b>BRGY,SINGALT,PLAYAN CITY</b></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="50%">
+                       <p style="text-align: left;font-size: 11px;">Administrator/Beneficial User:</p><br>
+                       <p style="text-align: left;font-size: 11px;">TIN:</p>
+                   </td>
+                   <td width="50%"><p style="text-align: left;font-size: 11px;">Address:</p><br>
+                       <p style="text-align: left;font-size: 11px;">Tel No.:</p>
+                   </td>
+               </tr>
+           
+                <tr>
+                     <td width="100%" colspan="2" style="border:0px;"><p style="text-align: left;"><b>PROPERTY LOCATION</b></p></td>
+                </tr>
+           
+                    <tr>
+                        <td >
+                        <p style="text-align: left;font-size: 11px;width:50%;">No./Street:</p><br>
+                        <p style="text-align: left;font-size: 11px;"></p>
+                    </td>
+                    <td ><p style="text-align: left;font-size: 11px;width:50%;">Brgy:</p><br>
+                        <p style="text-align: left;font-size: 11px;">AULO</p>
+                    </td>
+                </tr> 
+                <tr>
+                    <td width="50%">
+                    <p style="text-align: left;font-size: 11px;">District: </p><br>
+                    
+                </td>
+                <td width="50%"><p style="text-align: left;font-size: 11px;">City: <b>PALAYAN CITY</b></p><br>
+               </td>
+            </tr> 
+           
+                <tr>
+                     <td width="100%" colspan="2" style="border:0px;"><p style="text-align: left;"><b>PROPERTY BOUNDARIES</b></p></td>
+                </tr>
+        
+            <tr>
+                    <td width="50%">
+                    <p style="text-align: left;font-size: 11px;">North:</p><br>
+                    <p style="text-align: left;font-size: 11px;">AGUSTIN CUNANAN</p>
+                </td>
+                <td width="50%" style="text-align: left;font-size: 11px;border-bottom: 0px;">Land Sketch:
+                    
+                    
+                
+                
+                </td>
+            </tr> 
+            <tr>
+                <td width="50%">
+                    <p style="text-align: left;font-size: 11px;">East:</p><br>
+                    <p style="text-align: left;font-size: 11px;">PUBLIC LAND</p>  
+                </td>
+                <td width="50%" style="text-align: left;font-size: 11px;border-bottom: 0px;border-top: 0px;">
+                </td>
+            </tr> 
+            <tr>
+                <td width="50%">
+                    <p style="text-align: left;font-size: 11px;">South:</p><br>
+                    <p style="text-align: left;font-size: 11px;">FRANCISCO CATALON</p>   
+                </td>
+                <td width="50%" style="text-align: left;font-size: 11px;border-bottom: 0px;border-top: 0px;">
+                 </td>
+            </tr> 
+            <tr>
+                <td width="50%">
+                    <p style="text-align: left;font-size: 11px;">West:</p><br>
+                    <p style="text-align: left;font-size: 11px;">AGUSTIN CUNANAN CABU RIVER</p>  
+                </td>
+                <td width="50%" style="text-align: center;font-size: 11px;border-top: 0px;">
+                    (Not necessanly draw to scale)
+                    
+                
+                
+                </td>
+            </tr> 
+        </table>
+        <table width="100%" id="summary" class="noborder">
+            <tr>
+                 <td><p style="text-align: left;"><b>LAND APPRAISAL</b></p></td>
+            </tr>
+        </table>
+            <table width="100%" id="summary">
+                <tr>
+                    <th width="25%"style="font-size: 10px;">Classification</th>
+                    <th width="25%"style="font-size: 10px;">Sub-Classification</th>
+                    <th width="25%"style="font-size: 10px;">Area</th>
+                    <th width="25%"style="font-size: 10px;">Unit Value</th>
+                    <th width="25%"style="font-size: 10px;">Base Market value</th>
+                </tr>
+                <tr>
+                    <td style="font-size: 10px;text-align: center;"><p>Agricultural</p></td>
+                    <td style="font-size: 10px;text-align: center;">Agr'l Others/Upland(2ND)</td>
+                    <td style="font-size: 10px;text-align: center;">14,0463 has</td>
+                    <td style="font-size: 10px;text-align: center;">155,000.00 </td>
+                    <td class="pull-right" style="font-size: 10px;">2,177,176.50</td>
+                </tr>  
+                <tr>
+                    <td style="font-size: 10px;text-align: center;"><p>Agricultural</p></td>
+                    <td style="font-size: 10px;text-align: center;">Agr'l Others/Upland(2ND)</td>
+                    <td style="font-size: 10px;text-align: center;">14,0463 has</td>
+                    <td style="font-size: 10px;text-align: center;">155,000.00 </td>
+                    <td class="pull-right" style="font-size: 10px;">2,177,176.50</td>
+                </tr> 
+                <tr>
+                    <td style="font-size: 10px;text-align: center;"><p>Agricultural</p></td>
+                    <td style="font-size: 10px;text-align: center;">Agr'l Others/Upland(2ND)</td>
+                    <td style="font-size: 10px;text-align: center;">14,0463 has</td>
+                    <td style="font-size: 10px;text-align: center;">155,000.00 </td>
+                    <td class="pull-right" style="font-size: 10px;">2,177,176.50</td>
+                </tr> 
+                <tr>
+                    <td style="font-size: 10px;text-align: center;"><p>Agricultural</p></td>
+                    <td style="font-size: 10px;text-align: center;">Agr'l Others/Upland(2ND)</td>
+                    <td style="font-size: 10px;text-align: center;">14,0463 has</td>
+                    <td style="font-size: 10px;text-align: center;">155,000.00 </td>
+                    <td class="pull-right" style="font-size: 10px;">2,177,176.50</td>
+                </tr> 
+                <tr>
+                    <td style="font-size: 10px;text-align: center;border-right: 0px;"></td>
+                    <td style="font-size: 10px;text-align: center;border-right: 0px;border-left: 0px;"><b>Total</b></td>
+                    <td style="font-size: 10px;text-align: center;border-right: 0px;border-left: 0px;">14,0463 has</td>
+                    <td style="font-size: 10px;text-align: center;border-right: 0px;border-left: 0px;"></td>
+                    <td class="pull-right" style="font-size: 10px;border-left: 0px;">2,177,176.50</td>
+                </tr> 
+               
+            </table>
+            
+            <table width="100%" id="summary" class="noborder">
+                <tr>
+                     <td><p style="text-align: left;"><b>PLANTS AND TREES APPRAISAL</b></p></td>
+                </tr>
+            </table>
+                <table width="100%" id="summary">
+                    <tr>
+                        <th width="25%"style="font-size: 10px;" rowspan="3">Kind of Plants/Trees</th>
+                        <th width="25%"style="font-size: 10px;" rowspan="3">Sub-Class/Age</th>
+                        <th width="25%" colspan="5" style="font-size: 10px;">NUMBER OF TREES PLANTED
+                           
+                               
+                             
+                        </th>
+                        
+                        <th width="25%"style="font-size: 10px;" rowspan="3">Unit Value</th>
+                        <th width="25%"style="font-size: 10px;" rowspan="3">Base Market value</th>
+                    </tr>
+                    <tr>
+                        
+                        <th width="25%"style="font-size: 10px;" rowspan="2">Non-Fruit Bearing</th>
+                        <th width="75%"style="font-size: 10px;" colspan="4">Fruit Bearing</th>
+                       
+                    </tr>
+                    <tr>
+                        <th width="25%"style="font-size: 10px;" rowspan="">Productive</th>
+                        <th width="25%"style="font-size: 10px;" rowspan=""></th>
+                        <th width="75%"style="font-size: 10px;" colspan="2">Non Productive</th>
+                       
+                    </tr>
+                    <tr>
+                        <td style="font-size: 10px;text-align: center;"><p>Agricultural</p></td>
+                        <td style="font-size: 10px;text-align: center;">Agr'l Others/Upland(2ND)</td>
+                        <td style="font-size: 10px;text-align: center;">14,0463 has</td>
+                        <td style="font-size: 10px;text-align: center;">155,000.00 </td>
+                        <td class="pull-right" style="font-size: 10px;">2,177,176.50</td>
+                        <td style="font-size: 10px;text-align: center;">Agr'l Others/Upland(2ND)</td>
+                        <td style="font-size: 10px;text-align: center;">14,0463 has</td>
+                        <td style="font-size: 10px;text-align: center;">155,000.00 </td>
+                        <td class="pull-right" style="font-size: 10px;">2,177,176.50</td>
+                    </tr>
+                    <tr>
+                        <td style="font-size: 10px;text-align: center;"><p>Agricultural</p></td>
+                        <td style="font-size: 10px;text-align: center;">Agr'l Others/Upland(2ND)</td>
+                        <td style="font-size: 10px;text-align: center;">14,0463 has</td>
+                        <td style="font-size: 10px;text-align: center;">155,000.00 </td>
+                        <td class="pull-right" style="font-size: 10px;">2,177,176.50</td>
+                        <td style="font-size: 10px;text-align: center;">Agr'l Others/Upland(2ND)</td>
+                        <td style="font-size: 10px;text-align: center;">14,0463 has</td>
+                        <td style="font-size: 10px;text-align: center;">155,000.00 </td>
+                        <td class="pull-right" style="font-size: 10px;">2,177,176.50</td>
+                    </tr>  
+                    <tr>
+                        <td style="font-size: 10px;text-align: center;"><p>Agricultural</p></td>
+                        <td style="font-size: 10px;text-align: center;">Agr'l Others/Upland(2ND)</td>
+                        <td style="font-size: 10px;text-align: center;">14,0463 has</td>
+                        <td style="font-size: 10px;text-align: center;">155,000.00 </td>
+                        <td class="pull-right" style="font-size: 10px;">2,177,176.50</td>
+                        <td style="font-size: 10px;text-align: center;">Agr'l Others/Upland(2ND)</td>
+                        <td style="font-size: 10px;text-align: center;">14,0463 has</td>
+                        <td style="font-size: 10px;text-align: center;">155,000.00 </td>
+                        <td class="pull-right" style="font-size: 10px;">2,177,176.50</td>
+                    </tr>  
+                    <tr>
+                        <td style="font-size: 10px;text-align: center;"><p>Agricultural</p></td>
+                        <td style="font-size: 10px;text-align: center;">Agr'l Others/Upland(2ND)</td>
+                        <td style="font-size: 10px;text-align: center;">14,0463 has</td>
+                        <td style="font-size: 10px;text-align: center;">155,000.00 </td>
+                        <td class="pull-right" style="font-size: 10px;">2,177,176.50</td>
+                        <td style="font-size: 10px;text-align: center;">Agr'l Others/Upland(2ND)</td>
+                        <td style="font-size: 10px;text-align: center;">14,0463 has</td>
+                        <td style="font-size: 10px;text-align: center;">155,000.00 </td>
+                        <td class="pull-right" style="font-size: 10px;">2,177,176.50</td>
+                    </tr>  
+                    <tr>
+                        <td style="font-size: 10px;text-align: center;border-right: 0px;"></td>
+                        <td style="font-size: 10px;text-align: center;border-right: 0px;border-left: 0px;"></td>
+                        <td style="font-size: 10px;text-align: center;border-right: 0px;border-left: 0px;"></td>
+                        <td style="font-size: 10px;text-align: center;border-right: 0px;border-left: 0px;"></td>
+                        <td class="pull-right" style="font-size: 10px;border-right: 0px;border-left: 0px;"></td>
+                        <td style="font-size: 10px;text-align: center;border-right: 0px;border-left: 0px;"></td>
+                        <td class="pull-right" style="font-size: 10px;border-left: 0px;border-right: 0px;"></td>
+                        <td style="font-size: 10px;text-align:left ;border-left:0px;" colspan="2">Sub-Total</td>
+                        
+                        
+                    </tr>  
+                    <tr>
+                        <td style="font-size: 10px;text-align: center;border-right: 0px;"></td>
+                        <td style="font-size: 10px;text-align: center;border-right: 0px;border-left: 0px;"></td>
+                        <td style="font-size: 10px;text-align: center;border-right: 0px;border-left: 0px;"></td>
+                        <td style="font-size: 10px;text-align: center;border-right: 0px;border-left: 0px;"></td>
+                        <td class="pull-right" style="font-size: 10px;border-right: 0px;border-left: 0px;"colspan="2">Total (Land,Plants & Trees)</td>
+                        <td style="font-size: 10px;text-align: center;border-right: 0px;border-left: 0px;"></td>
+                        <td class="pull-right" style="font-size: 10px;border-left: 0px;border-right: 0px;"></td>
+                        <td style="font-size: 10px;text-align:right ;border-left:0px;" colspan="2">25,5000</td>
+                        
+                        
+                    </tr>     
+                    
+                   
+                </table> 
+            </td>
+        </tr>
+            </table>
+     
+    
+    </body>
+    </html>
+    

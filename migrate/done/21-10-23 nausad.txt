@@ -1,0 +1,7 @@
+ALTER TABLE cto_payment_or_setups DROP COLUMN or_field_id;
+ALTER TABLE ho_inventory_posting MODIFY COLUMN base_unit_cost double;
+ALTER TABLE ho_inventory_posting MODIFY COLUMN base_total_cost double;
+ALTER TABLE ho_inventory_breakdowns MODIFY COLUMN hrb_base_unit_cost double;
+ALTER TABLE ho_inventory_breakdowns MODIFY COLUMN hrb_base_total_cost double;
+ALTER TABLE ho_inventory_breakdowns MODIFY COLUMN hrb_unit_cost double;
+ALTER TABLE ho_inventory_breakdowns MODIFY COLUMN hrb_total_cost double;

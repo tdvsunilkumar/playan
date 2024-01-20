@@ -1,0 +1,5 @@
+ALTER TABLE `pdo_bplo_endosements` ADD `cashierd_id` INT(11) NULL AFTER `bend_id`, ADD `cashier_id` INT(11) NULL AFTER `cashierd_id`, ADD `or_no` VARCHAR(255) NULL AFTER `cashier_id`, ADD `or_date` VARCHAR(255) NULL AFTER `or_no`;
+ALTER TABLE `pdo_bplo_endosements` ADD `or_amount` DOUBLE(10,2) NULL AFTER `or_date`;
+
+ALTER TABLE `pdo_bplo_endosements` CHANGE `or_date` `or_date` DATE NULL DEFAULT NULL;
+ALTER TABLE `pdo_bplo_endosements` ADD `ornoid` INT(11) NULL AFTER `cashier_id`;

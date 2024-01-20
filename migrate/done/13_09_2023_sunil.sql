@@ -1,0 +1,1 @@
+ALTER TABLE `cto_accounts_receivable_details` ADD `penalty_rate` DECIMAL(20,2) NULL AFTER `cbd_is_paid`;

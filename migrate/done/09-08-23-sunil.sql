@@ -1,0 +1,1 @@
+ALTER TABLE `rpt_building_floor_values` CHANGE `rpbfv_floor_additional_value` `rpbfv_floor_additional_value` DECIMAL(20,3) NULL, CHANGE `rpbfv_floor_adjustment_value` `rpbfv_floor_adjustment_value` DECIMAL(20,3) NULL;

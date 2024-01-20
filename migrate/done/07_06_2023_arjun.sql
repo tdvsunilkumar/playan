@@ -1,0 +1,1 @@
+ALTER TABLE `ho_application_sanitaries` ADD `has_document` TEXT NULL AFTER `has_approved_date`;

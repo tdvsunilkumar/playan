@@ -1,0 +1,1 @@
+ALTER TABLE `cto_tfocs` ADD `tfoc_is_optional_fee` INT(11) NULL DEFAULT '0' AFTER `is_taxpayer_charges`;
